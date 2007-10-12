@@ -1,7 +1,7 @@
 Name: Prefuse
 Version: beta
 Description: A java-based visualization toolkit.
-License: BSD
+License: prefuse-BSD
 Origin: http://www.prefuse.org/
 OSR: 4356
 

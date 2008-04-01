@@ -40,16 +40,66 @@
  */
 package org.netbeans.modules.xml.xpath.ext.spi;
 
-import org.netbeans.modules.xml.schema.model.GlobalType;
-import org.netbeans.modules.xml.xpath.ext.XPathExpression;
-import org.netbeans.modules.xml.xpath.ext.XPathSchemaContextHolder;
+import java.util.ArrayList;
+import java.util.List;
+import org.netbeans.modules.xml.xpath.ext.XPathSchemaContext;
 
 /**
- * @author Vladimir Yaroslavskiy
- * @version 2008.03.24
+ * Looks through the chan of SchemaContext elements and 
+ * try finding the corresponding cast. 
+ * 
+ * @author nk160297
  */
-public interface XPathCast extends XPathSchemaContextHolder {
-    XPathExpression getPathExpression();
-    String getPathText();
-    GlobalType getCastTo();
+public class SchemaContextBasedCastResolver implements XPathCastResolver {
+
+    private XPathSchemaContext mSContext;
+    
+    public SchemaContextBasedCastResolver(XPathSchemaContext sContext) {
+        mSContext = sContext;
+    }
+    
+    public List<XPathCast> getXPathCasts() {
+        List<XPathCast> castList = new ArrayList<XPathCast>();
+        populateCastList(mSContext, castList);
+        return castList;
+    }
+
+    public XPathCast getCast(XPathSchemaContext baseSContext) {
+        return getCast(mSContext, baseSContext);
+    }
+  
+    private XPathCast getCast(XPathSchemaContext lookInside, 
+            XPathSchemaContext soughtSContext) {
+        if (lookInside == null) {
+            return null;
+        }
+        //
+        if (lookInside instanceof CastSchemaContext) {
+            CastSchemaContext castContext = (CastSchemaContext)lookInside;
+            XPathSchemaContext baseSContext = castContext.getBaseContext();
+            if (baseSContext != null && baseSContext.equalsChain(soughtSContext)) {
+                XPathCast result = castContext.getTypeCast();
+                return result;
+            }
+        } else {
+            return getCast(lookInside.getParentContext(), soughtSContext);
+        }
+        //
+        return null;
+    }
+
+    private void populateCastList(XPathSchemaContext lookInside, 
+            List<XPathCast> castList) {
+        if (lookInside == null) {
+            return;
+        }
+        //
+        if (lookInside instanceof CastSchemaContext) {
+            CastSchemaContext castContext = (CastSchemaContext)lookInside;
+            XPathCast cast = castContext.getTypeCast();
+            castList.add(cast);
+        }
+        populateCastList(lookInside.getParentContext(), castList);
+    }
+
 }

@@ -58,14 +58,14 @@ import org.netbeans.modules.xml.xpath.ext.XPathSchemaContextHolder;
  * @author nk160297
  * @version 2008.05.20
  */
-public interface XPathCast extends XPathSchemaContextHolder {
+public interface XPathPseudoComp extends XPathSchemaContextHolder {
     
     /**
      * Points to the casted Element.
      * @return
      */
-    XPathExpression getPathExpression();
-    String getPathText();
+    XPathExpression getParentPathExpression();
+    String getParentPathText();
     
     /**
      * @return GlobalType, GlobalElement or GlobalAttrubute depends on 
@@ -73,4 +73,9 @@ public interface XPathCast extends XPathSchemaContextHolder {
      */
     GlobalType getType();
     
+    String getName();
+    
+    String getNamespace();
+    
+    boolean isAttribute();
 }

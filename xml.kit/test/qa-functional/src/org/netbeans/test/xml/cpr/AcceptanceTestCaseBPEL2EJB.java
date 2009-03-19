@@ -79,7 +79,7 @@ import org.netbeans.jellytools.FilesTabOperator;
 import org.netbeans.jellytools.nodes.Node;
 import org.netbeans.jellytools.NbDialogOperator;
 import org.netbeans.jemmy.operators.*;
-import org.netbeans.api.project.ProjectInformation;
+// import org.netbeans.api.project.ProjectInformation;
 import javax.swing.ListModel;
 import org.netbeans.test.xml.schema.lib.SchemaMultiView;
 import java.awt.Rectangle;
@@ -90,18 +90,16 @@ import javax.swing.text.BadLocationException;
  * @author michaelnazarov@netbeans.org
  */
 
-public class AcceptanceTestCaseBPEL2XSLT extends AcceptanceTestCaseXMLCPR {
+public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
     
     static final String [] m_aTestMethods = {
         "CreateBluePrint1Sample",
         "AddProjectReference",
         "DeleteProjectReference",
-        "AddSampleSchema",
-
         "ImportReferencedSchema",
         "ImportReferencedSchema2",
         "DeleteReferencedSchema",
-        "FindUsages", // TODO : How to find find usages output?
+        "FindUsages",
         "ValidateAndBuild",
         "AddAttribute",
         "ExploreAttribute",
@@ -135,22 +133,22 @@ public class AcceptanceTestCaseBPEL2XSLT extends AcceptanceTestCaseXMLCPR {
 
     static final String SAMPLE_CATEGORY_NAME = "Samples|SOA|BPEL BluePrints";
     static final String SAMPLE_PROJECT_NAME = "BluePrint 1";
-    static final String SAMPLE_NAME = "SampleApplication2Xslt";
+    static final String SAMPLE_NAME = "SampleApplication2Ejb";
     static final String COMPOSITE_APPLICATION_NAME = SAMPLE_NAME + "Application";
 
-    static final String MODULE_NAME = "NotifyManager";
+    static final String MODULE_NAME = "EJBModule1";
 
-    static final String SAMPLE_SCHEMA_PATH = "Transformation Files";
+    static final String SAMPLE_SCHEMA_PATH = "Source Packages|com.sun.test";
 
-    public AcceptanceTestCaseBPEL2XSLT(String arg0) {
+    public AcceptanceTestCaseBPEL2EJB(String arg0) {
         super(arg0);
     }
     
     public static TestSuite suite() {
-        TestSuite testSuite = new TestSuite(AcceptanceTestCaseBPEL2XSLT.class.getName());
+        TestSuite testSuite = new TestSuite(AcceptanceTestCaseBPEL2EJB.class.getName());
         
         for (String strMethodName : m_aTestMethods) {
-            testSuite.addTest(new AcceptanceTestCaseBPEL2XSLT(strMethodName));
+            testSuite.addTest(new AcceptanceTestCaseBPEL2EJB(strMethodName));
         }
         
         return testSuite;
@@ -189,38 +187,16 @@ public class AcceptanceTestCaseBPEL2XSLT extends AcceptanceTestCaseXMLCPR {
       endTest( );
     }
 
-    public void AddSampleSchema( )
-    {
-      startTest( );
-
-      ProjectsTabOperator pto = new ProjectsTabOperator( );
-      ProjectRootNode prn = pto.getProjectRootNode( MODULE_NAME );
-      prn.select( );
-
-      NewFileWizardOperator opNewFileWizard = NewFileWizardOperator.invoke( );
-      opNewFileWizard.selectCategory( "XML" );
-      opNewFileWizard.selectFileType( "Loan Application Sample Schema" );
-      opNewFileWizard.next( );
-      opNewFileWizard.finish( );
-
-      // Check created schema in project tree
-      if( null == ( new Node( prn, SAMPLE_SCHEMA_PATH + "|newLoanApplication.xsd" ) ) )
-      {
-        fail( "Unable to check created sample schema." );
-      }
-
-      endTest( );
-    }
-
     private CImportClickData[] acliImport =
     {
       new CImportClickData( true, 0, 0, 2, 4, "Unknown import table state after first click, number of rows: ", null ),
       new CImportClickData( true, 1, 0, 2, 5, "Unknown import table state after second click, number of rows: ", null ),
       new CImportClickData( true, 2, 0, 2, 7, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 5, 0, 2, 8, "Unknown import table state after forth click, number of rows: ", null ),
-      new CImportClickData( true, 6, 0, 2, 12, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( false, 3, 1, 1, 12, "Unknown to click on checkbox. #", null ),
-      new CImportClickData( true, 9, 1, 1, 12, "Unknown to click on checkbox. #", null )
+      new CImportClickData( true, 5, 0, 2, 10, "Unknown import table state after forth click, number of rows: ", null ),
+      new CImportClickData( true, 7, 0, 2, 11, "Unknown import table state after third click, number of rows: ", null ),
+      new CImportClickData( true, 8, 0, 2, 13, "Unknown import table state after third click, number of rows: ", null ),
+      new CImportClickData( false, 3, 1, 1, 13, "Unknown to click on checkbox. #", null ),
+      new CImportClickData( true, 9, 1, 1, 13, "Unknown to click on checkbox. #", null )
     };
 
     private CImportClickData[] acliCheck =
@@ -228,11 +204,12 @@ public class AcceptanceTestCaseBPEL2XSLT extends AcceptanceTestCaseXMLCPR {
       new CImportClickData( true, 0, 0, 2, 4, "Unknown import table state after first click, number of rows: ", null ),
       new CImportClickData( true, 1, 0, 2, 5, "Unknown import table state after second click, number of rows: ", null ),
       new CImportClickData( true, 2, 0, 2, 7, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 5, 0, 2, 8, "Unknown import table state after forth click, number of rows: ", null ),
-      new CImportClickData( true, 6, 0, 2, 12, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 3, 1, 1, 12, "Unknown to click on checkbox. #", "Selected document is already referenced." ),
-      new CImportClickData( true, 4, 1, 1, 12, "Unknown to click on checkbox. #", "Document cannot reference itself." ),
-      new CImportClickData( true, 9, 1, 1, 12, "Unknown to click on checkbox. #", "Selected document is already referenced." )
+      new CImportClickData( true, 5, 0, 2, 10, "Unknown import table state after forth click, number of rows: ", null ),
+      new CImportClickData( true, 7, 0, 2, 11, "Unknown import table state after third click, number of rows: ", null ),
+      new CImportClickData( true, 8, 0, 2, 13, "Unknown import table state after third click, number of rows: ", null ),
+      new CImportClickData( true, 3, 1, 1, 13, "Unknown to click on checkbox. #", "Selected document is already referenced." ),
+      new CImportClickData( true, 4, 1, 1, 13, "Unknown to click on checkbox. #", "Document cannot reference itself." ),
+      new CImportClickData( true, 9, 1, 1, 13, "Unknown to click on checkbox. #", "Selected document is already referenced." )
     };
 
     public void ImportReferencedSchema( )
@@ -243,7 +220,7 @@ public class AcceptanceTestCaseBPEL2XSLT extends AcceptanceTestCaseXMLCPR {
           SAMPLE_NAME,
           PURCHASE_SCHEMA_FILE_PATH,
           PURCHASE_SCHEMA_FILE_NAME,
-          MODULE_NAME,
+          MODULE_NAME + "/com/sun/test",
           false,
           acliImport
         );
@@ -286,7 +263,7 @@ public class AcceptanceTestCaseBPEL2XSLT extends AcceptanceTestCaseXMLCPR {
           MODULE_NAME,
           SAMPLE_SCHEMA_PATH,
           LOAN_SCHEMA_FILE_NAME_ORIGINAL,
-          5
+          9
         );
 
       endTest( );
@@ -300,7 +277,7 @@ public class AcceptanceTestCaseBPEL2XSLT extends AcceptanceTestCaseXMLCPR {
           MODULE_NAME,
           SAMPLE_SCHEMA_PATH,
           LOAN_SCHEMA_FILE_NAME_RENAMED,
-          5
+          9
         );
 
       endTest( );

@@ -41,23 +41,60 @@
 
 package org.netbeans.test.xml.cpr;
 
+import java.awt.Point;
+import java.util.zip.CRC32;
+import javax.swing.tree.TreePath;
 import junit.framework.TestSuite;
+import org.netbeans.jellytools.EditorOperator;
+import org.netbeans.jellytools.JellyTestCase;
 import org.netbeans.jellytools.NewProjectNameLocationStepOperator;
 import org.netbeans.jellytools.NewProjectWizardOperator;
+import org.netbeans.jellytools.NewFileWizardOperator;
+import org.netbeans.jellytools.OutputOperator;
+import org.netbeans.jellytools.ProjectsTabOperator;
+import org.netbeans.jellytools.TopComponentOperator;
+import org.netbeans.jellytools.WizardOperator;
+import org.netbeans.jellytools.actions.SaveAllAction;
+import org.netbeans.jellytools.nodes.Node;
+import org.netbeans.jellytools.nodes.ProjectRootNode;
+import org.netbeans.jemmy.operators.JButtonOperator;
+import org.netbeans.jemmy.operators.JDialogOperator;
+import org.netbeans.jemmy.operators.JListOperator;
+import org.netbeans.jemmy.operators.JPopupMenuOperator;
+import org.netbeans.jemmy.operators.JRadioButtonOperator;
+import org.netbeans.jemmy.operators.JTextFieldOperator;
+import org.netbeans.jemmy.operators.JTreeOperator;
+//import org.netbeans.test.xml.schema.lib.SchemaMultiView;
+//import org.netbeans.test.xml.schema.lib.util.Helpers;
 
-import org.netbeans.api.project.ProjectInformation;
+import org.netbeans.jemmy.operators.JFileChooserOperator;
+import org.netbeans.jemmy.operators.JMenuBarOperator;
+import org.netbeans.jemmy.operators.JCheckBoxOperator;
+import org.netbeans.jemmy.operators.JTreeOperator;
+import java.io.File;
+import org.netbeans.jellytools.MainWindowOperator;
+import java.awt.event.KeyEvent;
+//import java.awt.Robot;
+import org.netbeans.jellytools.FilesTabOperator;
+import org.netbeans.jellytools.nodes.Node;
+import org.netbeans.jellytools.NbDialogOperator;
+import org.netbeans.jemmy.operators.*;
+// import org.netbeans.api.project.ProjectInformation;
+import javax.swing.ListModel;
 import org.netbeans.test.xml.schema.lib.SchemaMultiView;
+import java.awt.Rectangle;
+import javax.swing.text.BadLocationException;
 
 /**
  *
  * @author michaelnazarov@netbeans.org
  */
 
-public class AcceptanceTestCaseBPEL2JAVAAPP extends AcceptanceTestCaseXMLCPR {
+public class AcceptanceTestCaseBPEL2MYSQL extends AcceptanceTestCaseXMLCPR {
     
     static final String [] m_aTestMethods = {
         "CreateBluePrint1Sample",
-        "CreateJAVAAPPModule",
+        "CreateMYSQLModule",
         "AddProjectReference",
         "DeleteProjectReference",
         "AddSampleSchema",
@@ -98,24 +135,24 @@ public class AcceptanceTestCaseBPEL2JAVAAPP extends AcceptanceTestCaseXMLCPR {
 
     static final String SAMPLE_CATEGORY_NAME = "Samples|SOA|BPEL BluePrints";
     static final String SAMPLE_PROJECT_NAME = "BluePrint 1";
-    static final String SAMPLE_NAME = "SampleApplication2Java";
+    static final String SAMPLE_NAME = "SampleApplication2Sql";
     static final String COMPOSITE_APPLICATION_NAME = SAMPLE_NAME + "Application";
 
-    static final String MODULE_CATEGORY_NAME = "Java";
-    static final String MODULE_PROJECT_NAME = "Java Application";
-    static final String MODULE_NAME = "JavaApplication";
+    static final String MODULE_CATEGORY_NAME = "SOA";
+    static final String MODULE_PROJECT_NAME = "SQL Module";
+    static final String MODULE_NAME = "SQLModule";
 
     static final String SAMPLE_SCHEMA_PATH = "Source Packages|<default package>";
 
-    public AcceptanceTestCaseBPEL2JAVAAPP(String arg0) {
+    public AcceptanceTestCaseBPEL2MYSQL(String arg0) {
         super(arg0);
     }
     
     public static TestSuite suite() {
-        TestSuite testSuite = new TestSuite(AcceptanceTestCaseBPEL2JAVAAPP.class.getName());
+        TestSuite testSuite = new TestSuite(AcceptanceTestCaseBPEL2MYSQL.class.getName());
         
         for (String strMethodName : m_aTestMethods) {
-            testSuite.addTest(new AcceptanceTestCaseBPEL2JAVAAPP(strMethodName));
+            testSuite.addTest(new AcceptanceTestCaseBPEL2MYSQL(strMethodName));
         }
         
         return testSuite;
@@ -134,7 +171,7 @@ public class AcceptanceTestCaseBPEL2JAVAAPP extends AcceptanceTestCaseXMLCPR {
         endTest( );
     }
     
-    public void CreateJAVAAPPModule( )
+    public void CreateMYSQLModule( )
     {
         startTest( );
 
@@ -186,11 +223,11 @@ public class AcceptanceTestCaseBPEL2JAVAAPP extends AcceptanceTestCaseXMLCPR {
       new CImportClickData( true, 0, 0, 2, 4, "Unknown import table state after first click, number of rows: ", null ),
       new CImportClickData( true, 1, 0, 2, 5, "Unknown import table state after second click, number of rows: ", null ),
       new CImportClickData( true, 2, 0, 2, 7, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 5, 0, 2, 9, "Unknown import table state after forth click, number of rows: ", null ),
-      new CImportClickData( true, 6, 0, 2, 11, "Unknown import table state after fifth click, number of rows: ", null ),
-      new CImportClickData( true, 7, 0, 2, 12, "Unknown import table state after sixth click, number of rows: ", null ),
-      new CImportClickData( false, 3, 1, 1, 12, "Unknown to click on checkbox. #", null ),
-      new CImportClickData( true, 8, 1, 1, 12, "Unknown to click on checkbox. #", null )
+      new CImportClickData( true, 5, 0, 2, 8, "Unknown import table state after forth click, number of rows: ", null ),
+      new CImportClickData( true, 6, 0, 2, 9, "Unknown import table state after fifth click, number of rows: ", null ),
+      new CImportClickData( true, 7, 0, 2, 10, "Unknown import table state after sixth click, number of rows: ", null ),
+      new CImportClickData( false, 3, 1, 1, 10, "Unknown to click on checkbox. #", null ),
+      new CImportClickData( true, 8, 1, 1, 10, "Unknown to click on checkbox. #", null )
     };
 
     private CImportClickData[] acliCheck =
@@ -198,12 +235,12 @@ public class AcceptanceTestCaseBPEL2JAVAAPP extends AcceptanceTestCaseXMLCPR {
       new CImportClickData( true, 0, 0, 2, 4, "Unknown import table state after first click, number of rows: ", null ),
       new CImportClickData( true, 1, 0, 2, 5, "Unknown import table state after second click, number of rows: ", null ),
       new CImportClickData( true, 2, 0, 2, 7, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 5, 0, 2, 9, "Unknown import table state after forth click, number of rows: ", null ),
-      new CImportClickData( true, 6, 0, 2, 11, "Unknown import table state after fifth click, number of rows: ", null ),
-      new CImportClickData( true, 7, 0, 2, 12, "Unknown import table state after sixth click, number of rows: ", null ),
-      new CImportClickData( true, 3, 1, 1, 12, "Unknown to click on checkbox. #", "Selected document is already referenced." ),
-      new CImportClickData( true, 4, 1, 1, 12, "Unknown to click on checkbox. #", "Document cannot reference itself." ),
-      new CImportClickData( true, 8, 1, 1, 12, "Unknown to click on checkbox. #", "Selected document is already referenced." )
+      new CImportClickData( true, 5, 0, 2, 8, "Unknown import table state after forth click, number of rows: ", null ),
+      new CImportClickData( true, 6, 0, 2, 9, "Unknown import table state after fifth click, number of rows: ", null ),
+      new CImportClickData( true, 7, 0, 2, 10, "Unknown import table state after sixth click, number of rows: ", null ),
+      new CImportClickData( true, 3, 1, 1, 10, "Unknown to click on checkbox. #", "Selected document is already referenced." ),
+      new CImportClickData( true, 4, 1, 1, 10, "Unknown to click on checkbox. #", "Document cannot reference itself." ),
+      new CImportClickData( true, 8, 1, 1, 10, "Unknown to click on checkbox. #", "Selected document is already referenced." )
     };
 
     public void ImportReferencedSchema( )
@@ -281,7 +318,7 @@ public class AcceptanceTestCaseBPEL2JAVAAPP extends AcceptanceTestCaseXMLCPR {
     {
       startTest( );
       
-      ValidateAndBuildInternal( SAMPLE_NAME );
+      ValidateAndBuildInternal( SAMPLE_NAME, true, "dist_se" );
 
       endTest( );
     }
@@ -492,7 +529,7 @@ public class AcceptanceTestCaseBPEL2JAVAAPP extends AcceptanceTestCaseXMLCPR {
       
       BuildInternal(
           COMPOSITE_APPLICATION_NAME,
-          false,
+          true,
           "jbi-build"
         );
 
@@ -525,4 +562,5 @@ public class AcceptanceTestCaseBPEL2JAVAAPP extends AcceptanceTestCaseXMLCPR {
 
       endTest( );
     }
+
 }

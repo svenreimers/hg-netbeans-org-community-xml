@@ -79,7 +79,7 @@ import org.netbeans.jellytools.FilesTabOperator;
 import org.netbeans.jellytools.nodes.Node;
 import org.netbeans.jellytools.NbDialogOperator;
 import org.netbeans.jemmy.operators.*;
-import org.netbeans.api.project.ProjectInformation;
+// import org.netbeans.api.project.ProjectInformation;
 import javax.swing.ListModel;
 import org.netbeans.test.xml.schema.lib.SchemaMultiView;
 import java.awt.Rectangle;
@@ -90,16 +90,18 @@ import javax.swing.text.BadLocationException;
  * @author michaelnazarov@netbeans.org
  */
 
-public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
+public class AcceptanceTestCaseBPEL2WEBAPP extends AcceptanceTestCaseXMLCPR {
     
     static final String [] m_aTestMethods = {
         "CreateBluePrint1Sample",
+        "CreateWEBAPPModule",
         "AddProjectReference",
         "DeleteProjectReference",
+        "AddSampleSchema",
         "ImportReferencedSchema",
         "ImportReferencedSchema2",
         "DeleteReferencedSchema",
-        "FindUsages",
+        "FindUsages", // TODO : How to find find usages output?
         "ValidateAndBuild",
         "AddAttribute",
         "ExploreAttribute",
@@ -133,22 +135,24 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
 
     static final String SAMPLE_CATEGORY_NAME = "Samples|SOA|BPEL BluePrints";
     static final String SAMPLE_PROJECT_NAME = "BluePrint 1";
-    static final String SAMPLE_NAME = "SampleApplication2Ejb";
+    static final String SAMPLE_NAME = "SampleApplication2WebApp";
     static final String COMPOSITE_APPLICATION_NAME = SAMPLE_NAME + "Application";
 
-    static final String MODULE_NAME = "EJBModule1";
+    static final String MODULE_CATEGORY_NAME = "Web";
+    static final String MODULE_PROJECT_NAME = "Web Application";
+    static final String MODULE_NAME = "WebApplication";
 
-    static final String SAMPLE_SCHEMA_PATH = "Source Packages|com.sun.test";
+    static final String SAMPLE_SCHEMA_PATH = "Source Packages|<default package>";
 
-    public AcceptanceTestCaseBPEL2EJB(String arg0) {
+    public AcceptanceTestCaseBPEL2WEBAPP(String arg0) {
         super(arg0);
     }
     
     public static TestSuite suite() {
-        TestSuite testSuite = new TestSuite(AcceptanceTestCaseBPEL2EJB.class.getName());
+        TestSuite testSuite = new TestSuite(AcceptanceTestCaseBPEL2WEBAPP.class.getName());
         
         for (String strMethodName : m_aTestMethods) {
-            testSuite.addTest(new AcceptanceTestCaseBPEL2EJB(strMethodName));
+            testSuite.addTest(new AcceptanceTestCaseBPEL2WEBAPP(strMethodName));
         }
         
         return testSuite;
@@ -167,6 +171,25 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
         endTest( );
     }
     
+    public void CreateWEBAPPModule( )
+    {
+        startTest( );
+
+        // Create BluePrint1 Sample
+        NewProjectWizardOperator opNewProjectWizard = NewProjectWizardOperator.invoke( );
+        opNewProjectWizard.selectCategory( MODULE_CATEGORY_NAME );
+        opNewProjectWizard.selectProject( MODULE_PROJECT_NAME );
+        opNewProjectWizard.next( );
+
+        NewProjectNameLocationStepOperator opNewProjectNameLocationStep = new NewProjectNameLocationStepOperator( );
+        opNewProjectNameLocationStep.txtProjectLocation( ).setText( System.getProperty( "xtest.ide.open.projects" ) );
+        opNewProjectNameLocationStep.txtProjectName( ).setText( MODULE_NAME );
+        opNewProjectWizard.next( );
+        opNewProjectWizard.finish( );
+
+        endTest( );
+    }
+
     public void AddProjectReference( )
     {
       startTest( );
@@ -187,40 +210,49 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
       endTest( );
     }
 
+    public void AddSampleSchema( )
+    {
+      startTest( );
+      
+      AddSampleSchemaInternal( MODULE_NAME, SAMPLE_SCHEMA_PATH );
+
+      endTest( );
+    }
+
     private CImportClickData[] acliImport =
     {
       new CImportClickData( true, 0, 0, 2, 4, "Unknown import table state after first click, number of rows: ", null ),
       new CImportClickData( true, 1, 0, 2, 5, "Unknown import table state after second click, number of rows: ", null ),
-      new CImportClickData( true, 2, 0, 2, 7, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 5, 0, 2, 10, "Unknown import table state after forth click, number of rows: ", null ),
-      new CImportClickData( true, 7, 0, 2, 11, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 8, 0, 2, 13, "Unknown import table state after third click, number of rows: ", null ),
+      new CImportClickData( true, 2, 0, 2, 7, "Unknown import table state after forth click, number of rows: ", null ),
+      new CImportClickData( true, 5, 0, 2, 11, "Unknown import table state after forth click, number of rows: ", null ),
+      new CImportClickData( true, 8, 0, 2, 12, "Unknown import table state after fifth click, number of rows: ", null ),
+      new CImportClickData( true, 9, 0, 2, 13, "Unknown import table state after sixth click, number of rows: ", null ),
       new CImportClickData( false, 3, 1, 1, 13, "Unknown to click on checkbox. #", null ),
-      new CImportClickData( true, 9, 1, 1, 13, "Unknown to click on checkbox. #", null )
+      new CImportClickData( true, 10, 1, 1, 13, "Unknown to click on checkbox. #", null )
     };
 
     private CImportClickData[] acliCheck =
     {
       new CImportClickData( true, 0, 0, 2, 4, "Unknown import table state after first click, number of rows: ", null ),
       new CImportClickData( true, 1, 0, 2, 5, "Unknown import table state after second click, number of rows: ", null ),
-      new CImportClickData( true, 2, 0, 2, 7, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 5, 0, 2, 10, "Unknown import table state after forth click, number of rows: ", null ),
-      new CImportClickData( true, 7, 0, 2, 11, "Unknown import table state after third click, number of rows: ", null ),
-      new CImportClickData( true, 8, 0, 2, 13, "Unknown import table state after third click, number of rows: ", null ),
+      new CImportClickData( true, 2, 0, 2, 7, "Unknown import table state after forth click, number of rows: ", null ),
+      new CImportClickData( true, 5, 0, 2, 11, "Unknown import table state after forth click, number of rows: ", null ),
+      new CImportClickData( true, 8, 0, 2, 12, "Unknown import table state after fifth click, number of rows: ", null ),
+      new CImportClickData( true, 9, 0, 2, 13, "Unknown import table state after sixth click, number of rows: ", null ),
       new CImportClickData( true, 3, 1, 1, 13, "Unknown to click on checkbox. #", "Selected document is already referenced." ),
       new CImportClickData( true, 4, 1, 1, 13, "Unknown to click on checkbox. #", "Document cannot reference itself." ),
-      new CImportClickData( true, 9, 1, 1, 13, "Unknown to click on checkbox. #", "Selected document is already referenced." )
+      new CImportClickData( true, 10, 1, 1, 13, "Unknown to click on checkbox. #", "Selected document is already referenced." )
     };
 
     public void ImportReferencedSchema( )
     {
       startTest( );
-
+      
       ImportReferencedSchemaInternal(
           SAMPLE_NAME,
           PURCHASE_SCHEMA_FILE_PATH,
           PURCHASE_SCHEMA_FILE_NAME,
-          MODULE_NAME + "/com/sun/test",
+          MODULE_NAME,
           false,
           acliImport
         );
@@ -263,7 +295,7 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
           MODULE_NAME,
           SAMPLE_SCHEMA_PATH,
           LOAN_SCHEMA_FILE_NAME_ORIGINAL,
-          9
+          5
         );
 
       endTest( );
@@ -277,7 +309,7 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
           MODULE_NAME,
           SAMPLE_SCHEMA_PATH,
           LOAN_SCHEMA_FILE_NAME_RENAMED,
-          9
+          5
         );
 
       endTest( );
@@ -290,69 +322,6 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
       ValidateAndBuildInternal( SAMPLE_NAME );
 
       endTest( );
-    }
-
-    private boolean HasChild( JTreeOperator tree, TreePath path, String child )
-    {
-      int iCnt = tree.getChildCount( path );
-      for( int i = 0; i < iCnt; i++ )
-      {
-        TreePath subpath = tree.getChildPath( path, i );
-        Object o = subpath.getLastPathComponent( );
-        if( o.toString( ).startsWith( child ) )
-          return true;
-      }
-      return false;
-    }
-
-    private TreePath GetSubPath( JTreeOperator tree, TreePath path, String name )
-    {
-      String[] asPaths = name.split( "\\|" );
-      for( String chunk : asPaths )
-      {
-        int iCnt = tree.getChildCount( path );
-        for( int i = 0; i < iCnt; i++ )
-        {
-          System.out.println( "*** Checking chunk " + chunk );
-          TreePath subpath = tree.getChildPath( path, i );
-          Object o = subpath.getLastPathComponent( );
-          if( o.toString( ).startsWith( chunk ) )
-          {
-            System.out.println( "*** Chunk found" );
-            path = subpath;
-
-            tree.selectPath( path );
-            tree.clickOnPath( path );
-
-            break;
-          }
-        }
-      }
-      return path;
-    }
-
-    private TreePath FindMultiwayPath(
-        JTreeOperator tree,
-        String schema,
-        String name
-      )
-    {
-      // First level is always Referenced schemas
-      TreePath path = tree.findPath( "Referenced Schemas" );
-      System.out.println( "*** Referenced Schemas found" );
-      // Then find path with required subpath (tricky but...)
-      int iChild = tree.getChildCount( path );
-      TreePath subpath = null;
-      for( int i = 0; i < iChild; i++ )
-      {
-        subpath = tree.getChildPath( path, i );
-        if( HasChild( tree, subpath, schema ) )
-        {
-          System.out.println( "*** Correct import found" );
-          return GetSubPath( tree, subpath, name );
-        }
-      }
-      return null;
     }
 
     public void AddAttribute( )
@@ -393,7 +362,6 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
 
       endTest( );
     }
-
     public void AddComplex( )
     {
       startTest( );
@@ -445,7 +413,7 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
           PURCHASE_SCHEMA_FILE_NAME,
           "Elements",
           "Add Element",
-          "Use Existing Type",
+          "Use Existing Type", 
           "Referenced Schemas|import|Complex Types|AddressType",
           ELEMENT_NAMES[ 0 ]
         );
@@ -594,4 +562,5 @@ public class AcceptanceTestCaseBPEL2EJB extends AcceptanceTestCaseXMLCPR {
 
       endTest( );
     }
+
 }

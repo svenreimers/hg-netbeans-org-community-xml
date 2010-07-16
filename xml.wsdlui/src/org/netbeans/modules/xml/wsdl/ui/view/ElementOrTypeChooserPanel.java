@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -77,6 +80,7 @@ public class ElementOrTypeChooserPanel extends javax.swing.JPanel implements Exp
     private Project mProject;
     private WSDLModel mModel;
     private SchemaComponent mPreviousSelectedComponent;
+    private Node mRootNode = null;
     
     /** Creates new form ElementOrTypeChooserPanel */
     public ElementOrTypeChooserPanel(Project project, Map<String, String> namespaceToPrefixMap, WSDLModel model) {
@@ -165,7 +169,15 @@ public class ElementOrTypeChooserPanel extends javax.swing.JPanel implements Exp
                     } catch(PropertyVetoException ex) {
                         //ignore this
                     }
-
+                    // somehow expanding of nodes causes the scroll to go to the 
+                    // last expanded node.  if the previous selection is null, 
+                    // then reexpand the 1st node to force the scroll to be on top
+                    if ((mPreviousSelectedComponent == null) && 
+                            (manager.getRootContext() != null) && 
+                            (manager.getRootContext().getChildren().getNodesCount() > 0)) {
+                        beanTreeView1.collapseNode(manager.getRootContext().getChildren().getNodes()[0]);
+                        beanTreeView1.expandNode(manager.getRootContext().getChildren().getNodes()[0]);                        
+                    }
                 }
             }
         };

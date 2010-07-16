@@ -66,6 +66,11 @@ public abstract class AbstractSchemaSearchVisitor extends DefaultSchemaVisitor {
     // prevent processing for all attributes.
     private boolean skipAttributes = false;
     
+    
+    // Indicates if it necessary to look the global objects only.
+    // It is used when the schema is the parent of searching.
+    protected boolean lookGlobalOnly = false; 
+   
     public AbstractSchemaSearchVisitor() {
     }
 
@@ -116,13 +121,8 @@ public abstract class AbstractSchemaSearchVisitor extends DefaultSchemaVisitor {
     // --------------- References ------------------
     @Override
     public void visit(ElementReference er) {
-        // # 105159, #130053
-        if (!isXdmDomUsed(er)) {
-            checkComponent(er);
-        }
         //
         NamedComponentReference<GlobalElement> geRef = er.getRef();
-
         if (geRef != null) {
             GlobalElement ge = geRef.get();
 
@@ -136,11 +136,6 @@ public abstract class AbstractSchemaSearchVisitor extends DefaultSchemaVisitor {
     public void visit(AttributeReference ar) {
         if (skipAttributes) {
             return;
-        }
-        
-        // # 105159, #130053
-        if (!isXdmDomUsed(ar)) {
-            checkComponent(ar);
         }
         //
         NamedComponentReference<GlobalAttribute> gaRef = ar.getRef();
@@ -249,20 +244,26 @@ public abstract class AbstractSchemaSearchVisitor extends DefaultSchemaVisitor {
         visitChildren(ce);
     }
 
-    @Override
-    public void visit(GlobalComplexType gct) {
-        visitChildren(gct);
-    }
+   @Override
+   public void visit(GlobalComplexType gct) {
+       if (!lookGlobalOnly) {
+           visitChildren(gct);
+       }
+   }
 
-    @Override
-    public void visit(LocalComplexType lct) {
-        visitChildren(lct);
-    }
+   @Override
+   public void visit(LocalComplexType lct) {
+       if (!lookGlobalOnly) {
+           visitChildren(lct);
+       }
+   }
 
-    @Override
-    public void visit(GlobalGroup gg) {
-        visitChildren(gg);
-    }
+   @Override
+   public void visit(GlobalGroup gg) {
+       if (!lookGlobalOnly) {
+           visitChildren(gg);
+       }
+   } 
 
     @Override
     public void visit(Redefine r) {
@@ -429,17 +430,6 @@ public abstract class AbstractSchemaSearchVisitor extends DefaultSchemaVisitor {
     }
 
     //-----------------------------------------------
-    /**
-     * This auxiliary method is a workaround fro the issuer #130053
-     * @param sc
-     * @return
-     */
-    protected boolean isXdmDomUsed(SchemaComponent sc) {
-        org.w3c.dom.Element domElement = sc.getPeer();
-        String packageName = domElement.getClass().getPackage().getName();
-        return "org.netbeans.modules.xml.xdm.nodes".equals(packageName); // NOI18N
-
-    }
 
     protected String fastGetRefName(NamedComponentReference ref) {
         if (ref == null) {

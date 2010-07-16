@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -43,10 +46,12 @@ package org.netbeans.modules.xml.wsdl.ui.view;
 
 import java.util.Collection;
 import org.netbeans.modules.xml.retriever.catalog.Utilities;
+import org.netbeans.modules.xml.schema.model.Schema;
 import org.netbeans.modules.xml.schema.model.SchemaModel;
 import org.netbeans.modules.xml.schema.model.SchemaModelReference;
 import org.netbeans.modules.xml.wsdl.model.WSDLModel;
 import org.netbeans.modules.xml.wsdl.ui.actions.NameGenerator;
+import org.netbeans.modules.xml.wsdl.ui.netbeans.module.Utility;
 import org.netbeans.modules.xml.xam.Model;
 import org.netbeans.modules.xml.xam.locator.CatalogModelException;
 import org.netbeans.modules.xml.xam.ui.customizer.AbstractReferenceDecorator;
@@ -91,8 +96,7 @@ public class SchemaReferenceDecorator extends AbstractReferenceDecorator {
             
             //For wsdl, imported schema's should have a namespace.
             if (model instanceof SchemaModel) {
-                
-                String tns = ((SchemaModel) model).getSchema().getTargetNamespace();
+                String tns = Utility.getTargetNamespace((SchemaModel) model);
                 if (tns == null) {
                     return NbBundle.getMessage(SchemaReferenceDecorator.class,
                     "LBL_ReferenceDecorator_NoNamespace");
@@ -108,19 +112,22 @@ public class SchemaReferenceDecorator extends AbstractReferenceDecorator {
             // It had better be a schema model, but check anyway.
             if (componentModel instanceof SchemaModel) {
                 SchemaModel sm = (SchemaModel) componentModel;
-                Collection<SchemaModelReference> references =
-                        sm.getSchema().getSchemaReferences();
-                // Ensure the selected document is not already among the
-                // set that have been included.
-                for (SchemaModelReference ref : references) {
-                    try {
-                        SchemaModel otherModel = ref.resolveReferencedModel();
-                        if (model.equals(otherModel)) {
-                            return NbBundle.getMessage(SchemaReferenceDecorator.class,
-                                    "LBL_ReferenceDecorator_AlreadyRefd");
+                Schema schema = sm.getSchema();
+                if (schema != null) {
+                    Collection<SchemaModelReference> references =
+                            schema.getSchemaReferences();
+                    // Ensure the selected document is not already among the
+                    // set that have been included.
+                    for (SchemaModelReference ref : references) {
+                        try {
+                            SchemaModel otherModel = ref.resolveReferencedModel();
+                            if (model.equals(otherModel)) {
+                                return NbBundle.getMessage(SchemaReferenceDecorator.class,
+                                        "LBL_ReferenceDecorator_AlreadyRefd");
+                            }
+                        } catch (CatalogModelException cme) {
+                            // Ignore that one as it does not matter.
                         }
-                    } catch (CatalogModelException cme) {
-                        // Ignore that one as it does not matter.
                     }
                 }
             }
@@ -174,7 +181,7 @@ public class SchemaReferenceDecorator extends AbstractReferenceDecorator {
     public String getNamespace(Model model) {
         if (model instanceof SchemaModel) {
             SchemaModel sm = (SchemaModel) model;
-            return sm.getSchema().getTargetNamespace();
+            return Utility.getTargetNamespace(sm);
         }
         return null;
     }

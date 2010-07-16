@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -65,7 +68,6 @@ import org.netbeans.modules.xml.wsdl.model.WSDLModel;
 import org.netbeans.modules.xml.wsdl.model.extensions.xsd.WSDLSchema;
 import org.netbeans.modules.xml.wsdl.ui.validation.ValidationAnnotation;
 import org.netbeans.modules.xml.wsdl.ui.view.treeeditor.FolderNode;
-import org.netbeans.modules.xml.wsdl.ui.view.treeeditor.RefreshableChildren;
 import org.netbeans.modules.xml.wsdl.ui.view.treeeditor.WSDLElementNode;
 import org.netbeans.modules.xml.xam.ModelSource;
 import org.netbeans.modules.xml.xam.dom.DocumentComponent;
@@ -73,9 +75,10 @@ import org.netbeans.modules.xml.xam.ui.customizer.Customizer;
 import org.openide.DialogDescriptor;
 import org.openide.cookies.EditCookie;
 import org.openide.cookies.LineCookie;
-import org.openide.nodes.Children;
 import org.openide.nodes.Node;
 import org.openide.text.Line;
+import org.openide.text.Line.ShowOpenType;
+import org.openide.text.Line.ShowVisibilityType;
 import org.openide.text.NbDocument;
 import org.openide.util.Lookup;
 import org.openide.util.NbBundle;
@@ -489,7 +492,7 @@ public class UIUtilities {
         }
         
         if (shouldShowSource) {
-            l.show(Line.SHOW_GOTO);
+            l.show(ShowOpenType.OPEN, ShowVisibilityType.FOCUS);
         }
     }
     

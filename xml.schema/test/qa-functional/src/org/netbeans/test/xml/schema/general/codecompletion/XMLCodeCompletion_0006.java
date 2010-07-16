@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -44,12 +47,14 @@ package org.netbeans.test.xml.schema.general.codecompletion;
 import junit.framework.TestSuite;
 
 import org.netbeans.jemmy.operators.JMenuBarOperator;
+import org.netbeans.jellytools.EditorOperator;
 import org.netbeans.jellytools.MainWindowOperator;
 import org.netbeans.junit.NbTestCase;
 import java.util.Properties;
 import org.netbeans.junit.RandomlyFails;
 import junit.framework.Test;
 import org.netbeans.junit.NbModuleSuite;
+import org.netbeans.test.xml.schema.lib.SchemaMultiView;
 
 /**
  *
@@ -110,7 +115,15 @@ public class XMLCodeCompletion_0006 extends XMLCodeCompletion {
     {
       startTest( );
 
-      AddElementInternal( SCHEMA_SHORT_NAME_1 + SCHEMA_EXTENSION, "newElement" );
+      // Use design view for adding
+      SchemaMultiView xml = new SchemaMultiView( SCHEMA_SHORT_NAME_1 + SCHEMA_EXTENSION );
+      xml.switchToDesign( );
+      DragSomething( SCHEMA_SHORT_NAME_1 + SCHEMA_EXTENSION, 0, "Element", 0, "newElement" );
+      DragSomething( SCHEMA_SHORT_NAME_1 + SCHEMA_EXTENSION, 0, "Element", 3, "newElement" );
+      xml.switchToSource( );
+      EditorOperator opXML = new EditorOperator( SCHEMA_SHORT_NAME_1 + SCHEMA_EXTENSION );
+      opXML.setCaretPosition( "elementFormDefault=\"qualified\">", false );
+      TypeCode( opXML, "\n<xsd:any/>" );
 
       endTest( );
     }
@@ -131,7 +144,15 @@ public class XMLCodeCompletion_0006 extends XMLCodeCompletion {
     {
       startTest( );
 
-      AddElementInternal( SCHEMA_SHORT_NAME_2 + SCHEMA_EXTENSION, "newElement" );
+      // Use design view for adding
+      SchemaMultiView xml = new SchemaMultiView( SCHEMA_SHORT_NAME_2 + SCHEMA_EXTENSION );
+      xml.switchToDesign( );
+      DragSomething( SCHEMA_SHORT_NAME_2 + SCHEMA_EXTENSION, 0, "Element", 0, "newElement" );
+      DragSomething( SCHEMA_SHORT_NAME_2 + SCHEMA_EXTENSION, 0, "Element", 3, "newElement" );
+      xml.switchToSource( );
+      EditorOperator opXML = new EditorOperator( SCHEMA_SHORT_NAME_1 + SCHEMA_EXTENSION );
+      opXML.setCaretPosition( "elementFormDefault=\"qualified\">", false );
+      TypeCode( opXML, "\n<xsd:any/>" );
 
       endTest( );
     }
@@ -139,6 +160,8 @@ public class XMLCodeCompletion_0006 extends XMLCodeCompletion {
     public void CreateConstrained( )
     {
       startTest( );
+
+      new JMenuBarOperator(MainWindowOperator.getDefault()).pushMenuNoBlock("File|Save All");
 
       CImportClickData[] aimpData =
       {
@@ -165,6 +188,8 @@ public class XMLCodeCompletion_0006 extends XMLCodeCompletion {
     public void StartAndContinueTag( )
     {
       startTest( );
+
+      // TODO : There is an issue possibly.
 
       String[] asCases =
       {

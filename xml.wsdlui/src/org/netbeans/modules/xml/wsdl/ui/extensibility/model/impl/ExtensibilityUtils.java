@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -72,9 +75,10 @@ import org.netbeans.modules.xml.wsdl.ui.extensibility.model.WSDLExtensibilityEle
 import org.netbeans.modules.xml.wsdl.ui.extensibility.model.WSDLExtensibilityElements;
 import org.netbeans.modules.xml.wsdl.ui.extensibility.model.WSDLExtensibilityElementsFactory;
 import org.netbeans.modules.xml.wsdl.ui.extensibility.model.XMLSchemaFileInfo;
+import org.netbeans.modules.xml.wsdl.ui.netbeans.module.Utility;
 import org.netbeans.modules.xml.wsdl.ui.schema.visitor.AbstractXSDVisitor;
 import org.netbeans.modules.xml.wsdl.ui.view.treeeditor.WSDLElementNode;
-import org.netbeans.modules.xml.xam.Model;
+import org.netbeans.modules.xml.xam.Model.State;
 import org.netbeans.modules.xml.xam.ModelSource;
 import org.openide.ErrorManager;
 import org.openide.filesystems.FileObject;
@@ -102,7 +106,7 @@ public class ExtensibilityUtils {
                 ms = Utilities.getModelSource(fileObject, false);
             }
             SchemaModel schemaModel = SchemaModelFactory.getDefault().getModel(ms);
-            if (schemaModel.getState() != Model.State.NOT_WELL_FORMED) {
+            if (schemaModel.getState() != State.NOT_WELL_FORMED) {
                 schema = schemaModel.getSchema();
             }
         } catch(Exception ex) {
@@ -251,7 +255,8 @@ class ElementFinderVisitor  extends AbstractXSDVisitor {
     @Override
     public void visit(GlobalElement ge) {
         if (qnames.size() > 0) {
-            if (new QName(ge.getModel().getSchema ().getTargetNamespace(), ge.getName()).equals(qnames.get(0))) {
+            String targetNs = Utility.getTargetNamespace(ge.getModel());
+            if (new QName(targetNs, ge.getName()).equals(qnames.get(0))) {
                 qnames.remove(0);
                 if (qnames.size() == 0) {
                     element = ge;
@@ -266,7 +271,8 @@ class ElementFinderVisitor  extends AbstractXSDVisitor {
     @Override
     public void visit(LocalElement le) {
         if (qnames.size() > 0) {
-            if (new QName(le.getModel().getSchema ().getTargetNamespace(), le.getName()).equals(qnames.get(0))) {
+            String targetNs = Utility.getTargetNamespace(le.getModel());
+            if (new QName(targetNs, le.getName()).equals(qnames.get(0))) {
                 qnames.remove(0);
                 if (qnames.size() == 0) {
                     element = le;

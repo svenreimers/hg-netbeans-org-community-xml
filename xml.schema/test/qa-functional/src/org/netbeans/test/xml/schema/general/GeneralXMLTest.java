@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -46,7 +49,6 @@ import org.netbeans.jellytools.OutputTabOperator;
 import org.netbeans.jemmy.JemmyException;
 import org.netbeans.jellytools.EditorOperator;
 import org.netbeans.jellytools.JellyTestCase;
-import org.netbeans.jellytools.NewProjectNameLocationStepOperator;
 import org.netbeans.jellytools.NewProjectWizardOperator;
 import org.netbeans.jellytools.NewFileWizardOperator;
 import org.netbeans.jellytools.ProjectsTabOperator;
@@ -71,6 +73,11 @@ import org.netbeans.jemmy.operators.JTableOperator;
 import org.netbeans.jemmy.operators.JTextComponentOperator;
 import org.netbeans.jemmy.operators.Operator;
 import java.io.File;
+import org.netbeans.jemmy.drivers.input.MouseRobotDriver;
+import org.netbeans.jemmy.Timeout;
+import java.awt.event.InputEvent;
+import org.netbeans.jellytools.NewJavaProjectNameLocationStepOperator;
+import org.netbeans.jellytools.TopComponentOperator;
 
 /**
  *
@@ -88,6 +95,7 @@ public class GeneralXMLTest extends JellyTestCase {
     {
       public boolean equals( java.lang.String caption, java.lang.String match )
       {
+        //System.out.println( caption + " == " + match );
         return caption.equals( match );
       }
     }
@@ -185,7 +193,7 @@ public class GeneralXMLTest extends JellyTestCase {
       opNewProjectWizard.selectProject( sProject );
       opNewProjectWizard.next( );
 
-      NewProjectNameLocationStepOperator opNewProjectNameLocationStep = new NewProjectNameLocationStepOperator( );
+      NewJavaProjectNameLocationStepOperator opNewProjectNameLocationStep = new NewJavaProjectNameLocationStepOperator( );
       opNewProjectNameLocationStep.txtProjectLocation( ).setText( GetWorkDir( ) );
       opNewProjectNameLocationStep.txtProjectName( ).setText( sName );
       opNewProjectWizard.finish( );
@@ -649,7 +657,7 @@ public class GeneralXMLTest extends JellyTestCase {
       //System.out.println( ">>>" + oto.getText( i, i ) + "<<<" );
 
     String sLast = oto.getLine( iCount - 1 );
-    if( sLast.endsWith( "\r" ) || sLast.endsWith( "\n" ) )
+    if( sLast.endsWith( "\r" ) || sLast.endsWith( "\n" ) || sLast.equals( "" ) )
       iCount--;
     if( asIdeals.length != iCount )
       fail( "Wrong number of output lines: " + iCount );
@@ -815,4 +823,54 @@ public class GeneralXMLTest extends JellyTestCase {
       jdNew.waitClosed( );
     }
 
+  protected void TypeCode( EditorOperator edit, String code )
+  {
+    int iLimit = code.length( );
+    for( int i = 0; i < iLimit; i++ )
+    {
+      edit.typeKey( code.charAt( i ) );
+      Sleep( 100 );
+    }
+  }
+
+  // TODO : add constant for destination
+  // TODO : calculate point right way without constants
+  // 0 - top, 1 - elements
+  protected void DragSomething(
+      String sName,
+      int iListIndex,
+      String sElementName,
+      int iDestination,
+      String sResult
+    )
+  {
+    TopComponentOperator top = new TopComponentOperator( sName );
+    TopComponentOperator pal = new TopComponentOperator( "Palette" );
+    JListOperator list = new JListOperator( pal, iListIndex );
+
+    ListModel lmd = list.getModel( );
+    int iIndex = list.findItemIndex( sElementName );
+    list.selectItem( iIndex );
+    Point pt = list.getClickPoint( iIndex );
+
+    int[] yy = { 40, 60, 150, 90, 175, 200, 235 };
+
+    MouseRobotDriver m_mouseDriver = new MouseRobotDriver(new Timeout("", 500));
+    m_mouseDriver.moveMouse( list, pt.x, pt.y );
+    m_mouseDriver.pressMouse( InputEvent.BUTTON1_MASK, 0 );
+    m_mouseDriver.enterMouse( top );
+    m_mouseDriver.dragMouse( top, 50, yy[ iDestination ], InputEvent.BUTTON1_MASK, 0 );
+    m_mouseDriver.releaseMouse( InputEvent.BUTTON1_MASK, 0 );
+
+    Sleep( 1000 );
+
+    if( null != sResult )
+    {
+      // Check text box
+      JTextComponentOperator text = new JTextComponentOperator( MainWindowOperator.getDefault( ), 0 );
+      String sText = text.getText( );
+      if( !sText.equals( sResult ) )
+        fail( "Invalid new element name, expected \"" + sResult + "\", found \"" + sText + "\"" );
+    }
+  }
 }

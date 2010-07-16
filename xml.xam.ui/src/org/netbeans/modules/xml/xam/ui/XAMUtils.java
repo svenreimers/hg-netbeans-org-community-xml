@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -41,7 +44,12 @@
 
 package org.netbeans.modules.xml.xam.ui;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import javax.swing.SwingUtilities;
 import org.netbeans.modules.xml.xam.Component;
+import org.netbeans.modules.xml.xam.ComponentEvent;
+import org.netbeans.modules.xml.xam.ComponentListener;
 import org.netbeans.modules.xml.xam.Model;
 import org.netbeans.modules.xml.xam.ModelSource;
 import org.netbeans.modules.xml.xam.ui.cookies.GetComponentCookie;
@@ -50,6 +58,25 @@ import org.openide.filesystems.FileObject;
 import org.openide.loaders.DataObject;
 import org.openide.loaders.DataObjectNotFoundException;
 import org.openide.nodes.Node;
+
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+import javax.xml.namespace.QName;
+import org.netbeans.modules.xml.schema.model.ComplexType;
+import org.netbeans.modules.xml.schema.model.SimpleType;
+import org.netbeans.modules.xml.xam.Named;
+import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
+import org.netbeans.modules.xml.schema.model.GlobalSimpleType;
+import org.netbeans.modules.xml.schema.model.GlobalType;
+import org.netbeans.modules.xml.schema.model.Schema;
+import org.netbeans.modules.xml.schema.model.SchemaComponent;
+import org.netbeans.modules.xml.schema.model.SchemaModel;
+import org.netbeans.modules.xml.schema.model.SchemaModelFactory;
+import org.netbeans.modules.xml.schema.model.SimpleContent;
+import org.netbeans.modules.xml.schema.model.TypeContainer;
+import org.netbeans.modules.xml.wsdl.model.spi.GenericExtensibilityElement;
+import org.netbeans.modules.xml.xam.dom.Attribute;
 
 /**
  * Common utilities for XAM user interface module.
@@ -136,4 +163,290 @@ public class XAMUtils {
         }
         return false;
     }
+
+    /**
+     * A wrapper listener. It guarantees that the event processing
+     * will be executed in the Event Dispatch thread.
+     *
+     * WARNING! Hold the instance somewhere if you are going to wrap it
+     * with the WeakListener. Otherwise it will be garbage collected.
+     */
+    public static class AwtPropertyChangeListener implements PropertyChangeListener {
+
+        private PropertyChangeListener mListener;
+
+        public AwtPropertyChangeListener(PropertyChangeListener listener) {
+            mListener = listener;
+        }
+
+        public void propertyChange(final PropertyChangeEvent evt) {
+            if (SwingUtilities.isEventDispatchThread()) {
+                mListener.propertyChange(evt);
+            }
+            else {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        mListener.propertyChange(evt);
+                    }
+                });
+            }
+        }
+
+    }
+
+    /**
+     * A wrapper listener. It guarantees that the event processing
+     * will be executed in the Event Dispatch thread.
+     * 
+     * WARNING! Hold the instance somewhere if you are going to wrap it
+     * with the WeakListener. Otherwise it will be garbage collected.
+     */
+    public static class AwtComponentListener implements ComponentListener {
+
+        private ComponentListener mListener;
+
+        public AwtComponentListener(ComponentListener listener) {
+            mListener = listener;
+        }
+
+        public void valueChanged(final ComponentEvent evt) {
+            if (SwingUtilities.isEventDispatchThread()) {
+                mListener.valueChanged(evt);
+            }
+            else {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        mListener.valueChanged(evt);
+                    }
+                });
+            }
+        }
+
+        public void childrenAdded(final ComponentEvent evt) {
+            if (SwingUtilities.isEventDispatchThread()) {
+                mListener.childrenAdded(evt);
+            }
+            else {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        mListener.childrenAdded(evt);
+                    }
+                });
+            }
+        }
+
+        public void childrenDeleted(final ComponentEvent evt) {
+            if (SwingUtilities.isEventDispatchThread()) {
+                mListener.childrenAdded(evt);
+            }
+            else {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        mListener.childrenAdded(evt);
+                    }
+                });
+            }
+        }
+
+    }
+
+    public static String getDisplayName(SchemaComponent type) {
+        if ( !(type instanceof GlobalSimpleType)) {
+            return getTypeName(type);
+        }
+        GlobalSimpleType simpleType = (GlobalSimpleType) type;
+        NamedComponentReference<GlobalSimpleType> ref = simpleType.createReferenceTo(simpleType, GlobalSimpleType.class);
+
+        return ref.getRefString();
+    }
+
+    public static Component getBasedSimpleType(Component component) {
+        if ( !(component instanceof SchemaComponent)) {
+            return component;
+        }
+        SchemaComponent type = getBuiltInSimpleType((SchemaComponent) component);
+
+        if (type == null) {
+            return component;
+        }
+        return type;
+    }
+
+    public static String getNamespace(SchemaComponent component) {
+        if (component == null || component.getModel() == null) {
+            return null;
+        }
+        return component.getModel().getEffectiveNamespace(component);
+    }
+
+    public static String getTypeName(Component component) {
+        if (component == null) {
+            return "n/a"; // NOI18N
+        }
+        if (component instanceof Named) {
+            return ((Named) component).getName();
+        }
+        return component.toString();
+    }
+
+    public static Attribute attributeName() {
+        return new GenericExtensibilityElement.StringAttribute(SCHEMA_COMPONENT_ATTRIBUTE_NAME);
+    }
+    
+    public static Attribute attributeType() {
+        return new GenericExtensibilityElement.StringAttribute(SCHEMA_COMPONENT_ATTRIBUTE_TYPE);
+    }
+    
+    public static GlobalSimpleType getBuiltInSimpleType(SchemaComponent schemaComponent) {
+//System.out.println();
+//System.out.println();
+//System.out.println("--------------------");
+//System.out.println("BUILT IN SIMPLE TYPE: " + getTypeName(schemaComponent));
+        if (schemaComponent == null) {
+            return null;
+        }
+        GlobalSimpleType globalSimpleType = findBuiltInType(schemaComponent);
+        if (globalSimpleType != null) {
+//System.out.println("  !!!!! SIMPLE !!!!!!!!");
+            return globalSimpleType;
+        }
+        String baseTypeName = schemaComponent.getAnyAttribute(new QName(
+            SCHEMA_COMPONENT_ATTRIBUTE_BASE));
+        globalSimpleType = null;
+
+//System.out.println("baseTypeName: " + baseTypeName);
+        // # 130281
+        Collection<GlobalSimpleType> schemaSimpleTypes = null;
+        SchemaModel sModel = schemaComponent.getModel();
+        if (sModel != null) {
+            Schema schema = sModel.getSchema();
+            if (schema != null) {
+                schemaSimpleTypes = schema.getSimpleTypes();
+            }
+        }
+        //
+        List<GlobalSimpleType> simpleTypes = new LinkedList<GlobalSimpleType>();
+        simpleTypes.addAll(schemaSimpleTypes);
+        simpleTypes.addAll(BUILT_IN_SIMPLE_TYPES);
+
+//System.out.println("Simple Types:");
+//System.out.println("" + simpleTypes);
+//System.out.println();
+
+        if (baseTypeName != null) {
+            baseTypeName = ignoreNamespace(baseTypeName);
+            globalSimpleType = findGlobalSimpleType(baseTypeName, simpleTypes);
+
+            if (globalSimpleType != null) {
+                // # 130281
+                return getBuiltInSimpleType(globalSimpleType);
+            }
+        }
+//System.out.println("getSchemaComponentTypeName: " + getSchemaComponentTypeName(schemaComponent));
+        // # 130281
+        globalSimpleType = findGlobalSimpleType(getSchemaComponentTypeName(schemaComponent), simpleTypes);
+//System.out.println("globalSimpleType: " + globalSimpleType);
+
+        if (globalSimpleType != null) {
+            for (SchemaComponent childComponent : globalSimpleType.getChildren()) {
+                globalSimpleType = getBuiltInSimpleType(childComponent);
+               
+                if (globalSimpleType != null) {
+                    return globalSimpleType;
+                }
+            }
+            return null;
+        }
+//System.out.println();
+        // # 130281
+        for (SchemaComponent child : schemaComponent.getChildren()) {
+//System.out.println("  child: " + child.getClass().getName());
+          if (child instanceof SimpleContent) {
+//System.out.println("        getLocalDefinition: " + ((SimpleContent) child).getLocalDefinition());
+              globalSimpleType = getBuiltInSimpleType(((SimpleContent) child).getLocalDefinition());
+
+              if (globalSimpleType != null) {
+                  return globalSimpleType;
+              }
+          }
+        }
+        return null;
+    }
+    
+    public static GlobalSimpleType findBuiltInType(SchemaComponent schemaComponent) {
+        return findGlobalSimpleType(getSchemaComponentTypeName(schemaComponent), BUILT_IN_SIMPLE_TYPES);
+    }
+    
+    public static boolean isBuiltInSimpleType(SchemaComponent schemaComponent) {
+        /*
+        if ( !(schemaComponent instanceof GlobalSimpleType)) {
+            return false;
+        }
+        return (findGlobalSimpleType(getSchemaComponentTypeName(schemaComponent), 
+                BUILT_IN_SIMPLE_TYPES) != null);
+        */
+        return findBuiltInType(schemaComponent) != null;
+    }
+
+    public static GlobalSimpleType findGlobalSimpleType(String typeName, Collection<GlobalSimpleType> globalSimpleTypes) {
+        if (typeName != null && globalSimpleTypes != null) {
+            for (GlobalSimpleType globalSimpleType : globalSimpleTypes) {
+                if (ignoreNamespace(globalSimpleType.toString()).equals(ignoreNamespace(typeName))) {
+                    return globalSimpleType;
+                }
+            }
+        }
+        return null;
+    }
+
+    private static String getSchemaComponentTypeName(SchemaComponent schemaComponent) {
+        String typeName = null;
+
+        if ((schemaComponent instanceof SimpleType) || (schemaComponent instanceof ComplexType)) {
+            typeName = schemaComponent.getAttribute(attributeName());
+        }
+        else {
+            NamedComponentReference<? extends GlobalType> typeRef = getSchemaComponentTypeRef(schemaComponent);
+        
+            if (typeRef != null && typeRef.get() != null) {
+                typeName = typeRef.get().getName();
+            }
+            else {
+                typeName = ((SchemaComponent) schemaComponent).getAttribute(attributeType());
+            }
+        }
+        return typeName;
+    }
+    
+    private static NamedComponentReference<? extends GlobalType> getSchemaComponentTypeRef(SchemaComponent schemaComponent) {
+        NamedComponentReference<? extends GlobalType> typeRef = null;
+        try {
+            typeRef = ((TypeContainer) schemaComponent).getType();
+        } 
+        catch (Exception e) {
+        }
+        return typeRef;
+    }
+    
+    public static String ignoreNamespace(String dataWithNamespace) {
+        if (dataWithNamespace == null) {
+          return null;
+        }
+        int index = dataWithNamespace.indexOf(":");
+
+        if ((index > -1) && (index < dataWithNamespace.length() - 1)) {
+            return dataWithNamespace.substring(index + 1);
+        }
+        return dataWithNamespace;
+    }
+
+    public static boolean equal(Object o1, Object o2) {
+        if (o1 == o2) return true;
+        return (o1 == null || o2 == null) ? false : o1.equals(o2);
+    }
+
+    private static final String SCHEMA_COMPONENT_ATTRIBUTE_BASE = "base"; // NOI18N
+    private static final String SCHEMA_COMPONENT_ATTRIBUTE_NAME = "name"; // NOI18N
+    private static final String SCHEMA_COMPONENT_ATTRIBUTE_TYPE = "type"; // NOI18N
+    public static Collection<GlobalSimpleType> BUILT_IN_SIMPLE_TYPES = SchemaModelFactory.getDefault().getPrimitiveTypesModel().getSchema().getSimpleTypes();
 }

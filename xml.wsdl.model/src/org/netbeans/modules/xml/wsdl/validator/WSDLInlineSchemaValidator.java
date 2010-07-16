@@ -55,6 +55,7 @@ import org.w3c.dom.ls.LSResourceResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+@org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.xam.spi.Validator.class)
 public class WSDLInlineSchemaValidator extends XsdBasedValidator {
     
     @SuppressWarnings("unchecked")
@@ -119,31 +120,25 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
                     validatedModels.add(model);
                     return new ValidationResult(resultItems, validatedModels);
                 }
+                return EMPTY_RESULT;
             }
         }
         return null;
     }
     
     private String getSystemId(WSDLModel model) {
+        // # 170429
+        File file = model.getModelSource().getLookup().lookup(File.class);
+         
+        if (file != null) {
+            return file.toURI().toString();
+        }
         Source source = model.getModelSource().getLookup().lookup(Source.class);
 
-        // Try to get Source via File from lookup.
-        if(source == null) {
-            File file = model.getModelSource().getLookup().lookup(File.class);
-            if(file != null) {
-                try {
-                    source =  new SAXSource(new InputSource(new FileInputStream(file)));
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(getClass().getName()).log(Level.SEVERE, "getSystemId", ex); //NOI18N
-                }
-            }
-        }
-        
         if (source != null) {
             return source.getSystemId();
         }
         return null;
-        
     }
 
     private void validate(WSDLModel model, 
@@ -152,10 +147,12 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
                           LSResourceResolver resolver) {
         try {
             SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
             if (resolver != null) {
                 sf.setResourceResolver(resolver);
             }
             sf.setErrorHandler(handler);
+
             if (saxSource == null) {
                 return;
             }
@@ -203,7 +200,6 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
         
     }
 
-    
     class InlineSchemaValidatorHandler extends XsdBasedValidator.Handler {
         int startingLineNumber;
         public InlineSchemaValidatorHandler(Model model, int lineNumber) {
@@ -216,9 +212,6 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
             super.logValidationErrors(resultType, errorDescription, startingLineNumber + lineNumber,
                     columnNumber);
         }
-        
-        
-
     }
 
     @Override
@@ -294,8 +287,6 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
                 splits = null;
                 schemaTop = null;
             }
-
-
             source = new StringReader(strBuf.toString());
 //            source = new SAXSource(new InputSource(new StringReader(strBuf.toString())));
             strBuf = null;
@@ -307,9 +298,7 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
     class WSDLLSResourceResolver implements LSResourceResolver {
         
         private WSDLModel mModel;
-                
         private LSResourceResolver mDelegate;
-        
         private String mWsdlSystemId;
         private String mWsdlText;
         private Map<String, String> mWsdlPrefixes;
@@ -329,6 +318,7 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
              mDelegate = CatalogModelFactory.getDefault().getLSResourceResolver();
            
         }
+
         public LSInput resolveResource(String type, 
                                        String namespaceURI, 
                                        String publicId, 
@@ -336,7 +326,8 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
                                        String baseURI) {
             
              LSInput lsi = mDelegate.resolveResource(type, namespaceURI, publicId, systemId, baseURI);
-             if(lsi == null) {
+
+             if (lsi == null) {
                  //if we can not get an input from catalog, then it could that
                  //there as a schema in types section which refer to schema compoment from other inline schema
                  //so we try to check in other inline schema.
@@ -386,9 +377,7 @@ public class WSDLInlineSchemaValidator extends XsdBasedValidator {
                         }
                     }
                 }
-                
                 return schema;
         }
-        
     }
 }

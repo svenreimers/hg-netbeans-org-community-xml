@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -61,7 +64,7 @@ import org.netbeans.core.spi.multiview.MultiViewElement;
 import org.netbeans.core.spi.multiview.MultiViewElementCallback;
 import org.netbeans.core.spi.multiview.MultiViewFactory;
 import org.netbeans.modules.xml.schema.model.SchemaComponent;
-import org.netbeans.modules.xml.validation.ShowCookie;
+import org.netbeans.modules.xml.validation.ui.ShowCookie;
 import org.netbeans.modules.xml.wsdl.model.WSDLComponent;
 import org.netbeans.modules.xml.wsdl.model.WSDLModel;
 import org.netbeans.modules.xml.wsdl.ui.view.treeeditor.NodesFactory;
@@ -74,6 +77,8 @@ import org.openide.nodes.Node;
 import org.openide.nodes.NodeAdapter;
 import org.openide.nodes.NodeEvent;
 import org.openide.text.CloneableEditor;
+import org.openide.text.Line.ShowOpenType;
+import org.openide.text.Line.ShowVisibilityType;
 import org.openide.text.NbDocument;
 import org.openide.util.Lookup;
 import org.openide.util.RequestProcessor;
@@ -81,7 +86,6 @@ import org.openide.util.lookup.Lookups;
 import org.openide.loaders.DataObject;
 import org.openide.cookies.LineCookie;
 import org.openide.text.Line;
-import org.openide.windows.TopComponent;
 
 /**
  * @author Jeri Lockhart
@@ -143,7 +147,7 @@ public class WSDLSourceMultiViewElement extends CloneableEditor implements Multi
       }
       javax.swing.SwingUtilities.invokeLater(new Runnable() {
           public void run() {
-              line.show(Line.SHOW_GOTO, column);
+              line.show(ShowOpenType.OPEN, ShowVisibilityType.FOCUS, column);
 //todo r              openActiveSourceEditor();
           }
       });
@@ -402,7 +406,7 @@ public class WSDLSourceMultiViewElement extends CloneableEditor implements Multi
         editor.syncModel();
         editor.removeUndoManagerFromDocument();
     }
-
+    
     
     
     @Override

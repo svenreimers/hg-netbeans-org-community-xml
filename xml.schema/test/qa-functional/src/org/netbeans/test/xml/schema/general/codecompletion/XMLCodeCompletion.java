@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -44,8 +47,6 @@ package org.netbeans.test.xml.schema.general.codecompletion;
 import org.netbeans.test.xml.schema.general.GeneralXMLTest;
 
 import org.netbeans.jellytools.EditorOperator;
-import org.netbeans.jellytools.JellyTestCase;
-import org.netbeans.jellytools.NewProjectNameLocationStepOperator;
 import org.netbeans.jellytools.NewFileWizardOperator;
 import org.netbeans.jellytools.ProjectsTabOperator;
 import org.netbeans.jellytools.TopComponentOperator;
@@ -58,8 +59,7 @@ import org.netbeans.jellytools.nodes.Node;
 import org.netbeans.jemmy.operators.*;
 import org.netbeans.jellytools.modules.editor.CompletionJListOperator;
 import java.util.List;
-import javax.swing.SwingUtilities;
-import junit.framework.AssertionFailedError;
+import javax.swing.ListModel;
 
 /**
  *
@@ -117,7 +117,19 @@ public class XMLCodeCompletion extends GeneralXMLTest {
       NewFileWizardOperator.invoke().cancel( );
 
       NewFileWizardOperator opNewFileWizard = NewFileWizardOperator.invoke( );
-      opNewFileWizard.selectCategory( "Java" );
+
+      // There is no comparator support in this class,
+      // but we need it because "Java Server Faces" is before "Java"
+      // and there is no way to find "Java" using standard method,
+      // so find by ourself.
+      // +++ start of hack
+      JDialogOperator jd = new JDialogOperator( "New File" );
+      Sleep( 1500 );
+      JTreeOperator jt = new JTreeOperator( jd, 0 );
+      jt.clickOnPath( jt.findPath( "Java", new CFulltextStringComparator( ) ) );
+      //opNewFileWizard.selectCategory( "Java" );
+      // --- end of hack
+
       opNewFileWizard.selectFileType( "Java Package" );
       opNewFileWizard.next( );
       opNewFileWizard.finish( );

@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -91,7 +94,7 @@ public class SchemaImportPasteType extends PasteType {
         DataObject dObj = ActionHelper.getDataObject(schemaModel);
         Project project = FileOwnerQuery.getOwner(dObj.getPrimaryFile());
         DnDImportPanel panel = new DnDImportPanel();
-        panel.setNamespace(schemaModel.getSchema().getTargetNamespace());
+        panel.setNamespace(Utility.getTargetNamespace(schemaModel));
         panel.setProject(project);
         panel.setPrefix(prefix);
         panel.setFileName(dObj.getPrimaryFile());
@@ -145,7 +148,7 @@ public class SchemaImportPasteType extends PasteType {
         }
         //For wsdl, imported schema's should have a namespace.
 
-        String tns = model.getSchema().getTargetNamespace();
+        String tns = Utility.getTargetNamespace(model);
         if (tns == null) {
             return NbBundle.getMessage(SchemaImportPasteType.class,
                     "ERRMSG_NoNamespace");
@@ -177,7 +180,7 @@ public class SchemaImportPasteType extends PasteType {
         for (WSDLSchema wSchema : wsdlSchemas) {
             SchemaModel sm = wSchema.getSchemaModel();
             Collection<SchemaModelReference> references =
-                    sm.getSchema().getSchemaReferences();
+                sm.getSchema().getSchemaReferences();
             // Ensure the selected document is not already among the
             // set that have been included.
             for (SchemaModelReference ref : references) {

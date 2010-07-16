@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -165,7 +168,6 @@ public abstract class WSDLElementNode<T extends WSDLComponent> extends AbstractN
     /** cached so that during destroy all listeners can be cleaned up, nullified in destroy*/
     private final WeakReference<WSDLModel> wsdlmodel;
 
-//	private final Children children;
     
     private static final SystemAction[] ACTIONS = new SystemAction[] {
         SystemAction.get(CutAction.class),
@@ -210,14 +212,6 @@ public abstract class WSDLElementNode<T extends WSDLComponent> extends AbstractN
         this (Children.create(factory, false), element, new InstanceContent(), newTypesFactory);
         this.factory = factory;
     }
-    
-//    public WSDLElementNode(Children children, T element) {
-//        this(children, element, null);
-//    }
-//    
-//    public WSDLElementNode(Children children, T element, NewTypesFactory newTypesFactory) {
-//        this (children, element, new InstanceContent(), newTypesFactory);
-//    }
 
     /**
      * Constructor hack to allow creating our own Lookup.
@@ -234,12 +228,8 @@ public abstract class WSDLElementNode<T extends WSDLComponent> extends AbstractN
         //and update when childrenAdded and childrenRemoved
         super(children, createLookup(element.getModel(), contents));
         mNewTypesFactory = newTypesFactory;
-//        this.children = children;
         mElement = element;
         mLookupContents = contents;
-//        if (hasChildren()) {
-//        	setChildren(children);
-//        }
         // Add various objects to the lookup.
         // Keep this node and its cookie implementation at the top of the
         // lookup, as they provide cookies needed elsewhere, and we want
@@ -252,9 +242,11 @@ public abstract class WSDLElementNode<T extends WSDLComponent> extends AbstractN
         wsdlmodel = new WeakReference<WSDLModel>(element.getModel());
         
         weakModelListener = WeakListeners.propertyChange(this, wsdlmodel);
-        wsdlmodel.get().addPropertyChangeListener(weakModelListener);
         weakComponentListener = WeakListeners.create(ComponentListener.class, this, wsdlmodel);
-        wsdlmodel.get().addComponentListener(weakComponentListener);
+        if (wsdlmodel.get() != null) {
+            wsdlmodel.get().addPropertyChangeListener(weakModelListener);
+            wsdlmodel.get().addComponentListener(weakComponentListener);
+        }
         
         // Let the node try to update its display name.
         updateDisplayName();
@@ -1019,17 +1011,6 @@ public abstract class WSDLElementNode<T extends WSDLComponent> extends AbstractN
    }
 
    private void updateChildren() {
-//       boolean hasChildren = hasChildren();
-//       if (getChildren() == Children.LEAF) {
-//    	   if (hasChildren) setChildren(children);
-//       } else {
-//    	   if (!hasChildren) setChildren(Children.LEAF);
-//       }
-//       Children myChildren = getChildren();
-//       if (myChildren instanceof RefreshableChildren) {
-//           ((RefreshableChildren) myChildren).refreshChildren();
-//       }
-       
        if (factory instanceof Refreshable) {
            ((Refreshable) factory).refreshChildren(true);
        }

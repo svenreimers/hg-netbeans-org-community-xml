@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -76,8 +79,8 @@ import org.netbeans.modules.xml.schema.ui.basic.SchemaColumnsCategory;
 import org.netbeans.modules.xml.schema.ui.basic.SchemaSettings;
 import org.netbeans.modules.xml.schema.ui.basic.SchemaSettings.ViewMode;
 import org.netbeans.modules.xml.schema.ui.basic.SchemaTreeCategory;
-import org.netbeans.modules.xml.validation.ShowCookie;
-import org.netbeans.modules.xml.validation.ValidateAction;
+import org.netbeans.modules.xml.validation.action.ValidateAction;
+import org.netbeans.modules.xml.validation.ui.ShowCookie;
 import org.netbeans.modules.xml.xam.Component;
 import org.netbeans.modules.xml.xam.Model.State;
 import org.netbeans.modules.xml.xam.spi.Validator.ResultItem;
@@ -88,6 +91,7 @@ import org.netbeans.modules.xml.xam.ui.multiview.ActivatedNodesMediator;
 import org.netbeans.modules.xml.xam.ui.multiview.CookieProxyLookup;
 import org.netbeans.modules.xml.xam.ui.undo.QuietUndoManager;
 import org.netbeans.modules.xml.search.api.SearchManager;
+import org.netbeans.modules.xml.xam.ui.XAMUtils;
 import org.openide.ErrorManager;
 import org.openide.actions.FindAction;
 import org.openide.explorer.ExplorerManager;
@@ -127,10 +131,13 @@ public class SchemaColumnViewMultiViewElement extends TopComponent
     private ExplorerManager manager;
     private ValidateAction validateAction;
 
+    private PropertyChangeListener awtPCL = new XAMUtils.AwtPropertyChangeListener(this);
+
     /**
      * Nullary constructor for deserialization.
      */
     public SchemaColumnViewMultiViewElement() {
+        super();
     }
 
     public SchemaColumnViewMultiViewElement(SchemaDataObject schemaDataObject) {
@@ -220,6 +227,9 @@ public class SchemaColumnViewMultiViewElement extends TopComponent
         if (!SchemaModel.STATE_PROPERTY.equals(property)) {
             return;
         }
+        //
+        assert SwingUtilities.isEventDispatchThread();
+        //
         State newState = (State)evt.getNewValue();
         if (newState == SchemaModel.State.VALID) {
             errorMessage = null;
@@ -233,12 +243,8 @@ public class SchemaColumnViewMultiViewElement extends TopComponent
                     SchemaColumnViewMultiViewElement.class,
                     "MSG_NotWellformedSchema");
         }
-        //fix for IZ:116057
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                setActivatedNodes(new Node[] {schemaDataObject.getNodeDelegate()});
-            }
-        });
+
+        setActivatedNodes(new Node[] {schemaDataObject.getNodeDelegate()});
         emptyUI(errorMessage);
     }
 
@@ -255,7 +261,7 @@ public class SchemaColumnViewMultiViewElement extends TopComponent
             schemaModel = editor.getModel();
             if (schemaModel != null) {
                 PropertyChangeListener pcl = WeakListeners.
-                        create(PropertyChangeListener.class, this, schemaModel);
+                        create(PropertyChangeListener.class, awtPCL, schemaModel);
                 schemaModel.addPropertyChangeListener(pcl);
             }
         } catch (IOException io) {
@@ -295,7 +301,7 @@ public class SchemaColumnViewMultiViewElement extends TopComponent
         SchemaEditorSupport editor = schemaDataObject.getSchemaEditorSupport();
         try {
             SchemaModel sm = editor.getModel();
-            if (sm != null &&
+            if (sm != null && sm.getRootComponent() != null && 
                     sm.getState() == SchemaModel.State.VALID) {
                 return true;
             }
@@ -485,7 +491,8 @@ public class SchemaColumnViewMultiViewElement extends TopComponent
         try {
             SchemaModel model = schemaDataObject
                     .getSchemaEditorSupport().getModel();
-            if (model != null && model.getState() == SchemaModel.State.VALID) {
+            if (model != null && model.getRootComponent() != null &&
+                    model.getState() == SchemaModel.State.VALID) {
                 toolbar = new JToolBar();
                 toolbar.setFloatable(false);
                 if (categoryPane != null) {
@@ -506,7 +513,7 @@ public class SchemaColumnViewMultiViewElement extends TopComponent
         } catch (IOException ioe) {
             // wait until the model is valid
         }
-        return toolbar;
+        return toolbar == null ? new JToolBar() : toolbar;
     }
 
     @Override

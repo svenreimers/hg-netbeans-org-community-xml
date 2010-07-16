@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -72,7 +75,7 @@ import org.openide.nodes.Node;
 import org.openide.util.ImageUtilities;
 import org.openide.util.Lookup;
 import org.openide.util.NbBundle;
-import org.openide.util.Utilities;
+import org.openide.util.ImageUtilities;
 import org.openide.util.WeakListeners;
 import org.openide.util.lookup.ProxyLookup;
 
@@ -120,17 +123,20 @@ public class ImportViewNodes {
 
         // XXX May need to change icons as well
 
+        @Override
         public String getName() {
                 return group.getName();
             
         }
 
+        @Override
         public String getDisplayName() {
                 return MessageFormat.format( GROUP_NAME_PATTERN,
                     new Object[] { group.getDisplayName(), pi.getDisplayName(), getOriginal().getDisplayName() } );
             
         }
 
+        @Override
         public String getShortDescription() {
             FileObject gdir = group.getRootFolder();
             String dir = FileUtil.getFileDisplayName(gdir);
@@ -139,23 +145,28 @@ public class ImportViewNodes {
                                        dir);
         }
 
+        @Override
         public boolean canRename() {
             return false;
         }
 
+        @Override
         public boolean canCut() {
             return false;
         }
 
+        @Override
         public boolean canCopy() {
             // At least for now.
             return false;
         }
 
+        @Override
         public boolean canDestroy() {
             return false;
         }
 
+        @Override
         public Action[] getActions( boolean context ) {
 
             if ( context ) {
@@ -219,11 +230,13 @@ public class ImportViewNodes {
                 this.mFileToExclude = fileToExclude;
         }
         
+        @Override
         protected void addNotify() {
             super.addNotify();
             setKeys( getKeys() );
         }
 
+        @Override
         protected void removeNotify() {
             setKeys( Collections.EMPTY_SET );
             super.removeNotify();
@@ -282,17 +295,20 @@ public class ImportViewNodes {
             this.mFileToExclude = fileToExclude;
         }
         
+        @Override
         protected void addNotify() {
             super.addNotify();
             setKeys( getKeys() );
         }
 
+        @Override
         protected void removeNotify() {
             setKeys( Collections.EMPTY_SET );
             super.removeNotify();
         }
         
         
+        @Override
         protected Node[] createNodes(Object key) {
 
             FileObject folder = null;
@@ -325,6 +341,7 @@ public class ImportViewNodes {
                             Project prj = FileOwnerQuery.getOwner(folder);
                             if(ownerProject.equals(prj)) {
                                 FilterNode fn = new FilterNode(delegate) {
+                                     @Override
                                      public Action getPreferredAction() {
                                          return null;
                                      }
@@ -427,6 +444,7 @@ public class ImportViewNodes {
             this.dupCookie =  new DuplicateFileCookie(fileObject);
         }
         
+        @Override
         public Image getIcon(int type) {
             Image img = super.getIcon(type);
             fileExists = isFileExistsInPreviousProject();
@@ -440,6 +458,7 @@ public class ImportViewNodes {
         }
         
         
+        @Override
         public Cookie getCookie(Class type) {
             Cookie c = this.set.getCookie(type);
             if(c != null) {
@@ -449,6 +468,7 @@ public class ImportViewNodes {
             return super.getCookie(type);
         }
         
+        @Override
         public String getShortDescription() {
             if(isFileExistsInPreviousProject()) {
                 return "File already exists in a previous project.";

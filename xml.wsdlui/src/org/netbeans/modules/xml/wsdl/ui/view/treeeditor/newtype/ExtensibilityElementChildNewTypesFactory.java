@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -50,6 +53,7 @@ import javax.xml.namespace.QName;
 import org.netbeans.modules.xml.schema.model.Element;
 import org.netbeans.modules.xml.wsdl.model.ExtensibilityElement;
 import org.netbeans.modules.xml.wsdl.model.WSDLComponent;
+import org.netbeans.modules.xml.wsdl.ui.netbeans.module.Utility;
 import org.netbeans.modules.xml.wsdl.ui.schema.visitor.CreateAddSchemaElementActionVisitor;
 import org.netbeans.modules.xml.wsdl.ui.schema.visitor.SchemaElementMinMaxOccursFinderVisitor;
 import org.netbeans.modules.xml.xam.Nameable;
@@ -96,7 +100,8 @@ public class ExtensibilityElementChildNewTypesFactory implements NewTypesFactory
                     
                     if (element instanceof Nameable) {
                         Nameable nameable = (Nameable) element;
-                        QName elementQName = new QName(element.getModel().getSchema().getTargetNamespace(), nameable.getName());
+                        String ns = Utility.getTargetNamespace(element.getModel());
+                        QName elementQName = new QName(ns, nameable.getName());
                         if (!qnameMap.containsKey(elementQName) || maxOccurs > qnameMap.get(elementQName).intValue()) {
                             eeNewTypeList.add(new ExtensibilityElementChildNewType(component, element));
                         }

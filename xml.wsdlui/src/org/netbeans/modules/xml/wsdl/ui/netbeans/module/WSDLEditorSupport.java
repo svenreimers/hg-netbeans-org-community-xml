@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -69,9 +72,12 @@ import org.netbeans.core.spi.multiview.CloseOperationHandler;
 import org.netbeans.core.spi.multiview.CloseOperationState;
 import org.netbeans.modules.xml.api.EncodingUtil;
 import org.netbeans.modules.xml.retriever.catalog.Utilities;
+import org.netbeans.modules.xml.wsdl.model.Definitions;
 import org.netbeans.modules.xml.wsdl.model.WSDLModel;
 import org.netbeans.modules.xml.wsdl.model.WSDLModelFactory;
+import org.netbeans.modules.xml.xam.Model;
 import org.netbeans.modules.xml.xam.ModelSource;
+import org.netbeans.modules.xml.xam.ui.cookies.ViewComponentCookie;
 import org.netbeans.modules.xml.xam.ui.undo.QuietUndoManager;
 import org.netbeans.modules.xml.xdm.nodes.Convertors;
 import org.openide.DialogDisplayer;
@@ -143,6 +149,30 @@ public class WSDLEditorSupport extends DataEditorSupport
         }
         return (Pane) tc;
     }
+
+    @Override
+    public void open() {
+        if (getOpenedPanes() != null &&
+                getOpenedPanes().length > 0) {
+            //if already open, open current view.
+            super.open();
+            return;
+        }
+        // Do not use  ViewComponentCookie here, because of recursion.
+        WSDLModel model = getModel();
+        Definitions def = null;
+        if (model.getState() == Model.State.VALID) {
+            def = model.getDefinitions();
+        }
+        String preferredID = WSDLTreeViewMultiViewDesc.PREFERRED_ID;
+        if (def == null) {
+            preferredID = WSDLSourceMultiviewDesc.PREFERRED_ID;
+        }
+        super.open();
+        WSDLMultiViewFactory.requestMultiviewActive(preferredID);
+    }
+    
+    
 
     /**
      *

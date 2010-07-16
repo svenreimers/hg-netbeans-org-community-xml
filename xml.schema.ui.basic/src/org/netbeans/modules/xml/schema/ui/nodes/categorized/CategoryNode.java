@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -69,7 +72,7 @@ import org.netbeans.modules.xml.xam.ui.highlight.HighlightManager;
 import org.openide.actions.NewAction;
 import org.openide.actions.PasteAction;
 import org.openide.filesystems.FileObject;
-import org.openide.filesystems.Repository;
+import org.openide.filesystems.FileUtil;
 import org.openide.loaders.DataObject;
 import org.openide.loaders.DataObjectNotFoundException;
 import org.openide.nodes.AbstractNode;
@@ -80,7 +83,6 @@ import org.openide.util.HelpCtx;
 import org.openide.util.ImageUtilities;
 import org.openide.util.Lookup;
 import org.openide.util.NbBundle;
-import org.openide.util.Utilities;
 import org.openide.util.WeakListeners;
 import org.openide.util.actions.SystemAction;
 import org.openide.util.datatransfer.NewType;
@@ -168,7 +170,7 @@ public class CategoryNode extends AbstractNode
 		// TODO: Need to allow the children object to do the work here
                 SchemaModel model = parentReference.get().getModel();
                 weakComponentListener = (ComponentListener) WeakListeners.create(
-                        ComponentListener.class, this, model);
+                        ComponentListener.class, awtCL, model);
                 model.addComponentListener(weakComponentListener);
 
                 referenceSet = new HashSet<Component>();
@@ -225,6 +227,7 @@ public class CategoryNode extends AbstractNode
 	 *
 	 *
 	 */
+    @Override
 	public int hashCode() {
 		// Without this, the tree view collapses when nodes are changed.
 		return getName().hashCode();
@@ -342,6 +345,7 @@ public class CategoryNode extends AbstractNode
 	}
 
         @SuppressWarnings("unchecked")
+        @Override
         protected void createPasteTypes(Transferable transferable, List list) {
             if (isValid() && isEditable()) {
                 PasteType type = ComponentPasteType.getPasteType(
@@ -407,6 +411,7 @@ public class CategoryNode extends AbstractNode
 	 *
 	 *
 	 */
+    @Override
 	public NewType[] getNewTypes()
 	{
 		SchemaModel model = getReference().get().getModel();
@@ -518,8 +523,7 @@ public class CategoryNode extends AbstractNode
         }
 
 	private Node getFolderNode() {
-	    FileObject fo =
-		Repository.getDefault().getDefaultFileSystem().getRoot();
+	    FileObject fo = FileUtil.getConfigRoot();
 	    Node n = null;
 	    try {
 		DataObject dobj = DataObject.find(fo);
@@ -565,7 +569,8 @@ public class CategoryNode extends AbstractNode
 	    this.badge = badge;
 	}
 	
-        public String getHtmlDisplayName() {
+    @Override
+    public String getHtmlDisplayName() {
             String name = getDisplayName();
             // Need to escape any HTML meta-characters in the name.
             name = name.replace("<", "&lt;").replace(">", "&gt;");
@@ -601,5 +606,6 @@ public class CategoryNode extends AbstractNode
 	private InstanceContent lookupContents;
         private ComponentListener weakComponentListener;
 	private String badge;
+    private ComponentListener awtCL = new XAMUtils.AwtComponentListener(this);
 	
 }

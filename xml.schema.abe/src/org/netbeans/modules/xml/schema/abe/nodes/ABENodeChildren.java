@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -43,7 +46,6 @@ package org.netbeans.modules.xml.schema.abe.nodes;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import org.netbeans.modules.xml.axi.AXIComponent;
 import org.netbeans.modules.xml.axi.AXIContainer;
@@ -52,9 +54,9 @@ import org.netbeans.modules.xml.axi.AbstractElement;
 import org.netbeans.modules.xml.axi.AnyElement;
 import org.netbeans.modules.xml.axi.Compositor;
 import org.netbeans.modules.xml.axi.ContentModel;
-import org.netbeans.modules.xml.axi.Element;
 import org.netbeans.modules.xml.xam.ComponentEvent;
 import org.netbeans.modules.xml.xam.ComponentListener;
+import org.netbeans.modules.xml.xam.ui.XAMUtils;
 import org.openide.nodes.Children;
 import org.openide.nodes.Node;
 import org.openide.util.WeakListeners;
@@ -66,6 +68,7 @@ import org.openide.util.WeakListeners;
 public class ABENodeChildren extends Children.Keys
         implements ComponentListener {
     private AXIComponent component;
+    private ComponentListener awtCL = new XAMUtils.AwtComponentListener(this);
     
     /** Creates a new instance of ABENodeChildren */
     public ABENodeChildren(AXIComponent component) {
@@ -95,12 +98,13 @@ public class ABENodeChildren extends Children.Keys
         super.addNotify();
         refreshChildren();
         if(component != null && component.getModel() != null) {
-            ComponentListener cl = WeakListeners.create(ComponentListener.class, this,
-                    component.getModel());
+            ComponentListener cl = WeakListeners.create(ComponentListener.class,
+                    awtCL, component.getModel());
             component.getModel().addComponentListener(cl);
         }
     }
     
+    @Override
     protected void removeNotify() {
         super.removeNotify();
         setKeys(Collections.emptyList());

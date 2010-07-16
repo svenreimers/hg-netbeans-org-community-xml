@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -50,7 +53,6 @@
 
 package org.netbeans.modules.xml.wsdl.ui.actions.schema;
 
-import java.io.IOException;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -100,7 +102,6 @@ import org.netbeans.modules.xml.wsdl.ui.spi.ExtensibilityElementConfigurator;
 import org.netbeans.modules.xml.wsdl.ui.spi.ExtensibilityElementConfiguratorFactory;
 import org.netbeans.modules.xml.xam.dom.AbstractDocumentComponent;
 import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
-import org.openide.ErrorManager;
 import org.openide.util.NbBundle;
 
 /**
@@ -236,14 +237,14 @@ public class ExtensibilityElementCreatorVisitor extends AbstractXSDVisitor {
         int minOccurs = le.getMinOccursEffective();
         //if this is top level object or min occur is > 0 then visit
         if(mStack.size() == 1 || minOccurs > 0) {
-            String namespace = le.getModel().getSchema().getTargetNamespace();
+            String namespace = Utility.getTargetNamespace(le.getModel());
             visit(le, le.getName(), namespace);
         }
     }
     
     @Override    
     public void visit(GlobalElement ge) {
-        String namespace = ge.getModel().getSchema().getTargetNamespace();
+        String namespace = Utility.getTargetNamespace(ge.getModel());
         visit(ge, ge.getName(), namespace);
     }
     
@@ -427,7 +428,8 @@ public class ExtensibilityElementCreatorVisitor extends AbstractXSDVisitor {
         } else if(fixedValue != null) {
             attrVal = fixedValue;
         } else {
-            QName elementQName = new QName(attr.getModel().getSchema().getTargetNamespace(), exElement.getQName().getLocalPart());
+            String targetNs = Utility.getTargetNamespace(attr.getModel());
+            QName elementQName = new QName(targetNs, exElement.getQName().getLocalPart());
             ExtensibilityElementConfigurator configurator = 
                 ExtensibilityElementConfiguratorFactory.getDefault().getExtensibilityElementConfigurator(elementQName);
             if(simpleType != null) {
@@ -436,13 +438,12 @@ public class ExtensibilityElementCreatorVisitor extends AbstractXSDVisitor {
                 if (simpleType instanceof GlobalSimpleType) {
                     simpleTypeName = ((GlobalSimpleType) simpleType).getName();
                 }
-                
-                String namesapce = simpleType.getModel().getSchema().getTargetNamespace();
-                SchemaModel primitiveTypesModel = SchemaModelFactory.getDefault().getPrimitiveTypesModel();
-                String primitiveTypeNamesapce = primitiveTypesModel.getSchema().getTargetNamespace();
-                if(namesapce != null 
-                        && namesapce.equals(primitiveTypeNamesapce)
-                        && simpleTypeName != null && simpleTypeName.equals("boolean")) {//NOI18N
+                SchemaModel primitiveTypesModel =
+                        SchemaModelFactory.getDefault().getPrimitiveTypesModel();
+                //
+                if (simpleType.getModel() == primitiveTypesModel &&
+                        "boolean".equals(simpleTypeName)) {//NOI18N
+                    //
                     if (configurator != null) {
                         attrVal = configurator.getDefaultValue(exElement, exElement.getQName(), attrName);
                     }

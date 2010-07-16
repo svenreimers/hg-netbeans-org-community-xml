@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -41,6 +44,7 @@
 
 package org.netbeans.modules.xml.wsdl.ui.wizard;
 
+import org.netbeans.modules.xml.wsdl.ui.wizard.common.WSDLWizardConstants;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -52,6 +56,8 @@ import java.util.Map;
 
 import javax.xml.XMLConstants;
 
+import org.netbeans.api.project.FileOwnerQuery;
+import org.netbeans.api.project.Project;
 import org.netbeans.modules.xml.catalogsupport.DefaultProjectCatalogSupport;
 import org.netbeans.modules.xml.schema.model.GlobalElement;
 import org.netbeans.modules.xml.schema.model.GlobalType;
@@ -62,6 +68,8 @@ import org.netbeans.modules.xml.wsdl.model.Definitions;
 import org.netbeans.modules.xml.wsdl.model.Types;
 import org.netbeans.modules.xml.wsdl.model.WSDLModel;
 import org.netbeans.modules.xml.wsdl.model.extensions.xsd.WSDLSchema;
+import org.netbeans.modules.xml.wsdl.ui.api.property.CatalogHelper;
+import org.netbeans.modules.xml.wsdl.ui.netbeans.module.Utility;
 import org.netbeans.modules.xml.wsdl.ui.view.ElementOrType;
 import org.netbeans.modules.xml.wsdl.ui.view.PartAndElementOrTypeTableModel;
 import org.netbeans.modules.xml.wsdl.ui.view.PartAndElementOrTypeTableModel.PartAndElementOrType;
@@ -97,13 +105,13 @@ public class SchemaImportsGenerator implements Command {
     public void execute() {
         if(mModel != null) {
             List<PartAndElementOrTypeTableModel.PartAndElementOrType> inputMessageParts = 
-                (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_INPUT);
+                (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_INPUT);
             
             List<PartAndElementOrTypeTableModel.PartAndElementOrType> outputMessageParts = 
-                (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_OUTPUT);
+                (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_OUTPUT);
             
             List<PartAndElementOrTypeTableModel.PartAndElementOrType> faultMessageParts = 
-                (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_FAULT);
+                (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_FAULT);
             
             List<PartAndElementOrTypeTableModel.PartAndElementOrType> allParts = new ArrayList<PartAndElementOrTypeTableModel.PartAndElementOrType>();
             if (inputMessageParts != null) {
@@ -116,14 +124,14 @@ public class SchemaImportsGenerator implements Command {
                 allParts.addAll(faultMessageParts);
             }
             
-            Map<String, String> namespaceToPrefixMap = (Map) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.NAMESPACE_TO_PREFIX_MAP);
+            Map<String, String> namespaceToPrefixMap = (Map) this.mConfigurationMap.get(WSDLWizardConstants.NAMESPACE_TO_PREFIX_MAP);
             if (namespaceToPrefixMap != null) {
                 for (String namespace : namespaceToPrefixMap.keySet()) {
                     ((AbstractDocumentComponent) mModel.getDefinitions()).addPrefix(namespaceToPrefixMap.get(namespace), namespace);
                 }
             }
             boolean fromWizard = false;
-            if (mConfigurationMap.containsKey(WizardPortTypeConfigurationStep.IS_FROM_WIZARD)) {
+            if (mConfigurationMap.containsKey(WSDLWizardConstants.IS_FROM_WIZARD)) {
                 fromWizard = true;
             }
             
@@ -198,7 +206,7 @@ public class SchemaImportsGenerator implements Command {
              }
              
              if (model != null) {
-                 String schemaTNS = model.getSchema().getTargetNamespace();
+                 String schemaTNS = Utility.getTargetNamespace(model);
                  if (schemaTNS != null && 
                          !schemaTNS.equals(XMLConstants.W3C_XML_SCHEMA_NS_URI)) {
                      
@@ -211,25 +219,31 @@ public class SchemaImportsGenerator implements Command {
                              // generate absolute URI, this will get changed later in wizard post process import
                              path = FileUtil.toFile(fo).toURI().toString();
                          } else if (!FileUtil.toFile(fo).toURI().equals(wsdlFileURI)) { 
-                             //should be different files. in case of inline schemas.
-                             DefaultProjectCatalogSupport catalogSupport = DefaultProjectCatalogSupport.getInstance(wsdlFileObj);
-                             if (catalogSupport.needsCatalogEntry(wsdlFileObj, fo)) {
-                                 // Remove the previous catalog entry, then create new one.
-                                 URI uri;
-                                 try {
-                                     uri = catalogSupport.getReferenceURI(wsdlFileObj, fo);
-                                     catalogSupport.removeCatalogEntry(uri);
-                                     catalogSupport.createCatalogEntry(wsdlFileObj, fo);
-                                     path = catalogSupport.getReferenceURI(wsdlFileObj, fo).toString();
-                                 } catch (URISyntaxException use) {
-                                     ErrorManager.getDefault().notify(use);
-                                 } catch (IOException ioe) {
-                                     ErrorManager.getDefault().notify(ioe);
-                                 } catch (CatalogModelException cme) {
-                                     ErrorManager.getDefault().notify(cme);
+                             //see if its a remote reference
+                             Project wsdlProject = FileOwnerQuery.getOwner(wsdlFileObj);
+                             CatalogHelper catalogHelper = new CatalogHelper(wsdlProject);
+                             path = catalogHelper.getReferencePath(fo, "xsd");
+                             if (path == null) {
+                                 //should be different files. in case of inline schemas.
+                                 DefaultProjectCatalogSupport catalogSupport = DefaultProjectCatalogSupport.getInstance(wsdlFileObj);
+                                 if (catalogSupport.needsCatalogEntry(wsdlFileObj, fo)) {
+                                     // Remove the previous catalog entry, then create new one.
+                                     URI uri;
+                                     try {
+                                         uri = catalogSupport.getReferenceURI(wsdlFileObj, fo);
+                                         catalogSupport.removeCatalogEntry(uri);
+                                         catalogSupport.createCatalogEntry(wsdlFileObj, fo);
+                                         path = catalogSupport.getReferenceURI(wsdlFileObj, fo).toString();
+                                     } catch (URISyntaxException use) {
+                                         ErrorManager.getDefault().notify(use);
+                                     } catch (IOException ioe) {
+                                         ErrorManager.getDefault().notify(ioe);
+                                     } catch (CatalogModelException cme) {
+                                         ErrorManager.getDefault().notify(cme);
+                                     }
+                                 } else {
+                                     path = RelativePath.getRelativePath(FileUtil.toFile(wsdlFileObj).getParentFile(), FileUtil.toFile(fo));
                                  }
-                             } else {
-                                 path = RelativePath.getRelativePath(FileUtil.toFile(wsdlFileObj).getParentFile(), FileUtil.toFile(fo));
                              }
                          }
                          if (path != null && (!existingLocationToNamespaceMap.containsKey(path) ||

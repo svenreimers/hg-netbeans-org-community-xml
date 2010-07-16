@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -50,6 +53,7 @@
 
 package org.netbeans.modules.xml.wsdl.ui.wizard;
 
+import org.netbeans.modules.xml.wsdl.ui.wizard.common.WSDLWizardConstants;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -126,8 +130,8 @@ public class OperationGenerator implements Command {
     public void execute() {
         if(mModel != null) {
             //operation
-            String operationName = (String) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_NAME);
-            OperationType ot = (OperationType) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_TYPE);
+            String operationName = (String) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_NAME);
+            OperationType ot = (OperationType) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_TYPE);
             
             this.mOperation = createOperation(ot, mModel);
             this.mOperation.setName(operationName);
@@ -135,21 +139,21 @@ public class OperationGenerator implements Command {
             
             //opertion type
             List<PartAndElementOrTypeTableModel.PartAndElementOrType> inputMessageParts = 
-                    (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_INPUT);
+                    (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_INPUT);
             
             List<PartAndElementOrTypeTableModel.PartAndElementOrType> outputMessageParts = 
-                    (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_OUTPUT);
+                    (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_OUTPUT);
             
             List<PartAndElementOrTypeTableModel.PartAndElementOrType> faultMessageParts = 
-                    (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_FAULT);
+                    (List<PartAndElementOrTypeTableModel.PartAndElementOrType>) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_FAULT);
 
             SchemaImportsGenerator schemaImportGenerator = new SchemaImportsGenerator(this.mModel, mConfigurationMap);
             schemaImportGenerator.execute();
             mImports.addAll(schemaImportGenerator.getImports());
             
-            String inputMessageName = (String) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_INPUT_MESSAGE);
-            String outputMessageName = (String) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_OUTPUT_MESSAGE);
-            String faultMessageName  = (String) this.mConfigurationMap.get(WizardPortTypeConfigurationStep.OPERATION_FAULT_MESSAGE);
+            String inputMessageName = (String) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_INPUT_MESSAGE);
+            String outputMessageName = (String) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_OUTPUT_MESSAGE);
+            String faultMessageName  = (String) this.mConfigurationMap.get(WSDLWizardConstants.OPERATION_FAULT_MESSAGE);
                     
             processOperationType(ot, 
                                 this.mOperation, 

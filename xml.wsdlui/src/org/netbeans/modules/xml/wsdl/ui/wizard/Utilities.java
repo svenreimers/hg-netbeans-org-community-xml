@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -67,7 +70,8 @@ public class Utilities {
             if (i < (before.length - diff)) {
                 res[i] = before[i];
             } else {
-                res[i] = panels[i - before.length + diff].getComponent().getName();
+                Component component = panels[i - before.length + diff].getComponent();
+                res[i] = component != null ? component.getName() : "...";
             }
         }
         return res;
@@ -111,5 +115,22 @@ public class Utilities {
             }
         }
         return null;
+    }
+    
+    
+    public static String[] createSteps(String[] before) {
+        //assert panels != null;
+        // hack to use the steps set before this panel processed
+        int diff = 0;
+        if (before == null) {
+            before = new String[0];
+        } else if (before.length > 0) {
+            diff = ("...".equals(before[before.length - 1])) ? 1 : 0; // NOI18N
+        }
+        String[] res = new String[(before.length - diff)];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = before[i];
+        }
+        return res;
     }
 }

@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -68,7 +71,7 @@ import org.netbeans.modules.xml.wsdl.ui.view.OperationConfigurationPanel;
 import org.netbeans.modules.xml.wsdl.ui.view.OperationType;
 import org.netbeans.modules.xml.wsdl.ui.view.PartAndElementOrTypeTableModel;
 import org.netbeans.modules.xml.wsdl.ui.wizard.OperationGenerator;
-import org.netbeans.modules.xml.wsdl.ui.wizard.WizardPortTypeConfigurationStep;
+import org.netbeans.modules.xml.wsdl.ui.wizard.common.WSDLWizardConstants;
 import org.netbeans.modules.xml.xam.ModelSource;
 import org.openide.DialogDescriptor;
 import org.openide.DialogDisplayer;
@@ -127,37 +130,37 @@ public class PortTypeOperationNewType extends NewType {
                     
                     String operationName = opPanel.getOperationName();
                     OperationType ot = opPanel.getOperationType();
-                    configurationMap.put(WizardPortTypeConfigurationStep.OPERATION_NAME, operationName);
-                    configurationMap.put(WizardPortTypeConfigurationStep.OPERATION_TYPE, ot);
+                    configurationMap.put(WSDLWizardConstants.OPERATION_NAME, operationName);
+                    configurationMap.put(WSDLWizardConstants.OPERATION_TYPE, ot);
                     
                     String inputMessageName = opPanel.getInputMessageName();
                     String outputMessageName = opPanel.getOutputMessageName();
                     String faultMessageName = opPanel.getFaultMessageName();
                     
-                    configurationMap.put(WizardPortTypeConfigurationStep.OPERATION_INPUT_MESSAGE, inputMessageName);
-                    configurationMap.put(WizardPortTypeConfigurationStep.OPERATION_OUTPUT_MESSAGE, outputMessageName);
-                    configurationMap.put(WizardPortTypeConfigurationStep.OPERATION_FAULT_MESSAGE, faultMessageName);
+                    configurationMap.put(WSDLWizardConstants.OPERATION_INPUT_MESSAGE, inputMessageName);
+                    configurationMap.put(WSDLWizardConstants.OPERATION_OUTPUT_MESSAGE, outputMessageName);
+                    configurationMap.put(WSDLWizardConstants.OPERATION_FAULT_MESSAGE, faultMessageName);
                     
                     List<PartAndElementOrTypeTableModel.PartAndElementOrType> inputParts = opPanel.getInputMessageParts();
                     List<PartAndElementOrTypeTableModel.PartAndElementOrType> outputParts = opPanel.getOutputMessageParts();
                     List<PartAndElementOrTypeTableModel.PartAndElementOrType> faultParts = opPanel.getFaultMessageParts();
                     Map<String, String> namespaceToPrefixMap = opPanel.getNamespaceToPrefixMap();
                     
-                    configurationMap.put(WizardPortTypeConfigurationStep.NAMESPACE_TO_PREFIX_MAP, namespaceToPrefixMap);
+                    configurationMap.put(WSDLWizardConstants.NAMESPACE_TO_PREFIX_MAP, namespaceToPrefixMap);
                    
                     //if inputMessage Name is new not an existing message name then populate part names as well
                     if(opPanel.isNewInputMessage()) {
-                        configurationMap.put(WizardPortTypeConfigurationStep.OPERATION_INPUT, inputParts);
+                        configurationMap.put(WSDLWizardConstants.OPERATION_INPUT, inputParts);
                     }
                     
                     //if outputMessage Name is new not an existing message name then populate part names as well
                     if(opPanel.isNewOutputMessage()) {
-                        configurationMap.put(WizardPortTypeConfigurationStep.OPERATION_OUTPUT, outputParts);
+                        configurationMap.put(WSDLWizardConstants.OPERATION_OUTPUT, outputParts);
                     }
                     
                     //if faultMessage Name is new not an existing message name then populate part names as well
                     if(opPanel.isNewFaultMessage()) {
-                        configurationMap.put(WizardPortTypeConfigurationStep.OPERATION_FAULT, faultParts);
+                        configurationMap.put(WSDLWizardConstants.OPERATION_FAULT, faultParts);
                     }
                     model.startTransaction();
                     OperationGenerator opGen = new OperationGenerator(model, this.mPortType, configurationMap);

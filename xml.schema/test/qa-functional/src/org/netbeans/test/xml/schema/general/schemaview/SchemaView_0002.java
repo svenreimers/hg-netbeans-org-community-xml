@@ -1,7 +1,10 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+ * Copyright 1997-2010 Oracle and/or its affiliates. All rights reserved.
+ *
+ * Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+ * Other names may be trademarks of their respective owners.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common
@@ -13,9 +16,9 @@
  * specific language governing permissions and limitations under the
  * License.  When distributing the software, include this License Header
  * Notice in each file and include the License file at
- * nbbuild/licenses/CDDL-GPL-2-CP.  Sun designates this
+ * nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
  * particular file as subject to the "Classpath" exception as provided
- * by Sun in the GPL Version 2 section of the License file that
+ * by Oracle in the GPL Version 2 section of the License file that
  * accompanied this code. If applicable, add the following below the
  * License Header, with the fields enclosed by brackets [] replaced by
  * your own identifying information:
@@ -62,6 +65,7 @@ import org.netbeans.jemmy.operators.JDialogOperator;
 import org.netbeans.jemmy.operators.JLabelOperator;
 import org.netbeans.jemmy.operators.JTextComponentOperator;
 import org.netbeans.junit.NbModuleSuite;
+import org.netbeans.jemmy.Timeouts;
 
 /**
  *
@@ -145,6 +149,17 @@ public class SchemaView_0002 extends SchemaView {
   {
     String[] asButtons = { "Find Next", "Find Previous", "Clear" };
     System.out.println( "+++ Enter." );
+
+    // Set new timeout
+    Timeouts t =  top.getTimeouts( );
+    long lBack = 0;
+    if( !bPresent )
+    {
+      lBack = t.getTimeout( "ComponentOperator.WaitComponentTimeout" );
+      t.setTimeout( "ComponentOperator.WaitComponentTimeout", 1000 );
+      top.setTimeouts( t );
+    }
+
     for( String s : asButtons )
     {
       try
@@ -155,6 +170,8 @@ public class SchemaView_0002 extends SchemaView {
         if( !bPresent )
         {
           System.out.println( "+++ Should not be present." );
+          t.setTimeout( "ComponentOperator.WaitComponentTimeout", lBack );
+          top.setTimeouts( t );
           return false;
         }
       }
@@ -169,6 +186,11 @@ public class SchemaView_0002 extends SchemaView {
       }
     }
     System.out.println( "+++ Done." );
+    if( !bPresent )
+    {
+      t.setTimeout( "ComponentOperator.WaitComponentTimeout", lBack );
+      top.setTimeouts( t );
+    }
     return true;
   }
 
@@ -555,8 +577,13 @@ public class SchemaView_0002 extends SchemaView {
     TreeModel tm = jtUsages.getModel( );
     Object o[] = new Object[ 11 ];
     o[ 0 ] = tm.getRoot( );
+    //System.out.println( "===" + o[ 0 ] );
     for( int i = 1; i < 11; i++ )
+    {
       o[ i ] = tm.getChild( o[ i - 1 ], 0 );
+      //System.out.println( "===" + o[ i ] );
+    }
+    Sleep( 1000 );
     TreePath tpp = new TreePath( o );
     jtUsages.selectPath( tpp );
 

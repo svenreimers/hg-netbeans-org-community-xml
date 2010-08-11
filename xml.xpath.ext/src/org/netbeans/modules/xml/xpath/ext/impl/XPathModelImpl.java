@@ -359,15 +359,16 @@ public class XPathModelImpl implements XPathModel {
 
                 if (parentCompHolder != null) {
                     
-                    // xsi:type
-                    if (isAttribute && nodeName.equals("type") &&
-                            XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI.
+                	// xsi:atribute
+                    if (isAttribute && XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI.
                             equalsIgnoreCase(nsUri))
                     {
-                       SchemaCompPair newPair = new SchemaCompPair(SchemaCompHolder.
-                               Factory.construct(SchemaUtils.getXsiTypeAttr()),
-                               parentCompHolder);
-                        addPair(foundCompPairSet, newPair);
+                    	SchemaComponent xsiAttr = SchemaUtils.getXsiAttr(nodeName);
+                    	if(xsiAttr != null) {
+                    		SchemaCompPair newPair = new SchemaCompPair(SchemaCompHolder.
+                    				Factory.construct(xsiAttr),parentCompHolder);
+                    		addPair(foundCompPairSet, newPair);
+                    	}
                         break; 
                     }
                     

@@ -87,18 +87,18 @@ import org.openide.util.Exceptions;
  * @author Ajit
  */
 public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
-        
+
     public Project project;
     public AntProjectHelper helper;
     public ReferenceHelper refHelper;
-    
+
     /**
      * Creates a new instance of DefaultProjectCatalogSupport
      */
     public DefaultProjectCatalogSupport(Project project) {
         this(project,project.getLookup().lookup(AntProjectHelper.class),project.getLookup().lookup(ReferenceHelper.class));
     }
-    
+
     public DefaultProjectCatalogSupport(Project project, AntProjectHelper helper,
             ReferenceHelper refHelper) {
         this.project = project;
@@ -120,11 +120,11 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
         }
         return (DefaultProjectCatalogSupport) owner.getLookup().lookup(DefaultProjectCatalogSupport.class);
     }
-    
+
     public boolean supportsCrossProject() {
         return helper != null;
     }
-    
+
     public URI constructProjectProtocol(FileObject foTobeAddedInCat) {
         Project owner = FileOwnerQuery.getOwner(foTobeAddedInCat);
         if(owner!=null) {
@@ -137,11 +137,11 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
         }
         return null;
     }
-    
+
     public boolean isProjectProtocol(URI uriStoredInCatFile) {
         return ProjectConstants.NBURI_SCHEME.equals(uriStoredInCatFile.getScheme());
     }
-    
+
     public FileObject resolveProjectProtocol(URI uriToBeResolved) {
         if(supportsCrossProject() && isProjectProtocol(uriToBeResolved)) {
             String ssp = uriToBeResolved.getSchemeSpecificPart();
@@ -149,6 +149,7 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
                     AntProjectHelper.PROJECT_PROPERTIES_PATH).
                     getProperty("project.".concat(ssp));
             if(targetPrjRelativeRoot!=null){
+				targetPrjRelativeRoot = targetPrjRelativeRoot.replaceAll(" ", "%20");
                 File myPrjRoot = FileUtil.toFile(project.getProjectDirectory());
                 File tgtPrjRoot = new File(myPrjRoot.toURI().resolve(targetPrjRelativeRoot));
                 FileObject tgtPrjFobj = FileUtil.toFileObject(FileUtil.normalizeFile(tgtPrjRoot));
@@ -161,7 +162,7 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
         }
         return null;
     }
-    
+
     public boolean needsCatalogEntry(FileObject source, FileObject target) {
         assert source !=null && target !=null;
         // check if target belongs to different project or different source root
@@ -173,11 +174,11 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
         if (folder != null && !FileUtil.isParentOf(folder,target)) {
             return true;
         }
-        
+
         return false;
     }
-    
-    public URI createCatalogEntry(FileObject source, FileObject target) 
+
+    public URI createCatalogEntry(FileObject source, FileObject target)
            throws IOException, CatalogModelException {
         assert source !=null && target !=null;
         CatalogWriteModel cwm = CatalogWriteModelFactory.getInstance().
@@ -207,7 +208,7 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
             }
             sourceURI = targetURI;
         }
-        
+
         try {
             if (sourceURI != null) {
                 sourceURI = new URI(sourceURI.toASCIIString());
@@ -224,7 +225,7 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
 
         return sourceURI;
     }
-    
+
     public URI getReferenceURI(FileObject source, FileObject target) throws URISyntaxException {
         Project targetProject = FileOwnerQuery.getOwner(target);
         FileObject sourceFolder = getSourceFolderByContentFile(source);
@@ -233,12 +234,12 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
             sourceFolder = source;
         }
         String relPathToSrcGroup = getRelativePath(source.getParent(), sourceFolder);
-        String relPathToSrcGroupWithSlash = relPathToSrcGroup.trim().equals("") ? "" : 
+        String relPathToSrcGroupWithSlash = relPathToSrcGroup.trim().equals("") ? "" :
             relPathToSrcGroup.concat("/");
 
         if (project != targetProject && targetProject != null) {
             FileObject folder = getSourceFolderByContentFile(targetProject, target);
-        
+
             if (folder == null) {
                 String relPathFromTgtGroup = getRelativePath(targetProject.getProjectDirectory(), target);
                 return new URI(getUsableProjectName(targetProject).concat("/").concat(relPathFromTgtGroup));
@@ -247,7 +248,7 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
             return new URI(getUsableProjectName(targetProject) + "/" + relPathFromTgtGroup);
         } else {
             FileObject targetSourceFolderByContentFile = getSourceFolderByContentFile(target);
-        
+
             if (targetSourceFolderByContentFile == null) {
                 targetSourceFolderByContentFile = target;
             }
@@ -262,17 +263,17 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
             return new URI(relPathToSrcGroupWithSlash.concat(relativePath));
         }
     }
-    
+
     public Set getProjectReferences() {
         SubprojectProvider provider = (SubprojectProvider)project.getLookup().
                 lookup(SubprojectProvider.class);
         return provider.getSubprojects();
     }
-    
+
     private FileObject getSourceFolderByContentFile(FileObject source) {
         return getSourceFolderByContentFile(project, source);
     }
-    
+
     private static String[] sourceTypes = new String[] {
         ProjectConstants.SOURCES_TYPE_XML,
         ProjectConstants.SOURCES_TYPE_JAVA,
@@ -281,7 +282,7 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
         ProjectConstants.SOURCES_TYPE_PHP,
         ProjectConstants.SOURCES_TYPE_RUBY
     };
-    
+
     private static FileObject getSourceFolderByContentFile(Project project, FileObject source) {
         Sources sources = ProjectUtils.getSources(project);
         assert sources !=null;
@@ -292,13 +293,13 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
                 sourceGroups.addAll(Arrays.asList(groups));
             }
         }
-            
+
         assert sourceGroups.size()>0;
         for(SourceGroup sourceGroup:sourceGroups) {
             if(FileUtil.isParentOf(sourceGroup.getRootFolder(),source))
                 return sourceGroup.getRootFolder();
         }
-        
+
         FileObject metaInf = project.getProjectDirectory().getFileObject("src/conf"); //NOI18N
         if (metaInf != null) {
             if (FileUtil.isParentOf(metaInf, source)) {
@@ -307,7 +308,7 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
         }
         return null;
     }
-    
+
     private static String getRelativePath(FileObject source, FileObject target) {
         File sourceLocationFile = FileUtil.toFile(source);
         File targetLocationFile = FileUtil.toFile(target);
@@ -351,7 +352,7 @@ public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
         return  PropertyUtils.getUsablePropertyName(ProjectUtils.getInformation
                 (project).getName()).replace('.','_');
     }
-    
+
     public boolean removeCatalogEntry(URI uri) throws IOException {
         CatalogWriteModel cwm  = null;
         try {

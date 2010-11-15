@@ -343,7 +343,7 @@ public final class ReferenceUtil {
             return null;
         }
         if (webServiceName == null) {
-            printError(i18n(ReferenceUtil.class, "ERR_Cannot_find_Web_service", javaName)); // NOI18N
+            printError(i18n(ReferenceUtil.class, "ERR_Cannot_Find_Web_Service", javaName)); // NOI18N
             return null;
         }
 //out();

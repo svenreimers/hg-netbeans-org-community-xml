@@ -251,10 +251,9 @@ public class WsdlUIPanel extends javax.swing.JPanel {
     }
 
     void updateNS() {
-//System.out.println();
-//System.out.println("BBB ==: " + getPath());
-//System.out.println();
+    		nsTF.getDocument().removeDocumentListener(mListener); 
             nsTF.setText(TARGET_URL_PREFIX + projectName + "/" + getPath() + fileNameTF.getText()); // NOI18N
+            nsTF.getDocument().addDocumentListener(mListener);
     }
 
     void attachFileNameListener(javax.swing.JTextField fileNameTextField) {
@@ -632,7 +631,7 @@ private void concreteWSDLChoiceActionPerformed(java.awt.event.ActionEvent evt) {
         }
         
         private void documentChanged(javax.swing.event.DocumentEvent e) {
-            hasUserModifiedNamespace = true;
+        	hasUserModifiedNamespace = true;
         }
     }
     

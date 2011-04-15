@@ -61,6 +61,7 @@ import org.openide.nodes.Node;
 import org.openide.windows.WindowManager;
 
 import org.netbeans.api.project.Project;
+import org.netbeans.api.project.ProjectUtils;
 import org.netbeans.modules.xml.retriever.catalog.CatalogElement;
 import org.netbeans.modules.xml.retriever.catalog.CatalogEntry;
 import org.netbeans.modules.xml.retriever.catalog.CatalogWriteModel;
@@ -261,7 +262,15 @@ final class ReferenceHelper {
         }
         FileObject target = FileUtil.toFileObject(file);
         ProjectCatalogSupport support = getProjectCatalogSupport();
+//out();
+//out("project 1: " + myProject.getProjectDirectory());
+//out();
+//out("project 2: " + ReferenceUtil.getProject(target).getProjectDirectory());
 
+        if (ProjectUtils.hasSubprojectCycles(myProject, ReferenceUtil.getProject(target))) {
+            printError(i18n(ReferenceHelper.class, "ERR_Cannot_Add_Cyclic_References")); // NOI18N
+            return null;
+        }
         try {
 //out();
 //out(" class: " + support.getClass().getName());

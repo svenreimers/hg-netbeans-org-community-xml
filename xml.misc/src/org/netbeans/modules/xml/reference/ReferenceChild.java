@@ -330,7 +330,7 @@ public final class ReferenceChild extends AbstractNode {
 
         @Override
         protected String getKeyName() {
-            return isRemoteResource() ? "LBL_Delete_URL" : "LBL_Delete_Resource"; // NOI18N
+            return isRemoteResource() ? "LBL_Delete_URL" : "LBL_Remove_Resource"; // NOI18N
         }
 
         public void actionPerformed(ActionEvent event) {

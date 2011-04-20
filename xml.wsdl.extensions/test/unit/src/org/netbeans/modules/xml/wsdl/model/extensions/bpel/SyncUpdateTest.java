@@ -85,9 +85,11 @@ public class SyncUpdateTest extends TestCase {
 
         public void assertChangeEvent(Object source) {
             for (ComponentEvent e : events) {
-                if (e.getEventType() == ComponentEvent.EventType.VALUE_CHANGED &&
-                    e.getSource() == source) {
-                    return;
+                switch (e.getEventType()) {
+                case VALUE_CHANGED:
+                    if (e.getSource() == source) {
+                        return;
+                    }
                 }
             }
             assertFalse("Failed to receive ATTRIBUTE event on " + source, true);
@@ -95,9 +97,11 @@ public class SyncUpdateTest extends TestCase {
         
         public void assertChildAddedEvent(Object source) {
             for (ComponentEvent e : events) {
-                if (e.getEventType() == ComponentEvent.EventType.CHILD_ADDED &&
-                    e.getSource() == source) {
-                    return;
+                switch (e.getEventType()) {
+                case CHILD_ADDED:
+                    if (e.getSource() == source) {
+                        return;
+                    }
                 }
             }
             assertFalse("Failed to receive CHILD_ADDED event on " + source, true);
@@ -105,9 +109,11 @@ public class SyncUpdateTest extends TestCase {
 
         public void assertChildRemovedEvent(Object source) {
             for (ComponentEvent e : events) {
-                if (e.getEventType() == ComponentEvent.EventType.CHILD_REMOVED &&
-                    e.getSource() == source) {
-                    return;
+                switch (e.getEventType()) {
+                case CHILD_REMOVED:
+                    if (e.getSource() == source) {
+                        return;
+                    }
                 }
             }
             assertFalse("Failed to receive CHILD_REMOVED event on " + source, true);

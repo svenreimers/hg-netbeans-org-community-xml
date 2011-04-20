@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="xml" basedir=".">
-    <description>Builds the module suite xml.</description>
+    <mkdir dir=".hg"/> <!-- just in case -->
+    <get src="http://download.netbeans.org/netbeans/7.0/final/zip/netbeans-7.0-201104080000-ml-javase.zip" dest=".hg" skipexisting="true" verbose="true"/>
+    <unzip src=".hg/netbeans-7.0-201104080000-ml-javase.zip" dest=".hg"/>
     <import file="nbproject/build-impl.xml"/>
     <target name="downloadbinaries" description="Download external binaries not stored in Mercurial sources.">
         <!-- XXX as of NB 7.0 (a5514d070c77) this will be standard; until then need our own copy: -->

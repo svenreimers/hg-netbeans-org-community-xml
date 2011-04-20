@@ -19,4 +19,8 @@
 -->
 <project name="xml.libs.jxpath" default="netbeans" basedir=".">
     <import file="nbproject/build-impl.xml"/>
+    <target name="release" depends="projectized-common.release">
+        <mkdir dir="${cluster}/modules/ext"/>
+        <copy file="external/jxpath-1.2.jar" todir="${cluster}/modules/ext"/>
+    </target>
 </project>

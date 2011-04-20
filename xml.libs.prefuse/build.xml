@@ -46,4 +46,8 @@ made subject to such option by the copyright holder.
 
 <project name="xml.libs.prefuse" default="netbeans" basedir=".">
     <import file="nbproject/build-impl.xml"/>
+    <target name="release" depends="projectized-common.release">
+        <mkdir dir="${cluster}/modules/ext"/>
+        <copy file="external/prefuse-beta.jar" todir="${cluster}/modules/ext"/>
+    </target>
 </project>

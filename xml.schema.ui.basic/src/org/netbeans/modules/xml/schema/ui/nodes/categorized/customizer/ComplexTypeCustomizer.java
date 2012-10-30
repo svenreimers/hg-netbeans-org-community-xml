@@ -67,6 +67,7 @@ import org.netbeans.modules.xml.schema.model.ComplexExtension;
 import org.netbeans.modules.xml.schema.model.ComplexExtensionDefinition;
 import org.netbeans.modules.xml.schema.model.ComplexType;
 import org.netbeans.modules.xml.schema.model.ComplexTypeDefinition;
+import org.netbeans.modules.xml.schema.model.Extension;
 import org.netbeans.modules.xml.schema.model.GlobalComplexType;
 import org.netbeans.modules.xml.schema.model.GlobalGroup;
 import org.netbeans.modules.xml.schema.model.GlobalSimpleType;
@@ -84,6 +85,7 @@ import org.netbeans.modules.xml.schema.model.SimpleContent;
 import org.netbeans.modules.xml.schema.model.SimpleContentRestriction;
 import org.netbeans.modules.xml.schema.model.SimpleExtension;
 import org.netbeans.modules.xml.schema.ui.basic.editors.SchemaComponentSelectionPanel;
+import org.netbeans.modules.xml.xam.Reference;
 import org.netbeans.modules.xml.xam.ui.customizer.MessageDisplayer;
 import org.openide.util.HelpCtx;
 import org.openide.util.NbBundle;
@@ -108,6 +110,11 @@ public class ComplexTypeCustomizer<T extends ComplexType>
     /** Creates new form ComplexTypeCustomizer */
     public ComplexTypeCustomizer(SchemaComponentReference<T> reference) {
         this(reference,null);
+    }
+    
+    static GlobalType getBase(Extension ext) {
+        Reference<GlobalType> ref = ext.getBase();
+        return ref == null ? null : ref.get();
     }
     
     /**
@@ -137,7 +144,7 @@ public class ComplexTypeCustomizer<T extends ComplexType>
                 contentType = ContentType.Restriction;
                 ComplexContentRestriction ccr =
                         (ComplexContentRestriction)cc.getLocalDefinition();
-                gRef = ccr.getBase().get();
+                gRef = getBase(ccr);
                 ComplexTypeDefinition innerDefinition = ccr.getDefinition();
                 if(innerDefinition instanceof All) {
                     innerContentType = ContentType.All;
@@ -152,7 +159,7 @@ public class ComplexTypeCustomizer<T extends ComplexType>
                 contentType = ContentType.Extension;
                 ComplexExtension ce =
                         (ComplexExtension)cc.getLocalDefinition();
-                gRef = ce.getBase().get();
+                gRef = getBase(ce);
                 ComplexExtensionDefinition innerDefinition = ce.getLocalDefinition();
                 if(innerDefinition instanceof All) {
                     innerContentType = ContentType.All;
@@ -172,11 +179,11 @@ public class ComplexTypeCustomizer<T extends ComplexType>
                 contentType = ContentType.Restriction;
                 SimpleContentRestriction scr =
                         (SimpleContentRestriction)sc.getLocalDefinition();
-                if(scr.getBase()!=null)
-                    gRef = scr.getBase().get();
+                Reference<GlobalType> ref = scr.getBase();
+                gRef = ref == null ? null : ref.get();
             } else if(sc.getLocalDefinition() instanceof SimpleExtension) {
                 contentType = ContentType.Extension;
-                gRef = ((SimpleExtension)sc.getLocalDefinition()).getBase().get();
+                gRef = getBase(((SimpleExtension)sc.getLocalDefinition()));
             }
         }
     }

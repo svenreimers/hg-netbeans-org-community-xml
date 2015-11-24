@@ -117,6 +117,11 @@ public class ComplexTypeCustomizer<T extends ComplexType>
         return ref == null ? null : ref.get();
     }
     
+    static GlobalType getBase(ComplexContentRestriction ext) {
+        Reference<? extends GlobalType> ref = ext.getBase();
+        return ref == null ? null : ref.get();
+    }
+    
     /**
      * non UI component (model) initialization and access methods
      */

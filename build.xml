@@ -4,8 +4,21 @@
     <get src="http://download.netbeans.org/netbeans/7.0/final/zip/netbeans-7.0-201104080000-ml-javase.zip" dest=".hg" skipexisting="true" verbose="true"/>
     <unzip src=".hg/netbeans-7.0-201104080000-ml-javase.zip" dest=".hg"/>
     <import file="nbproject/build-impl.xml"/>
-    <target name="downloadbinaries" description="Download external binaries not stored in Mercurial sources.">
+    
+    <available property="junit-installed" file=".hg/netbeans/platform/modules/org-netbeans-libs-junit4.jar"/>
+    
+    <target name="downloadbinaries-tasks">
         <taskdef classpath="${nbplatform.nb70.harness.dir}/tasks.jar" resource="org/netbeans/nbbuild/taskdefs.properties"/>
+    </target>
+    
+    <target name="downloadbinaries-junit" depends="downloadbinaries-tasks" unless="junit-installed">
+        <autoupdate installDir=".hg/netbeans"
+            updatecenter="http://updates.netbeans.org/netbeans/updates/7.0/uc/final/certified/catalog.xml.gz">
+            <modules includes="org.netbeans.libs.junit4"/>
+        </autoupdate> 
+    </target>
+    
+    <target name="downloadbinaries" depends="downloadbinaries-junit" description="Download external binaries not stored in Mercurial sources.">
         <property file="${user.home}/.nbbuild.properties"/> <!-- permit binaries.cache to be overridden -->
         <property name="binaries.cache" location="${user.home}/.hgexternalcache"/>
         <property name="binaries.server" value="http://hg.netbeans.org/binaries/"/>

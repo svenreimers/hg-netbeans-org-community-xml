@@ -1,0 +1,36 @@
+#third-party, other licenses, these files should be ignored.
+c.gestalt.netbeans.modules.wsdlextensions.rss/src/com/gestalt/netbeans/modules/wsdlextensions/rss/wsdl.xsd
+c.gestalt.netbeans.modules.wsdlextensions.sip/src/com/gestalt/netbeans/modules/wsdlextensions/sip/wsdl.xsd
+c.gestalt.netbeans.modules.wsdlextensions.uddi/src/com/gestalt/netbeans/modules/wsdlextensions/uddi/wsdl.xsd
+xml.wsdlextui/src/org/netbeans/modules/xml/wsdlextui/resources/http/wsdl.xsd
+xml.wsdlextui/src/org/netbeans/modules/xml/wsdlextui/resources/soap/wsdl.xsd
+xml.wsdlui/src/org/netbeans/modules/xml/wsdl/ui/netbeans/module/resources/plnk/wsdl.xsd
+xml.wsdlui/src/org/netbeans/modules/xml/wsdl/ui/netbeans/module/resources/varprop/wsdl.xsd
+xml.wsdlui/src/org/netbeans/modules/xml/wsdl/ui/netbeans/module/resources/wsdl.xsd
+xml.schema/src/org/netbeans/modules/xml/schema/wizard/templates/PurchaseOrder.xsd
+xml.wsdl.extensions/src/org/netbeans/modules/xml/wsdl/model/extensions/bpel/validation/schema/resources/ws-bpel_plnktype.xsd:
+xml.wsdl.extensions/src/org/netbeans/modules/xml/wsdl/model/extensions/bpel/validation/schema/resources/ws-bpel_varprop.xsd:
+xml.wsdlui/src/org/netbeans/modules/xml/wsdl/ui/netbeans/module/resources/plnk/ws-bpel_plnktype.xsd
+xml.wsdlui/src/org/netbeans/modules/xml/wsdl/ui/netbeans/module/resources/varprop/ws-bpel_varprop.xsd
+File: xml.wsdlextui/src/org/netbeans/modules/xml/wsdlextui/resources/http/http.xsd
+xml.wsdlextui/src/org/netbeans/modules/xml/wsdlextui/resources/soap/soap12.xsd
+c.gestalt.netbeans.modules.wsdlextensions.rss/src/com/gestalt/netbeans/modules/wsdlextensions/rss/template/template.xml
+c.gestalt.netbeans.modules.wsdlextensions.sip/src/com/gestalt/netbeans/modules/wsdlextensions/sip/template/template.xml
+c.gestalt.netbeans.modules.wsdlextensions.uddi/src/com/gestalt/netbeans/modules/wsdlextensions/uddi/template/template.xml
+c.gestalt.netbeans.modules.wsdlextensions.xmpp/src/com/gestalt/netbeans/modules/wsdlextensions/xmpp/template/template.xml
+xml.schema.abe/src/org/netbeans/modules/xml/schema/abe/GradientShadePanel.java
+xml.wsdl.extensions/src/org/netbeans/modules/xml/wsdl/model/extensions/bpel/BPELComponentFactory.java
+xml.wsdl.extensions/test/unit/src/org/netbeans/modules/xml/wsdl/model/extensions/resources/OTA_TravelItinerary.xsd
+xml.wsdl.refactoring/test/unit/src/org/netbeans/modules/xml/wsdl/refactoring/resources/OTA_TravelItinerary.xsd
+xml.wsdl.refactoring/test/unit/src/org/netbeans/modules/xml/wsdl/refactoring/resources/uddi.wsdl
+xml.wsdlui/src/org/netbeans/modules/xml/wsdl/ui/netbeans/module/resources/service-link.xsd
+xml.wsdlui/src/org/netbeans/modules/xml/wsdl/ui/netbeans/module/resources/service-reference.xsd
+xml.xam.ui/src/org/netbeans/modules/xml/xam/ui/layout/JSplitterBar.java
+xml.xam.ui/src/org/netbeans/modules/xml/xam/ui/layout/JSplitterSpace.java
+xml.xam.ui/src/org/netbeans/modules/xml/xam/ui/layout/SplitterBarMouseListener.java
+xml.xam.ui/src/org/netbeans/modules/xml/xam/ui/layout/SplitterBarMouseMotionListener.java
+xml.xam.ui/src/org/netbeans/modules/xml/xam/ui/layout/SplitterLayout.java
+c.gestalt.netbeans.modules.wsdlextensions.rss/src/com/gestalt/netbeans/modules/wsdlextensions/rss/template/RSSBCTemplateProvider.java
+c.gestalt.netbeans.modules.wsdlextensions.sip/src/com/gestalt/netbeans/modules/wsdlextensions/sip/template/SIPBCTemplateProvider.java
+c.gestalt.netbeans.modules.wsdlextensions.uddi/src/com/gestalt/netbeans/modules/wsdlextensions/uddi/template/UDDIBCTemplateProvider.java
+c.gestalt.netbeans.modules.wsdlextensions.xmpp/src/com/gestalt/netbeans/modules/wsdlextensions/xmpp/template/XMPPBCTemplateProvider.java

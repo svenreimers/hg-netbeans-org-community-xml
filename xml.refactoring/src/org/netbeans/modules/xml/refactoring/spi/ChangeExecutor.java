@@ -55,7 +55,6 @@ import org.netbeans.modules.xml.xam.Referenceable;
  * (2) refactoring selected the usage components.
  * The implementation of this class is reponsible for the first step.
  *
- * @author Nam Nguyen
  */
 public abstract class ChangeExecutor {
 

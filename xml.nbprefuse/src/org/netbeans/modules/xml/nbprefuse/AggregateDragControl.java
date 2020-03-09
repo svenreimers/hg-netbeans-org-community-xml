@@ -64,7 +64,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 /**
  * Interactive drag control that is "aggregate-aware"

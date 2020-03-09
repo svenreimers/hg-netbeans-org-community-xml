@@ -52,7 +52,6 @@ import org.openide.util.ImageUtilities;
 
 /**
  *
- * @author  skini
  */
 public class MessagePanel extends javax.swing.JPanel {
     private static Color nbErrorForeground;

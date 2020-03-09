@@ -58,7 +58,6 @@ import org.openide.filesystems.FileObject;
  * class of components in a certain set of models.  Refactoring manager will
  * lookup of the service through entries declared via {@link org.openide.util.lookup.ServiceProvider}.
  *
- * @author Nam Nguyen
  */
 
 public abstract class RefactoringEngine {

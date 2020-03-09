@@ -68,7 +68,6 @@ import org.openide.util.actions.SystemAction;
 
 /**
  *
- * @author Sonali
  */
 public abstract class XMLRefactoringElement extends SimpleRefactoringElementImplementation {
     

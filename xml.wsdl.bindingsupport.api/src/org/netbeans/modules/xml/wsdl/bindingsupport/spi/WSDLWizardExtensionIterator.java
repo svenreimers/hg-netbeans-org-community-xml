@@ -48,7 +48,6 @@ import org.openide.WizardDescriptor;
 /**
  * Interface for implementing wsdl wizard extension iterator.
  * 
- * @author skini
  */
 public abstract class WSDLWizardExtensionIterator implements WizardDescriptor.Iterator {
     private WSDLWizardContext context;

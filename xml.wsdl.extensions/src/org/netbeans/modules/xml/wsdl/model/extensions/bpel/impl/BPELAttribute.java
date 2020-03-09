@@ -51,9 +51,6 @@ import org.netbeans.modules.xml.xam.dom.Attribute;
 
 /**
  *
- * @author Nam Nguyen
- * changed by 
- * @author ads
  */
 public enum BPELAttribute implements Attribute {
     TYPE("type"),

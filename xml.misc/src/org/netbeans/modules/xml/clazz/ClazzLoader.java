@@ -60,7 +60,6 @@ import org.netbeans.modules.xml.reference.ReferenceUtil;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2009.07.10
  */
 public final class ClazzLoader extends ClassLoader {

@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.refactoring;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class CannotRefactorException extends RuntimeException {
     

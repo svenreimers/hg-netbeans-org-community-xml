@@ -72,7 +72,6 @@ import org.netbeans.modules.xml.catalogsupport.DefaultProjectCatalogSupport;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.06.17
  */
 final class ReferenceHelper {

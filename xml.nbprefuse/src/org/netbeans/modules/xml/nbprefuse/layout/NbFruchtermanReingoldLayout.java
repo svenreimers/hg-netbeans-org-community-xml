@@ -69,8 +69,6 @@ import prefuse.visual.VisualItem;
  * <p>This implementation was ported from the implementation in the
  * <a href="http://jung.sourceforge.net/">JUNG</a> framework.</p>
  * 
- * @author Scott White, Yan-Biao Boey, Danyel Fisher
- * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 public class NbFruchtermanReingoldLayout extends Layout {
 

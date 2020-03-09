@@ -51,7 +51,6 @@ import org.netbeans.modules.xml.xam.Referenceable;
 import org.netbeans.modules.refactoring.spi.ui.CustomRefactoringPanel;
 
 /**
- * @author  Jan Becicka
  */
 public class WhereUsedPanel extends JPanel implements CustomRefactoringPanel {
     public static final long serialVersionUID = 1L;

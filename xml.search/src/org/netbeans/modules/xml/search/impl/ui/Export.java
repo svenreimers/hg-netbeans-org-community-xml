@@ -70,7 +70,6 @@ import org.openide.awt.HtmlBrowser;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.12.21
  */
 public class Export extends Dialog {

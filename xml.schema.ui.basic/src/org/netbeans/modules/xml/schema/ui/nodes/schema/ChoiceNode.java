@@ -60,8 +60,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Jeri Lockhart
  */
 public class ChoiceNode extends SchemaComponentNode<Choice>
 {

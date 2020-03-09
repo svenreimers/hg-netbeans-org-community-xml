@@ -65,7 +65,6 @@ import javax.swing.tree.TreeSelectionModel;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2009.07.15
  */
 final class ClazzTree extends JTree {

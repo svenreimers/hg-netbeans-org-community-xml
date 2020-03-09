@@ -80,7 +80,6 @@ import org.openide.filesystems.FileObject;
 
 /**
  * Asks where to move a class to.
- * @author Jan Becicka, Jesse Glick
  */
 public class MoveFilePanel extends JPanel implements ActionListener, DocumentListener,CustomRefactoringPanel {
   

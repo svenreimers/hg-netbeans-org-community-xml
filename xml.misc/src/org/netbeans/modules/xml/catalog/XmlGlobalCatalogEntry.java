@@ -44,7 +44,6 @@
 package org.netbeans.modules.xml.catalog;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2010.01.25
  */
 final class XmlGlobalCatalogEntry {

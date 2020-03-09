@@ -49,7 +49,6 @@ import org.netbeans.modules.xml.xam.spi.Validator.ResultItem;
 import org.netbeans.modules.xml.xam.spi.Validator.ResultType;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.12.07
  */
 public final class QuickFixable extends ResultItem {

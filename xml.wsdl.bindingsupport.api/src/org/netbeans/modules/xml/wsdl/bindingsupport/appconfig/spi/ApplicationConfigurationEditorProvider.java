@@ -48,7 +48,6 @@ import javax.management.openmbean.CompositeData;
  * An SPI for a binding component to optionally provide a customized 
  * Application Configuration editor.
  * 
- * @author jqian
  */
 public interface ApplicationConfigurationEditorProvider {
 

@@ -70,7 +70,6 @@ import org.openide.ErrorManager;
 
 /**
  *
- * @author Sonali Kochar
  */
 public class WSDLWhereUsedRefactoringPlugin extends WSDLRefactoringPlugin {
     

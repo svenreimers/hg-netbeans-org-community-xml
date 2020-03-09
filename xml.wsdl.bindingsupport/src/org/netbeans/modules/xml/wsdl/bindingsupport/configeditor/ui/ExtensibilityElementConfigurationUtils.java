@@ -60,7 +60,6 @@ import org.openide.DialogDisplayer;
 
 /**
  *
- * @author skini
  */
 public class ExtensibilityElementConfigurationUtils {
 

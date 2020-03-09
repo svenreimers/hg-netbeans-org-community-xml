@@ -61,7 +61,6 @@ import org.openide.DialogDescriptor;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2009.07.15
  */
 public final class ClazzDialog extends Dialog implements TreeSelectionListener {

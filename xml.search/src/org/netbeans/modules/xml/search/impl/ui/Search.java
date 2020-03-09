@@ -66,7 +66,6 @@ import org.netbeans.modules.xml.search.impl.output.View;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.11.23
  */
 public final class Search extends Dialog {

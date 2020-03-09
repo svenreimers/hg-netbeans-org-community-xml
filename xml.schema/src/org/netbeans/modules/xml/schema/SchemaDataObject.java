@@ -79,8 +79,6 @@ import org.xml.sax.InputSource;
 /**
  * XML Schema owner. It provides text editing and validation cookies support.
  *
- * @author  Petr Kuzel
- * @author  Jeri Lockhart
  */
 public final class SchemaDataObject extends MultiDataObject {
     

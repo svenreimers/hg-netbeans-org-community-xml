@@ -65,7 +65,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class FindUsagesFocusControl extends NbFocusControl{
     

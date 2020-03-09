@@ -81,7 +81,6 @@ import prefuse.data.Graph;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class DeleteRefactoringUI implements org.netbeans.modules.refactoring.spi.ui.RefactoringUI, RefactoringCustomUI{
     

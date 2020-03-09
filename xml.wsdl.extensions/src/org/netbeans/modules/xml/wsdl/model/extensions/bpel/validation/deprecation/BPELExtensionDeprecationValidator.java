@@ -63,7 +63,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author radval
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.xam.spi.Validator.class)
 public class BPELExtensionDeprecationValidator implements Validator {

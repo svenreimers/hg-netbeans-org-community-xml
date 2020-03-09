@@ -85,7 +85,6 @@ import org.netbeans.modules.xml.catalogsupport.ProjectReferenceUtility;
 
 /**
  *
- * @author  Ajit
  */
 public class CustomizerProjectReferences extends javax.swing.JPanel implements HelpCtx.Provider {
     

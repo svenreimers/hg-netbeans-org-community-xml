@@ -90,7 +90,6 @@ import prefuse.visual.NodeItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public abstract class AnalysisUtilities {
     

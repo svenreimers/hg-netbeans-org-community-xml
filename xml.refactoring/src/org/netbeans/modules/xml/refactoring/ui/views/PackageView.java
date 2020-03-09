@@ -81,7 +81,6 @@ import org.openide.nodes.Node;
 /**
  * Factory for package views.
  * @see org.netbeans.spi.project.ui.LogicalViewProvider
- * @author Jesse Glick
  */
 public class PackageView {
         

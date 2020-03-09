@@ -49,7 +49,6 @@ import org.openide.nodes.Node.Cookie;
 
 /**
  *
- * @author Nam Nguyen
  */
 public interface ModelProvider extends Cookie {
     

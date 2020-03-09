@@ -63,7 +63,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class FindUsagesRendererFactory implements RendererFactory {
     private NbLabelRenderer nodeRenderer;

@@ -49,10 +49,6 @@ import org.netbeans.modules.xml.wsdl.model.ExtensibilityElement;
 
 /**
  *
- * @author Nam Nguyen
- * 
- * changed by 
- * @author ads
  */
 public interface BPELExtensibilityComponent extends ExtensibilityElement {
     interface Visitor {

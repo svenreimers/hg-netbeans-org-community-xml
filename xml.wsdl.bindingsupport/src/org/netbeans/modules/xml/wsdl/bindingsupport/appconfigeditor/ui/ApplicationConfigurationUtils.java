@@ -51,7 +51,6 @@ import org.openide.DialogDisplayer;
 
 /**
  *
- * @author jqian
  */
 public class ApplicationConfigurationUtils {
     

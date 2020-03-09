@@ -92,7 +92,6 @@ import prefuse.data.Node;
 
 /**
  *
- * @author Sonali
  */
 public class GraphHelper {
     

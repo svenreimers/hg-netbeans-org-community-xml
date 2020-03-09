@@ -55,7 +55,6 @@ import org.netbeans.modules.xml.search.spi.SearchProvider;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.11.13
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.search.spi.SearchEngine.class)

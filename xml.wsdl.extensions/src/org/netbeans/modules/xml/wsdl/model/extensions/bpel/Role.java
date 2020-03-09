@@ -54,10 +54,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author Nam Nguyen
- * 
- * changed by
- * @author ads 
  */
 
 public interface Role extends BPELExtensibilityComponent, Nameable<WSDLComponent>, ReferenceableWSDLComponent {

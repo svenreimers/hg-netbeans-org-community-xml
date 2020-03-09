@@ -81,7 +81,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class FindWSDLUsageVisitor extends ChildVisitor implements WSDLVisitor {
     

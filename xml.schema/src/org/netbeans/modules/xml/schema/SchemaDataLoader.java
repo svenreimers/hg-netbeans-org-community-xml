@@ -50,8 +50,6 @@ import org.openide.util.NbBundle;
 /**
  * XML Schema loader. It is mime type based.
  *
- * @author  Petr Kuzel
- * @author  Jeri Lockhart
  */
 public class SchemaDataLoader extends UniFileLoader {
 

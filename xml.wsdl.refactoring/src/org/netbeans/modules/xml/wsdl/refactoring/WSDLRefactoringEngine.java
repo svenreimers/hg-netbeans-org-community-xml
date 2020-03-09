@@ -79,7 +79,6 @@ import org.openide.filesystems.FileUtil;
 import org.openide.util.NbBundle;
 
 /**
- * @author Nam Nguyen
  */
 public class WSDLRefactoringEngine {
     public static final String WSDL_MIME_TYPE = "text/x-wsdl+xml";  // NOI18N

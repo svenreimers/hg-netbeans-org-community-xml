@@ -57,7 +57,6 @@ import org.openide.util.ImageUtilities;
 
 /**
  *
- * @author  skini
  */
 public class CommonMessagePanel extends javax.swing.JPanel {
 

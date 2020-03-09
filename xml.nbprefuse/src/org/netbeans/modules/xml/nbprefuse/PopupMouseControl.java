@@ -58,7 +58,6 @@ import prefuse.visual.VisualItem;
  *  popup menu.  
  *
  *
- * @author Jeri Lockhart
  */
 public final class PopupMouseControl extends ControlAdapter {
         

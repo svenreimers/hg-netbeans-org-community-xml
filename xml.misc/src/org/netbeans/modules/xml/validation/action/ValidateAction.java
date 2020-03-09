@@ -62,7 +62,6 @@ import org.netbeans.modules.xml.validation.ui.Output;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2009.08.31
  */
 public class ValidateAction extends AbstractAction {

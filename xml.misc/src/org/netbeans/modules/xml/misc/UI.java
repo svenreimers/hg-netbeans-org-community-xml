@@ -96,7 +96,6 @@ import org.openide.util.NbBundle;
 import org.openide.util.datatransfer.ExClipboard;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2005.12.14
  */
 public final class UI {

@@ -68,7 +68,6 @@ import javax.swing.plaf.basic.BasicButtonUI;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.02.21
  */
 final class Tabbed extends JTabbedPane {

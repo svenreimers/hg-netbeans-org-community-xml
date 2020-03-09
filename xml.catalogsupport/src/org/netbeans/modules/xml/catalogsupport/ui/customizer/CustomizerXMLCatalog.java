@@ -67,7 +67,6 @@ import org.netbeans.modules.xml.retriever.catalog.CatalogWriteModelFactory;
 import org.netbeans.modules.xml.xam.locator.CatalogModelException;
 
 /**
- * @author  Ajit
  */
 public class CustomizerXMLCatalog extends javax.swing.JPanel implements HelpCtx.Provider {
     

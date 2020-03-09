@@ -72,7 +72,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class FindSchemaUsageVisitor extends ChildVisitor implements WSDLVisitor {
     private ReferenceableSchemaComponent referenced;

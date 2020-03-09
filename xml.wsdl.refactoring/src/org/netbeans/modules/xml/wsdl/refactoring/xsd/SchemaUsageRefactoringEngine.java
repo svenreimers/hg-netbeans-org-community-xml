@@ -88,7 +88,6 @@ import org.openide.util.NbBundle;
  * Provides capability to search for usages of schema components in WSDL models.
  * Provides capability to refactor schema component references in WSDL models.
  *
- * @author Nam Nguyen
  */
 public class SchemaUsageRefactoringEngine {
     

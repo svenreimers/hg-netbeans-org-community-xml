@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.time;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.11.27
  */
 public final class Duration extends Time {

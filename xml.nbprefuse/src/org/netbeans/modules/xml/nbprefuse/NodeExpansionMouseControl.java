@@ -70,7 +70,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public final class NodeExpansionMouseControl extends ControlAdapter {
     

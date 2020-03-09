@@ -59,7 +59,6 @@ import org.w3c.dom.Element;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class CorrelationPropertyImpl extends NamedExtensibilityElementBase implements ReferenceableExtensibilityElement, CorrelationProperty {
     

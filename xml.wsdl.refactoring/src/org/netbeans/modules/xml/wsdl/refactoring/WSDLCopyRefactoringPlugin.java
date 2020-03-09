@@ -79,7 +79,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Sonali Kochar
  */
 public class WSDLCopyRefactoringPlugin extends WSDLRefactoringPlugin  implements XMLRefactoringPlugin {
     

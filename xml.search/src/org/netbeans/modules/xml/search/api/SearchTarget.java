@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.search.api;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.05.29
  */
 public interface SearchTarget {

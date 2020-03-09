@@ -47,7 +47,6 @@ import org.openide.filesystems.FileObject;
 import org.netbeans.api.project.Project;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.10.24
  */
 public final class ReferenceFile {

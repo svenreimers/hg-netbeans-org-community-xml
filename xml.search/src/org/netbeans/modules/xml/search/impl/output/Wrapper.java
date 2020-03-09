@@ -65,7 +65,6 @@ import javax.swing.tree.TreePath;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.10.18
  */
 final class Wrapper extends JPanel {

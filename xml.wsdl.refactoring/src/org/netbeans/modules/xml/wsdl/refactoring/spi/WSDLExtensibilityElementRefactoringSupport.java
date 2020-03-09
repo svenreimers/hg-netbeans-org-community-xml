@@ -50,7 +50,6 @@ import org.netbeans.modules.xml.xam.Referenceable;
 
 /**
  *
- * @author skini
  */
 public abstract class WSDLExtensibilityElementRefactoringSupport {
     

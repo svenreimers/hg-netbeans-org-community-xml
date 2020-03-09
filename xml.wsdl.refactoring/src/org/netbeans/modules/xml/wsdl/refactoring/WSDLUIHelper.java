@@ -72,7 +72,6 @@ import org.openide.util.actions.SystemAction;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class WSDLUIHelper {
     

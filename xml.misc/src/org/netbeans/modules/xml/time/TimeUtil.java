@@ -52,7 +52,6 @@ import java.util.GregorianCalendar;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.04.14
  */
 public final class TimeUtil {

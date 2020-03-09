@@ -47,7 +47,6 @@ import javax.swing.AbstractAction;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.06.18
  */
 abstract class ReferenceAction extends AbstractAction {

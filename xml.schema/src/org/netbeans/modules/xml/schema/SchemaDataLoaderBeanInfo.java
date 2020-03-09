@@ -54,7 +54,6 @@ import org.openide.util.Utilities;
 /**
  * Loader BeanInfo adding metadata missing in org.openide.loaders.MultiFileLoaderBeanInfo.
  *
- * @author Petr Kuzel
  */
 public class SchemaDataLoaderBeanInfo extends SimpleBeanInfo {
 

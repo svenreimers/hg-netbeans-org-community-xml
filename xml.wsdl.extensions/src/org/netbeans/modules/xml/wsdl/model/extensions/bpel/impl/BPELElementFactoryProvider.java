@@ -56,10 +56,6 @@ import org.netbeans.modules.xml.wsdl.model.spi.ElementFactory;
 import org.w3c.dom.Element;
 
 /**
- * @authro Nam Nguyen
- * 
- * changed by
- * @author ads
  */
 public class BPELElementFactoryProvider {
     

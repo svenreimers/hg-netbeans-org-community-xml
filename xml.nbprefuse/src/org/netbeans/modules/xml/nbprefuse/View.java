@@ -57,7 +57,6 @@ import java.beans.PropertyChangeListener;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public interface View  extends PropertyChangeListener {
 

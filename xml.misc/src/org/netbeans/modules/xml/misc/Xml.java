@@ -72,7 +72,6 @@ import org.netbeans.modules.xml.xam.Named;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.04.14
  */
 public final class Xml {

@@ -83,7 +83,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Sonali Kochar
  */
 public class WSDLRenameRefactoringPlugin extends WSDLRefactoringPlugin  {
     

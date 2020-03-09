@@ -86,7 +86,6 @@ import org.openide.util.lookup.ProxyLookup;
 
 /**
  *
- * @author Ritesh Adval
  *
  * @version 
  */

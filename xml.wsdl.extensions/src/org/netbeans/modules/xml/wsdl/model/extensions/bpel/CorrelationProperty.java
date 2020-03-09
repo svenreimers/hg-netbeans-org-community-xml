@@ -51,10 +51,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author rico
- * 
- * changed by
- * @author ads
  */
 public interface CorrelationProperty extends ReferenceableExtensibilityElement, BPELExtensibilityComponent {
     String TYPE_PROPERTY = "type";

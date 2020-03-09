@@ -68,7 +68,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author skini
  */
 public class SoapBodyConfigurator extends ExtensibilityElementConfigurator {
 

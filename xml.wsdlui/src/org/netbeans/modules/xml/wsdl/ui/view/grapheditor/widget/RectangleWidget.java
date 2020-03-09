@@ -53,7 +53,6 @@ import org.netbeans.modules.xml.wsdl.ui.view.grapheditor.border.FilledBorder;
 
 /**
  * 
- * @author skini
  *
  */
 public class RectangleWidget extends Widget {

@@ -63,7 +63,6 @@ import org.openide.nodes.Sheet;
 import org.openide.util.NbBundle;
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class KeyRefNode extends SchemaComponentNode<KeyRef>
 {

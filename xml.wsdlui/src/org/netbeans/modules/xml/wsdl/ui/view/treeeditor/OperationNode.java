@@ -98,7 +98,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author Ritesh Adval
  *
  */
 public abstract class OperationNode<T extends Operation> extends WSDLExtensibilityElementNode<T> {

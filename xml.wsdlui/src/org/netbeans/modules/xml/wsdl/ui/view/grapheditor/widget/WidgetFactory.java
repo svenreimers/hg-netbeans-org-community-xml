@@ -77,8 +77,6 @@ import org.openide.util.Lookup;
  * Factory for creating Widget instances to represent the various WSDL
  * model components (e.g. Operation, Role, PartnerLinkType).
  *
- * @author radval
- * @author Nathan Fiedler
  */
 public class WidgetFactory {
     /** The single instance of this class. */

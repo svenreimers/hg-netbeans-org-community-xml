@@ -57,7 +57,6 @@ import org.netbeans.modules.xml.wsdl.bindingsupport.template.localized.Localized
 
 /**
  *
- * @author  skini
  */
 public class TemplatePanel extends javax.swing.JPanel {
     

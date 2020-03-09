@@ -109,7 +109,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author radval
  */
 public class OperationParameterWidget extends AbstractWidget<OperationParameter>
         implements DnDHandler {

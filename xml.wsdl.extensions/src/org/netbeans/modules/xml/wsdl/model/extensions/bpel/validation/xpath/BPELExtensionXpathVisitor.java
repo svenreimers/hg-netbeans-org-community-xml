@@ -80,7 +80,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author nk160297
  */
 public class BPELExtensionXpathVisitor extends ValidationVisitor {
     

@@ -65,7 +65,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  skini
  */
 public class ParameterOrderPropertyPanel extends javax.swing.JPanel {
     

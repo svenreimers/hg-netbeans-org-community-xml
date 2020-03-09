@@ -84,7 +84,6 @@ import org.openide.util.Lookup;
  * <code>SchemaComponentNodeChildren</code> to present a structural hierarchy
  * of schema nodes.
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class CategorizedSchemaNodeFactory extends SchemaNodeFactory
 {

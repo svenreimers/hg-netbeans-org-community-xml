@@ -60,7 +60,6 @@ import org.w3c.dom.Attr;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class AdvancedLocalElementNode extends LocalElementNode {
     /**

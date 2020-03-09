@@ -26,7 +26,6 @@ import org.netbeans.modules.xml.xam.dom.AbstractDocumentComponent;
 
 /**
  *
- * @author supernikita
  */
 public class WsdlNamespaceContext implements NamespaceContext {
 

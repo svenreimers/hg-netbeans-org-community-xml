@@ -75,7 +75,6 @@ import org.w3c.dom.Element;
 
 /**
  *
- * @author radval
  */
 public class PortTypeGenerator implements Command {
     

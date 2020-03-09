@@ -109,7 +109,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 /**
  * This is advanced creator which creates templates for some components.
  *
- * @author Ajit Bhate
  */
 public class AdvancedSchemaComponentCreator extends SchemaComponentCreator {
     /** Creates a new instance of AdvancedSchemaComponentCreator */

@@ -61,7 +61,6 @@ import org.netbeans.modules.xml.xam.Model;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class ReferencedSchemaModelChildren<C extends SchemaModelReference> 
 		extends CategorizedChildren<C>

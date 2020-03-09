@@ -49,7 +49,6 @@ import org.netbeans.api.visual.action.WidgetAction;
 
 /**
  *
- * @author anjeleevich
  */
 public interface DnDHandler {
     

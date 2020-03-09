@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.wsdl.model.WSDLModel;
 
 /**
  *
- * @author  radval
  */
 public class NotificationOperationPanel extends javax.swing.JPanel implements OperationConfiguration {
     

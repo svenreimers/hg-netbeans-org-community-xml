@@ -57,8 +57,6 @@ import org.netbeans.modules.xml.xam.ui.customizer.ExternalReferenceDecorator;
 /**
  * An include customizer.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class IncludeCustomizer extends ExternalReferenceCustomizer<Include> {
     private static final long serialVersionUID = 1L;

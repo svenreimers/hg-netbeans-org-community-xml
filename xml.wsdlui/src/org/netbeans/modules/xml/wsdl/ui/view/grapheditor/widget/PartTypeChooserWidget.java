@@ -81,7 +81,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author anjeleevich
  */
 public class PartTypeChooserWidget extends Widget implements ActionListener {
     

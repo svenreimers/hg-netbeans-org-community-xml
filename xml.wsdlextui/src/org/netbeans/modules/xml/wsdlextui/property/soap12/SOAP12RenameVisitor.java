@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author skini
  */
 public class SOAP12RenameVisitor extends ChildVisitor implements SOAP12Component.Visitor {
     private Referenceable referenced;

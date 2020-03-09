@@ -59,7 +59,6 @@ import org.openide.explorer.propertysheet.PropertyEnv;
 
 /**
  *
- * @author radval
  *
  */
 public class ParameterOrderPropertyEditor extends PropertyEditorSupport implements ExPropertyEditor {

@@ -59,8 +59,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.schema.SequenceNode;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Jeri Lockhart
  */
 public class AdvancedSequenceNode extends SequenceNode
 {

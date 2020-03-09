@@ -76,7 +76,6 @@ import org.netbeans.modules.xml.schema.ui.basic.editors.SchemaComponentSelection
 /**
  * Attribute customizer
  *
- * @author  Ajit Bhate
  */
 public class SimpleTypeCustomizer<T extends SimpleType>
         extends AbstractSchemaComponentCustomizer<T>

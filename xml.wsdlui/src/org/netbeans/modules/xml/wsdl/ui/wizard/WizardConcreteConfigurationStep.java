@@ -92,7 +92,6 @@ import org.openide.windows.IOProvider;
 
 /**
  *
- * @author radval
  */
 public class WizardConcreteConfigurationStep extends WSDLWizardDescriptorPanel implements WSDLWizardConstants  {
     

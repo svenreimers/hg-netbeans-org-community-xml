@@ -111,7 +111,6 @@ import org.netbeans.modules.xml.xam.ui.customizer.Customizer;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class SchemaComponentCreator extends DeepSchemaVisitor
 {	

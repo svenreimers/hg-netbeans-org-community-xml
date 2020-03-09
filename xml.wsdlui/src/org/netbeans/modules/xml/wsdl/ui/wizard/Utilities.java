@@ -52,7 +52,6 @@ import org.openide.WizardDescriptor;
 
 /**
  *
- * @author  mkuchtiak
  */
 public class Utilities {
     

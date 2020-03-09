@@ -72,7 +72,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author  skini
  */
 public class ElementOrTypeChooserPanel extends javax.swing.JPanel implements ExplorerManager.Provider {
     

@@ -83,7 +83,6 @@ import org.openide.loaders.DataObjectNotFoundException;
 
 /**
  *
- * @author Ajit Bhate (ajit.bhate@Sun.Com)
  */
 public class AdvancedSchemaComponentNewType extends NewType {
     

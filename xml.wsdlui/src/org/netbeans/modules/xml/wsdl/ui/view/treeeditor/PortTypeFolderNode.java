@@ -60,7 +60,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author Ritesh Adval
  *
  */
 public class PortTypeFolderNode extends FolderNode {

@@ -51,7 +51,6 @@ import javax.xml.transform.stream.StreamSource;
 import org.netbeans.modules.xml.wsdl.validator.spi.ValidatorSchemaFactory;
 
 /**
- * @author Sujit Biswas
  *
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.wsdl.validator.spi.ValidatorSchemaFactory.class)

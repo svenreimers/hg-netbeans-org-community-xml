@@ -67,7 +67,6 @@ import org.netbeans.modules.xml.wsdl.model.WSDLModel;
 
 /**
  *
- * @author radval
  */
 class ElementOrTypeTableCellEditor extends AbstractCellEditor
                                                 implements TableCellEditor {

@@ -72,7 +72,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  skini
  */
 public class OperationConfigurationPanel extends javax.swing.JPanel {
 

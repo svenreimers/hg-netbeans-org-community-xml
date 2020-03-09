@@ -54,8 +54,6 @@ import org.netbeans.api.visual.widget.Widget;
  * A widget that controls the expanded state of an expander widget by
  * responding to certain input events.
  *
- * @author radval
- * @author Nathan Fiedler
  */
 public class HeaderWidget extends Widget {
     /** The expander we control. */

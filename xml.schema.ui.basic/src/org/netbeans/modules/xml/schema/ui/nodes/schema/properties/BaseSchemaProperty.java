@@ -83,7 +83,6 @@ import org.openide.nodes.PropertySupport;
  * MyPropertyEditor.class // if default value is false
  * );
 </CODE>
- * @author Ajit Bhate
  */
 public class BaseSchemaProperty extends PropertySupport.Reflection {
     

@@ -52,7 +52,6 @@ package org.netbeans.modules.xml.wsdl.ui.view;
 
 /**
  *
- * @author  radval
  */
 public class ServiceAndPortConfigurationPanel extends javax.swing.JPanel {
     

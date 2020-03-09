@@ -70,7 +70,6 @@ import org.openide.util.lookup.InstanceContent;
 
 /**
  *
- * @author Administrator
  */
 public class PrimitiveSimpleTypesNode extends AbstractNode
 {

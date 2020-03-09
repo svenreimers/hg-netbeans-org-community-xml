@@ -44,7 +44,6 @@ package org.netbeans.modules.xml.wsdl.ui.wizard.common;
 
 /**
  *
- * @author skini
  */
 public interface WSDLWizardConstants {
     

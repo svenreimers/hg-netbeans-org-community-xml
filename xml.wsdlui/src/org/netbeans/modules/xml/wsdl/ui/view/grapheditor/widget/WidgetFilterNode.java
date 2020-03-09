@@ -65,7 +65,6 @@ import org.openide.util.datatransfer.NewType;
 /**
  * Default filter node implementation for all widgets.
  *
- * @author  Nathan Fiedler
  */
 public class WidgetFilterNode extends FilterNode {
 

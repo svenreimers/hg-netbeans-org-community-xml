@@ -90,7 +90,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author radval
  */
 public class WizardAbstractConfigurationStep extends WSDLWizardDescriptorPanel implements WSDLWizardConstants {
     

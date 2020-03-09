@@ -57,7 +57,6 @@ import org.netbeans.modules.xml.wsdl.validator.spi.ValidatorSchemaFactory;
 
 /**
  *
- * @author radval
  */
 public class SOAPValidatorSchemaFactoryTest extends TestCase {
     

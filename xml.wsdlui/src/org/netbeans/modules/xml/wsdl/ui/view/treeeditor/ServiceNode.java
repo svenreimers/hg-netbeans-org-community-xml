@@ -80,7 +80,6 @@ import org.openide.util.datatransfer.NewType;
 
 
 /**
- * @author Ritesh Adval
  *
  **/
 public class ServiceNode extends WSDLExtensibilityElementNode<Service> {

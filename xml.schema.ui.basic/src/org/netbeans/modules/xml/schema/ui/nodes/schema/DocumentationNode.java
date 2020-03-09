@@ -79,9 +79,6 @@ import org.openide.util.actions.SystemAction;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Jeri Lockhart
- * @author  Ajit Bhate
  */
 public class DocumentationNode extends SchemaComponentNode<Documentation> {
     /**

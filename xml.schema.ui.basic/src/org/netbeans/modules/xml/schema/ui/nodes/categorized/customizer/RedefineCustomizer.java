@@ -57,8 +57,6 @@ import org.openide.util.HelpCtx;
 /**
  * A redefine customizer.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class RedefineCustomizer extends ExternalReferenceCustomizer<Redefine> {
     private static final long serialVersionUID = 1L;

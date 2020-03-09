@@ -72,7 +72,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author skini
  */
 public class ExtensibilityElementNewTypesFactory implements NewTypesFactory {
     

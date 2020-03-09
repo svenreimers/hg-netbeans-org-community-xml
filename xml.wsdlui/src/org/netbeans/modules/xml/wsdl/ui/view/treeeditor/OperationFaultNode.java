@@ -54,7 +54,6 @@ import org.openide.util.Utilities;
 
 /**
  *
- * @author Ritesh Adval
  *
  */
 public class OperationFaultNode extends OperationParameterNode<Fault> {

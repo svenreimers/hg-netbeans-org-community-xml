@@ -55,7 +55,6 @@ import org.openide.util.actions.SystemAction;
 /**
  * Default filter node implementation for all widgets.
  *
- * @author  Nathan Fiedler
  */
 public class ReadOnlyWidgetFilterNode extends FilterNode {
 

@@ -56,7 +56,6 @@ import org.openide.nodes.Node;
 /**
  * This class provides the ability to add node extensions to children based on
  * the underlying schema component type.
- * @author Chris Webster
  */
 public class CategorizedChildrenExtension extends DefaultSchemaVisitor {
     

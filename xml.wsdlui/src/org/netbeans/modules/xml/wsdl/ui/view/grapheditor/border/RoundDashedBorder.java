@@ -64,7 +64,6 @@ import org.netbeans.api.visual.border.Border;
 
 /**
  *
- * @author useradmin
  */
 public class RoundDashedBorder implements Border {
     

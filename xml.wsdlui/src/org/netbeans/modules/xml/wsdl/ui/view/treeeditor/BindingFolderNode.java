@@ -62,7 +62,6 @@ import org.openide.util.Utilities;
 import org.openide.util.datatransfer.NewType;
 
 /**
- * @author Ritesh Adval
  *
  * 
  */

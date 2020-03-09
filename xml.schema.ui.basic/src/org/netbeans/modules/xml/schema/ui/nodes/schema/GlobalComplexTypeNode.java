@@ -67,7 +67,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.schema.properties.DerivationType
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class GlobalComplexTypeNode extends SchemaComponentNode<GlobalComplexType>
 {

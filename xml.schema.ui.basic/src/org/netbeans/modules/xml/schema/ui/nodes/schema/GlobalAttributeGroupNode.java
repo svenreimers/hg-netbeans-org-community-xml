@@ -52,7 +52,6 @@ import org.openide.util.NbBundle;
 import org.openide.util.datatransfer.NewType;
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class GlobalAttributeGroupNode extends SchemaComponentNode<GlobalAttributeGroup>
 {

@@ -51,7 +51,6 @@ import org.openide.nodes.PropertySupport;
  * Provides a default implementation of PropertySupport.Reflection.
  * This class knows whether the model is writable or not and changes as per the model's read/write capability.
  *
- * @author skini
  *
  */
 public class BaseAttributeProperty extends PropertySupport.Reflection {

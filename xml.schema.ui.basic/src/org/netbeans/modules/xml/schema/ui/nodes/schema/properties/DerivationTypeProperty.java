@@ -60,7 +60,6 @@ import org.netbeans.modules.xml.schema.ui.basic.editors.DerivationTypeEditor;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class DerivationTypeProperty extends BaseSchemaProperty {
     

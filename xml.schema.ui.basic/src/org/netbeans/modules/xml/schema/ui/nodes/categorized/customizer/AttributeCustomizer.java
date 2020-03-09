@@ -71,7 +71,6 @@ import org.netbeans.modules.xml.xam.ui.customizer.MessageDisplayer;
 /**
  * Attribute customizer
  *
- * @author  Ajit Bhate
  */
 abstract class AttributeCustomizer<T extends Attribute>
         extends AbstractSchemaComponentCustomizer<T>

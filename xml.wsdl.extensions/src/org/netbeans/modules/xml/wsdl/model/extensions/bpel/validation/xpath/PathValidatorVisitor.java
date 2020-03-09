@@ -49,7 +49,6 @@ import org.netbeans.modules.xml.xam.ui.XAMUtils;
  * This visitor is intended to validate semantics of single XPath.
  * It can check reference integrity of variables, parts and types.
  *
- * @author nk160297
  */
 public class PathValidatorVisitor extends XPathModelTracerVisitor {
     

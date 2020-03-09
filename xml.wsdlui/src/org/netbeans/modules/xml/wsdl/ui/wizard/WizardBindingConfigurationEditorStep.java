@@ -85,7 +85,6 @@ import org.openide.windows.IOProvider;
 
 /**
  *
- * @author radval
  */
 public class WizardBindingConfigurationEditorStep implements WizardDescriptor.FinishablePanel {
     private String mErrorMessage;

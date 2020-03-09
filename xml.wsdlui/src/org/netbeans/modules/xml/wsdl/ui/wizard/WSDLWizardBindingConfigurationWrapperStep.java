@@ -69,7 +69,6 @@ import org.openide.util.HelpCtx;
 
 /**
  *
- * @author radval
  */
 public class WSDLWizardBindingConfigurationWrapperStep implements WizardDescriptor.FinishablePanel {
     

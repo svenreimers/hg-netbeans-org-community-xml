@@ -66,7 +66,6 @@ import org.openide.util.NbBundle;
 import org.netbeans.modules.xml.schema.ui.nodes.schema.properties.BooleanProperty;
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class LocalComplexTypeNode extends SchemaComponentNode<LocalComplexType>
 {

@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.wsdl.model.extensions.soap12.SOAP12Body;
 import org.netbeans.modules.xml.wsdl.model.extensions.soap12.SOAP12Fault;
 
 /**
- * @author Sujit Biswas
  *
  */
 public class Soap12BindingPostProcessor {

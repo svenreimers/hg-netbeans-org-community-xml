@@ -47,7 +47,6 @@ import org.netbeans.modules.xml.wsdl.bindingsupport.spi.WSDLWizardExtensionItera
 
 /**
  *
- * @author skini
  */
 public class DefaultWizardExtensionIterator extends WSDLWizardExtensionIterator {
 

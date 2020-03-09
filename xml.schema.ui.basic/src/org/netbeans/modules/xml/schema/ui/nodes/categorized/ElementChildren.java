@@ -56,7 +56,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.SchemaUIContext;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class ElementChildren<C extends Element>
         extends CategorizedChildren<C>

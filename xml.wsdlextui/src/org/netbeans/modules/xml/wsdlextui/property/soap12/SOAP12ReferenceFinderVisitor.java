@@ -62,7 +62,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author skini
  */
 class SOAP12ReferenceFinderVisitor extends ChildVisitor implements SOAP12Component.Visitor {
 

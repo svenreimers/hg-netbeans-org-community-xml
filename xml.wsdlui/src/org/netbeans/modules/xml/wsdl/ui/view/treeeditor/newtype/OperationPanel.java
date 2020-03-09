@@ -72,7 +72,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  radval
  */
 public class OperationPanel extends javax.swing.JPanel {
     

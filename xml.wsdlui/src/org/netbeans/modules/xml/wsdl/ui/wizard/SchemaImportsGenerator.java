@@ -82,7 +82,6 @@ import org.openide.filesystems.FileUtil;
 
 /**
  *
- * @author radval
  */
 public class SchemaImportsGenerator implements Command {
     

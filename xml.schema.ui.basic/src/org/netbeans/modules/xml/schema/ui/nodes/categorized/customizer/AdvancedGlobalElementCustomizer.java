@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.categorized.customizer.ElementCu
 /**
  * Global Element customizer
  *
- * @author  Ajit Bhate
  */
 public class AdvancedGlobalElementCustomizer extends ElementCustomizer<GlobalElement>
 {

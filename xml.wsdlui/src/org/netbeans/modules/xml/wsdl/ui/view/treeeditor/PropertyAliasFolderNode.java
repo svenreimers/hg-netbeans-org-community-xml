@@ -61,7 +61,6 @@ import org.openide.util.actions.SystemAction;
 /**
  *
  *
- * @author Ritesh Adval
  *
  */
 public class PropertyAliasFolderNode extends AbstractNode {

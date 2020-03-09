@@ -50,7 +50,6 @@ import org.openide.nodes.PropertySupport;
 /**
  * A node property that is read-only.
  *
- * @author  Nathan Fiedler
  */
 public class ReadOnlyProperty extends PropertySupport.ReadOnly {
     /** The read-only value. */

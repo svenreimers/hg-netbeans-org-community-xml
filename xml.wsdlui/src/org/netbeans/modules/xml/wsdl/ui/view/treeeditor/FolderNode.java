@@ -83,7 +83,6 @@ import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
 
 /**
- * @author skini
  */
 public abstract class FolderNode extends AbstractNode
         implements Highlighted, Node.Cookie, CountChildrenCookie {
@@ -307,7 +306,6 @@ public abstract class FolderNode extends AbstractNode
     
     /**
      * Copied from bpel.
-     * @author Vitaly Bychkov
      * @version 1.0
      *
      */

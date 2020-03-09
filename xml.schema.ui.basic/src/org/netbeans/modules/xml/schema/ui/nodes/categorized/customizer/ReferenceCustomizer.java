@@ -72,7 +72,6 @@ import org.openide.util.HelpCtx;
 /**
  * Attribute customizer
  *
- * @author  Ajit Bhate
  */
 public class ReferenceCustomizer<T extends SchemaComponent>
         extends AbstractSchemaComponentCustomizer<T>

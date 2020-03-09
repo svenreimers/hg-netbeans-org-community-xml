@@ -82,7 +82,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author radval
  */
 public class PortTypeOperationNewType extends NewType {
     private PortType mPortType = null;

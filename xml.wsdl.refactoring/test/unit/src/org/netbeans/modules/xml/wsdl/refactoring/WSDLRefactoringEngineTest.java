@@ -76,7 +76,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class WSDLRefactoringEngineTest extends TestCase {
 

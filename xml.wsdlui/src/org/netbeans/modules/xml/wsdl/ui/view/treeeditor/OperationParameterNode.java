@@ -88,7 +88,6 @@ import org.openide.util.datatransfer.PasteType;
 
 /**
  *
- *@author skini
  *
  */
 public abstract class OperationParameterNode<T extends OperationParameter> extends WSDLNamedElementNode<OperationParameter> implements ComponentListener {

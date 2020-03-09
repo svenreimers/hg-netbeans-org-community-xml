@@ -54,8 +54,6 @@ import org.openide.nodes.Node;
  * A proxy, of sorts, which appears in the columns view to make the root
  * node visible in the first column of the view.
  *
- * @author Ajit Bhate
- * @author Nathan Fiedler
  */
 public class DummyDefinitionsNode extends FilterNode implements Node.Cookie {
 

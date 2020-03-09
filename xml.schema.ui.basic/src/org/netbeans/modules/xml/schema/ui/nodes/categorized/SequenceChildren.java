@@ -58,7 +58,6 @@ import org.openide.nodes.Node;
  * order of its children according to their type, as that would be quite
  * wrong for a sequence component.
  *
- * @author Nathan Fiedler
  */
 public class SequenceChildren<C extends SchemaComponent>
         extends CategorizedChildren<C> {

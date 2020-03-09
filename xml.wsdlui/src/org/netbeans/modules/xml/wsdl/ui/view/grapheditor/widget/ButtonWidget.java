@@ -65,7 +65,6 @@ import org.netbeans.api.visual.widget.Widget;
 
 /**
  *
- * @author anjeleevich
  */
 public class ButtonWidget extends Widget implements FocusableWidget {
 

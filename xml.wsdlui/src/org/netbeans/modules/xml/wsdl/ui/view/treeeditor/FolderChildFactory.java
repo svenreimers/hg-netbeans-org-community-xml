@@ -50,7 +50,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author skini
  */
 public class FolderChildFactory
         extends ChildFactory

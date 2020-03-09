@@ -101,7 +101,6 @@ import org.xml.sax.XMLReader;
 
 /** WsdlUIPanel.java - bottom panel for WSDL wizard
  *
- * @author  mkuchtiak
  */
 public class WsdlUIPanel extends javax.swing.JPanel {
 

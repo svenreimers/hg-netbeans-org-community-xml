@@ -67,7 +67,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author nn136682
  */
 public class SchemaUsageRefactoringEngineTest extends TestCase {
   //  SchemaUsageRefactoringEngine instance = new SchemaUsageRefactoringEngine();

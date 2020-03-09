@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.schema.model.SimpleTypeRestriction;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class SimpleTypeChildren<C extends SimpleType>
         extends CategorizedChildren<C>

@@ -51,7 +51,6 @@ import org.netbeans.modules.xml.xam.Referenceable;
 
 /**
  *
- * @author skini
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.wsdl.refactoring.spi.WSDLExtensibilityElementRefactoringSupport.class)
 public class SOAP12BindingRefactoringSupport extends WSDLExtensibilityElementRefactoringSupport {

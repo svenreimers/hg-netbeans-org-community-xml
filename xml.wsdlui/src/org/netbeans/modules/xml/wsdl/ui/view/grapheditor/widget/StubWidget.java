@@ -52,7 +52,6 @@ import org.netbeans.modules.xml.wsdl.ui.view.grapheditor.border.FilledBorder;
 
 /**
  *
- * @author anjeleevich
  */
 public class StubWidget extends LabelWidget {
     

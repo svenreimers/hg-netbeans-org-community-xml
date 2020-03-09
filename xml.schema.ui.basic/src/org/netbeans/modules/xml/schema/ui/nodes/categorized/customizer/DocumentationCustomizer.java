@@ -61,7 +61,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class DocumentationCustomizer extends AbstractSchemaComponentCustomizer<Documentation> {
     static final long serialVersionUID = 1L;

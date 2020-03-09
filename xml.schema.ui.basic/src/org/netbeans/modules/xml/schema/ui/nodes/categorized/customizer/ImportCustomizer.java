@@ -63,8 +63,6 @@ import org.openide.loaders.DataObject;
 /**
  * An import customizer.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class ImportCustomizer extends ExternalReferenceCustomizer<Import> {
     private static final long serialVersionUID = 1L;

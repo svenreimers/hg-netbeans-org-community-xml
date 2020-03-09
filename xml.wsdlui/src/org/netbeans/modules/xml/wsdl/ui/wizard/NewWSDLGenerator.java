@@ -76,7 +76,6 @@ import org.openide.loaders.TemplateWizard;
 
 /**
  *
- * @author radval
  */
 public class NewWSDLGenerator {
     

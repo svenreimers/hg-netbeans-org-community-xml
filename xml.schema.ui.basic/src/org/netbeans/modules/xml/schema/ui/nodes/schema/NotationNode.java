@@ -55,7 +55,6 @@ import org.openide.nodes.Node.Property;
 import org.openide.util.NbBundle;
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class NotationNode extends SchemaComponentNode<Notation>
 {

@@ -61,7 +61,6 @@ import org.netbeans.modules.xml.wsdl.ui.netbeans.module.Utility;
 
 /**
  *
- * @author  skini
  */
 public class RemoveAttributesDialog extends javax.swing.JDialog {
 

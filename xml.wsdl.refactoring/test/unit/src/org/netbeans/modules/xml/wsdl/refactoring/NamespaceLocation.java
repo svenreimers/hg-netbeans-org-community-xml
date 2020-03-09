@@ -55,7 +55,6 @@ import org.openide.loaders.DataObject;
 
 /**
  *
- * @author nn136682
  */
 public enum NamespaceLocation {
     HOTEL("http://www.sun.com/javaone/05/HotelReservationService", "resources/HotelReservationService.wsdl"),

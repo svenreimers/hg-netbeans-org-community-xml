@@ -69,7 +69,6 @@ import org.openide.util.datatransfer.PasteType;
 
 /**
  *
- * @author Ritesh Adval
  *
  * 
  */

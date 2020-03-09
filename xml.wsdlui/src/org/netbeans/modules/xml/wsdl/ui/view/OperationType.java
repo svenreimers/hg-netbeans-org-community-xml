@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.wsdl.ui.view;
 
 /**
  *
- * @author radval
  */
 public class OperationType {
         public static final String OPERATION_REQUEST_REPLY = "OPERATION_REQUEST_REPLY"; //NOI18N

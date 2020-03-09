@@ -48,7 +48,6 @@ import org.netbeans.modules.xml.xam.dom.Attribute;
 
 /**
  *
- * @author radval
  */
 public class StringAttribute implements Attribute {
     private String name;

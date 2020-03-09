@@ -87,7 +87,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.NewTypesFactory;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class AdvancedNewTypesFactory extends NewTypesFactory {
     /**

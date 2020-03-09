@@ -54,7 +54,6 @@ import org.netbeans.api.visual.border.Border;
 
 /**
  *
- * @author anjeleevich
  */
 public class GradientBgBorder implements Border {
 

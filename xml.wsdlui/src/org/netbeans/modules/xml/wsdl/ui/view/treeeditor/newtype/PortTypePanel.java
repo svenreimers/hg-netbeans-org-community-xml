@@ -70,7 +70,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  radval
  */
 public class PortTypePanel extends javax.swing.JPanel {
     

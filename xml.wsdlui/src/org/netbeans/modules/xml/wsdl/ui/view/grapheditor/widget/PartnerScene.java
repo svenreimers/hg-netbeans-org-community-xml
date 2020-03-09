@@ -92,7 +92,6 @@ import org.openide.util.datatransfer.PasteType;
 
 /**
  *
- * @author anjeleevich
  */
 public class PartnerScene extends ObjectScene implements ComponentListener, DnDHandler, PropertyChangeListener {
     private ButtonAction buttonAction;

@@ -83,8 +83,6 @@ import org.openide.util.Utilities;
  * Contains the scrollable view that displays the widgets which represent
  * the partner link types view (e.g. collaborations and messages).
  *
- * @author radval
- * @author Nathan Fiedler
  */
 public class GraphView extends JPanel {
     /** Manages the state of the widgets and corresponding objects. */

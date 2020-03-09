@@ -59,7 +59,6 @@ import org.openide.ErrorManager;
 
 /**
  * 
- * @author radval
  *
  */
 public class OperationInputOutputFaultPropertyAdapter extends ConstraintNamedPropertyAdapter implements NamedPropertyAdapter {

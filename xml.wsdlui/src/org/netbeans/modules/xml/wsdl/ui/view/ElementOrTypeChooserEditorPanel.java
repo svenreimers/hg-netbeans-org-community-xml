@@ -74,7 +74,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  radval
  */
 public class ElementOrTypeChooserEditorPanel extends javax.swing.JPanel {
     

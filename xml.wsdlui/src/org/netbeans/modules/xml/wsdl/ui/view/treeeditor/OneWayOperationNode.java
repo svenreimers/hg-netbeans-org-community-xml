@@ -55,7 +55,6 @@ import org.openide.util.Utilities;
 
 /**
  *
- * @author Ritesh Adval
  *
  */
 public class OneWayOperationNode extends OperationNode<OneWayOperation> {

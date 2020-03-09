@@ -62,7 +62,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class QueryUnusedGlobalsView implements View{
     private SchemaModel model;

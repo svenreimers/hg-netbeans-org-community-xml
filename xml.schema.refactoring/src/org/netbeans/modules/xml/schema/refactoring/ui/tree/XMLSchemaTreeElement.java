@@ -68,7 +68,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Jan Becicka
  */
 public class XMLSchemaTreeElement implements TreeElement { 
     

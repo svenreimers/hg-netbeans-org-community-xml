@@ -63,8 +63,6 @@ import org.openide.util.actions.SystemAction;
 
 /**
  * Action which just holds a few other SystemAction's for grouping purposes.
- * @author cwebster
- * @author Jeri Lockhart
  */
 public class QueryAction  extends NodeAction {
     private static final long serialVersionUID = 1L;

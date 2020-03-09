@@ -58,7 +58,6 @@ import org.netbeans.modules.xml.schema.model.Derivation;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class DerivationTypeForm extends javax.swing.JPanel implements ActionListener {
 

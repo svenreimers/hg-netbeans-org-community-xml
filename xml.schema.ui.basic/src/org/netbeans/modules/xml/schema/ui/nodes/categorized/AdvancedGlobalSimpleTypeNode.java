@@ -78,7 +78,6 @@ import org.netbeans.modules.xml.xam.ui.customizer.CustomizerProvider;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class AdvancedGlobalSimpleTypeNode extends GlobalSimpleTypeNode
 {

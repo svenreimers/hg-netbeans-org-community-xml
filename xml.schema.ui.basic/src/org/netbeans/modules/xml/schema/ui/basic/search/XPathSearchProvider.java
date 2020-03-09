@@ -62,7 +62,6 @@ import org.openide.util.NbBundle;
 /**
  * Implements a SearchProvider that finds components matching an XML Path.
  *
- * @author Nathan Fiedler
  */
 public class XPathSearchProvider implements SearchProvider {
     /** Model in which to perform the search. */

@@ -72,7 +72,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class GlobalReferenceEditor<T extends ReferenceableSchemaComponent>
 		extends PropertyEditorSupport

@@ -76,9 +76,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.categorized.CategorizedSchemaNod
 /**
  * Represents the schema model using a tree view.
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Nathan Fiedler
- * @author  Jeri Lockhart
  */
 public class SchemaTreeView extends JPanel
         implements ExplorerManager.Provider, Lookup.Provider,

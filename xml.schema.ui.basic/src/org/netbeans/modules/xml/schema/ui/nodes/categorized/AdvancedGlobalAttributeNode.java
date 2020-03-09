@@ -60,7 +60,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class AdvancedGlobalAttributeNode extends GlobalAttributeNode
 {

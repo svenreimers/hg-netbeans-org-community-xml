@@ -58,7 +58,6 @@ import org.openide.util.Lookup;
  * Provides utility methods for the Find Usages highlighting provider implementations.
  * copied from org.netbeans.modules.xml.schema.ui.basic.search.Providers
  *
- * @author Jeri Lockhart
  *
  */
 public class HighlightProvider {

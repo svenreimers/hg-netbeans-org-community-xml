@@ -64,7 +64,6 @@ import org.openide.util.NbBundle;
  * Implements a SearchProvider that compares the value of the name attribute
  * with the query string, using a case-insensitive string comparison.
  *
- * @author Nathan Fiedler
  */
 public class ComponentNameSearchProvider extends DeepSchemaVisitor
         implements SearchProvider {

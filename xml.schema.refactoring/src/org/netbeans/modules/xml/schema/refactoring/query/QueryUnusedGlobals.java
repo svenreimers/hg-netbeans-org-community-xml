@@ -74,7 +74,6 @@ import org.openide.util.RequestProcessor;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class QueryUnusedGlobals implements Query {
     

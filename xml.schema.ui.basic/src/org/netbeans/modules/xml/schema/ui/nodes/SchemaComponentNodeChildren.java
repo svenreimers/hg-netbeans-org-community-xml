@@ -57,7 +57,6 @@ import org.openide.nodes.Node;
  * superclass, in which case the developer should override the 
  * <code>createChildNodes()</code> method to create new node children.
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class SchemaComponentNodeChildren<T extends SchemaComponent>
 	extends RefreshableChildren

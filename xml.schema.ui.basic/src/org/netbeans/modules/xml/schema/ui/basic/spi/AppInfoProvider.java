@@ -50,7 +50,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author Ajit
  */
 public abstract class AppInfoProvider {
     public abstract boolean isActive(SchemaModel sm);

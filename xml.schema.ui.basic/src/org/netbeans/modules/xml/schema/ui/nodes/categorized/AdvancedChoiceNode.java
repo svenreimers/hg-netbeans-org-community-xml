@@ -58,8 +58,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Jeri Lockhart
  */
 public class AdvancedChoiceNode extends ChoiceNode
 {

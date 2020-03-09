@@ -90,9 +90,6 @@ import org.openide.util.NbBundle;
  * Represents a column in the SchemaColumnsView, displaying the details of
  * a SchemaComponentNode.
  * 
- * @author Todd Fast, todd.fast@sun.com
- * @author Nathan Fiedler
- * @author Jeri Lockhart
  */
 public class SchemaColumn extends JPanel
 	implements ExplorerManager.Provider, Lookup.Provider, 

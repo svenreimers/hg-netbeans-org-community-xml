@@ -92,7 +92,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class QueryUnusedGlobalsReader {
     

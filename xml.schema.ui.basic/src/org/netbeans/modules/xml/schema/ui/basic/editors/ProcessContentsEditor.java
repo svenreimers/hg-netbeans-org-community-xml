@@ -59,7 +59,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ajit Bhate
  * "Lax", "Skip", "Strict", Empty
  *
  */

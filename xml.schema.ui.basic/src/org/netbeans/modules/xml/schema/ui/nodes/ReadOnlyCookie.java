@@ -49,7 +49,6 @@ import org.openide.nodes.Node;
 /**
  * Indicates if a node is read-only or writable.
  *
- * @author Nathan Fiedler
  */
 public class ReadOnlyCookie implements Node.Cookie {
     /** True if nodes are writable, false to be immutable. */

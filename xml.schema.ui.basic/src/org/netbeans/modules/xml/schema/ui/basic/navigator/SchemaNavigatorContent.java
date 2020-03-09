@@ -77,7 +77,6 @@ import org.openide.util.RequestProcessor;
 /**
  * XML Schema Navigator component containing a tree of schema components.
  *
- * @author  Nathan Fiedler
  */
 public class SchemaNavigatorContent extends AbstractXMLNavigatorContent  implements Runnable{
     /** silence compiler warnings */

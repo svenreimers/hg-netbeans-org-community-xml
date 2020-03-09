@@ -51,7 +51,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class TypeNameFilterNode extends FilterNode
 {

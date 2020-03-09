@@ -55,7 +55,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.*;
 import org.netbeans.modules.xml.schema.ui.nodes.schema.GlobalGroupNode;
 /**
  *
- * @author  Ajit Bhate
  */
 public class AdvancedGlobalGroupNode extends GlobalGroupNode
 {

@@ -137,8 +137,6 @@ import org.openide.util.lookup.ProxyLookup;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Nathan Fiedler
  */
 public abstract class SchemaComponentNode<T extends SchemaComponent>
         extends AbstractNode

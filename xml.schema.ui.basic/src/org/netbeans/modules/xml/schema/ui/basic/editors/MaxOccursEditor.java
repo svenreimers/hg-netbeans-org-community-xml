@@ -62,7 +62,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class MaxOccursEditor  extends PropertyEditorSupport
         implements ExPropertyEditor

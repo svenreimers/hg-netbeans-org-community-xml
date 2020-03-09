@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ajit Bhate
  * "qualified", "unqualified", Empty (Default for Schema)
  *
  */

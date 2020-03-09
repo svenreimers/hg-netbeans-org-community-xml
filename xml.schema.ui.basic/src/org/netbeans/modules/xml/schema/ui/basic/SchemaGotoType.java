@@ -52,7 +52,6 @@ import org.openide.util.NbBundle;
 /**
  * GotoType for showing a component in the schema view (tree/columns).
  *
- * @author  Nathan Fiedler
  */
 public class SchemaGotoType extends GotoType {
 

@@ -67,7 +67,6 @@ import org.openide.util.lookup.ProxyLookup;
 /**
  * Displays the categorized version of the schema column view.
  *
- * @author Nathan Fiedler
  */
 public class SchemaColumnsCategory extends AbstractCategory {
     /** Associated schema model. */

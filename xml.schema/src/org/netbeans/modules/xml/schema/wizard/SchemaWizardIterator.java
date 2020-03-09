@@ -68,7 +68,6 @@ import org.netbeans.spi.project.ui.templates.support.Templates;
  *
  * Read http://performance.netbeans.org/howto/dialogs/wizard-panels.html.
  * 
- * @author  Samaresh (Samaresh.Panda@Sun.Com)
  */
 public class SchemaWizardIterator extends AbstractSchemaWizardIterator {
         

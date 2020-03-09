@@ -58,7 +58,6 @@ import org.netbeans.jemmy.operators.JToggleButtonOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class autoupdate_0001 extends autoupdate {

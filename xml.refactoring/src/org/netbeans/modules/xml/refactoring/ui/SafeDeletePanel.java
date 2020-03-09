@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
 /**
  * Subclass of CustomRefactoringPanel representing the
  * Safe Delete refactoring UI
- * @author Bharath Ravikumar
  */
 public class SafeDeletePanel extends JPanel implements CustomRefactoringPanel {
 

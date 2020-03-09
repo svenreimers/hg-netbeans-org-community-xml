@@ -53,7 +53,6 @@ import org.netbeans.api.xml.services.UserCatalog;
 
 /**
  *
- * @author  anovak
  */
 public class XSDParser {
 

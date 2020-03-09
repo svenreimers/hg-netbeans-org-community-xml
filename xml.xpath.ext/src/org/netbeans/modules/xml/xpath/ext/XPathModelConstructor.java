@@ -47,7 +47,6 @@ package org.netbeans.modules.xml.xpath.ext;
  * A consturctor can be created first. It holds all information required for 
  * a new model cration and initialization. 
  *
- * @author Nikita Krjukov
  */
 public interface XPathModelConstructor {
 

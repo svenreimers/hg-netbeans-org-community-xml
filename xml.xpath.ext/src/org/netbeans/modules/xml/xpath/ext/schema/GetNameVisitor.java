@@ -47,7 +47,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
  *      ((Named)schemaComponent).getName();
  *  }
  * 
- * @author nk160297
  */
 public class GetNameVisitor extends DefaultSchemaVisitor {
 

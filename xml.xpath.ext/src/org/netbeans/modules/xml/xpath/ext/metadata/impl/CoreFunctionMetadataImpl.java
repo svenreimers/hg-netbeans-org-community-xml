@@ -35,7 +35,6 @@ import org.openide.util.NbBundle;
 /**
  * Contains static metadata classes for all XPath Core Functions.
  * 
- * @author nk160297
  */
 public abstract class CoreFunctionMetadataImpl implements CoreFunctionMetadata {
 

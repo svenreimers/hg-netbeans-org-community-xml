@@ -24,7 +24,6 @@ import javax.xml.namespace.QName;
 /**
  * 
  * 
- * @author nk160297
  */
 public interface ExtFunctionMetadata extends FunctionMetadata<QName> {
     

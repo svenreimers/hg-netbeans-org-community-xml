@@ -23,7 +23,6 @@ import java.util.List;
 
 /**
  * 
- * @author radval
  *
  */
 public interface XPathOperationOrFuntion<NameType> extends XPathExpression {

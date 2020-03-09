@@ -25,7 +25,6 @@ package org.netbeans.modules.xml.xpath.ext;
  *  - The ".." is not a short form of parent axis! 
  * They are not the axis at all but rather the abbreviated location steps.
  * 
- * @author nk160297
  */
 public enum XPathAxis {
     SELF(null, "self"),  // NOI18N  

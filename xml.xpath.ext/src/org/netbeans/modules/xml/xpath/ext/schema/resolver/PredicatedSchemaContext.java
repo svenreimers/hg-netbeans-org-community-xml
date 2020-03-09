@@ -36,7 +36,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.VariableVisibilityChecker;
  * WARNING. The class hasn't intended to be used in HashSet yet. 
  * It doesn't have hashCode method redifined.
  * 
- * @author nk160297
  */
 public class PredicatedSchemaContext implements WrappingSchemaContext {
 

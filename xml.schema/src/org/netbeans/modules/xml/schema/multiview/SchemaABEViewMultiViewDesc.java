@@ -59,7 +59,6 @@ import org.openide.windows.TopComponent;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class SchemaABEViewMultiViewDesc extends Object
 	implements MultiViewDescription, Serializable {

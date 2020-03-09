@@ -21,7 +21,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathOperationOrFuntion;
 
 /**
  * 
- * @author nk160297
  */
 public interface FunctionMetadata<NameType> extends GeneralFunctionMetadata<NameType> {
 

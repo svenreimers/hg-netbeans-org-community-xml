@@ -42,7 +42,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.impl.ExpressionWriter;
  * entities. It has its own implementation of all base interfaces. 
  * Other XPath entities has hidden implementation. Only theirs interfaces are opened. 
  * 
- * @author Enrico Lelina
  * @version 
  */
 public class XPathExtensionFunction implements XPathOperationOrFuntion<QName> {

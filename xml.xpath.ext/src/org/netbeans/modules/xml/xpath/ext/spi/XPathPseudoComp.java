@@ -51,8 +51,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.XPathSchemaContext;
  * An general interface for Pseudo Components.
  * It specifies
  * 
- * @author Vladimir Yaroslavskiy
- * @author Nikita Krjukov
  * @version 2009.01.26
  */
 public interface XPathPseudoComp extends XPathSchemaContextHolder {

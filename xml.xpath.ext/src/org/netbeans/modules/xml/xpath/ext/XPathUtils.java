@@ -81,7 +81,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.ExpressionComparatorVisitor;
 /**
  * Utility class.
  * 
- * @author nk160297
  */
 public class XPathUtils {
 

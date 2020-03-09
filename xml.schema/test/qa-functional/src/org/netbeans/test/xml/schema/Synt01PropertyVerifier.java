@@ -66,7 +66,6 @@ import org.netbeans.jemmy.Timeouts;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class Synt01PropertyVerifier extends PropertyVerifier {
     

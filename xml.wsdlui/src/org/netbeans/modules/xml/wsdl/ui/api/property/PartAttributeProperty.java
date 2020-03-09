@@ -56,7 +56,6 @@ import org.openide.nodes.PropertySupport;
 
 /**
  *
- * @author radval
  *
  */
 public class PartAttributeProperty extends PropertySupport.Reflection {

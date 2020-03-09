@@ -51,7 +51,6 @@ import java.util.ArrayList;
 
 /**
  * Represents an XML element
- * @author  anovak
  */
 class SchemaElement extends AbstractResultNode implements Element {
 

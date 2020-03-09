@@ -29,7 +29,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathModel;
  * It doesn't have metadata (the NULL_METADATA_STUB is used), but 
  * the name is known and it is returned by the getName() method. 
  * 
- * @author Enrico Lelina
  * @version 
  */
 public class UnknownExtensionFunction extends XPathExtensionFunction {

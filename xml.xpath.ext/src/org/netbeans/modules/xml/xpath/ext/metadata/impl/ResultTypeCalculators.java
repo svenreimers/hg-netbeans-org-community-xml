@@ -26,7 +26,6 @@ import org.netbeans.modules.xml.xpath.ext.metadata.XPathType;
 
 /**
  *
- * @author nk160297
  */
 public abstract class ResultTypeCalculators {
 

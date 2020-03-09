@@ -27,7 +27,6 @@ import org.netbeans.modules.xml.schema.model.ReferenceableSchemaComponent;
  *
  * Implementation classes should have equals() method! 
  *
- * @author Nikita Krjukov
  */
 public interface XPathVariable {
     QName getName();

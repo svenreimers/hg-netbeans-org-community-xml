@@ -62,7 +62,6 @@ import org.netbeans.test.xml.schema.lib.util.Helpers;
 
 /**
  *
- * @author Tony Beckham
  */
 public class RefactoringTestCase extends JellyTestCase {
 

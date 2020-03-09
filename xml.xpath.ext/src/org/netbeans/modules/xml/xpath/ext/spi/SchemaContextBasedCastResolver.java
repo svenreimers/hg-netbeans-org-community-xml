@@ -54,7 +54,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.XPathSchemaContext;
  * Looks through the chan of SchemaContext elements and 
  * try finding the corresponding cast. 
  * 
- * @author nk160297
  */
 public class SchemaContextBasedCastResolver implements XPathCastResolver {
 

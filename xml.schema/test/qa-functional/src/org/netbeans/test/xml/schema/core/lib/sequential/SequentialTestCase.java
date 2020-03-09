@@ -48,7 +48,6 @@ import org.netbeans.jellytools.JellyTestCase;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class SequentialTestCase extends JellyTestCase {
     private SequentialTest m_test;

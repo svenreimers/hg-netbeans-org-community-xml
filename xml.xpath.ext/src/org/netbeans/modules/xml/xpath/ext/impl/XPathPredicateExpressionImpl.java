@@ -27,7 +27,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathVisitor;
 
 /**
  *
- * @author radval
  *
  */
 public class XPathPredicateExpressionImpl extends XPathExpressionImpl 

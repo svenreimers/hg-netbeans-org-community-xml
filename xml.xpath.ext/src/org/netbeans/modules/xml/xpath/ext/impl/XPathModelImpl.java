@@ -86,8 +86,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.SchemaCompHolder.Eleme
  * <a href="http://www-106.ibm.com/developerworks/webservices/library/ws-bpel/#Expressions">
  * expressions in BPEL4WS</a>.
  *
- * @author Nikita Krjukov
- * @author Enrico Lelina
  * @version 
  */
 public class XPathModelImpl implements XPathModel {

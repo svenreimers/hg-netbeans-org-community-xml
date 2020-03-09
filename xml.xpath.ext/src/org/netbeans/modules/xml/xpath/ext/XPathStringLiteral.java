@@ -23,7 +23,6 @@ package org.netbeans.modules.xml.xpath.ext;
 /**
  * Represents a string literal.
  * 
- * @author Enrico Lelina
  * @version 
  */
 public interface XPathStringLiteral extends XPathLiteral {

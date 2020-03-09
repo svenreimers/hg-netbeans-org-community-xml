@@ -68,7 +68,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.XPathVariable;
  *
  * TODO: All visit(xxx) methods must specify mEquals!
  *
- * @author Nikita Krjukov
  */
 public class ExpressionComparatorVisitor implements XPathVisitor {
 

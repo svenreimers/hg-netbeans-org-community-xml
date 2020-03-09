@@ -30,7 +30,6 @@ import javax.xml.namespace.NamespaceContext;
  * This interface is extension for standart J2SE NamespaceContext interface. It
  * adds some function to existing for work with namespace.
  *
- * @author ads
  */
 public interface ExNamespaceContext extends NamespaceContext {
 

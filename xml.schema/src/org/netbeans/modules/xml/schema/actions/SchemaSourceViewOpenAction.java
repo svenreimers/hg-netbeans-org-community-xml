@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class SchemaSourceViewOpenAction extends OpenAction{
     private static final long serialVersionUID = 1L;

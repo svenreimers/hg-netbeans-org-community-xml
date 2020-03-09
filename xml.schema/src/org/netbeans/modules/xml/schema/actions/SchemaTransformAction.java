@@ -66,7 +66,6 @@ import org.openide.windows.TopComponent;
  * An action on the SchemaDataObject node (SchemaNode)
  * to "Transform" the schema (from one design pattern to another)
  *
- * @author Ayub Khan
  */
 public class SchemaTransformAction extends CookieAction {
     private static final long serialVersionUID = 1L;

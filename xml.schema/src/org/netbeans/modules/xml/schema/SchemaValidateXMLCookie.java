@@ -54,7 +54,6 @@ import org.openide.ErrorManager;
 /**
  * Implements the ValidateXMLCookie cookie for schema models.
  *
- * @author  Nathan Fiedler
  */
 public class SchemaValidateXMLCookie implements ValidateXMLCookie {
     private SchemaDataObject dataObject;

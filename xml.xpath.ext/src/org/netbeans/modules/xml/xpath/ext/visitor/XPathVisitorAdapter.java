@@ -35,8 +35,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathVariableReference;
 
 /**
  *
- * @author radval
- * @author nk160297
  */
 public abstract class XPathVisitorAdapter implements XPathVisitor {
 

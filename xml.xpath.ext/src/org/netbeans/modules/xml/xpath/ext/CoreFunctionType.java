@@ -26,7 +26,6 @@ import org.netbeans.modules.xml.xpath.ext.metadata.impl.CoreFunctionMetadataImpl
 /**
  * Types of the core XPath functions.
  * 
- * @author nk160297
  * @version 
  */
 public enum CoreFunctionType { 

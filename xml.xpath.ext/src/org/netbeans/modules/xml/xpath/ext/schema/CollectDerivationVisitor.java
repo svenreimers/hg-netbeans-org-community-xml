@@ -64,7 +64,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
  * The key is a deriving Schema component. The value is a Schema component 
  * from which the key component is derived. 
  * 
- * @author nk160297
  */
 public class CollectDerivationVisitor extends DefaultSchemaVisitor {
 

@@ -28,7 +28,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathModel;
  * 
  * The implementaion class can also perform type validation for parameters. 
  * 
- * @author nk160297
  */
 public interface ResultTypeCalculator {
 

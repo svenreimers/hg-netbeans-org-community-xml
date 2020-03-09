@@ -53,7 +53,6 @@ import org.netbeans.modules.xml.xam.dom.AbstractDocumentComponent;
  * The default implementation of the ExNamespaceContext.
  * It can be used with any XAM based XML model (Schema, WSDL, ...). 
  * 
- * @author nk160297
  */
 public class XmlExNamespaceContext implements ExNamespaceContext {
     

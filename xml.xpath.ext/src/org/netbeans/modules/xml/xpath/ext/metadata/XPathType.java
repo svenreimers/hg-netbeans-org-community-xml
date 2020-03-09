@@ -29,7 +29,6 @@ import org.netbeans.modules.xml.xam.Named;
  * Represents XPath types.
  * The content of theis fils is draft!
  * 
- * @author nk160297
  */
 public interface XPathType {
 

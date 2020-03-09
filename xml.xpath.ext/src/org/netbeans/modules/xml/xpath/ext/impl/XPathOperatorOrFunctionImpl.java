@@ -32,8 +32,6 @@ import org.netbeans.modules.xml.xpath.ext.metadata.StubExtFunction;
 
 /**
  * 
- * @author radval
- * @author nk160297
  */
 public abstract class XPathOperatorOrFunctionImpl<NameType> 
         extends XPathExpressionImpl

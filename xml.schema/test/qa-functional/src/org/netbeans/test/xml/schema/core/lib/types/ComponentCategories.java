@@ -46,7 +46,6 @@ package org.netbeans.test.xml.schema.core.lib.types;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public enum ComponentCategories {
     ATTRIBUTES(1),

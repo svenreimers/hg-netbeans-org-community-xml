@@ -22,8 +22,6 @@ package org.netbeans.modules.xml.xpath.ext;
 /**
  * Represents a node test on type.
  * 
- * @author Enrico Lelina
- * @author nk160297
  * @version 
  */
 public class StepNodeTypeTest implements StepNodeTest {

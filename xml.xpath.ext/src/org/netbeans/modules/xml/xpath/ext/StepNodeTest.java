@@ -22,7 +22,6 @@ package org.netbeans.modules.xml.xpath.ext;
 /**
  * Represents a node test in a location path step.
  * 
- * @author Nikita Krjukov
  * @version 
  */
 public interface StepNodeTest {

@@ -48,8 +48,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.XPathSchemaContext;
 
 /**
  * 
- * @author nk160297
- * @author Vladimir Yaroslavskiy
  * @version 2008.03.24
  */
 public interface XPathCastResolver {

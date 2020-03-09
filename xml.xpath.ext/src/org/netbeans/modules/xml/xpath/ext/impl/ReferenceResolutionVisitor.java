@@ -83,7 +83,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathVisitorAdapter;
  * Be aware that many of visit() methods throws the StopResolutionException
  * which is a RuntimeException. It is done to escape visitor interface modification.
  *
- * @author Nikita Krjukov
  */
 public class ReferenceResolutionVisitor extends XPathVisitorAdapter {
 

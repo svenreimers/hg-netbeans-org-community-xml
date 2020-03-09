@@ -68,7 +68,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.ExtensionFunctionResolver;
 
 /**
  *
- * @author nk160297
  */
 public class XPathModelFactoryImpl implements XPathModelFactory {
 

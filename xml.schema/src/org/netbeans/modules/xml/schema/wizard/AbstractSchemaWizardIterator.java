@@ -76,7 +76,6 @@ import org.netbeans.spi.project.ui.templates.support.Templates;
 /**
  * Sample schema wizard iterator. See layer.xml for template declaration.
  *
- * @author  Samaresh (Samaresh.Panda@Sun.Com)
  */
 public abstract class AbstractSchemaWizardIterator extends Object implements TemplateWizard.Iterator {
         

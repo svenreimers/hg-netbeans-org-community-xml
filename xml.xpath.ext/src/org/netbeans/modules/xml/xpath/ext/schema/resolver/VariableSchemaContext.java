@@ -30,7 +30,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.SchemaModelsStack;
 
 /**
  *
- * @author nk160297
  */
 public class VariableSchemaContext implements XPathSchemaContext {
 

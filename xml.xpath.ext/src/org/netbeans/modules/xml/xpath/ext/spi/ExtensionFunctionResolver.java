@@ -29,7 +29,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.validation.XPathValidationContext;
  * So it is the responsibility of an external module to provid full 
  * information about extension functions. 
  * 
- * @author nk160297
  */
 public interface ExtensionFunctionResolver {
 

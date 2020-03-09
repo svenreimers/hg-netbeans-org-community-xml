@@ -29,7 +29,6 @@ import org.netbeans.modules.xml.xam.spi.Validator.ResultType;
  * will be informed about all problems while the model resolve  
  * schema types. 
  * 
- * @author nk160297
  */
 public interface XPathValidationContext {
 

@@ -30,7 +30,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathVisitable;
  * arguments to operations and functions. The children expressions are
  * represented as an ordered collection.
  *
- * @author Enrico Lelina
  * @version 
  */
 public interface XPathExpression extends XPathVisitable {

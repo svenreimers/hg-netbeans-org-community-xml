@@ -70,7 +70,6 @@ import org.openide.windows.OutputWriter;
 
 /**
  *
- * @author girix
  */
 public final class ImportDirectory implements Runnable{
     

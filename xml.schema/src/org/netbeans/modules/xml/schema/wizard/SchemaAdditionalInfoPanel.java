@@ -62,7 +62,6 @@ import org.openide.loaders.TemplateWizard;
  * This class represents the data for the schema panel wizard.
  * Read http://performance.netbeans.org/howto/dialogs/wizard-panels.html.
  * 
- * @author  Samaresh (Samaresh.Panda@Sun.Com)
  */
 public class SchemaAdditionalInfoPanel implements WizardDescriptor.Panel, ChangeListener {
 

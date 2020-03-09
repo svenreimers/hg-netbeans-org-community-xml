@@ -42,7 +42,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.XPathSchemaContext;
  * The meaning of such changes is to prevent mess up with this 2 notions.
  * The changes affects many modules so it worth doing it when code will be stable. 
  *
- * @author nk160297
  */
 public interface XPathSchemaContextHolder {
 

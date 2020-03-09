@@ -56,7 +56,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathSchemaContextHolder;
 /**
  * This interface represents any special location steps like wildcards or
  * node types (node(), comment(), text(), processing-instruction()).
- * @author nikita
  */
 public interface XPathSpecialStep extends XPathSchemaContextHolder {
 

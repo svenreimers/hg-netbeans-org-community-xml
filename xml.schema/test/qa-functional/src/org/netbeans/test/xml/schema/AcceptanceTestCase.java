@@ -93,7 +93,6 @@ import org.netbeans.junit.RandomlyFails;
 
 /**
  *
- * @author ca@netbeans.org, michaelnazarov@netbeans.org
  */
 
 public class AcceptanceTestCase extends JellyTestCase {

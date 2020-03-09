@@ -31,7 +31,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.SchemaModelsStack;
 /**
  * The schema context, which relates to a Type Cast step. 
  * 
- * @author nk160297
  */
 public class CastSchemaContext implements WrappingSchemaContext {
 

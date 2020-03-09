@@ -36,7 +36,6 @@ import javax.swing.Icon;
  *     It can be used for avoiding redundant brackets 
  *     when an expression is converted to a string
  * 
- * @author nk160297
  */
 public interface GeneralFunctionMetadata<NameType> {
 

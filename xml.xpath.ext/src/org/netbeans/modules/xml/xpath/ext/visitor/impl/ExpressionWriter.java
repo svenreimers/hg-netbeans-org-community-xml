@@ -41,8 +41,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathVisitorAdapter;
  * Implements the XPathVisitor interface to generate a string representation
  * of an expression.
  * 
- * @author sbyn
- * @author nk160297
  * @version 
  */
 public class ExpressionWriter extends XPathVisitorAdapter  {

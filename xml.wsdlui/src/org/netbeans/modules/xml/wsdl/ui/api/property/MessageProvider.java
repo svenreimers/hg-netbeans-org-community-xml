@@ -52,7 +52,6 @@ import org.netbeans.modules.xml.wsdl.model.Message;
 /**
  * This provider provides a WSDL Message name for use with parts chooser and part chooser.
  *
- * @author skini
  *
  */
 public interface MessageProvider {

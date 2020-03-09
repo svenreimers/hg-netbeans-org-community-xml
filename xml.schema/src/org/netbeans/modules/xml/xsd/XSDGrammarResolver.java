@@ -57,7 +57,6 @@ import org.w3c.dom.Attr;
 
 /**
  * Resolves XSDGrammars and Namespaces
- * @author  Ales Novak
  */
 class XSDGrammarResolver implements GrammarQuery {
     

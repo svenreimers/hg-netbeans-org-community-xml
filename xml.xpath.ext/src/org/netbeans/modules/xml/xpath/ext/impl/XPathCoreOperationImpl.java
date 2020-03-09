@@ -30,7 +30,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathVisitor;
 /**
  * Represents a core XPath operation.
  * 
- * @author Enrico Lelina
  * @version 
  */
 public class XPathCoreOperationImpl extends XPathOperatorOrFunctionImpl<String>

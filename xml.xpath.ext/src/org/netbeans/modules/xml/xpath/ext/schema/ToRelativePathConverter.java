@@ -34,8 +34,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathVisitorAdapter;
  * Implements the XPathVisitor interface to convert the XPath expression
  * to relative form. 
  * 
- * @author sbyn
- * @author nk160297
  * @version 
  */
 public class ToRelativePathConverter extends XPathVisitorAdapter  {

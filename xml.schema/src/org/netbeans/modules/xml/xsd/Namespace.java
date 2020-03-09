@@ -45,7 +45,6 @@ package org.netbeans.modules.xml.xsd;
 
 /**
  * Represents a Namespace
- * @author  anovak
  */
 class Namespace {
 

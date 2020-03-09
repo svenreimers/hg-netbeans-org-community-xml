@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.schema.wizard;
 
 /**
  *
- * @author girix
  */
 public interface IConstants {
     public static final String SOURCE_LOCATION_KEY = "sourceLocationKey"; //NOI18N

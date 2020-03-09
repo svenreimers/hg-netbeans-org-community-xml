@@ -25,7 +25,6 @@ import javax.xml.namespace.QName;
 /**
  * XPathModel helper class.
  *
- * @author Enrico Lelina
  * @version
  */
 public interface XPathModelFactory {

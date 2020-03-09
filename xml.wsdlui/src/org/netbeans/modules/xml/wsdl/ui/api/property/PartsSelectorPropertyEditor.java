@@ -55,7 +55,6 @@ import org.openide.explorer.propertysheet.PropertyEnv;
 
 /**
  *
- * @author radval
  *
  */
 public class PartsSelectorPropertyEditor extends PropertyEditorSupport implements ExPropertyEditor {

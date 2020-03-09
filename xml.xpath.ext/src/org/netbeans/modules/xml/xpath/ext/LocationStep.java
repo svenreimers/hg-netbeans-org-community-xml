@@ -24,8 +24,6 @@ import javax.xml.namespace.NamespaceContext;
 /**
  * Represents a step in a location path.
  * 
- * @author Enrico Lelina
- * @author nk160297
  * @version 
  */
 public interface LocationStep extends XPathExpression, XPathSchemaContextHolder {

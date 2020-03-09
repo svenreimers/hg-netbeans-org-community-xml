@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.wsdl.ui.view.treeeditor.WSDLElementNode;
 /**
  * CompletionModelProvider for WSDL document. The extensibility elements need to write their own completionmodelprovider.
  *
- * @author Shivanand (shivanand.kini@sun.com)
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.schema.completion.spi.CompletionModelProvider.class)
 public class WSDLCompletionModelProvider extends CompletionModelProvider {

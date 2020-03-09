@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.xpath.ext.impl;
  * This private exception is used only internally to interrupt Schema resulution.
  * It must never go out of this class.
  *
- * @author Nikita Krjukov
  */
 public class StopResolutionException  extends RuntimeException {
 

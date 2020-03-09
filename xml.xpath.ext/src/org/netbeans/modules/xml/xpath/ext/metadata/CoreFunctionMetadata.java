@@ -22,7 +22,6 @@ package org.netbeans.modules.xml.xpath.ext.metadata;
 /**
  * 
  * 
- * @author nk160297
  */
 public interface CoreFunctionMetadata extends FunctionMetadata<String> {
     

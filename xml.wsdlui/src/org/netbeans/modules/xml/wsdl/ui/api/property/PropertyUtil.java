@@ -68,7 +68,6 @@ import org.netbeans.modules.xml.wsdl.ui.netbeans.module.Utility;
 
 /**
  *
- * @author radval
  */
 public class PropertyUtil {
     private static final String COLON = ":";// NOI18N

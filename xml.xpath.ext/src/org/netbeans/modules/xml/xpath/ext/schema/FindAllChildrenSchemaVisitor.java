@@ -39,7 +39,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
  * This schema visitor is inteneded to look for a children elements or attributes 
  * It looks only children at the next lavel. 
  * 
- * @author nk160297
  */
 public class FindAllChildrenSchemaVisitor extends AbstractSchemaSearchVisitor {
     

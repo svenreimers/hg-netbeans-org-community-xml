@@ -106,7 +106,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author radval
  */
 public class ExtensibilityElementCreatorVisitor extends AbstractXSDVisitor {
     

@@ -22,7 +22,6 @@ package org.netbeans.modules.xml.xpath.ext;
 /**
  * Represents a core XPath operation.
  * 
- * @author Enrico Lelina
  * @version 
  */
 public interface XPathCoreOperation extends XPathOperationOrFuntion<String> {

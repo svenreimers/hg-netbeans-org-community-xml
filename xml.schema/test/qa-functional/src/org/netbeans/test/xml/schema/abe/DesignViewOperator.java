@@ -50,7 +50,6 @@ import org.netbeans.jemmy.operators.JPopupMenuOperator;
 
 /**
  *
- * @author Mikhail Matveev
  */
 public class DesignViewOperator extends TopComponentOperator{
     

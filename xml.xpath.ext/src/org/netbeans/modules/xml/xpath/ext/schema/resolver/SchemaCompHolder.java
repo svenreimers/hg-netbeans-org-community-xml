@@ -61,7 +61,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.XPathPseudoComp;
  *  - Pseudo Element
  *  - Pseudo Attribute
  * 
- * @author nk160297
  */
 public interface SchemaCompHolder<T> {
     T getHeldComponent();

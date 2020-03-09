@@ -67,7 +67,6 @@ import org.openide.util.NbBundle;
  * This class represents the schema wizard, that is the GUI.
  * Read http://performance.netbeans.org/howto/dialogs/wizard-panels.html.
  *
- * @author  Samaresh (Samaresh.Panda@Sun.Com)
  */
 final class SchemaAdditionalInfoGUI extends javax.swing.JPanel {
     

@@ -34,7 +34,6 @@ import org.openide.util.NbBundle;
 /**
  * Contains static metadata classes for all XPath operations.
  * 
- * @author nk160297
  */
 public abstract class OperationMetadataImpl implements OperationMetadata {
     

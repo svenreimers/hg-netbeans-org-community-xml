@@ -25,7 +25,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathModel;
 /**
  * XPathModel helper class.
  *
- * @author nk160297
  */
 public class XPathModelHelperImpl extends XPathModelHelper {
 

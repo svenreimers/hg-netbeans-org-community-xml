@@ -59,7 +59,6 @@ import org.xml.sax.helpers.DefaultHandler;
 /**
  * CheckXMLCookie and ValidateXMLCookie implementation for XML Schemas.
  *
- * @author  Petr Kuzel
  */
 public final class ValidateSchemaSupport extends ValidateXMLSupport {
     

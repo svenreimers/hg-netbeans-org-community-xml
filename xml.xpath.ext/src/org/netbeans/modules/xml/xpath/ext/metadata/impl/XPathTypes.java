@@ -28,7 +28,6 @@ import org.netbeans.modules.xml.schema.model.SchemaComponent;
 
 /**
  *
- * @author nk160297
  */
 public abstract class XPathTypes {
 

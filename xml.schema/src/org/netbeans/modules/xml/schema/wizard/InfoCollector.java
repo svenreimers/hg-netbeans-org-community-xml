@@ -69,7 +69,6 @@ import org.openide.util.Exceptions;
 
 /**
  *
- * @author girix
  */
 public class InfoCollector {
     public static enum InfoType {

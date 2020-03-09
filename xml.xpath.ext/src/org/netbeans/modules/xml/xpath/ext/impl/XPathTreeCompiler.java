@@ -39,7 +39,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathPredicateExpression;
 import org.netbeans.modules.xml.xpath.ext.XPathVariableReference;
 
 /**
- * @author nk160297
  *
  * Extendes the Compiler for constructing netbeans specific XPath model.
  */

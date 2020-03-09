@@ -54,7 +54,6 @@ import org.openide.nodes.PropertySupport;
  * Provides a default implementation of PropertySupport.Reflection.
  * Can be used to show attributes with default values.
  *
- * @author skini
  *
  */
 public class StringAttributeProperty extends PropertySupport.Reflection {

@@ -48,7 +48,6 @@ package org.netbeans.modules.xml.wsdl.ui.common;
 /**
  * Implements a fully-qualified name model.
  *
- * @author Enrico Lelina
  * @version 
  */
 public class QName {

@@ -58,7 +58,6 @@ import org.netbeans.modules.xml.wsdl.ui.api.property.PropertyAdapter;
 
 /**
  *
- * @author radval
  */
 public abstract class CommonAttributePropertyAdapter extends PropertyAdapter {
     

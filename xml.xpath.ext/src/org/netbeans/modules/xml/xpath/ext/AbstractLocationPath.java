@@ -23,7 +23,6 @@ import javax.xml.namespace.NamespaceContext;
 
 /**
  *
- * @author nk160297
  */
 public interface AbstractLocationPath extends XPathSchemaContextHolder {
 

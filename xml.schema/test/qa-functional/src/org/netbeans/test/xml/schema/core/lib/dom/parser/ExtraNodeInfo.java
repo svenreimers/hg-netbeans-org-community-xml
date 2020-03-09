@@ -50,7 +50,6 @@ import org.netbeans.test.xml.schema.core.lib.util.Helpers;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class ExtraNodeInfo {
     

@@ -28,7 +28,6 @@ import org.netbeans.modules.xml.schema.model.SchemaComponent;
  * The special visitor for looking for attributes only. 
  * It is necessary for ComplexContentRestriction only. 
  * 
- * @author nk160297
  */
 public class CollectInheritedAttributesVisitor extends AbstractSchemaSearchVisitor {
     

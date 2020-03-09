@@ -27,7 +27,6 @@ import org.netbeans.modules.xml.wsdl.model.WSDLModel;
  * the wsdl part uses this to have the user select a node in the tree and map it appropriately
  * to the correct property.
  *
- * @author skini
  *
  */
 public interface ElementOrTypeProvider {

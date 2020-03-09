@@ -55,7 +55,6 @@ import org.xml.sax.Attributes;
 
 /**
  * ContentHandler impl for building XSD grammar
- * @author  anovak
  */
 class XSDContentHandler implements ContentHandler {
 

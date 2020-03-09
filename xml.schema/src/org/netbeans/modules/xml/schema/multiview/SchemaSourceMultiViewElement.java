@@ -85,8 +85,6 @@ import org.openide.util.lookup.Lookups;
 /**
  * The source editor for schema documents.
  *
- * @author Jeri Lockhart
- * @author Nathan Fiedler
  */
 public class SchemaSourceMultiViewElement extends CloneableEditor
         implements MultiViewElement {

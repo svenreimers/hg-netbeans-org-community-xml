@@ -51,8 +51,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.CastSchemaContext;
  * A general type cast interface. It specifies a subject of cast and a
  * target schema type.
  * 
- * @author Vladimir Yaroslavskiy
- * @author Nikita Krjukov
  * @version 2009.01.26
  */
 public interface XPathCast extends XPathSchemaContextHolder {

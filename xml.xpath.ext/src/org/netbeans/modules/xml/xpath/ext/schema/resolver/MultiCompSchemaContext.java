@@ -30,7 +30,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.SchemaModelsStack;
  *
  * TODO: this class looks like unnecessary
  * 
- * @author nk160297
  */
 public class MultiCompSchemaContext implements XPathSchemaContext {
 

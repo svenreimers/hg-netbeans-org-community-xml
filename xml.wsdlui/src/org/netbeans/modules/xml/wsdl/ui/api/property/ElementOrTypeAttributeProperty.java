@@ -51,7 +51,6 @@ import org.openide.nodes.PropertySupport;
 
 /**
  *
- * @author skini
  *
  */
 public class ElementOrTypeAttributeProperty

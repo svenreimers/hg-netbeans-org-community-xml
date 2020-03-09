@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
 /**
  * Checks well-formess of XML file sending results to output window.
  *
- * @author  Petr Kuzel
  * @version exact copy of tools/actions/CheckXMLAction
  * @deprecated To be eliminated once a API CheckXMLAction will be intorduces
  */

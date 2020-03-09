@@ -47,7 +47,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.XPathVariable;
 
 /**
  *
- * @author Nikita Krjukov
  */
 public class VariableVisibilityChecker extends XPathModelTracerVisitor {
 

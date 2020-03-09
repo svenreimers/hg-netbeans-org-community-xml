@@ -22,7 +22,6 @@ package org.netbeans.modules.xml.xpath.ext;
 /**
  * XPathModel helper class.
  *
- * @author Enrico Lelina
  * @version
  */
 public abstract class XPathModelHelper {

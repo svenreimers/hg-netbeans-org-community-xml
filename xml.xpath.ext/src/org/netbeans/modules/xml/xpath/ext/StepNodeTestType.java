@@ -21,7 +21,6 @@ package org.netbeans.modules.xml.xpath.ext;
 
 /**
  *
- * @author nk160297
  */
 public enum StepNodeTestType {
     NODETYPE_NODE("node"),  // NOI18N

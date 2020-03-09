@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.xpath.ext.schema.resolver;
  * This interface marks Schema Context which wraps another one.
  * The getBaseContext() method is intended to get the wrapped context.
  *
- * @author Nikita Krjukov
  */
 public interface WrappingSchemaContext extends XPathSchemaContext {
     XPathSchemaContext getBaseContext();

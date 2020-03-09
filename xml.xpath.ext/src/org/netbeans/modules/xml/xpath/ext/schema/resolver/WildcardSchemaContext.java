@@ -42,7 +42,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.XPathSpecialStepImpl;
  *        true                    false               *
  *        false                   true                @*
  * 
- * @author nk160297
  */
 public class WildcardSchemaContext implements XPathSchemaContext {
 

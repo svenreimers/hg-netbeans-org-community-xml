@@ -31,7 +31,6 @@ import java.util.List;
  * argumens.
  * 
  * @see org.netbeans.modules.xml.xpath.ext.metadata.XPathMetadataUtils#getArgDescriptorsList
- * @author nk160297
  */
 public final class ArgumentGroup implements AbstractArgument {
 

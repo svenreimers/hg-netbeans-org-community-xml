@@ -29,7 +29,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.impl.PathExpressionWriter;
 
 
 /**
- * @author Enrico Lelina
  * @version 
  */
 public class XPathLocationPathImpl

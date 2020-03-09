@@ -29,7 +29,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.validation.XPathValidationContext;
 /**
  * Interface for an XPath parser wrapper.
  *
- * @author Enrico Lelina
  * @version 
  */
 public interface XPathModel extends XPathSchemaContextHolder {

@@ -29,7 +29,6 @@ import org.netbeans.modules.xml.schema.model.SchemaModel;
  * model by the specified namespace URI. It is required when 
  * there are absolute location pathes in the XPath expression. 
  * 
- * @author nk160297
  */
 public interface ExternalModelResolver {
     

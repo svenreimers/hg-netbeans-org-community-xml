@@ -22,7 +22,6 @@ import org.openide.util.NbBundle;
  * The enumeration of common problems which can happen while 
  * the XPath model performs resolution of ext references.
  * 
- * @author nk160297
  */
 public enum XPathProblem {
     XPATH_PARSING_EXCEPTION,

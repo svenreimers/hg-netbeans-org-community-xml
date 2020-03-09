@@ -47,7 +47,6 @@ import org.xml.sax.Attributes;
 
 /**
  * Specialized element representing xs:complexType or xs:simpleType
- * @author  anovak
  */
 class Type extends SchemaElement {
 

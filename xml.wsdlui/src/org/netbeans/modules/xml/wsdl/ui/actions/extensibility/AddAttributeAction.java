@@ -68,7 +68,6 @@ import org.netbeans.modules.xml.xam.dom.AbstractDocumentComponent;
 
 /**
  *
- * @author radval
  */
 public class AddAttributeAction extends CommonAddExtensibilityAttributeAction {
     

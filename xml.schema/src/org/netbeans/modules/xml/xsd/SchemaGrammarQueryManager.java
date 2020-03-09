@@ -51,7 +51,6 @@ import java.io.*;
 
 /** XML Schema Grammar provided code completion for XML Schema file.
  *
- * @author  Milan Kuchtiak
  */
 public class SchemaGrammarQueryManager extends org.netbeans.modules.xml.api.model.GrammarQueryManager
 {

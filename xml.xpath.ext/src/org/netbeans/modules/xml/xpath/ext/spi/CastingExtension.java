@@ -45,7 +45,6 @@ package org.netbeans.modules.xml.xpath.ext.spi;
 /**
  * The marker interface for XPathCast and XPathPseudoComp. 
  * 
- * @author Nikita Krjukov
  */
 public interface CastingExtension {
 

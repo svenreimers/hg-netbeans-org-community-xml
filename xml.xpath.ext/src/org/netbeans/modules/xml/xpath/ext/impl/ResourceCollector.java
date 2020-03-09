@@ -48,7 +48,6 @@ import java.util.Set;
 /**
  * Collects requierd imports and prefixes
  *
- * @author Nikita Krjukov
  */
 public class ResourceCollector {
 

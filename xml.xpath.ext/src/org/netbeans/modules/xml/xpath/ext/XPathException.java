@@ -23,7 +23,6 @@ package org.netbeans.modules.xml.xpath.ext;
 /**
  * XPath exception class.
  *
- * @author Enrico Lelina
  * @version 
  */
 public class XPathException

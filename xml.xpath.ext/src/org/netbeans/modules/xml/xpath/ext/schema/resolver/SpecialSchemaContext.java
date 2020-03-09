@@ -61,7 +61,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.XPathSpecialStepImpl;
  * Be aware that the node() isn't a special step. It rather considered as
  * a wildcard like * or @*
  *
- * @author Nikita Krjukov
  */
 public class SpecialSchemaContext implements XPathSchemaContext {
 

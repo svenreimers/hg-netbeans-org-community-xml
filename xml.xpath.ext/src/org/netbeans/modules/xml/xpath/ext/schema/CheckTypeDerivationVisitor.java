@@ -39,7 +39,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 /**
  * This schema visitor is inteneded to check if one type is derived from another.
  * 
- * @author nk160297
  */
 public class CheckTypeDerivationVisitor extends DefaultSchemaVisitor {
     

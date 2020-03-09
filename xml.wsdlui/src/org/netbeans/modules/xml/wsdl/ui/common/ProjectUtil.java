@@ -56,7 +56,6 @@ import org.netbeans.spi.project.support.ant.AntProjectHelper;
 import org.openide.ErrorManager;
 
 /**
- * @author radval
  *
  * Netbeans Project related utility operations
  */

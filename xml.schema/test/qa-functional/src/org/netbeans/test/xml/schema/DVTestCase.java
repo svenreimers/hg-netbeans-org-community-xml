@@ -72,7 +72,6 @@ import org.netbeans.test.xml.schema.lib.util.Helpers;
 
 /**
  *
- * @author Mikhail Matveev
  */
 
 public class DVTestCase extends JellyTestCase {

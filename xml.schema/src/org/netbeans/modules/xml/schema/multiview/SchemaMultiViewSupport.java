@@ -79,8 +79,6 @@ import org.openide.windows.TopComponent;
  *
  *
  *
- * @author Jeri Lockhart
- * @author Ajit Bhate
  */
 public class SchemaMultiViewSupport implements ViewComponentCookie, ShowCookie {
     public static final String SCHEMA_EDITOR_HELP_ID = "SCHEMA_EDITOR_HELP_ID";

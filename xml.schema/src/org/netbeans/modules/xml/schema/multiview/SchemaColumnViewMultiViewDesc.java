@@ -58,7 +58,6 @@ import org.openide.windows.TopComponent;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class SchemaColumnViewMultiViewDesc extends Object
 	implements MultiViewDescription, Serializable {

@@ -79,7 +79,6 @@ import java.util.regex.*;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class autoupdate extends GeneralXMLTest {

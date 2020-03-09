@@ -46,7 +46,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
  * This visitor looks only for attributes defined direclty inside of parent.
  * Inherited attributes aren't taken into consideration.
  * 
- * @author nk160297
  */
 public class CollectLocalAttributesVisitor extends DefaultSchemaVisitor {
     

@@ -61,7 +61,6 @@ import org.openide.windows.TopComponent;
  * An action on the SchemaDataObject node (SchemaNode)
  * to "Open" the schema multiview to the SchemaView tab
  *
- * @author Jeri Lockhart
  */
 public class SchemaViewOpenAction extends NodeAction{
     private static final long serialVersionUID = 1L;

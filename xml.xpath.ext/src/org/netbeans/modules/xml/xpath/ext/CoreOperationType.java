@@ -40,7 +40,6 @@ import org.netbeans.modules.xml.xpath.ext.metadata.impl.OperationMetadataImpl.Un
 /**
  * Types of the core XPath operations.
  * 
- * @author Enrico Lelina
  * @version 
  */
 public enum CoreOperationType {

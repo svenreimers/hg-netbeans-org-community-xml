@@ -33,7 +33,6 @@ import org.openide.ErrorManager;
 /**
  * Represents a node test on name.
  * 
- * @author Enrico Lelina
  * @version 
  */
 public class StepNodeNameTest implements StepNodeTest {

@@ -63,7 +63,6 @@ import javax.swing.ListModel;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class XMLCodeCompletion extends GeneralXMLTest {

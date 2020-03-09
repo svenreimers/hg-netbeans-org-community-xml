@@ -46,7 +46,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.XPathSchemaContext;
 
 /**
  *
- * @author Nikita Krjukov
  */
 public class XPathSpecialStepImpl implements XPathSpecialStep {
 

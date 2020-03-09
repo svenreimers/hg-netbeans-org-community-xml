@@ -58,7 +58,6 @@ import org.openide.util.Utilities;
 import org.openide.windows.TopComponent;
 /**
  *
- * @author Jeri Lockhart
  */
 public class SchemaSourceMultiViewDesc 
                 implements MultiViewDescription, Serializable {

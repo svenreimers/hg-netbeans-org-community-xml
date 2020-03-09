@@ -45,8 +45,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.XPathVariable;
  * In case of a BPEL Message type varialbe, the method getType() should 
  * return the type of Message Part.
  * 
- * @author radval
- * @author nk160297
  */
 public interface XPathVariableReference 
         extends XPathExpression, XPathSchemaContextHolder {

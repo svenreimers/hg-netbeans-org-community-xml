@@ -31,8 +31,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathModel;
  * Implements the XPathVisitor interface to generate a string representation
  * of an AbstractLocationPath.
  * 
- * @author sbyn
- * @author nk160297
  * @version 
  */
 public class PathExpressionWriter extends ExpressionWriter  {

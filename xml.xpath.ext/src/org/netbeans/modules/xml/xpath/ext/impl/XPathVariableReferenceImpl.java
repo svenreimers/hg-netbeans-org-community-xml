@@ -32,8 +32,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.XPathVariable;
 
 /**
  * 
- * @author radval
- * @author nk160297
  *
  */
 public class XPathVariableReferenceImpl extends XPathExpressionImpl 

@@ -26,7 +26,6 @@ package org.netbeans.modules.xml.xpath.ext.schema;
  * This exception signals about trying to set bad namespace for element. This
  * could be either bad prefix or bad namespace.
  *
- * @author ads
  */
 public class InvalidNamespaceException extends Exception {
 

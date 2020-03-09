@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.wsdl.ui.common;
 
 /**
  *
- * @author radval
  */
 public class Constants {
 

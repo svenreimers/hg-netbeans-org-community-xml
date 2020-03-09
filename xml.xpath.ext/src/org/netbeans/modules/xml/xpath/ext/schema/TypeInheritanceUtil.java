@@ -59,7 +59,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.ExternalModelResolver;
  * 
  * Then the collected data can be analysed. 
  * 
- * @author nk160297
  */
 public class TypeInheritanceUtil {
 

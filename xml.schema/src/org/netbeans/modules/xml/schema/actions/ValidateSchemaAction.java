@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
 /**
  * Validates XML Schema file sending results to output window.
  *
- * @author  Petr Kuzel
  * @version 1.0
  */
 public class ValidateSchemaAction extends CookieAction implements CollectXMLAction.XMLAction {

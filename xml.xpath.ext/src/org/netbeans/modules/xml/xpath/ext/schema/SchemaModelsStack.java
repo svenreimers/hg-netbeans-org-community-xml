@@ -53,7 +53,6 @@ import org.netbeans.modules.xml.schema.model.SchemaModel;
  * a global element, when it is located inside of a schema, which doesn't have
  * a target namespace attribute. 
  * 
- * @author nk160297
  */
 public class SchemaModelsStack {
 

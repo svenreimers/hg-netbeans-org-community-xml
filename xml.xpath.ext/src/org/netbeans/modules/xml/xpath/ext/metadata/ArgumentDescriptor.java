@@ -25,7 +25,6 @@ import java.util.List;
 /**
  * Describes an argument (parameter) of a method or operation.
  * 
- * @author nk160297
  */
 public final class ArgumentDescriptor implements AbstractArgument {
 

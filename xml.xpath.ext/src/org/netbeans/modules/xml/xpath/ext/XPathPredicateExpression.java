@@ -26,8 +26,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.XPathSchemaContext;
  * This helps distinguishing expression which are predicates.
  * (ie. expression which are inside [] in a location/expression path.
  *
- * @author Nikita Krjukov
- * @author radval
  *
  */
 public interface XPathPredicateExpression 

@@ -59,7 +59,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Nikita Krjukov
  */
 public class SchemaUtils {
 

@@ -65,7 +65,6 @@ import org.openide.filesystems.FileObject;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.04.16
  */
 final class SearchProvider extends org.netbeans.modules.xml.search.spi.SearchProvider.Adapter {

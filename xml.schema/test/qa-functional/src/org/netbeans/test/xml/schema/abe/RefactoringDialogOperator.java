@@ -54,7 +54,6 @@ import org.netbeans.jemmy.operators.JTextFieldOperator;
 
 /**
  *
- * @author Misha
  */
 public class RefactoringDialogOperator extends JDialogOperator{
     

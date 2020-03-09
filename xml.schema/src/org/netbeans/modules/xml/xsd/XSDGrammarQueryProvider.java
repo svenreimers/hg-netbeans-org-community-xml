@@ -52,7 +52,6 @@ import org.netbeans.modules.xml.api.model.*;
 /**
  * Provide XSD grammar. It must be registered at layer.
  *
- * @author  Ales Novak <ales.novak@sun.com>
  */
 public class XSDGrammarQueryProvider extends GrammarQueryManager {
 

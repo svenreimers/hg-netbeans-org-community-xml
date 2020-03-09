@@ -61,7 +61,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.XPathSchemaContext.Sch
  * assigns context for all components of the XPath model, for which 
  * it can be specified.
  *
- * @author nk160297
  */
 public interface XPathSchemaContext {
     

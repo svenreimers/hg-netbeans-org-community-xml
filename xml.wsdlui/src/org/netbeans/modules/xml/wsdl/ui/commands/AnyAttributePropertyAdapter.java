@@ -64,7 +64,6 @@ import org.openide.ErrorManager;
 
 /**
  *
- * @author radval
  */
 public class AnyAttributePropertyAdapter extends PropertyAdapter {
     

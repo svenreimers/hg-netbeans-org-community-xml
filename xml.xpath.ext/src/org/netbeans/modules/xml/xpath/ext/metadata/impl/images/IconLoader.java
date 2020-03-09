@@ -27,7 +27,6 @@ import org.openide.util.Utilities;
 
 /**
  *
- * @author nk160297
  */
 public final class IconLoader {
 

@@ -42,7 +42,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author nk160297
  */
 public final class XPathMetadataUtils {
 

@@ -61,7 +61,6 @@ import org.openide.nodes.PropertySupport;
 
 /**
  *
- * @author radval
  */
 public class PortTypeAttributeProperty extends PropertySupport.Reflection {
 	

@@ -38,7 +38,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathVisitor;
  * The class is declared as final because the functin is very specific and 
  * is not intended to be inherited.
  *
- * @author nk160297
  */
 public final class StubExtFunction extends XPathExtensionFunction {
 

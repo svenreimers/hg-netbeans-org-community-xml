@@ -109,9 +109,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Jeri Lockhart
- * @author Todd Fast, todd.fast@sun.com
- * @author Nathan Fiedler
  */
 public class SchemaColumnViewMultiViewElement extends TopComponent
         implements MultiViewElement, PropertyChangeListener,

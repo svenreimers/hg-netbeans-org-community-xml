@@ -58,7 +58,6 @@ import org.netbeans.test.xml.schema.lib.SchemaMultiView;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class XMLCodeCompletion_0006 extends XMLCodeCompletion {

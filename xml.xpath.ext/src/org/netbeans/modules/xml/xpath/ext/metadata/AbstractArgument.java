@@ -26,7 +26,6 @@ package org.netbeans.modules.xml.xpath.ext.metadata;
  * They have to implement an inherited interfaces. 
  * Now there are two such interfaces: ArgumentDescriptor and ArgumentGroup.
  * 
- * @author nk160297
  */
 public interface AbstractArgument {
 

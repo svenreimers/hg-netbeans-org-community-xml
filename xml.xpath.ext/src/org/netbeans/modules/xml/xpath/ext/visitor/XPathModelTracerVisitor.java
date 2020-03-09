@@ -30,7 +30,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathPredicateExpression;
 
 /**
  *
- * @author nk160297
  */
 public abstract class XPathModelTracerVisitor extends XPathVisitorAdapter {
     

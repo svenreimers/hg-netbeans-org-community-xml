@@ -24,7 +24,6 @@ import org.netbeans.modules.xml.xpath.ext.XPathModel;
 
 /**
  * 
- * @author radval
  *
  */
 public class XPathLiteralImpl extends XPathExpressionImpl implements XPathLiteral {

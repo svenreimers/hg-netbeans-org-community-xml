@@ -45,7 +45,6 @@ import org.netbeans.modules.xml.xpath.ext.schema.resolver.XPathSchemaContext;
  * The name and namespace of the sought children is specified in the constructor.
  * If the namespace isn't specified, then it looks for a children only by name. 
  * 
- * @author nk160297
  */
 public class FindChildrenSchemaVisitor extends AbstractSchemaSearchVisitor {
     

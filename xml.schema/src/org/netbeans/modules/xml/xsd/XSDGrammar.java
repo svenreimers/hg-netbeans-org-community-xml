@@ -57,7 +57,6 @@ import org.netbeans.modules.xml.api.model.HintContext;
  * It is produced by {@link XSDParser}.
  * Hints given by this grammar do not guarantee that valid XML document is created.
  *
- * @author  Ales Novak
  */
 class XSDGrammar  implements GrammarQuery {
     

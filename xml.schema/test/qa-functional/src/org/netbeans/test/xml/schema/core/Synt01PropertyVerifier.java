@@ -49,7 +49,6 @@ import org.netbeans.test.xml.schema.core.lib.sequential.SequentialTestSuite;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class Synt01PropertyVerifier extends PropertyVerifier {
     

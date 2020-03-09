@@ -28,7 +28,6 @@ import org.netbeans.modules.xml.schema.model.ReferenceableSchemaComponent;
  * anything about them. It is a resposibility of external modules 
  * to resolve variables and theirs types.
  * 
- * @author nk160297
  */
 public interface VariableResolver<VarClass extends XPathVariable> {
 

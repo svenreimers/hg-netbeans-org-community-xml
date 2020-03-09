@@ -60,7 +60,6 @@ import org.netbeans.test.xml.schema.core.lib.SchemaMultiView;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class Helpers {
     

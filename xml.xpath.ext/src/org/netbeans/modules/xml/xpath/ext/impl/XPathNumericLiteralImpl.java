@@ -26,7 +26,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathVisitor;
 /**
  * Represents a numeric literal.
  * 
- * @author Enrico Lelina
  * @version 
  */
 public class XPathNumericLiteralImpl extends XPathLiteralImpl

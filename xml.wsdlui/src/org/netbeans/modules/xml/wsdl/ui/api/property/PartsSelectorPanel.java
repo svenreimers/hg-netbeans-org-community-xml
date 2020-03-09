@@ -55,7 +55,6 @@ import org.openide.explorer.propertysheet.PropertyEnv;
 
 /**
  *
- * @author  skini
  */
 public class PartsSelectorPanel extends javax.swing.JPanel {
     

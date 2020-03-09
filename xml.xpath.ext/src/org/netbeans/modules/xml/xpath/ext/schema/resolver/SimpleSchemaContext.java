@@ -32,7 +32,6 @@ import org.netbeans.modules.xml.xpath.ext.spi.XPathPseudoComp;
 
 /**
  * The schema context, which contains only one Schema component. 
- * @author nk160297
  */
 public class SimpleSchemaContext implements XPathSchemaContext {
 

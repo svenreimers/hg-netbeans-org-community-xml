@@ -81,7 +81,6 @@ import org.netbeans.jellytools.TopComponentOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class GeneralXMLTest extends JellyTestCase {

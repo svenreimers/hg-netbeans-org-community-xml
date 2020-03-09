@@ -20,7 +20,6 @@
 package org.netbeans.modules.xml.xpath.ext;
 
 /**
- * @author radval
  */
 public interface XPathExpressionPath extends XPathExpression, AbstractLocationPath {
     

@@ -62,7 +62,6 @@ import org.netbeans.junit.NbModuleSuite;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class XMLCodeCompletion_0005 extends XMLCodeCompletion {

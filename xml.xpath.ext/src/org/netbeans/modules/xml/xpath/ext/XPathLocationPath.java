@@ -22,7 +22,6 @@ package org.netbeans.modules.xml.xpath.ext;
 /**
  * Represents a location path.
  * 
- * @author Enrico Lelina
  * @version 
  */
 public interface XPathLocationPath extends XPathExpression, AbstractLocationPath {

@@ -51,8 +51,6 @@ import org.netbeans.modules.xml.api.model.GrammarResult;
 
 /**
  *
- * @author  Ales Novak
- * @author Petr Kuzel
  */
 abstract class AbstractResultNode extends AbstractNode implements GrammarResult {
 

@@ -84,7 +84,6 @@ import org.openide.util.Exceptions;
 
 /**
  *
- * @author Ajit
  */
 public class DefaultProjectCatalogSupport extends ProjectCatalogSupport {
 

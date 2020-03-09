@@ -66,8 +66,6 @@ import org.openide.windows.TopComponent;
  * ViewComponentCookie and ShowCookie.
  * The instance of this class is in the WSDLDataObject cookie set.
  * 
- * @author Ajit Bhate
- * @author Nathan Fiedler
  */
 public class WSDLMultiViewSupport implements ViewComponentCookie, ShowCookie {
     /** The data object */

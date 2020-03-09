@@ -60,8 +60,6 @@ import org.openide.windows.TopComponent;
 /**
  * An implementation of NavigatorPanel for WSDL navigator.
  *
- * @author Marek Fukala
- * @author Nathan Fiedler
  */
 public class WSDLNavigatorPanel implements LookupListener, NavigatorPanel {
     private Lookup.Result selection;

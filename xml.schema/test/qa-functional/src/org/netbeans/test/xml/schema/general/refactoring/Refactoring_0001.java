@@ -58,7 +58,6 @@ import junit.framework.Test;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 public class Refactoring_0001 extends Refactoring
 {

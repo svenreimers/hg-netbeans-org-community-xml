@@ -50,7 +50,6 @@ import org.openide.util.NbBundle;
 import org.openide.util.actions.CallableSystemAction;
 /**
  *
- * @author Sonali
  */
 public class PaletteCustomizerAction extends CallableSystemAction {
 

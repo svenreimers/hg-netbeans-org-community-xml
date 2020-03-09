@@ -56,7 +56,6 @@ import org.openide.windows.WindowManager;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class WSDLMultiViewFactory {
     /**

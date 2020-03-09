@@ -61,8 +61,6 @@ import org.openide.util.NbBundle;
 /**
  * Represents a collection of external references, or a single file.
  *
- * @author Ajit Bhate
- * @author Nathan Fiedler
  */
 public class ExternalReferenceDataNode extends FilterNode
         implements ExternalReferenceNode {

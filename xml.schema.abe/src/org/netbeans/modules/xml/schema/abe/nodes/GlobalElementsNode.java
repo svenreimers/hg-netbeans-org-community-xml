@@ -65,7 +65,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author girix
  */
 public class GlobalElementsNode extends AbstractNode {
     

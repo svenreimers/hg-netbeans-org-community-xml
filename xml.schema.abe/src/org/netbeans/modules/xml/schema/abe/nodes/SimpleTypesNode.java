@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.schema.model.GlobalSimpleType;
 
 /**
  *
- * @author Ayub Khan
  */
 public class SimpleTypesNode extends AbstractNode
 {

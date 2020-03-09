@@ -51,7 +51,6 @@ import org.w3c.dom.Node;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class NodeIterator {
     private Iterator m_iterator;

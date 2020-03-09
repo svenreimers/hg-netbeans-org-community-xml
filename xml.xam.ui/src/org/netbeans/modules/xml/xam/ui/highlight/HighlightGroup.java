@@ -50,7 +50,6 @@ import java.util.Set;
 /**
  * A collection of Highlight objects, which are shown or hidden as a group.
  *
- * @author Nathan Fiedler
  */
 public class HighlightGroup {
     /** Type of highlight group for search results (includes parents). */

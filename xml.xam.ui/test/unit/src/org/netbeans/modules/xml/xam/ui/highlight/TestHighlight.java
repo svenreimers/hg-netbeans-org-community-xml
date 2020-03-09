@@ -49,7 +49,6 @@ import org.netbeans.modules.xml.xam.Component;
 /**
  * A concrete implementation of Highlight for use in unit testing.
  *
- * @author Nathan Fiedler
  */
 public class TestHighlight extends Highlight {
 

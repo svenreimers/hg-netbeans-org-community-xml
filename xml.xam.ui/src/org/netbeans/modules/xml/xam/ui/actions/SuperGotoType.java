@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
  * GotoType for showing the definition of a component (e.g. the type that
  * defines an element).
  *
- * @author  Nathan Fiedler
  */
 public class SuperGotoType extends GotoType {
 

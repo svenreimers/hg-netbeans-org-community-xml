@@ -54,8 +54,6 @@ import org.openide.util.actions.CookieAction;
 /**
  * Base class for all actions which show a component in a particular view.
  *
- * @author Ajit Bhate
- * @author Nathan Fiedler
  */
 public abstract class AbstractShowComponentAction extends CookieAction {
     /** silence compiler warnings */

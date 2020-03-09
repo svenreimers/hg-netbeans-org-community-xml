@@ -78,7 +78,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Sonali Kochar
  */
 public class SchemaCopyRefactoringPlugin extends SchemaRefactoringPlugin  implements XMLRefactoringPlugin {
     

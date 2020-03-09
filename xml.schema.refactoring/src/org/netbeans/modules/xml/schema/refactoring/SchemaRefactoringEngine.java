@@ -67,7 +67,6 @@ import org.openide.filesystems.FileObject;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class SchemaRefactoringEngine { 
     

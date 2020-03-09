@@ -114,7 +114,6 @@ import org.openide.util.lookup.ProxyLookup;
  * shared component. For example, lets say PO.xsd declares an element 'shipTo' and
  * the type of this eleemnt is from a differnet source file Address.xsd.
  *
- * @author Samaresh (Samaresh.Panda@Sun.Com)
  */
 public abstract class ABEAbstractNode extends AbstractNode
         implements GotoCookie, PropertyChangeListener, ReferenceableProvider {

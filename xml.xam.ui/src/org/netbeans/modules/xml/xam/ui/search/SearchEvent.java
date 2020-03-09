@@ -51,7 +51,6 @@ import java.util.List;
  * An event which indicates that a search operation has commenced,
  * completed, was dismissed, or failed due to an exception.
  *
- * @author Nathan Fiedler
  */
 public class SearchEvent extends EventObject {
     /** silence compiler warnings */

@@ -60,7 +60,6 @@ import javax.swing.event.ListSelectionListener;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class NamespacePanel extends javax.swing.JPanel
         implements ActionListener, ListSelectionListener, DocumentListener {

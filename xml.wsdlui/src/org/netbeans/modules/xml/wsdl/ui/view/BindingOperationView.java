@@ -65,7 +65,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  skini
  */
 public class BindingOperationView extends javax.swing.JPanel {
 

@@ -52,7 +52,6 @@ import org.openide.util.Lookup;
 /**
  * Concrete implementation of the search control panel.
  *
- * @author  Nathan Fiedler
  */
 public class DefaultSearchControlPanel extends SearchControlPanel {
     /** silence compiler warnings */

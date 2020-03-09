@@ -68,7 +68,6 @@ import org.xml.sax.helpers.DefaultHandler;
 
 
 /**
- * @author radval
  *
  * A factory which parses wsdl fast. 
  * Just parse some attributes from wsdl and ignore rests.

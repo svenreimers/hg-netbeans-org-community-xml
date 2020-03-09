@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.schema.model.TypeContainer;
 
 /**
  *
- * @author radval
  */
 public class CreateAddSchemaElementActionVisitor extends AbstractXSDVisitor {
     

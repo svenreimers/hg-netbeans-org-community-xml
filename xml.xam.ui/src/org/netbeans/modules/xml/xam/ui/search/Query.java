@@ -47,7 +47,6 @@ package org.netbeans.modules.xml.xam.ui.search;
 /**
  * Encapsulates the search query and its parameters.
  *
- * @author Nathan Fiedler
  */
 public class Query {
     /** The query string, possibly a regular expression. */

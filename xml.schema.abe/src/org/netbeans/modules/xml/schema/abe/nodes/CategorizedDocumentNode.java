@@ -52,7 +52,6 @@ import org.openide.util.NbBundle;
 
 /**
  * This node represents a category node. 
- * @author Chris Webster
  */
 public class CategorizedDocumentNode extends AbstractNode {
     

@@ -58,7 +58,6 @@ import org.netbeans.modules.xml.xam.ui.Util;
 /**
  * Tests DefaultHighlightManager class.
  *
- * @author Nathan Fiedler
  */
 public class DefaultHighlightManagerTest extends TestCase {
     private Schema schema;

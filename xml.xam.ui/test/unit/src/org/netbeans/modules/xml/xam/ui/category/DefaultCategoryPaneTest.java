@@ -53,7 +53,6 @@ import org.openide.util.Lookup;
 /**
  * Tests DefaultCategoryPane class.
  *
- * @author Nathan Fiedler
  */
 public class DefaultCategoryPaneTest extends TestCase {
 

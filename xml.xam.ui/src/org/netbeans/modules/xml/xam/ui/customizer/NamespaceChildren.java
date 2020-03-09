@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.xam.Model;
 /**
  * Represents the collection of files belonging to a common namespace.
  *
- * @author Ajit Bhate
  */
 public class NamespaceChildren extends Children.Keys {
     /** Map of namespace to a list of files in that namespace. */

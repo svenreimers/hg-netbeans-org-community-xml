@@ -108,8 +108,6 @@ import org.openide.windows.WindowManager;
 
 /**
  *
- * @author Jeri Lockhart
- * @author Todd Fast, todd.fast@sun.com
  */
 public class WSDLEditorSupport extends DataEditorSupport
         implements WSDLModelCookie, OpenCookie, EditCookie,

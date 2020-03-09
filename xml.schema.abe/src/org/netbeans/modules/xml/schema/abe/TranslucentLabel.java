@@ -64,7 +64,6 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author girix
  */
 public class TranslucentLabel extends JLabel{
     private static final long serialVersionUID = 7526472295622776147L;

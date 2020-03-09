@@ -60,7 +60,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author radval
  */
 public class WSDLBpelExtensibilityElementsTest extends TestCase {
     

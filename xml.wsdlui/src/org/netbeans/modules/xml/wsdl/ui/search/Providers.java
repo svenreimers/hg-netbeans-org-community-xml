@@ -55,7 +55,6 @@ import org.openide.windows.TopComponent;
 /**
  * Provides utility methods for the search provider implementations.
  *
- * @author Nathan Fiedler
  */
 public class Providers {
 

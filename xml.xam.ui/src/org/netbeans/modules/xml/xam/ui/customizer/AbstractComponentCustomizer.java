@@ -54,8 +54,6 @@ import org.netbeans.modules.xml.xam.ui.XAMUtils;
 /**
  * A customizer of XAM components.
  *
- * @author  Ajit Bhate
- * @author  Nathan Fiedler
  */
 public abstract class AbstractComponentCustomizer<T extends Component>
         extends AbstractCustomizer {

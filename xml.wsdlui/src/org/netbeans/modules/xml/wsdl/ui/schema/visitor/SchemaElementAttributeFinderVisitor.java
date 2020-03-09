@@ -71,7 +71,6 @@ import org.netbeans.modules.xml.schema.model.Attribute.Use;
 
 /**
  *
- * @author radval
  */
 public class SchemaElementAttributeFinderVisitor extends AbstractXSDVisitor {
     

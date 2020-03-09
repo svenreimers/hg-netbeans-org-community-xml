@@ -63,7 +63,6 @@ import org.xml.sax.InputSource;
 /**
  * Represents a WSDL file.
  *
- * @author  Jerry Waldorf
  */
 public class WSDLDataObject extends MultiDataObject {
 

@@ -57,7 +57,6 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author  radval
  */
 public class BindingConfigurationPanel extends javax.swing.JPanel {
     

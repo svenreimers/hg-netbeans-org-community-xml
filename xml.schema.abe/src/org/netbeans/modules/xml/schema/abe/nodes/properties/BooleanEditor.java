@@ -58,7 +58,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Jeri Lockhart
  * True, False, or null
  *
  */

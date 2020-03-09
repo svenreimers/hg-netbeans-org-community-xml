@@ -51,7 +51,6 @@ import javax.swing.JLabel;
 /**
  *
  *
- * @author Todd Fast, todd.fast@sun.com
  */
 public interface InstanceDesignConstants {
     public static final Color LIGHT_YELLOW=new Color(255,255,196);

@@ -47,7 +47,6 @@ import javax.swing.Action;
 import org.openide.util.Lookup;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.12.14
  */
 public abstract class SearchManager {

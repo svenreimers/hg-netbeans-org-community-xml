@@ -87,7 +87,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author girix
  */
 public class NamespacePanel extends GradientShadePanel{
     protected static final long serialVersionUID = 7526472295622776147L;

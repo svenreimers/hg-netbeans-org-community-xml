@@ -87,7 +87,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author girix
  */
 public class UIUtilities {
     

@@ -58,7 +58,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ayub Khan
  */
 public class CompositorNode extends ABEAbstractNode {
     

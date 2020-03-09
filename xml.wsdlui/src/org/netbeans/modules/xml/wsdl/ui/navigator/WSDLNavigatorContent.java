@@ -83,7 +83,6 @@ import org.openide.windows.TopComponent;
 /**
  * Navigator component containing a tree of WSDL components.
  *
- * @author  Nathan Fiedler
  */
 public class WSDLNavigatorContent extends JPanel
         implements ExplorerManager.Provider, Runnable, PropertyChangeListener {

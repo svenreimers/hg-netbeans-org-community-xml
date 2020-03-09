@@ -78,7 +78,6 @@ import org.openide.nodes.PropertySupport;
  * );
  * </CODE>
  * 
- * @author Ayub Khan
  */
 public class BaseABENodeProperty extends PropertySupport.Reflection {
     

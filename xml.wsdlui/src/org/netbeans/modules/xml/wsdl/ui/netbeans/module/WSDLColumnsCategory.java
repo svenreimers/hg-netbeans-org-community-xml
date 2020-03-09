@@ -67,7 +67,6 @@ import org.openide.util.lookup.ProxyLookup;
 /**
  * Displays the column form of the WSDL editor.
  *
- * @author Nathan Fiedler
  */
 public class WSDLColumnsCategory extends AbstractCategory {
     /** Associated WSDL model. */

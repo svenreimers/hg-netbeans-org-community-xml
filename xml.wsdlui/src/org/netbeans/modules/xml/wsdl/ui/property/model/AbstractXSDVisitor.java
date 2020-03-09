@@ -100,7 +100,6 @@ import org.netbeans.modules.xml.schema.model.Whitespace;
 
 /**
  *
- * @author radval
  */
 public abstract class AbstractXSDVisitor implements XSDVisitor {
     

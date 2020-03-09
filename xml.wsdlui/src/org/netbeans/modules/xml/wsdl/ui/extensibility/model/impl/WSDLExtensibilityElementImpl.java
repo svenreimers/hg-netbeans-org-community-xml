@@ -77,7 +77,6 @@ import org.openide.windows.TopComponent;
 
 
 /**
- * @author radval
  *
  * elements need to be unique withing this  WSDLExtensibilityElement.
  * (i.e two element name can be same as long as they are in different targetNamespace)

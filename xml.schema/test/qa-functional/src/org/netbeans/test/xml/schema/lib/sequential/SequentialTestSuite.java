@@ -51,7 +51,6 @@ import junit.framework.TestSuite;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class SequentialTestSuite extends TestSuite {
     private TestSequence m_testSequence;

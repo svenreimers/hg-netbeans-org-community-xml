@@ -60,7 +60,6 @@ import org.netbeans.modules.xml.axi.AXIComponent;
 
 /**
  *
- * @author girix
  */
 public abstract class ModelEventMediator implements PropertyChangeListener{
     

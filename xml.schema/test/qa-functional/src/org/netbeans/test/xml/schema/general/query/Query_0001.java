@@ -58,7 +58,6 @@ import org.netbeans.jemmy.operators.JToggleButtonOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class Query_0001 extends Query {

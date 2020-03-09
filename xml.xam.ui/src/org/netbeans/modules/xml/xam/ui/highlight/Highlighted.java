@@ -52,7 +52,6 @@ import org.netbeans.modules.xml.xam.Component;
  * A Highlighted object has the ability to highlight its visual
  * representation based on a particular Highlight object.
  *
- * @author Nathan Fiedler
  */
 public interface Highlighted extends EventListener {
 

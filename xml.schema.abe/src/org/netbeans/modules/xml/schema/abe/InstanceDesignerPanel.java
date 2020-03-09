@@ -81,7 +81,6 @@ import org.openide.windows.TopComponent;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class InstanceDesignerPanel extends ABEBaseDropPanel {
     public static final int EXPAND_BY_DEFAULT_LIMIT  = 50;

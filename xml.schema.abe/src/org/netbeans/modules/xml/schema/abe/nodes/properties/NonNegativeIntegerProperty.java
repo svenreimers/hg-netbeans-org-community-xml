@@ -64,7 +64,6 @@ import org.openide.util.NbBundle;
  * Inner class Primitive supports int type properties.
  * Inner class PrimitivePositive supports int type properties
  *  which have positive values (value>0).
- * @author Ajit Bhate
  */
 public class NonNegativeIntegerProperty extends BaseABENodeProperty {
     

@@ -54,7 +54,6 @@ import org.netbeans.test.xml.schema.lib.util.Helpers;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class SchemaMultiView {
     

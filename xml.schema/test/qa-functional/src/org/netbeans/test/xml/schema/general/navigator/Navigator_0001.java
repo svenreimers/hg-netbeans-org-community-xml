@@ -62,7 +62,6 @@ import org.netbeans.jellytools.nodes.ProjectRootNode;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class Navigator_0001 extends Navigator {

@@ -89,7 +89,6 @@ import org.openide.filesystems.FileUtil;
 
 /**
  *
- * @author Sonali
  */
 public abstract class SchemaRefactoringPlugin extends ProgressProviderAdapter implements RefactoringPlugin, XMLRefactoringPlugin {
     

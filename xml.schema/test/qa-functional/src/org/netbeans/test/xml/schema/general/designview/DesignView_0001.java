@@ -63,7 +63,6 @@ import org.netbeans.jemmy.drivers.input.MouseRobotDriver;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class DesignView_0001 extends DesignView {

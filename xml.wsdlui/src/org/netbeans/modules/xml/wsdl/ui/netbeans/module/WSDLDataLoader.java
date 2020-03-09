@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
 /** 
  * Recognizes .wsdl files as a single DataObject.
  *
- * @author Jerry Waldorf
  */
 public class WSDLDataLoader extends UniFileLoader {
 //        if we use text/*xml mime type then data editor support 

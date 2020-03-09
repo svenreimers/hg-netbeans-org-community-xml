@@ -77,7 +77,6 @@ import org.netbeans.modules.xml.schema.abe.nodes.ABEAbstractNode;
 /**
  *
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public abstract class TagPanel extends ABEBaseDropPanel implements ComponentListener{
     

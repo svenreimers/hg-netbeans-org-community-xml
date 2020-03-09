@@ -51,7 +51,6 @@ import org.openide.util.NbBundle;
 /**
  * GotoType for showing a component in the source view.
  *
- * @author  Nathan Fiedler
  */
 public class SourceGotoType extends GotoType {
 

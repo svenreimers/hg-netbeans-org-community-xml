@@ -54,7 +54,6 @@ import org.openide.util.Lookup;
  * category at any given time, and providing a means of selecting the
  * category to be shown.
  *
- * @author Nathan Fiedler
  */
 public interface CategoryPane {
     /** Property name for the selected Category. */

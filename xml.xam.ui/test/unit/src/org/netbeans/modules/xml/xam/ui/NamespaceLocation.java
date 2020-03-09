@@ -51,7 +51,6 @@ import org.openide.filesystems.FileUtil;
 
 /**
  *
- * @author nn136682
  */
 public enum NamespaceLocation {
     OTA("http://www.opentravel.org/OTA/2003/05", "resources/J1_TravelItinerary.xsd"),

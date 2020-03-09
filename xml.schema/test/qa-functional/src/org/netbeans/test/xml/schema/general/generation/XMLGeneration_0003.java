@@ -60,7 +60,6 @@ import org.netbeans.jemmy.operators.JTextComponentOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 // XML instance generation from a web source

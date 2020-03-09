@@ -53,7 +53,6 @@ import org.openide.util.actions.CookieAction;
 
 /**
  *
- * @author skini
  */
 public class ConfigureExtensibilityElementAction extends CommonNodeAction {
 

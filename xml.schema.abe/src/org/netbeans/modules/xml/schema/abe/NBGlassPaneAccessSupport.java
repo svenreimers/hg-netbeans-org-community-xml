@@ -60,7 +60,6 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author girix
  */
 public class NBGlassPaneAccessSupport {
     

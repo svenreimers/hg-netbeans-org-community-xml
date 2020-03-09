@@ -88,9 +88,6 @@ import org.openide.util.NbBundle;
  * Represents a column in the WSDLColumnsView, displaying the details of
  * a WSDLElementNode.
  * 
- * @author Todd Fast, todd.fast@sun.com
- * @author Nathan Fiedler
- * @author Jeri Lockhart
  */
 public class WSDLColumn extends JPanel
         implements ExplorerManager.Provider, Lookup.Provider, NodeListener,

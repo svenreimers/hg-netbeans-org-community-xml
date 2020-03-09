@@ -49,7 +49,6 @@ import java.awt.Component;
 /**
  * A SearchComponent presents the interface for the search feature.
  *
- * @author Nathan Fiedler
  */
 public interface SearchComponent {
 

@@ -50,7 +50,6 @@ import org.openide.nodes.Node;
 /**
  * GetComponentCookie returns referenced xam component. 
  * 
- * @author Ajit Bhate
  */
 public interface GetComponentCookie extends Node.Cookie {
 

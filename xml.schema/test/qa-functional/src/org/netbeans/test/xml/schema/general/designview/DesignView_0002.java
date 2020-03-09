@@ -60,7 +60,6 @@ import java.awt.Component;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class DesignView_0002 extends DesignView {

@@ -53,7 +53,6 @@ import org.netbeans.test.xml.schema.general.GeneralXMLTest;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class SchemaView extends GeneralXMLTest {

@@ -80,7 +80,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Samaresh (Samaresh.Panda@Sun.Com)
  */
 public class AttributeNode extends ABEAbstractNode {
     

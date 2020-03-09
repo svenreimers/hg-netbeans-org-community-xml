@@ -69,8 +69,6 @@ import javax.swing.border.EmptyBorder;
  * <p><em>Based on HtmlTextLinkButton from ide/welcome module in
  * NetBeans IDE.</em></p>
  *
- * @author  S. Aubrecht
- * @author  Nathan Fiedler
  */
 public class LinkButton extends JButton implements FocusListener, MouseListener {
     private static final long serialVersionUID = 1L;

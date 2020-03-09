@@ -75,7 +75,6 @@ import org.openide.nodes.Node.Property;
 
 /**
  *
- * @author radval
  */
 public class BuiltInCustomizerFactory {
    

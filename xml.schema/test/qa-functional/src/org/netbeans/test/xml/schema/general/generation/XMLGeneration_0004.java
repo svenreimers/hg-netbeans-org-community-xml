@@ -59,7 +59,6 @@ import junit.framework.Test;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 // Multiple XML Schema generation from local sources

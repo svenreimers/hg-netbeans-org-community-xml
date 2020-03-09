@@ -61,7 +61,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author radval
  */
 public class SchemaAttributeTypeFinderVisitor extends AbstractXSDVisitor {
     

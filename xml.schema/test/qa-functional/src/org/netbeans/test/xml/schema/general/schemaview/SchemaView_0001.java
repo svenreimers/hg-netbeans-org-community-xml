@@ -70,7 +70,6 @@ import org.netbeans.jemmy.operators.JTextComponentOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class SchemaView_0001 extends SchemaView {

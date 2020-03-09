@@ -52,7 +52,6 @@ import org.openide.nodes.PropertySupport;
 
 /**
  * 
- * @author Ayub Khan
  */
 public class MinOccursProperty extends BaseABENodeProperty {
     

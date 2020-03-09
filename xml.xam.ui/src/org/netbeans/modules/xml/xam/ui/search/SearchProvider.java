@@ -50,7 +50,6 @@ import java.util.List;
  * Provides the capability to search a XAM model and display the results
  * in a manner appropriate for the current view of the model.
  *
- * @author Nathan Fiedler
  */
 public interface SearchProvider {
 

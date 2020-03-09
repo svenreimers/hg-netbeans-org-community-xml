@@ -81,8 +81,6 @@ import org.netbeans.modules.xml.xam.dom.Attribute;
 /**
  * Common utilities for XAM user interface module.
  *
- * @author Nam Nguyen
- * @author Nathan Fiedler
  */
 public class XAMUtils {
 

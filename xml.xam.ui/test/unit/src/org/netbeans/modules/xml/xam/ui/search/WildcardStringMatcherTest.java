@@ -49,7 +49,6 @@ import junit.framework.TestCase;
 /**
  * Unit test for WildcardStringMatcher class.
  *
- * @author Nathan Fiedler
  */
 public class WildcardStringMatcherTest extends TestCase {
     

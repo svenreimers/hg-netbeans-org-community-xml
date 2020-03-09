@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.schema.abe;
 
 /**
  *
- * @author girix
  */
 public abstract class AbstractUIVisitor implements UIVisitor{
     

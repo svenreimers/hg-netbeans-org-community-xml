@@ -65,7 +65,6 @@ import java.net.*;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class DTDActions_0001 extends DTDActions {

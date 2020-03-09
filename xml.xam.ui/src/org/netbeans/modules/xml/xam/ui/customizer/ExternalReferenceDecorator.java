@@ -52,7 +52,6 @@ import org.openide.nodes.Node;
  * An ExternalReferenceDecorator is used to control the appearance of the
  * nodes in the ExternalReferenceCustomizer.
  *
- * @author  Nathan Fiedler
  */
 public interface ExternalReferenceDecorator {
 

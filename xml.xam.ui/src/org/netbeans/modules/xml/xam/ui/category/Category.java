@@ -52,7 +52,6 @@ import org.openide.util.Lookup;
 /**
  * A Category represents a visual component within a XAM model editor.
  *
- * @author Nathan Fiedler
  */
 public interface Category extends Lookup.Provider {
 

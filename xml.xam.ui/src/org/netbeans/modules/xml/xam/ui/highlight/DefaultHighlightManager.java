@@ -52,7 +52,6 @@ import java.util.Set;
 /**
  * A default implementation of HighlightManager.
  *
- * @author Nathan Fiedler
  */
 public class DefaultHighlightManager extends HighlightManager {
 

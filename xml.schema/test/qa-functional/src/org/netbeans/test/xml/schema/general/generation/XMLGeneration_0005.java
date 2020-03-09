@@ -55,7 +55,6 @@ import junit.framework.Test;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 // XML document creation from multiple schemas

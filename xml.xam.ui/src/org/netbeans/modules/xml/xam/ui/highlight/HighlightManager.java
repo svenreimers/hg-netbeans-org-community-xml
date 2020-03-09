@@ -59,7 +59,6 @@ import org.openide.util.WeakListeners;
  * Manages the active set of HighlightGroup instances, as well as the
  * Highlighted implementations that interpret the active highlights.
  *
- * @author Nathan Fiedler
  */
 public abstract class HighlightManager {
     /** Default global highlight manager instance. */

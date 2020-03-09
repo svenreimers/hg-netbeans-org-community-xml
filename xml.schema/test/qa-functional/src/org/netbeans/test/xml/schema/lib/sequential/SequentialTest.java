@@ -48,7 +48,6 @@ import org.netbeans.jellytools.JellyTestCase;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class SequentialTest extends JellyTestCase {
     private boolean m_completed = false;

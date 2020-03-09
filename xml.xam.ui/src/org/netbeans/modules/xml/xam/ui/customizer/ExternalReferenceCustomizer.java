@@ -77,8 +77,6 @@ import org.openide.util.Utilities;
 /**
  * Base class for external reference customizers.
  *
- * @author  Ajit Bhate
- * @author  Nathan Fiedler
  */
 public abstract class ExternalReferenceCustomizer<T extends Component>
         extends AbstractReferenceCustomizer<T>

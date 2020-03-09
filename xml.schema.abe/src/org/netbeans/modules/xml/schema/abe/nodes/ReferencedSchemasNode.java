@@ -65,7 +65,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Samaresh
  */
 public class ReferencedSchemasNode extends AbstractNode {
     

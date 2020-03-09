@@ -64,7 +64,6 @@ import org.netbeans.modules.xml.xam.ui.search.DefaultSearchControlPanel;
 /**
  * The default implementation of CategoryPane.
  *
- * @author Nathan Fiedler
  */
 public class DefaultCategoryPane extends AbstractCategoryPane {
     /** The top component of our interface. */

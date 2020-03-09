@@ -52,7 +52,6 @@ import org.openide.util.NbBundle;
 /**
  * An implementation of NavigatorPanel for ABE view.
  *
- * @author Chris Webster
  */
 public class ABENavigatorPanel extends AbstractXMLNavigatorPanel {
    

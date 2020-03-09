@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
  * A placeholder node that displays a "please wait" message while the
  * task to generate the final node is performed.
  *
- * @author  Nathan Fiedler
  */
 public class WaitNode extends AbstractNode {
     /** A child key for this node, to be used with Children.Key.setKeys(). */

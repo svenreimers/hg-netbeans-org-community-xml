@@ -125,7 +125,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author radval
  */
 public abstract class AbstractXSDVisitor implements XSDVisitor {
     

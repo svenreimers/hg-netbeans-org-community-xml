@@ -60,7 +60,6 @@ import org.openide.filesystems.FileObject;
 
 /**
  *
- * @author radval
  */
 public class TestModelSourceProvider implements ModelSourceProvider {
     

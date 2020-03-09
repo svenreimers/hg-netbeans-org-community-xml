@@ -51,7 +51,6 @@ import org.netbeans.modules.xml.axi.SchemaGenerator;
 import org.netbeans.modules.xml.schema.abe.wizard.SchemaTransformWizard;
 
 /**
- * @author Ayub Khan
  */
 public class DesignPatternProperty extends BaseABENodeProperty {
 

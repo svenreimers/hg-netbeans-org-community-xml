@@ -78,7 +78,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Sonali
  */
 public class SchemaRefactoringTest extends TestCase {
     public static final String XSD_PO = "PurchaseOrder.xsd";

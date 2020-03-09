@@ -95,7 +95,6 @@ import org.openide.windows.IOProvider;
 
 /**
  *
- * @author  skini
  */
 public class BindingConfigurationDialogPanel extends javax.swing.JPanel {
 

@@ -80,7 +80,6 @@ import org.openide.util.actions.SystemAction;
 import org.w3c.dom.Element;
 /**
  *
- * @author Sonali
  */
 public class SchemaRefactoringElement  extends SimpleRefactoringElementImplementation {
     

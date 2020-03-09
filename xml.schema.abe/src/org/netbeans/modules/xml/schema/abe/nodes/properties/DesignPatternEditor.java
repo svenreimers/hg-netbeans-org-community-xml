@@ -57,7 +57,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ayub Khan
  * "russianDoll", "salamiSlice", "venitianBlind", "gardenofEden", Empty (Default for Schema)
  *
  */

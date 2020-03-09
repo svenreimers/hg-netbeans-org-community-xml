@@ -59,7 +59,6 @@ import org.netbeans.jemmy.operators.JTextComponentOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class Retriver_0003 extends Retriver {

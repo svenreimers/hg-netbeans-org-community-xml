@@ -85,7 +85,6 @@ import org.w3c.dom.Element;
 
 /**
  *
- * @author nn136682
  */
 public class Util {
     public static final String PO_XSD = "resources/PurchaseOrder.xsd";

@@ -50,7 +50,6 @@ import org.openide.nodes.Node.Cookie;
 /**
  * Cookie to be implemented by Nodes that can supply a set of GotoTypes.
  *
- * @author  Nathan Fiedler
  */
 public interface GotoCookie extends Cookie {
 

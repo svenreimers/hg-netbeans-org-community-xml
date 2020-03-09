@@ -55,7 +55,6 @@ import org.openide.loaders.DataObject;
 
 /**
  *
- * @author radval
  *
  */
 public class XMLSchemaFileInfoImpl implements XMLSchemaFileInfo {

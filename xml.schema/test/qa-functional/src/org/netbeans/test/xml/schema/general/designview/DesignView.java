@@ -50,7 +50,6 @@ import org.netbeans.jemmy.operators.AbstractButtonOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class DesignView extends GeneralXMLTest

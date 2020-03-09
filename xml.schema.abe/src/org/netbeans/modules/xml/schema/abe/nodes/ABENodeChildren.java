@@ -63,7 +63,6 @@ import org.openide.util.WeakListeners;
 
 /**
  *
- * @author Chris Webster
  */
 public class ABENodeChildren extends Children.Keys
         implements ComponentListener {

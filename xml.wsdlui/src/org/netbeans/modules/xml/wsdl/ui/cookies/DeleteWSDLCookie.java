@@ -50,7 +50,6 @@ import org.openide.nodes.Node;
  * This interface provides a Cookie to NetBeans to handle deletion of a WSDL
  * project object from the repository.
  *
- * @author Kiran B
  * @version 
  *
  */

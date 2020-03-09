@@ -67,7 +67,6 @@ import org.netbeans.modules.xml.schema.model.SchemaModelFactory;
 
 /**
  *
- * @author Ayub Khan
  */
 public class PrimitiveSimpleTypesNode extends AbstractNode
 {

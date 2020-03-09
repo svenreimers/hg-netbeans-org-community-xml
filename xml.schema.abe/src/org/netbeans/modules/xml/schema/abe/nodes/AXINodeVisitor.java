@@ -57,7 +57,6 @@ import org.openide.nodes.Node;
 
 /**
  * Provide a visitor to determine the appropriate nodes for AXIComponents
- * @author Chris Webster
  */
 public class AXINodeVisitor implements AXIVisitor {
     

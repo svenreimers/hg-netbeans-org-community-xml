@@ -58,7 +58,6 @@ import org.netbeans.jemmy.operators.JTableOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 // Sample XML generation from schema via new file wizard

@@ -53,7 +53,6 @@ import org.xml.sax.InputSource;
 /**
  * Tries to parse severel schemas with imports, includes and errors.
  *
- * @author Petr Kuzel
  */
 public class ValidateSchemaSupportTest extends TestCase {
 

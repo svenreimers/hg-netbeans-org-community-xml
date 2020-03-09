@@ -52,7 +52,6 @@ import java.awt.Dialog;
 
 /**
  *
- * @author  Ayub Khan
  */
 public class SchemaTransformProgressPanel extends javax.swing.JPanel {
     private static final long serialVersionUID = -483941387931729295L;

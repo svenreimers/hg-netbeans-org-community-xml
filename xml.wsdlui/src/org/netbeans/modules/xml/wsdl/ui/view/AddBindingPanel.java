@@ -78,7 +78,6 @@ import org.netbeans.modules.xml.wsdl.ui.netbeans.module.Utility;
 
 /**
  *
- * @author  radval
  */
 public class AddBindingPanel extends javax.swing.JPanel {
 

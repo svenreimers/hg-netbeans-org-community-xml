@@ -73,7 +73,6 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author girix
  */
 class ExpandCollapseButton extends JPanel{
     private static final long serialVersionUID = 7526472295622776147L;

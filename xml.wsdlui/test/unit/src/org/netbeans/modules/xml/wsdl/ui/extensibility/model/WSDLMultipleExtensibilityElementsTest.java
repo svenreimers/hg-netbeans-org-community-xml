@@ -63,7 +63,6 @@ import org.openide.util.Lookup;
 import junit.framework.*;
 /**
  *
- * @author radval
  */
 public class WSDLMultipleExtensibilityElementsTest extends TestCase {
     

@@ -55,7 +55,6 @@ import org.openide.nodes.Node;
  * This is a SPI for WSDL extensibility elements provider to implement in order to configure the way
  * wsdl editor behaves with the extensibility elements.
  *
- * @author skini
  *
  */
 

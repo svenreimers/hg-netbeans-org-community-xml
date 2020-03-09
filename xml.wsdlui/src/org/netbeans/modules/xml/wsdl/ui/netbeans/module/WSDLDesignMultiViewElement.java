@@ -90,8 +90,6 @@ import org.openide.windows.TopComponent;
 /**
  * TopComponent MultiViewElement for the WSDL graphical editor.
  *
- * @author radval
- * @author Nathan Fiedler
  */
 public class WSDLDesignMultiViewElement extends TopComponent
         implements MultiViewElement, ExplorerManager.Provider, PropertyChangeListener {

@@ -53,7 +53,6 @@ import javax.swing.border.Border;
 /**
  * Border that draws an arrow on the right side, pointing to the right.
  *
- * @author  Nathan Fiedler
  */
 public class ArrowBorder implements Border {
 

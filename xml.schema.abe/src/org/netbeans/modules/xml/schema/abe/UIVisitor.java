@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.schema.abe;
 
 /**
  *
- * @author girix
  */
 public interface UIVisitor {
     

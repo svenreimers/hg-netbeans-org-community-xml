@@ -75,7 +75,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author  Jeri Lockhart
  */
 public class AXIComponentSelectionPanel extends JPanel
         implements ExplorerManager.Provider, PropertyChangeListener {

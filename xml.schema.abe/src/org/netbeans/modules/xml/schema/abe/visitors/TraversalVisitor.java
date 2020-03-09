@@ -62,7 +62,6 @@ import org.netbeans.modules.xml.schema.abe.AbstractUIVisitor;
 
 /**
  *
- * @author girix
  */
 public abstract class TraversalVisitor extends AbstractUIVisitor{
     

@@ -70,7 +70,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author girix
  */
 public abstract class ElementsContainerPanel extends ContainerPanel{
     private static final long serialVersionUID = 7526472295622776147L;

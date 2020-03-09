@@ -48,7 +48,6 @@ import org.netbeans.test.xml.schema.general.components.components;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class ComplexComponent extends components {

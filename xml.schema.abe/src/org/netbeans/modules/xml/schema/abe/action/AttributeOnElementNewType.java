@@ -63,7 +63,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author girix
  */
 public class AttributeOnElementNewType extends NewType{
     

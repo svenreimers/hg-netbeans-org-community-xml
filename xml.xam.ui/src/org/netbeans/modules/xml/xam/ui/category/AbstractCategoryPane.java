@@ -50,7 +50,6 @@ import java.beans.PropertyChangeSupport;
 /**
  * Abstract implementation of CategoryPane, used by concrete implementations.
  *
- * @author Nathan Fiedler
  */
 public abstract class AbstractCategoryPane implements CategoryPane {
     /** Property change support for firing events to listeners. */

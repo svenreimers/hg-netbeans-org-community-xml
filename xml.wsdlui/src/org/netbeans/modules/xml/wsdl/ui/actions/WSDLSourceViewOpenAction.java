@@ -29,7 +29,6 @@ import org.openide.util.NbBundle;
 /**
  * Open the Source editor for the selected DataObject.
  *
- * @author Jeri Lockhart
  */
 public class WSDLSourceViewOpenAction extends OpenAction {
     /** silence compiler warnings */

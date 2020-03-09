@@ -50,7 +50,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author Administrator
  */
 public abstract class AbstractCustomizer extends JPanel implements Customizer {
 

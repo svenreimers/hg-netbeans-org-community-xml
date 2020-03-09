@@ -78,7 +78,6 @@ import org.openide.util.WeakListeners;
 /**
  * Interface for searching an XML document.
  *
- * @author  Nathan Fiedler
  */
 public class SearchFieldPanel extends JPanel
         implements ActionListener, DocumentListener, FocusListener,

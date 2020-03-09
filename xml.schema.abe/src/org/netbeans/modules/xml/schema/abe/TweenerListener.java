@@ -49,7 +49,6 @@ import org.netbeans.modules.xml.schema.abe.palette.DnDHelper;
 /**
  *
  *
- * @author Todd Fast, todd.fast@sun.com
  */
 public interface TweenerListener
 {

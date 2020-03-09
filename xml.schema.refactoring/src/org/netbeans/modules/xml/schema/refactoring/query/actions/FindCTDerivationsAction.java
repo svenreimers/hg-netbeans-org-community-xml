@@ -66,7 +66,6 @@ import org.openide.util.actions.CookieAction;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class FindCTDerivationsAction extends CookieAction {
     

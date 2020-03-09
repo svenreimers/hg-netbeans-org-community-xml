@@ -75,7 +75,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class MemberTypesEditor  extends PropertyEditorSupport
         implements ExPropertyEditor {

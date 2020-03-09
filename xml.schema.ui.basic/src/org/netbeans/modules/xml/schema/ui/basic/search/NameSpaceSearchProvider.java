@@ -68,7 +68,6 @@ import org.openide.util.NbBundle;
  * schema imported under a particular namespace, using a case-insensitive
  * wildcard comparison.
  *
- * @author Nathan Fiedler
  */
 public class NameSpaceSearchProvider extends DeepSchemaVisitor
         implements SearchProvider {

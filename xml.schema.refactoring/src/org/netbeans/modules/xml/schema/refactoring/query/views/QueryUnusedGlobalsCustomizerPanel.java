@@ -53,7 +53,6 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author  Jeri Lockhart
  */
 public class QueryUnusedGlobalsCustomizerPanel extends javax.swing.JPanel {
     public static final long serialVersionUID = 1L;

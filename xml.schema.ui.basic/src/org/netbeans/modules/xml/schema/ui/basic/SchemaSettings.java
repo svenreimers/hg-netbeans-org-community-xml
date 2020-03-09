@@ -53,7 +53,6 @@ import org.openide.util.NbPreferences;
 /**
  * Manages the schema editor options.
  *
- * @author  Nathan Fiedler
  */
 public class SchemaSettings {
     /** Singleton instance of SchemaSettings */

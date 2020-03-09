@@ -48,7 +48,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class DefaultExpandedCookie extends Object
 	implements Node.Cookie

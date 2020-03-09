@@ -65,8 +65,6 @@ import org.openide.util.WeakListeners;
 /**
  * Panel for showing proposed changes (refactoring elements) of any refactoring.
  *
- * @author  Pavel Flaska, Martin Matula
- * @author  Jeri Lockhart
  */
 //public class QueryPanel extends JPanel implements InvalidationListener {
 public class QueryPanel extends JPanel   implements NodeListener   {

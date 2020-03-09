@@ -78,7 +78,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class DerivationTypeEditor  extends PropertyEditorSupport
     implements ExPropertyEditor {

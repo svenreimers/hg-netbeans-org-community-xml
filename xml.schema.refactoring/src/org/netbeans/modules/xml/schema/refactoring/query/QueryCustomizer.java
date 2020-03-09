@@ -58,7 +58,6 @@ import org.netbeans.modules.xml.schema.model.SchemaComponentReference;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public interface QueryCustomizer {
 

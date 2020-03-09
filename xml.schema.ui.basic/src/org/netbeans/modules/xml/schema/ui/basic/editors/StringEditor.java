@@ -59,7 +59,6 @@ import org.openide.util.NbBundle;
 
 /**
  * A property editor for String class
- * @author Ajit Bhate
  */
 public class StringEditor extends PropertyEditorSupport {
 

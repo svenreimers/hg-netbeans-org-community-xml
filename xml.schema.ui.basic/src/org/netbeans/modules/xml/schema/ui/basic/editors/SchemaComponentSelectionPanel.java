@@ -79,7 +79,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.categorized.PrimitiveSimpleType;
 
 /**
  *
- * @author  Jeri Lockhart
  */
 public class SchemaComponentSelectionPanel<T extends ReferenceableSchemaComponent> extends JPanel
         implements ExplorerManager.Provider, PropertyChangeListener {

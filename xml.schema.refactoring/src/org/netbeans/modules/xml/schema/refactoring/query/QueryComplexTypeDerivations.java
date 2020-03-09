@@ -86,7 +86,6 @@ import org.openide.util.RequestProcessor;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class QueryComplexTypeDerivations  implements Query {
     protected String displayName;

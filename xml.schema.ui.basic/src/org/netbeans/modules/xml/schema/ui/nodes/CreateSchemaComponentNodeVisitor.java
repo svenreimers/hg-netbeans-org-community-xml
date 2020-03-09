@@ -104,7 +104,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class CreateSchemaComponentNodeVisitor extends DefaultSchemaVisitor
 {

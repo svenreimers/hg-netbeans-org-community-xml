@@ -62,7 +62,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class ActivatedNodesControlAdapter extends ControlAdapter {
     

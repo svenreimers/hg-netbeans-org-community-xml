@@ -64,7 +64,6 @@ import java.awt.event.MouseEvent;
  * !!! See issue 44576
  * !!! Remove this class as soon as issue 55845 is fixed
  *
- * @author Tran Duc Trung
  *
  */
 final public class CloseButtonTabbedPane extends JTabbedPane implements ChangeListener, Runnable {

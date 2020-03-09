@@ -74,7 +74,6 @@ import org.openide.explorer.view.NodeRenderer;
  * Leave this class alone for now--I may come back to it later to spruce up
  * the rendering of each tree node
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class SchemaComponentNodeRenderer extends NodeRenderer
 {

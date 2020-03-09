@@ -54,7 +54,6 @@ import org.openide.nodes.Children;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class AdvancedAttributeReferenceNode extends AttributeReferenceNode {
     /**

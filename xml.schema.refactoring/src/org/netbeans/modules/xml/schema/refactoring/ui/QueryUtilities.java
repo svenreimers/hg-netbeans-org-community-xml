@@ -84,7 +84,6 @@ import prefuse.util.ColorLib;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public abstract class QueryUtilities {
     

@@ -70,7 +70,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Administrator
  */
 public class MemberTypesPanel extends javax.swing.JPanel 
     implements ActionListener, ListSelectionListener {

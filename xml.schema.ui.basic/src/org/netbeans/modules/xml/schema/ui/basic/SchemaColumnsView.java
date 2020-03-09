@@ -75,9 +75,6 @@ import org.openide.util.Lookup;
  * <p><em>Note: SchemaColumnsView, like all NbColumnView subclasses, has its
  * own JScrollPane, you do not need to place it in a JScrollPane.</em></p>
  * 
- * @author Todd Fast, todd.fast@sun.com
- * @author Nathan Fiedler
- * @author Jeri Lockhart
  */
 public class SchemaColumnsView extends JPanel
         implements ColumnView, PropertyChangeListener {

@@ -50,8 +50,6 @@ import org.netbeans.modules.xml.xam.ui.ModelCookie;
 /**
  * Provides access to a schema model instance.
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Nathan Fiedler
  */
 public interface SchemaModelCookie extends ModelCookie<SchemaModel> {
 }

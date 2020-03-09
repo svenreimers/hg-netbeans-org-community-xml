@@ -67,8 +67,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Jan Becicka
- * @author  Jeri Lockhart
  */
 public class QueryPanelContainer extends TopComponent  
          {

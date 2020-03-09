@@ -78,7 +78,6 @@ import prefuse.data.Node;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class QuerySubstitutionGroupsReader  {
     

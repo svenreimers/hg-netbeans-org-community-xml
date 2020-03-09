@@ -67,7 +67,6 @@ import org.openide.util.RequestProcessor;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class QuerySubstitutionGroups  implements Query {
     protected String displayName;

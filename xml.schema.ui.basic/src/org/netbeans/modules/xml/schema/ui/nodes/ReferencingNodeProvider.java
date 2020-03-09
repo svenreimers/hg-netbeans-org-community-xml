@@ -57,7 +57,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author Ajit
  */
 public interface ReferencingNodeProvider {
     public Node getNode();

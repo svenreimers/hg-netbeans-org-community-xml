@@ -97,7 +97,6 @@ import prefuse.data.Node;
 
 /**
  *
- * @author Jeri Lockhart
  *
  * Reader for Where Used query and Complex Type Derivations query
  */

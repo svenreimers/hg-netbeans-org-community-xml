@@ -57,7 +57,6 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class CustomizerResults {
     private boolean wasCanceled;

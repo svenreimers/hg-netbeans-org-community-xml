@@ -61,7 +61,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class NewTypesFactory extends DeepSchemaVisitor
 {

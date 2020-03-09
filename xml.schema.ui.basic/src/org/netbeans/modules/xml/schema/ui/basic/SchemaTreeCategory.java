@@ -67,7 +67,6 @@ import org.openide.util.lookup.ProxyLookup;
 /**
  * Displays the categorized version of the schema tree view.
  *
- * @author Nathan Fiedler
  */
 public class SchemaTreeCategory extends AbstractCategory {
     /** Associated schema model. */

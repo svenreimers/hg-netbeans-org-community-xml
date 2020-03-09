@@ -59,8 +59,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Nathan Fiedler
  */
 public class AdvancedGlobalElementNode extends GlobalElementNode {
     /**

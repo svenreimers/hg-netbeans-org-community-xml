@@ -51,9 +51,6 @@ import org.netbeans.modules.xml.text.navigator.base.AbstractXMLNavigatorPanel;
 /**
  * An implementation of NavigatorPanel for XML Schema navigator.
  *
- * @author Marek Fukala
- * @author Nathan Fiedler
- * @author Samaresh Panda
  */
 public class SchemaNavigatorPanel extends AbstractXMLNavigatorPanel {
 

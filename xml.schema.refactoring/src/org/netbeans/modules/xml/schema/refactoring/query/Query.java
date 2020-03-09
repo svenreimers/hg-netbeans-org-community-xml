@@ -60,7 +60,6 @@ import org.netbeans.modules.xml.schema.refactoring.ui.QueryPanel;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public interface Query {
 

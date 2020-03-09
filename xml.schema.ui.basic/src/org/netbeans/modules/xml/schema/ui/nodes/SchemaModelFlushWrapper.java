@@ -57,7 +57,6 @@ import org.openide.nodes.Node;
 /**
  * This class provides a wrapper which invokes flush on the schema model
  * when setValue has been invoked.
- * @author Chris Webster
  */
 public class SchemaModelFlushWrapper extends Node.Property {
     private Node.Property delegate;

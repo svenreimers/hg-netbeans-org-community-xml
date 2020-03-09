@@ -53,7 +53,6 @@ import org.netbeans.modules.xml.xam.dom.AbstractDocumentComponent;
 /**
  * Utility class for generating names for elements within a schema model.
  *
- * @author Nathan Fiedler
  */
 public class NameGenerator {
     /** Default starting value for the uniqueness counter (e.g. 0 or 1). */

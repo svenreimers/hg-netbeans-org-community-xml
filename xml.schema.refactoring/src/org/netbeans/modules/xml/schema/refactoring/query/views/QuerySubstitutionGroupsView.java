@@ -100,7 +100,6 @@ import prefuse.render.EdgeRenderer;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class QuerySubstitutionGroupsView implements View, PropertyChangeListener {
     

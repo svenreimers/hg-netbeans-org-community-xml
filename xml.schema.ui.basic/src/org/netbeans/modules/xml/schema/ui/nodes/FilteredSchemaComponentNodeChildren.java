@@ -51,7 +51,6 @@ import org.netbeans.modules.xml.schema.model.SchemaComponentReference;
 /**
  * A children object that shows only a single type of child
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class FilteredSchemaComponentNodeChildren<C extends SchemaComponent>
 	extends SchemaComponentNodeChildren<C>

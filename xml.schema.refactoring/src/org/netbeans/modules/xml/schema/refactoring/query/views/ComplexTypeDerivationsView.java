@@ -101,7 +101,6 @@ import prefuse.render.EdgeRenderer;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class ComplexTypeDerivationsView implements View, PropertyChangeListener {
     

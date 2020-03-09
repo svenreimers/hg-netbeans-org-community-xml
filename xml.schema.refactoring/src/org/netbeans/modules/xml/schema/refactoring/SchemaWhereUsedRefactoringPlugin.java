@@ -71,7 +71,6 @@ import org.openide.ErrorManager;
 
 /**
  *
- * @author Sonali Kochar
  */
 public class SchemaWhereUsedRefactoringPlugin extends SchemaRefactoringPlugin  {
     

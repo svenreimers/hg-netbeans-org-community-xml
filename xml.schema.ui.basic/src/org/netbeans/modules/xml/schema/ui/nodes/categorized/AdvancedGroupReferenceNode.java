@@ -54,7 +54,6 @@ import org.openide.nodes.Children;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class AdvancedGroupReferenceNode extends GroupReferenceNode {
     /**

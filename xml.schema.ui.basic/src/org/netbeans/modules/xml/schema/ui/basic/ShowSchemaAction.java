@@ -52,7 +52,6 @@ import org.openide.util.NbBundle;
 /**
  * Action to show a component in the schema view.
  *
- * @author Ajit Bhate
  */
 public class ShowSchemaAction extends AbstractShowComponentAction {
     /** silence compiler warnings */

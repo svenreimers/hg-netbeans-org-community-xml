@@ -60,8 +60,6 @@ import org.openide.nodes.Node;
  * the Index cookie to allow re-ordering of the children. To enable, the
  * instance must be added to the lookup (cookie set) of the parent Node.
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Nathan Fiedler
  */
 public abstract class RefreshableChildren extends Children.Keys implements Index {
     /** Permits changing order of children. */

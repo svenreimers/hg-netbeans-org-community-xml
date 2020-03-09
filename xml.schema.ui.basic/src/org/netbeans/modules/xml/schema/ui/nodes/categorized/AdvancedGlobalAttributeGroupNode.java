@@ -55,7 +55,6 @@ import org.openide.nodes.Children;
 import org.openide.util.datatransfer.NewType;
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class AdvancedGlobalAttributeGroupNode extends GlobalAttributeGroupNode
 {

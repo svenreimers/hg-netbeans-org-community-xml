@@ -74,7 +74,6 @@ import org.netbeans.modules.xml.schema.refactoring.SchemaUIHelper.FilteredSchema
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class ResultsPanel extends JPanel implements ExplorerManager.Provider,
              PropertyChangeListener{

@@ -63,7 +63,6 @@ import org.openide.util.NbBundle;
  * Implements a SearchProvider that compares the name of the document tag
  * with the query string, using a case-insensitive string comparison.
  *
- * @author Nathan Fiedler
  */
 public class ComponentTypeSearchProvider extends DeepSchemaVisitor
         implements SearchProvider {

@@ -58,7 +58,6 @@ import org.netbeans.modules.xml.xpath.ext.visitor.XPathModelTracerVisitor;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2009.12.10
  */
 public final class Expression {

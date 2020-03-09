@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.search.spi;
 import org.netbeans.modules.xml.search.api.SearchEvent;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.05.25
  */
 public interface SearchListener {

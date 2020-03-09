@@ -51,7 +51,6 @@ import org.openide.util.HelpCtx;
 /**
  * Interface required to be implemented by custom wizard extension implementation.
  *
- * @author skini
  */
 public abstract class WSDLWizardDescriptorPanel implements WizardDescriptor.FinishablePanel{
 

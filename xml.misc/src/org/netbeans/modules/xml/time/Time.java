@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.time;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.08.13
  */
 abstract class Time {

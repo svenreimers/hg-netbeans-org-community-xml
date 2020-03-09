@@ -51,11 +51,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author rico
- * @author Nam Nguyen
- * 
- * changed by 
- * @author ads
  */
 public interface PropertyAlias extends BPELExtensibilityComponent {
     String PROPERTY_NAME_PROPERTY = "propertyName";

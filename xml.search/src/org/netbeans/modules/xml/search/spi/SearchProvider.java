@@ -68,7 +68,6 @@ import org.netbeans.modules.xml.search.api.SearchTarget;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.04.16
  */
 public interface SearchProvider {

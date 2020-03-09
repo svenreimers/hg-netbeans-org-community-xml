@@ -58,7 +58,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public interface ReferenceableProvider extends Node.Cookie {
     

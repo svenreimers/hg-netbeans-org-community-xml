@@ -56,7 +56,6 @@ import org.openide.filesystems.FileObject;
 
 /**
  *
- * @author Sonali Kochar
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.refactoring.spi.ui.TreeElementFactoryImplementation.class, position=51)
 public class WSDLTreeFactoryImpl implements TreeElementFactoryImplementation {

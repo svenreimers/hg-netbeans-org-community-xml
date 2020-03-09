@@ -80,7 +80,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Sonali
  */
 public class FauxRefactoringElement extends SimpleRefactoringElementImplementation {
     

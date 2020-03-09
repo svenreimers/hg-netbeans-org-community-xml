@@ -56,7 +56,6 @@ import org.openide.util.Cancellable;
 
 /**
  *
- * @author Jeri Lockhart
  */
 
 

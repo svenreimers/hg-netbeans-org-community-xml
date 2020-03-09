@@ -61,7 +61,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class SyncUpdateTest extends TestCase {
     private TestComponentListener listener;

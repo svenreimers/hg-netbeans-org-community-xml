@@ -51,8 +51,6 @@ import org.netbeans.modules.xml.wsdl.model.ReferenceableExtensibilityElement;
 
 /**
  *
- * @author rico
- * @author Nam Nguyen
  */
 public interface PartnerLinkType extends ReferenceableExtensibilityElement, 
         ExtensibilityElement.UpdaterProvider, BPELExtensibilityComponent {

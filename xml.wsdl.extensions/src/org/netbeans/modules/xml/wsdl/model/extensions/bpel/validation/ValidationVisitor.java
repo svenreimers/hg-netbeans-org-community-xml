@@ -57,7 +57,6 @@ import org.netbeans.modules.xml.xam.spi.Validator.ResultItem;
 
 
 /**
- * @author ads
  *
  */
 public abstract class ValidationVisitor implements BPELExtensibilityComponent.Visitor {

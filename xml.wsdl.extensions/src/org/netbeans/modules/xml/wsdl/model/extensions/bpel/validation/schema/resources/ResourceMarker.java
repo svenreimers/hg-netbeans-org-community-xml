@@ -51,7 +51,6 @@ package org.netbeans.modules.xml.wsdl.model.extensions.bpel.validation.schema.re
  * If package chages his name it will automatically reflected in usages
  * ( via refactoring ).
  * 
- * @author ads
  *
  */
 public final class ResourceMarker {

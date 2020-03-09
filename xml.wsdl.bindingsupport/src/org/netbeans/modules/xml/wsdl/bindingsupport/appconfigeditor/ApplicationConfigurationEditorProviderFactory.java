@@ -52,7 +52,6 @@ import org.openide.util.LookupListener;
 
 /**
  *
- * @author skini
  */
 public class ApplicationConfigurationEditorProviderFactory {
     

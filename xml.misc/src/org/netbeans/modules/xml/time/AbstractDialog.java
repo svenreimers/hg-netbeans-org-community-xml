@@ -69,7 +69,6 @@ import org.openide.util.Utilities;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.11.27
  */
 abstract class AbstractDialog extends JDialog {

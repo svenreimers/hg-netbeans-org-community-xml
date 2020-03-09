@@ -60,7 +60,6 @@ import org.netbeans.modules.xml.wsdl.bindingsupport.template.WsdlTemplateType;
 
 /**
  *
- * @author radval
  */
 public class LocalizedTemplate {
     

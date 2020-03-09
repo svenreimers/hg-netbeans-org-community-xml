@@ -56,7 +56,6 @@ import org.openide.nodes.Node;
 /**
  * Default UI Helper.
  *
- * @author Nam Nguyen
  */
 public class UIHelper {
 

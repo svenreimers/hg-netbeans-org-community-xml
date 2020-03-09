@@ -75,7 +75,6 @@ import org.netbeans.modules.xml.retriever.catalog.CatalogWriteModel;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.06.09
  */
 public final class ReferenceNode extends AbstractNode {

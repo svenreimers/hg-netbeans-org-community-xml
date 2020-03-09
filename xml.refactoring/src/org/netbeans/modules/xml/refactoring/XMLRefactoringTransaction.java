@@ -109,7 +109,6 @@ import org.netbeans.modules.refactoring.spi.BackupFacility;
  * Single transaction object, ensuring the order of refactoring change across
  * affected models.  Responsible for undo/redo of refactoring
  *
- * @author Sonali
  */
 public class XMLRefactoringTransaction implements Transaction {
     

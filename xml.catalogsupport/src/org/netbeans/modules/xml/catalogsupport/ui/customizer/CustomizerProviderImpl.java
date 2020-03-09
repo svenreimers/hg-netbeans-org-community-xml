@@ -70,7 +70,6 @@ import org.netbeans.spi.project.ui.support.ProjectCustomizer;
 /** 
  * Customization of project to support XML
  *
- * @author Ajit Bhate
  */
 public class CustomizerProviderImpl implements CustomizerProvider {
     

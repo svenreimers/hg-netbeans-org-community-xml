@@ -58,7 +58,6 @@ import prefuse.render.EdgeRenderer;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class CompositionEdgeRenderer
                 extends EdgeRenderer {

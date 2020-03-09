@@ -47,7 +47,6 @@ import org.openide.nodes.Node;
 import org.netbeans.modules.xml.xam.spi.Validator.ResultItem;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2009.08.31
  */
 public interface ShowCookie extends Node.Cookie  {

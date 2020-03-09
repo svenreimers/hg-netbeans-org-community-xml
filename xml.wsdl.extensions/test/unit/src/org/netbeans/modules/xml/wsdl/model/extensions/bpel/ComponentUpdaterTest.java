@@ -55,7 +55,6 @@ import org.netbeans.modules.xml.wsdl.model.extensions.bpel.impl.QueryImpl;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class ComponentUpdaterTest extends TestCase {
     private WSDLModel model;

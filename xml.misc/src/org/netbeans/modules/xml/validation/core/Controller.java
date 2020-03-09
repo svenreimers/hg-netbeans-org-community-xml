@@ -72,7 +72,6 @@ import org.netbeans.modules.xml.validation.ui.Output;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.01.17
  */
 public final class Controller implements ComponentListener {

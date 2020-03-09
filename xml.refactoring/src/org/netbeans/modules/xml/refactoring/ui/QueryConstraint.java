@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.refactoring.ui;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public interface QueryConstraint {
 

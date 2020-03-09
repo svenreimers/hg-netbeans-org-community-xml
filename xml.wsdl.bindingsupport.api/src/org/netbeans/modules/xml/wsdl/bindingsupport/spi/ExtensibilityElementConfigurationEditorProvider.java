@@ -53,7 +53,6 @@ import org.netbeans.modules.xml.wsdl.model.WSDLComponent;
  * Provides an interface for Binding Component plugins to provide a configuration panel,
  * which can help users to configure the binding.
  * 
- * @author skini
  */
 public abstract class ExtensibilityElementConfigurationEditorProvider {
 

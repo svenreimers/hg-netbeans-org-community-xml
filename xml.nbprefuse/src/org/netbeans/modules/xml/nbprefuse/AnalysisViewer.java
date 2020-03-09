@@ -54,7 +54,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Jeri Lockhart
  */
 public class AnalysisViewer extends JPanel implements
 

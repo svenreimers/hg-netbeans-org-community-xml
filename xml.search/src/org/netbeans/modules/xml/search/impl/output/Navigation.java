@@ -50,7 +50,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTree;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.10.18
  */
 final class Navigation extends JPanel {

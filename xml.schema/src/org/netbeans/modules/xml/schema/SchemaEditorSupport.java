@@ -110,9 +110,6 @@ import org.openide.windows.WindowManager;
 /**
  * Editor support for the schema data object.
  *
- * @author Jeri Lockhart
- * @author Todd Fast, todd.fast@sun.com
- * @author Nathan Fiedler
  */
 public class SchemaEditorSupport extends DataEditorSupport
         implements SchemaModelCookie, OpenCookie, EditCookie,

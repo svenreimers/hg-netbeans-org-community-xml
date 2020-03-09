@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.reference;
 import org.netbeans.api.project.Project;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.10.22
  */
 public interface ReferenceTraveller {

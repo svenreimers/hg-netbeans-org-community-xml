@@ -84,7 +84,6 @@ import prefuse.data.Graph;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class FileRenameRefactoringUI implements org.netbeans.modules.refactoring.spi.ui.RefactoringUI, RefactoringCustomUI {
     

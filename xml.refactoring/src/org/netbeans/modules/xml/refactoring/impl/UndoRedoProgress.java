@@ -70,7 +70,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class UndoRedoProgress {
     private ProgressHandle handle;

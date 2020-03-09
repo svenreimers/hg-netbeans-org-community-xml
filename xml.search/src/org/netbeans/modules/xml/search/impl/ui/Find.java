@@ -70,7 +70,6 @@ import org.netbeans.modules.xml.search.spi.SearchProvider;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.11.20
  */
 public final class Find extends SearchControlPanel {

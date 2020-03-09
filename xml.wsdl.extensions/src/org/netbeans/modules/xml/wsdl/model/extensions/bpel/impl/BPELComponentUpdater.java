@@ -55,10 +55,6 @@ import org.netbeans.modules.xml.xam.ComponentUpdater;
 import org.netbeans.modules.xml.xam.dom.AbstractDocumentComponent;
 
 /**
- * @author Nam Nguyen
- * 
- * changed by
- * @author ads
  */
 public class BPELComponentUpdater implements
         BPELExtensibilityComponent.Visitor,

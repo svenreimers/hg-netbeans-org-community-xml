@@ -76,7 +76,6 @@ import org.netbeans.modules.xml.misc.Xml;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.05.03
  */
 public abstract class Validator implements org.netbeans.modules.xml.xam.spi.Validator {

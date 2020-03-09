@@ -73,7 +73,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Jan Becicka
  */
 public class WSDLTreeElement implements TreeElement { 
     

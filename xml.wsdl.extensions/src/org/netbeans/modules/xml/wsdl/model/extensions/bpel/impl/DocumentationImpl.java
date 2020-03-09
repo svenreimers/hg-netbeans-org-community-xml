@@ -57,7 +57,6 @@ import org.w3c.dom.Element;
 
 
 /**
- * @author ads
  *
  */
 public class DocumentationImpl extends GenericExtensibilityElement implements Documentation {

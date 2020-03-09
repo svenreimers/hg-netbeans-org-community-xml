@@ -51,7 +51,6 @@ import org.netbeans.modules.xml.search.spi.SearchListener;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.01.25
  */
 final class Progress implements SearchListener {

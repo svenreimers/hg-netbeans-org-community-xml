@@ -57,7 +57,6 @@ import org.netbeans.api.print.PrintManager;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.02.11
  */
 final class Panel extends JPanel {

@@ -60,10 +60,6 @@ import org.w3c.dom.Element;
 
 /**
  *
- * @author Nam Nguyen
- * 
- * changed by 
- * @author ads
  */
 public class RoleImpl extends NamedExtensibilityElementBase implements Role {
     

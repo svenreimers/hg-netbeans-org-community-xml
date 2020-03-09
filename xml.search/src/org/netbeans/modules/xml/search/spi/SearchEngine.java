@@ -54,7 +54,6 @@ import org.netbeans.modules.xml.search.api.SearchOption;
 import org.netbeans.modules.xml.search.api.SearchPattern;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.05.25
  */
 public interface SearchEngine {

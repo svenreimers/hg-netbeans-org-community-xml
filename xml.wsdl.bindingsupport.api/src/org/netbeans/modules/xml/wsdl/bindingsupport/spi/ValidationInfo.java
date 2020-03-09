@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.wsdl.bindingsupport.spi;
 
 /**
  *
- * @author radval
  */
 public class ValidationInfo {
 

@@ -50,10 +50,6 @@ import javax.xml.namespace.QName;
 
 /**
  *
- * @author Nam Nguyen
- * 
- * changed by
- * @author ads
  */
 public enum BPELQName {
     PROPERTY(createVarpropQName("property")),

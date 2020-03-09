@@ -73,7 +73,6 @@ import org.netbeans.spi.project.ui.templates.support.Templates;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.06.14
  */
 public abstract class SampleIterator implements WizardDescriptor.InstantiatingIterator {

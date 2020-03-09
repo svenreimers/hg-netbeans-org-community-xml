@@ -49,7 +49,6 @@ import junit.framework.TestCase;
 import org.netbeans.modules.xml.search.api.SearchManager;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2009.04.29
  */
 public class SearchManagerTest extends TestCase {

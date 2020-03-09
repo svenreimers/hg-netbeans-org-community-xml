@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.clazz;
 import javax.swing.Icon;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2009.07.15
  */
 final class ClazzElement {

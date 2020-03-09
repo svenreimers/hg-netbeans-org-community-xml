@@ -127,7 +127,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class WhereUsedView implements View, PropertyChangeListener {
     

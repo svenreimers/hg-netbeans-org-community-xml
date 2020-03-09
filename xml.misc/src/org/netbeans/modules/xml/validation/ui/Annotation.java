@@ -48,7 +48,6 @@ import java.beans.PropertyChangeListener;
 import org.openide.text.Annotatable;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.02.01
  */
 public final class Annotation extends org.openide.text.Annotation implements PropertyChangeListener {

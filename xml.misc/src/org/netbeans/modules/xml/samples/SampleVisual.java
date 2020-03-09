@@ -68,7 +68,6 @@ import org.netbeans.spi.project.ui.support.ProjectChooser;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.06.14
  */
 final class SampleVisual extends JPanel implements DocumentListener {

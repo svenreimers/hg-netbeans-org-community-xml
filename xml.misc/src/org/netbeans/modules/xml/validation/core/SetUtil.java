@@ -49,7 +49,6 @@ import org.netbeans.modules.xml.xam.Named;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.12.07
  */
 public final class SetUtil {

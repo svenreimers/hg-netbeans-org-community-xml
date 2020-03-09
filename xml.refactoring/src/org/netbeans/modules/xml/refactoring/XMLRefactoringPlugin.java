@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.xam.Referenceable;
 /**
  * Base class for all refactoring plugins that want to participate in the single global transaction
  *
- * @author Sonali
  */
 public interface XMLRefactoringPlugin {
     

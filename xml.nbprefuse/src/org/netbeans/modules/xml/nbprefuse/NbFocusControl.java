@@ -62,7 +62,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class NbFocusControl extends FocusControl{
     

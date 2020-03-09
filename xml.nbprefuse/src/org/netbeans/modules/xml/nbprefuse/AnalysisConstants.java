@@ -59,7 +59,6 @@ import javax.swing.ImageIcon;
 import org.netbeans.modules.xml.nbprefuse.render.NbLabelRenderer;
 /**
  *
- * @author Jeri Lockhart
  */
 public interface AnalysisConstants {
     // node and edge attributes

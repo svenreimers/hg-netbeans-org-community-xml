@@ -73,7 +73,6 @@ import org.openide.filesystems.FileObject;
 
 
 /**
- * @author Jan Becicka
  */
 public class CopyPanel extends JPanel implements ActionListener, DocumentListener, CustomRefactoringPanel {
   

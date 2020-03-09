@@ -67,7 +67,6 @@ import org.openide.DialogDescriptor;
 
 /**
  *
- * @author  skini
  */
 public class ConfigurationEditorPanel extends javax.swing.JPanel implements PropertyChangeListener {
 

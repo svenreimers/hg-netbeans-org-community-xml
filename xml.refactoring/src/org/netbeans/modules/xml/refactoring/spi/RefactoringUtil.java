@@ -77,7 +77,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class RefactoringUtil {
     

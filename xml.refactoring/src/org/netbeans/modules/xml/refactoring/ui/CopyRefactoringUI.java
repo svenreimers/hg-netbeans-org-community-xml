@@ -67,7 +67,6 @@ import org.openide.util.lookup.Lookups;
 
 /** Refactoring UI object for Copy  refactoring.
  *
- * @author Sonali Kochar
  */
 public class CopyRefactoringUI implements RefactoringUI  {
     // reference to pull up refactoring this UI object corresponds to

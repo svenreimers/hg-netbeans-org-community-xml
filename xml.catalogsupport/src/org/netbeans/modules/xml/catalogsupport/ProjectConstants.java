@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.catalogsupport;
 /**
  * Commond project constants.
  *
- * @author Nam Nguyen
  */
 public interface ProjectConstants {
     /** 

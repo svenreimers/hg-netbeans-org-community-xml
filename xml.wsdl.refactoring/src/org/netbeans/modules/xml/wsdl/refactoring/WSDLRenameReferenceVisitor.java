@@ -85,7 +85,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class WSDLRenameReferenceVisitor extends DefaultVisitor implements WSDLVisitor {
     RenameRefactoring request;

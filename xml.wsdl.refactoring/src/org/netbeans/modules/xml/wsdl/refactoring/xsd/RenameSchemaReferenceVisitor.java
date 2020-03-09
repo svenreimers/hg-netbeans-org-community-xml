@@ -62,7 +62,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class RenameSchemaReferenceVisitor extends DefaultVisitor implements WSDLVisitor {
     private ReferenceableSchemaComponent renamedReferenced;

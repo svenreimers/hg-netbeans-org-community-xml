@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.search.impl.output;
 import org.netbeans.modules.xml.search.api.SearchElement;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.02.27
  */
 final class Element extends SearchElement.Adapter {

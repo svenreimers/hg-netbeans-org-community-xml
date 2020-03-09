@@ -49,7 +49,6 @@ package org.netbeans.modules.xml.wsdl.model.extensions.bpel;
 
 
 /**
- * @author ads
  *
  */
 public interface Documentation extends BPELExtensibilityComponent {

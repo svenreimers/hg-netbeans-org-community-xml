@@ -76,7 +76,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class BPELReadWriteTest extends TestCase {
     

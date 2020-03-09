@@ -56,7 +56,6 @@ import org.netbeans.modules.xml.search.spi.SearchListener;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.11.24
  */
 public final class View extends TopComponent implements SearchListener {

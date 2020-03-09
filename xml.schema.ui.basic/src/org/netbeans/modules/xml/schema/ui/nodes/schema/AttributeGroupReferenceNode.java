@@ -55,8 +55,6 @@ import org.openide.nodes.Sheet;
 import org.openide.util.NbBundle;
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Jeri Lockhart
  */
 public class AttributeGroupReferenceNode extends SchemaComponentNode<AttributeGroupReference>
 		

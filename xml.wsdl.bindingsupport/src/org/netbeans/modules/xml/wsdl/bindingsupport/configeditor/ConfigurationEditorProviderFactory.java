@@ -52,7 +52,6 @@ import org.openide.util.LookupListener;
 
 /**
  *
- * @author skini
  */
 public class ConfigurationEditorProviderFactory {
     private static final Map<String, ExtensibilityElementConfigurationEditorProvider> map = new HashMap<String, ExtensibilityElementConfigurationEditorProvider>();

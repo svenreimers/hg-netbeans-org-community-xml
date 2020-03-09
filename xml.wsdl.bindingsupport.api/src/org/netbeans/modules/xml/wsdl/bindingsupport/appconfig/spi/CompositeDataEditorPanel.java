@@ -47,7 +47,6 @@ import javax.swing.JPanel;
 /**
  * A JPanel for editing CompositeData.
  * 
- * @author jqian
  */
 public abstract class CompositeDataEditorPanel extends JPanel {
 

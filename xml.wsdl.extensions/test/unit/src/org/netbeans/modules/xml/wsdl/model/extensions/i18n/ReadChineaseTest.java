@@ -62,7 +62,6 @@ import org.netbeans.modules.xml.wsdl.model.extensions.TestCatalogModel;
 import org.netbeans.modules.xml.wsdl.model.impl.Util;
 /**
  *
- * @author sgenipudi
  */
 public class ReadChineaseTest extends TestCase {
     

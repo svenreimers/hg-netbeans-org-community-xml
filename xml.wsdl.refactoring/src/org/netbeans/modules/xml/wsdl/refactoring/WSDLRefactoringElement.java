@@ -90,7 +90,6 @@ import org.w3c.dom.Element;
 
 /**
  *
- * @author Sonali
  */
 public class WSDLRefactoringElement extends SimpleRefactoringElementImplementation {
     

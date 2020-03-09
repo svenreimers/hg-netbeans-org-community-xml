@@ -59,7 +59,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class EdgeStrokeColorAction  extends ColorAction {
 

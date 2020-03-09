@@ -62,7 +62,6 @@ import org.netbeans.modules.xml.wsdl.bindingsupport.template.TemplateType;
 
 /**
  *
- * @author radval
  */
 public class LocalizedTemplateGroup implements Comparable<LocalizedTemplateGroup> {
     

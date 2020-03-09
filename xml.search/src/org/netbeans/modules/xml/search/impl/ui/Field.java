@@ -58,7 +58,6 @@ import javax.swing.SwingUtilities;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.12.22
  */
 final class Field {

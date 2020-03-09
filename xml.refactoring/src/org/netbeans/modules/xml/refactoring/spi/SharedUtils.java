@@ -118,7 +118,6 @@ import org.openide.windows.TopComponent;
 /**
  * Shared utilities for service implementation code.
  *
- * @author Nam Nguyen
  */
 public class SharedUtils {
     

@@ -53,8 +53,6 @@ import org.netbeans.modules.xml.wsdl.model.Output;
 import org.netbeans.modules.xml.wsdl.model.Part;
 
 /**
- * Provides
- * @author skini
  */
 public class WSDLUtils {
     

@@ -49,7 +49,6 @@ import org.openide.util.HelpCtx;
 /**
  * Provides description of the editor component.
  * 
- * @author skini
  */
 public interface ExtensibilityElementConfigurationEditorComponent {
     public static final String PROPERTY_ERROR_EVT = "PROPERTY_ERROR_EVT";

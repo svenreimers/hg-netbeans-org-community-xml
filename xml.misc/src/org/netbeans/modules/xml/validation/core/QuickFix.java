@@ -48,7 +48,6 @@ import javax.swing.Action;
 import java.awt.event.ActionEvent;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.12.06
  */
 public interface QuickFix extends Action {

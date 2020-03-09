@@ -75,7 +75,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Sonali Kochar
  */
 public class WSDLMoveRefactoringPlugin extends WSDLRefactoringPlugin  implements XMLRefactoringPlugin {
     

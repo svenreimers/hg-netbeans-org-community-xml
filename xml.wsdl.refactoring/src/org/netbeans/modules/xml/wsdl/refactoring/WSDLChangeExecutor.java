@@ -57,7 +57,6 @@ import org.netbeans.modules.xml.xam.Referenceable;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class WSDLChangeExecutor  {
     

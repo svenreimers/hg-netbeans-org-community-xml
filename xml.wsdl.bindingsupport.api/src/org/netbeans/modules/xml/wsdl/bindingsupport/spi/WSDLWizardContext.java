@@ -49,7 +49,6 @@ import org.openide.WizardDescriptor;
 /**
  * Provides the context implementation for implementors to use for customizing wsdl wizard
  * 
- * @author skini
  */
 public interface WSDLWizardContext {
 

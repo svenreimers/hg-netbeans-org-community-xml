@@ -64,7 +64,6 @@ import org.xml.sax.SAXException;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2010.01.25
  */
 public abstract class XmlGlobalCatalog implements CatalogReader, CatalogDescriptor, EntityResolver {

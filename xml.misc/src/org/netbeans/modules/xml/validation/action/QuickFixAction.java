@@ -60,7 +60,6 @@ import org.netbeans.modules.xml.validation.core.QuickFixable;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.12.03
  */
 public final class QuickFixAction extends IconAction {

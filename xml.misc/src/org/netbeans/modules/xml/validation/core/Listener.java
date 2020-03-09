@@ -47,7 +47,6 @@ import java.util.List;
 import org.netbeans.modules.xml.xam.spi.Validator.ResultItem;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.04.14
  */
 public interface Listener {

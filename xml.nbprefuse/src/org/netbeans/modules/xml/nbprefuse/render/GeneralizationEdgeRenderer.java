@@ -69,7 +69,6 @@ import prefuse.visual.VisualItem;
 
 /**
  *
- * @author Jeri Lockhart
  */
 public class GeneralizationEdgeRenderer 
                 extends EdgeRenderer {

@@ -95,7 +95,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Sonali Kochar
  */
 public class WSDLSafeDeleteRefactoringPlugin extends WSDLRefactoringPlugin {
     

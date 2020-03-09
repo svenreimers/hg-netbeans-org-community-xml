@@ -56,7 +56,6 @@ import org.netbeans.modules.xml.xam.spi.Validator.ResultItem;
 
 /**
  *
- * @author radval
  */
 public class ValidationHelper {
     

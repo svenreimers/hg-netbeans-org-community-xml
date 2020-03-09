@@ -83,7 +83,6 @@ import org.netbeans.modules.xml.search.impl.ui.Export;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.11.24
  */
 final class Tree extends JTree {

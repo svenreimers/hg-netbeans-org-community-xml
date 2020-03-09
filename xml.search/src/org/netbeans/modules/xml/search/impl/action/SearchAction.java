@@ -55,7 +55,6 @@ import org.netbeans.modules.xml.search.impl.output.View;
 import static org.netbeans.modules.xml.misc.UI.*;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2006.11.13
  */
 public final class SearchAction extends IconAction {

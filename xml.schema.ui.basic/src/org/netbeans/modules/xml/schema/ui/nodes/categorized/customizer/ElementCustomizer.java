@@ -77,7 +77,6 @@ import org.netbeans.modules.xml.xam.ui.customizer.MessageDisplayer;
 /**
  * Element customizer
  *
- * @author  Ajit Bhate
  */
 abstract class ElementCustomizer<T extends Element>
         extends AbstractSchemaComponentCustomizer<T>

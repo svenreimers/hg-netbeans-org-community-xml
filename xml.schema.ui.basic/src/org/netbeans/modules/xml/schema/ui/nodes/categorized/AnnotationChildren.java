@@ -60,7 +60,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.SchemaUIContext;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class AnnotationChildren extends CategorizedChildren<Annotation> {
     public AnnotationChildren(SchemaUIContext context,

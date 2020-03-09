@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.categorized.customizer.Attribute
 /**
  * Global Element customizer
  *
- * @author  Ajit Bhate
  */
 public class AdvancedGlobalAttributeCustomizer extends AttributeCustomizer<GlobalAttribute>
 {

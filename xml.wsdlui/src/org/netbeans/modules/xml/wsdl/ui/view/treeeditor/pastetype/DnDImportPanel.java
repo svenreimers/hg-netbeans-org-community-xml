@@ -54,7 +54,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  skini
  */
 public class DnDImportPanel extends javax.swing.JPanel {
 

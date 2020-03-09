@@ -48,7 +48,6 @@ import org.openide.util.Lookup;
 import org.netbeans.spi.palette.PaletteActions;
 
 /**
- * @author radval
  * 
  */
 public class WSDLPaletteActions extends PaletteActions {

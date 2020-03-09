@@ -54,7 +54,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.schema.SchemaNode;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class AdvancedSchemaNode extends SchemaNode {
 

@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.xam.ui.XAMUtils;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class AdvancedFacetProperty extends BaseSchemaProperty {
     

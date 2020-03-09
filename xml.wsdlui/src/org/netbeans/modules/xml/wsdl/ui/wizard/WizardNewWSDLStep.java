@@ -53,7 +53,6 @@ import org.openide.util.HelpCtx;
 
 /**
  *
- * @author radval
  */
 public class WizardNewWSDLStep implements WizardDescriptor.FinishablePanel {
     private WizardDescriptor.Panel mPanel;

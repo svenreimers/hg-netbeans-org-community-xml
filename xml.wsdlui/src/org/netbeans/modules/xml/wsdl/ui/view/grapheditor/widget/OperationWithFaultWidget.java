@@ -54,7 +54,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author rico
  */
 public abstract class OperationWithFaultWidget<T extends Operation> extends OperationWidget<T> {
     private Widget dummyWidget;

@@ -52,7 +52,6 @@ import org.netbeans.modules.xml.wsdl.validator.spi.ValidatorSchemaFactory;
 
 /**
  * 
- * @author jyang
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.wsdl.validator.spi.ValidatorSchemaFactory.class)
 public class MimeValidatorSchemaFactory extends ValidatorSchemaFactory{

@@ -83,7 +83,6 @@ import org.openide.util.lookup.ProxyLookup;
 
 /**
  * Support for creating logical views.
- * @author Jesse Glick, Petr Hrebejk
  */
 public class ImportViewNodes {
     

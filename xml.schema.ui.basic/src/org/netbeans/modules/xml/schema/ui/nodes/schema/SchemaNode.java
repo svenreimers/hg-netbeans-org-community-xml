@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.*;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class SchemaNode extends SchemaComponentNode<Schema>
 {

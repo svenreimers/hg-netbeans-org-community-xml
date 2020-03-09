@@ -85,7 +85,6 @@ import org.openide.util.datatransfer.NewType;
 
 
 /**
- * @author Ritesh Adval
  *
  */
 public class BindingNode extends WSDLExtensibilityElementNode<Binding> {

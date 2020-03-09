@@ -73,7 +73,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  skini
  */
 public class BindingSubTypePanel extends javax.swing.JPanel {
     

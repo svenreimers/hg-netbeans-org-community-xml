@@ -47,7 +47,6 @@ import javax.swing.text.JTextComponent;
 import org.openide.text.ActiveEditorDrop;
 
 /**
- * @author radval
  * 
  */
 public class WSDLPaletteDrop implements ActiveEditorDrop {

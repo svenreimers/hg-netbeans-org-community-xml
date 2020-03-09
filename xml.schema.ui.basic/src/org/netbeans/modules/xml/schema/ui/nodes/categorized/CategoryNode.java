@@ -94,7 +94,6 @@ import org.openide.util.lookup.ProxyLookup;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class CategoryNode extends AbstractNode
         implements Node.Cookie, ComponentListener, Highlighted,

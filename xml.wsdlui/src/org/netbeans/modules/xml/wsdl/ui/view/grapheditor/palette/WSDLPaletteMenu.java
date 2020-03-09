@@ -48,7 +48,6 @@ import org.openide.util.NbBundle;
 import org.openide.util.actions.CallableSystemAction;
 
 /**
- * @author radval
  * 
  */
 public class WSDLPaletteMenu extends CallableSystemAction {

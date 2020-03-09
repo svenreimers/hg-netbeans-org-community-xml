@@ -52,7 +52,6 @@ import org.openide.util.NbBundle;
 /**
  * GotoType for showing a component in the design view.
  *
- * @author  Nathan Fiedler
  */
 public class DesignGotoType extends GotoType {
 

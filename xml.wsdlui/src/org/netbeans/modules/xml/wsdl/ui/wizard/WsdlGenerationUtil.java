@@ -68,7 +68,6 @@ import org.netbeans.modules.xml.wsdl.ui.spi.ExtensibilityElementConfiguratorFact
 
 /**
  *
- * @author radval
  */
 public class WsdlGenerationUtil {
     

@@ -67,7 +67,6 @@ import org.openide.util.datatransfer.NewType;
 /**
  * NewType for importing a schema file.
  *
- * @author  Nathan Fiedler
  */
 public class ImportSchemaNewType extends NewType {
     /** Component in which to create import. */

@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.wsdl.model.WSDLModel;
 
 /**
  *
- * @author  radval
  */
 public class OneWayOperationPanel extends javax.swing.JPanel implements OperationConfiguration {
 

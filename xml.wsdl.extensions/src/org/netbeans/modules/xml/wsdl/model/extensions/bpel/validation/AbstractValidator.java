@@ -62,7 +62,6 @@ import org.netbeans.modules.xml.xam.spi.Validation.ValidationType;
 /**
  * 
  * Generic abstract validator. 
- * @author radval
  *
  */
 public abstract class AbstractValidator implements Validator {

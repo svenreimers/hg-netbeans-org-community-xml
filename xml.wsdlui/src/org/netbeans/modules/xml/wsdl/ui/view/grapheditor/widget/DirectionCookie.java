@@ -51,7 +51,6 @@ import org.openide.nodes.Node;
  * this cookie in its Lookup. All operations have a direction associated
  * with them, either pointing to the right, or pointing to the left.
  *
- * @author  Nathan Fiedler
  */
 public class DirectionCookie implements Node.Cookie {
     /** True if this cookie represents a right-sided operation. */

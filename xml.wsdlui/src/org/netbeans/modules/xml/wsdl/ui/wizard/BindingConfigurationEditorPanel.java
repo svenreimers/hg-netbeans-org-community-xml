@@ -61,7 +61,6 @@ import org.netbeans.modules.xml.wsdl.bindingsupport.spi.ExtensibilityElementConf
 
 /**
  *
- * @author  skini
  */
 public class BindingConfigurationEditorPanel extends javax.swing.JPanel {
 

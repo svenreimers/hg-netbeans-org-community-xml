@@ -60,7 +60,6 @@ import org.openide.util.actions.SystemAction;
 
 /**
  *
- * @author Ritesh Adval
  *
  *
  */

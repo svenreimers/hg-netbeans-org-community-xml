@@ -61,8 +61,6 @@ import org.netbeans.modules.xml.wsdl.ui.view.grapheditor.widget.DnDHandler;
  * Action for drag and drop. Implement ConnectProvider isTargetWidget, isSourceWidget and createConnection.
  * Modified version of ConnectAction.
  *
- * @author David Kaspar
- * @author skini
  */
 public class DragDropAction extends WidgetAction.LockedAdapter {
 

@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.SchemaUIContext;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class ComplexTypeChildren<C extends ComplexType>
         extends CategorizedChildren<C>

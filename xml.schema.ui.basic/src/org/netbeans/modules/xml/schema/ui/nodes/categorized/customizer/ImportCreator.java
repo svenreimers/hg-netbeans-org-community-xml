@@ -63,8 +63,6 @@ import org.openide.util.NbBundle;
 /**
  * An import creator.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class ImportCreator extends ExternalReferenceCreator<Schema> {
     /** silence compiler warnings */

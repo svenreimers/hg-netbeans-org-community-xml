@@ -51,7 +51,6 @@ import org.openide.util.Utilities;
 /**
  * Modified version of ExtendedConnectionAction.
  * 
- * @author alex
  */
 public class ExtendedDragDropAction extends DragDropAction {
 

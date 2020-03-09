@@ -52,7 +52,6 @@ import org.openide.util.Utilities;
 /**
  * Dialog used to create User Defined WSDL and the operations
  *
- * @author Kiran
  *
  * @version 
  */

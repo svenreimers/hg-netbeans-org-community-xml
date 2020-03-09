@@ -57,7 +57,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class DocumentationPanel extends javax.swing.JPanel
 {

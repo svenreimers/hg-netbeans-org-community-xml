@@ -55,7 +55,6 @@ import org.netbeans.modules.xml.schema.model.GlobalType;
  * implement this interface, it has no other effect on the nodes created
  * by the factory.
  *
- * @author  Nathan Fiedler
  */
 public interface PrimitiveSimpleType extends GlobalType {
 }

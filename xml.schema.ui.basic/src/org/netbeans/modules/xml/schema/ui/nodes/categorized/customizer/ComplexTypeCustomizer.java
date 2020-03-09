@@ -92,7 +92,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class ComplexTypeCustomizer<T extends ComplexType>
         extends AbstractSchemaComponentCustomizer<T>

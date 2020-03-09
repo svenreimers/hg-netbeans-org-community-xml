@@ -61,8 +61,6 @@ import org.openide.util.NbBundle;
 /**
  * Property editor for import component location property.
  *
- * @author radval
- * @author Nathan Fiedler
  */
 public class ImportLocationPropertyEditor extends PropertyEditorSupport
         implements ExPropertyEditor {

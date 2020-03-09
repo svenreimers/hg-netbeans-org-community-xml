@@ -59,7 +59,6 @@ import org.netbeans.modules.xml.schema.ui.basic.editors.BooleanEditor;
  * This class provides property support for properties having boolean values.
  * It provides support for properties which default to null or to false
  * when not specified.
- * @author Ajit Bhate
  */
 public class BooleanProperty extends BaseSchemaProperty {
     

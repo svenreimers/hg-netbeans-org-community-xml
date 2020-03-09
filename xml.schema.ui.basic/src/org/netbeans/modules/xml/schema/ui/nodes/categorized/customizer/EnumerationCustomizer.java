@@ -69,7 +69,6 @@ import org.netbeans.modules.xml.schema.model.SimpleRestriction;
 /**
  * Attribute customizer
  *
- * @author  Ajit Bhate
  */
 public class EnumerationCustomizer<T extends SimpleRestriction>
         extends AbstractSchemaComponentCustomizer<T>

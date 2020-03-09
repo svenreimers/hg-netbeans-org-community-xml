@@ -65,7 +65,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
  * This class provides property support for properties having boolean values.
  * It provides support for properties which default to null or to false
  * when not specified.
- * @author Ajit Bhate
  */
 public class MemberTypesProperty extends BaseSchemaProperty {
     

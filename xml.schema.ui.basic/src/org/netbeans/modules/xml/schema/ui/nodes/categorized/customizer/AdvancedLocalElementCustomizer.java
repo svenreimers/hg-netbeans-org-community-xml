@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.categorized.customizer.ElementCu
 /**
  * Local Element customizer
  *
- * @author  Ajit Bhate
  */
 public class AdvancedLocalElementCustomizer extends ElementCustomizer<LocalElement>
 {

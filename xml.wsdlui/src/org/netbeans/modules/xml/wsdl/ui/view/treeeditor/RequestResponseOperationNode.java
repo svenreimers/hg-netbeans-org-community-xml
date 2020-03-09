@@ -54,7 +54,6 @@ import org.openide.util.Utilities;
 
 /**
  *
- * @author Ritesh Adval
  *
  */
 public class RequestResponseOperationNode extends OperationNode<RequestResponseOperation> {

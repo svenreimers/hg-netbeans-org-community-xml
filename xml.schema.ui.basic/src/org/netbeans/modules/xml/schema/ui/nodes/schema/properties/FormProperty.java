@@ -59,7 +59,6 @@ import org.netbeans.modules.xml.schema.ui.basic.editors.FormPropertyEditor;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class FormProperty extends BaseSchemaProperty {
     

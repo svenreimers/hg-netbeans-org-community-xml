@@ -57,7 +57,6 @@ import org.netbeans.api.visual.widget.Widget;
  * Temporary widget which draws a arrow. Can be dashed, and either pointing east or west.
  * May be replaced by connection widget in future.
  * 
- * @author skini
  *
  */
 public class ArrowWidget extends Widget {

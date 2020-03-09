@@ -68,7 +68,6 @@ import org.openide.explorer.propertysheet.PropertyEnv;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class AdvancedEnumerationProperty extends BaseSchemaProperty
 {

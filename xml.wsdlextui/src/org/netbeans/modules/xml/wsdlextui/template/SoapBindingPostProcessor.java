@@ -64,7 +64,6 @@ import org.netbeans.modules.xml.wsdl.model.extensions.soap.SOAPFault;
 
 /**
  *
- * @author radval
  */
 public class SoapBindingPostProcessor {
     

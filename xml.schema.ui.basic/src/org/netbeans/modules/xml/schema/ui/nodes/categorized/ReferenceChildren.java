@@ -59,7 +59,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.SchemaUIContext;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class ReferenceChildren<C extends SchemaComponent>
         extends CategorizedChildren<C>

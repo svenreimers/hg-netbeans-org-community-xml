@@ -56,7 +56,6 @@ import org.openide.WizardDescriptor;
 
 /**
  *
- * @author skini
  */
 public class WSDLWizardContextImpl implements WSDLWizardContext {
     private WSDLWizardIterator iterator;

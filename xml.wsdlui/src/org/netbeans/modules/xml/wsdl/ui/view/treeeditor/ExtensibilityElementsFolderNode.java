@@ -66,7 +66,6 @@ import org.openide.util.NbBundle;
 import org.openide.util.datatransfer.NewType;
 
 /**
- * @author Ritesh Adval
  *
  *
  */

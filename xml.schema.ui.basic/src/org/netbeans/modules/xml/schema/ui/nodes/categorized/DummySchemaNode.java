@@ -61,7 +61,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class DummySchemaNode extends FilterNode implements Node.Cookie
 {

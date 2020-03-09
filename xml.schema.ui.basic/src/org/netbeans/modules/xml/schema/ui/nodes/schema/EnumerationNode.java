@@ -58,8 +58,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.schema.properties.BaseSchemaProp
 
 /**
  * 
- * @author Todd Fast, todd.fast@sun.com
- * @author Ajit Bhate
  */
 public class EnumerationNode extends SchemaComponentNode<Enumeration>
 {

@@ -89,7 +89,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Milan Kuchtiak
  */
 public final class WsdlPanel implements WizardDescriptor.FinishablePanel {
     

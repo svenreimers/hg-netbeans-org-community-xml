@@ -55,7 +55,6 @@ import org.netbeans.modules.xml.xam.dom.AbstractDocumentComponent;
 
 /**
  *
- * @author radval
  */
 public class PartnerLinkTypeGenerator implements Command {
     

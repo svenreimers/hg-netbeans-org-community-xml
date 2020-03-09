@@ -63,7 +63,6 @@ import org.openide.util.lookup.Lookups;
 import org.openide.util.lookup.ProxyLookup;
 
 /**
- * @author  Ajit Bhate
  */
 public class DetailsNode extends AbstractNode
 {

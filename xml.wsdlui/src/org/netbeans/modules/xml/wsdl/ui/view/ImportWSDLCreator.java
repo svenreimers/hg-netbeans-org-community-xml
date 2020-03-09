@@ -64,8 +64,6 @@ import org.openide.util.NbBundle;
 /**
  * An import creator.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class ImportWSDLCreator extends ExternalReferenceCreator<Definitions> {
     /** silence compiler warnings */

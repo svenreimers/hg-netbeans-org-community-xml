@@ -49,7 +49,6 @@ import org.netbeans.api.visual.widget.Widget;
 /**
  * This interface decorates a drag drop action.
  *
- * @author skini
  */
 public interface DragDropDecorator {
 

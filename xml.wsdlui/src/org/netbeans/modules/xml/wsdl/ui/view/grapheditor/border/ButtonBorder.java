@@ -53,7 +53,6 @@ import org.netbeans.api.visual.border.Border;
 
 /**
  *
- * @author anjeleevich
  */
 public class ButtonBorder implements Border {
     private int top;

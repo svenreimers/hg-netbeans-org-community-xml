@@ -76,7 +76,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author Ritesh Adval
  *
  */
 public class MessageNode extends WSDLExtensibilityElementNode<Message> {

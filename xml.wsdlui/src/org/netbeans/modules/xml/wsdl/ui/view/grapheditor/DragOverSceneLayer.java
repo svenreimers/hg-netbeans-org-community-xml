@@ -71,8 +71,6 @@ import org.openide.nodes.Node;
  * Drag Layer on which icons for drag events are rendered.   
  * Need to provide methods for changing custom icon?
  *
- * @author radval
- * @author skini
  */
 public class DragOverSceneLayer extends LayerWidget {
 

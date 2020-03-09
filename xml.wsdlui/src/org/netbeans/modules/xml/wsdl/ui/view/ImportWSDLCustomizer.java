@@ -58,8 +58,6 @@ import org.openide.util.HelpCtx;
 /**
  * An import customizer.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class ImportWSDLCustomizer extends ExternalReferenceCustomizer<Import> {
     private static final long serialVersionUID = 1L;

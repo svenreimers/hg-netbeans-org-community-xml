@@ -65,7 +65,6 @@ import org.xml.sax.SAXParseException;
 
 /**
  *
- * @author radval
  */
 public class SchemaTest extends TestCase {
     

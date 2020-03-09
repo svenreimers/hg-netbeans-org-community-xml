@@ -73,7 +73,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author radval
  */
 public class PartAndElementOrTypeTableModel extends AbstractTableModel {
     

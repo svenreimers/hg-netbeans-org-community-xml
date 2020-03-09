@@ -62,7 +62,6 @@ import org.openide.util.Lookup;
 /**
  * Widget to represent an Output WSDL component.
  *
- * @author radval
  */
 public class OutputWidget extends OperationParameterWidget {
 

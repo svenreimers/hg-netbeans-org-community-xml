@@ -57,7 +57,6 @@ import org.netbeans.modules.xml.wsdl.model.extensions.http.HTTPAddress;
 
 /**
  *
- * @author radval
  */
 public class HttpBindingPostProcessor {
     

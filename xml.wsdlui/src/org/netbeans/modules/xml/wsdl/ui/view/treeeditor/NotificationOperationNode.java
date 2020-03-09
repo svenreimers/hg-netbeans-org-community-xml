@@ -55,7 +55,6 @@ import org.openide.util.Utilities;
 
 /**
  *
- * @author Ritesh Adval
  *
  */
 public class NotificationOperationNode extends OperationNode<NotificationOperation> {

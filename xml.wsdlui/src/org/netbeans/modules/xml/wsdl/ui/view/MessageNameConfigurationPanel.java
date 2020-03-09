@@ -58,7 +58,6 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author  radval
  */
 public class MessageNameConfigurationPanel extends javax.swing.JPanel {
     

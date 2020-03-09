@@ -64,7 +64,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class LocalElementNode extends SchemaComponentNode<LocalElement>
 {

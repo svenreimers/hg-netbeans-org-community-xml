@@ -48,7 +48,6 @@ package org.netbeans.modules.xml.wsdl.ui.view.grapheditor.actions;
 /**
  * Opens the name editor and closes the editor.
  * 
- * @author skini
  *
  */
 public interface WidgetEditCookie {

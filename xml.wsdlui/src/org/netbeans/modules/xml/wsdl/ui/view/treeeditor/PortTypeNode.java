@@ -87,7 +87,6 @@ import org.openide.util.datatransfer.NewType;
 
 
 /**
- * @author Ritesh Adval
  *
  */
 public class PortTypeNode extends WSDLNamedElementNode<PortType> {

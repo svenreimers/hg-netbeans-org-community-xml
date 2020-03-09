@@ -61,7 +61,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ajit Bhate
  */
 abstract class AbstractSchemaComponentCustomizer<T extends SchemaComponent> 
 		extends AbstractComponentCustomizer<SchemaComponent>

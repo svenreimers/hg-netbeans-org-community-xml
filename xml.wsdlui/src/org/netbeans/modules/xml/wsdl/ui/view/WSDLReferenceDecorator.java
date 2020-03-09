@@ -64,7 +64,6 @@ import org.openide.util.NbBundle;
 /**
  * The ExternalReferenceDecorator for WSDL components.
  *
- * @author  Nathan Fiedler
  */
 public class WSDLReferenceDecorator extends AbstractReferenceDecorator {
     /** The customizer that created this decorator. */

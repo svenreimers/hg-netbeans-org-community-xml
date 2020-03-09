@@ -77,7 +77,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  radval
  */
 public class CommonMessageConfigurationPanel extends javax.swing.JPanel {
     

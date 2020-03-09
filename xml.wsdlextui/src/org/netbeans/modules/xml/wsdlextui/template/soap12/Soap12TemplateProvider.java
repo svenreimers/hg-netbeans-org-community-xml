@@ -54,7 +54,6 @@ import org.netbeans.modules.xml.wsdl.model.Port;
 import org.openide.util.NbBundle;
 
 /**
- * @author Sujit Biswas
  *
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.wsdl.bindingsupport.spi.ExtensibilityElementTemplateProvider.class)

@@ -63,7 +63,6 @@ import org.openide.util.datatransfer.NewType;
 /**
  * NewType for importing a WSDL file.
  *
- * @author  Nathan Fiedler
  */
 public class ImportWSDLNewType extends NewType {
     /** Component in which to create import. */

@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.wsdl.ui.view.treeeditor;
 
 /**
  *
- * @author radval
  */
 public class WSDLExtensibleDocumentedNode {
 

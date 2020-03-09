@@ -61,8 +61,6 @@ import org.openide.util.NbBundle;
 /**
  * A redefine creator.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class RedefineCreator extends ExternalReferenceCreator<Schema> {
     /** silence compiler warnings */

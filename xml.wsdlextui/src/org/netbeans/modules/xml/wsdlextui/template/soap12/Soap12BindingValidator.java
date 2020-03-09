@@ -68,7 +68,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 import org.openide.util.NbBundle;
 
 /**
- * @author Sujit Biswas
  *
  */
 public class Soap12BindingValidator {

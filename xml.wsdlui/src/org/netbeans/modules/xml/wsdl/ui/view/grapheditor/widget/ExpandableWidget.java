@@ -50,7 +50,6 @@ package org.netbeans.modules.xml.wsdl.ui.view.grapheditor.widget;
  * the actual size change itself, when either of the collapse/expand
  * methods are invoked.
  *
- * @author  Nathan Fiedler
  */
 public interface ExpandableWidget {
 

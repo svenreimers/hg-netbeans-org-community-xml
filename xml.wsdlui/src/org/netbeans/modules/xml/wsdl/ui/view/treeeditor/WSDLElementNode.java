@@ -141,7 +141,6 @@ import org.openide.util.lookup.ProxyLookup;
 /**
  * Base class for all Nodes used in the WSDL editor.
  *
- * @author radval
  */
 public abstract class WSDLElementNode<T extends WSDLComponent> extends AbstractNode
         implements ComponentListener, ReferenceableProvider, Highlighted,

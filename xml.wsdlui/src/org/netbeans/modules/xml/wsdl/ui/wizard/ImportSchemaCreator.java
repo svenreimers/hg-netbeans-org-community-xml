@@ -64,7 +64,6 @@ import org.openide.nodes.Node;
  * An import customizer for schema in a WSDL document from the new WSDL
  * file wizard.
  *
- * @author  Nathan Fiedler
  */
 public class ImportSchemaCreator extends ImportSchemaCustomizer {
     /** silence compiler warnings */

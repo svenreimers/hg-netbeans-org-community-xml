@@ -62,7 +62,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author radval
  */
 public class NotificationOperationWidget
 extends OperationWidget<NotificationOperation> {

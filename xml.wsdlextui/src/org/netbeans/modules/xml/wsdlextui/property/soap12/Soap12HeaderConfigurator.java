@@ -63,7 +63,6 @@ import org.openide.nodes.Node;
 import org.openide.util.NbBundle;
 
 /**
- * @author Sujit Biswas
  *
  */
 @org.openide.util.lookup.ServiceProvider(service=org.netbeans.modules.xml.wsdl.ui.spi.ExtensibilityElementConfigurator.class)

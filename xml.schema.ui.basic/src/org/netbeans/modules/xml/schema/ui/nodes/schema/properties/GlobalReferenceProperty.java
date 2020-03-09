@@ -58,7 +58,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  * This class provides property support for properties having global references.
- * @author Ajit Bhate
  */
 public class GlobalReferenceProperty<T extends ReferenceableSchemaComponent>
 		extends BaseSchemaProperty {

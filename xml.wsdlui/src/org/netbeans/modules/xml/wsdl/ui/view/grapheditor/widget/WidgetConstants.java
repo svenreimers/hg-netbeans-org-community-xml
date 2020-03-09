@@ -56,8 +56,6 @@ import org.netbeans.modules.xml.wsdl.ui.view.grapheditor.layout.LeftRightLayout;
 /**
  * Defines constants to be used throughout the widget classes.
  *
- * @author Nathan Fiedler
- * @author Shivanand Kini
  */
 public interface WidgetConstants {
     /** The minimum width for message widget */

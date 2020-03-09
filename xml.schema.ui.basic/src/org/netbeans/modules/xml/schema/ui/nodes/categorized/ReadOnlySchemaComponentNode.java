@@ -80,7 +80,6 @@ import org.openide.util.lookup.ProxyLookup;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class ReadOnlySchemaComponentNode extends FilterNode {
     private transient String displayTemplate;

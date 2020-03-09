@@ -124,7 +124,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author radval
  */
 public class PortTypeWidget extends AbstractWidget<PortType> implements DnDHandler {
     private LabelWidget mNameWidget;

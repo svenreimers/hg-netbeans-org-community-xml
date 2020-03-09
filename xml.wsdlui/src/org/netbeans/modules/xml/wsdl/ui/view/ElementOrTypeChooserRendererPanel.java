@@ -59,7 +59,6 @@ import javax.swing.table.DefaultTableCellRenderer;
 
 /**
  *
- * @author  radval
  */
 public class ElementOrTypeChooserRendererPanel extends javax.swing.JPanel {
     

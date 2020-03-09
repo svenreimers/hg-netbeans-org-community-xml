@@ -44,7 +44,6 @@ package org.netbeans.modules.xml.wsdl.ui.view.treeeditor;
 
 /**
  *
- * @author skini
  */
 public interface Refreshable {
     

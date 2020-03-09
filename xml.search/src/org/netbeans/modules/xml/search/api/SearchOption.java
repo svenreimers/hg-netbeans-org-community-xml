@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.search.api;
 import org.netbeans.modules.xml.search.spi.SearchProvider;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.05.25
  */
 public interface SearchOption {

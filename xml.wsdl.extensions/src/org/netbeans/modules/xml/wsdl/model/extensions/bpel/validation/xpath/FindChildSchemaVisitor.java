@@ -85,7 +85,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
  * The special case is looking for a global element or attribute. 
  * In this case the parent schema component is the Schema object. 
  * 
- * @author nk160297
  */
 public class FindChildSchemaVisitor extends DefaultSchemaVisitor {
     

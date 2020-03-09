@@ -60,7 +60,6 @@ import javax.swing.table.DefaultTableCellRenderer;
 
 /**
  *
- * @author radval
  */
 public class ElementOrTypeTableCellRenderer extends DefaultTableCellRenderer {
         private ElementOrTypeChooserRendererPanel mPanel = new ElementOrTypeChooserRendererPanel();                                       

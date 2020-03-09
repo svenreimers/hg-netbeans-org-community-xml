@@ -64,7 +64,6 @@ import org.openide.util.NbBundle;
  * validate a WSDL XPath expression. The primary usage target is property alias 
  * objects and theirs query subelement.
  * 
- * @author nk160297
  */
 public class PathValidationContext implements XPathValidationContext {
 

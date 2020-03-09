@@ -63,7 +63,6 @@ import org.netbeans.modules.xml.schema.model.SchemaComponentReference;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class AnnotationCustomizer extends AbstractSchemaComponentCustomizer<Annotation>
 		implements PropertyChangeListener

@@ -49,7 +49,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author skini
  */
 public class WSDLChildFactory extends ChildFactory<WSDLComponent> implements Refreshable {
 

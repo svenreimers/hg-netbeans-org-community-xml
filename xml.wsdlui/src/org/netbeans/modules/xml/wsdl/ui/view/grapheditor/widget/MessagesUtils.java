@@ -67,7 +67,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author anjeleevich
  */
 public class MessagesUtils {
     

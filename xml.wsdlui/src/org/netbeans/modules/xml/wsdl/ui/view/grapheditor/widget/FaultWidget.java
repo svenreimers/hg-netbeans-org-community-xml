@@ -63,7 +63,6 @@ import org.openide.util.Lookup;
 /**
  * Represents a fault WSDL component.
  *
- * @author radval
  */
 public class FaultWidget extends OperationParameterWidget {
     /**

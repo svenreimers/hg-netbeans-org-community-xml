@@ -65,8 +65,6 @@ import org.openide.util.NbBundle;
 /**
  * An import customizer for schema in a WSDL document.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class ImportSchemaCustomizer extends ExternalReferenceCreator<Schema> {
     /** silence compiler warnings */

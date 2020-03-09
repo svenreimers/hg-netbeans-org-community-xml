@@ -61,8 +61,6 @@ import org.openide.util.NbBundle;
 /**
  * An include creator.
  *
- * @author  Administrator
- * @author  Nathan Fiedler
  */
 public class IncludeCreator extends ExternalReferenceCreator<Schema> {
     /** silence compiler warnings */

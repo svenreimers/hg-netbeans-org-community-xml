@@ -51,7 +51,6 @@ import org.openide.util.Lookup;
 import org.netbeans.modules.xml.search.spi.SearchProvider;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2007.12.14
  */
 public abstract class SearchManager {

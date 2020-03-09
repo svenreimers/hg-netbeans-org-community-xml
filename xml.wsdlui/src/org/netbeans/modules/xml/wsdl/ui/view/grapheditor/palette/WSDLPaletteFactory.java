@@ -48,7 +48,6 @@ import org.netbeans.spi.palette.PaletteController;
 import org.netbeans.spi.palette.PaletteFactory;
 
 /**
- * @author radval
  * 
  */
 public final class WSDLPaletteFactory {

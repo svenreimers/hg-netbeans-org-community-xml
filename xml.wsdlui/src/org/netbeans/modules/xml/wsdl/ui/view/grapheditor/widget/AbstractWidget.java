@@ -103,8 +103,6 @@ import org.openide.windows.TopComponent;
  * Class AbstractWidget is the base class for all widgets that represent
  * a WSDL component.
  *
- * @author radval
- * @author Nathan Fiedler
  */
 public abstract class AbstractWidget<T extends WSDLComponent> extends Widget
         implements ComponentListener, PopupMenuProvider, FocusableWidget, PropertyChangeListener {

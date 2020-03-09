@@ -63,7 +63,6 @@ import org.openide.util.NbBundle;
 /**
  * The ExternalReferenceDecorator for schema components.
  *
- * @author  Nathan Fiedler
  */
 public class SchemaReferenceDecorator extends AbstractReferenceDecorator {
     /** The customizer that created this decorator. */

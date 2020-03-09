@@ -63,7 +63,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class DefaultProperty extends BaseSchemaProperty {
     

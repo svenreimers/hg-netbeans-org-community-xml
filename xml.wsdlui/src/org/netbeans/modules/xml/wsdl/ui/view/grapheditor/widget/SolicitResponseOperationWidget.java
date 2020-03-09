@@ -63,7 +63,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author radval
  */
 public class SolicitResponseOperationWidget
         extends OperationWithFaultWidget<SolicitResponseOperation> {

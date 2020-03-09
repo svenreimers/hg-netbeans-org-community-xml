@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.wsdl.ui.wizard;
 
 /**
  *
- * @author radval
  */
 public interface Command {
     

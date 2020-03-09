@@ -63,7 +63,6 @@ import org.openide.util.actions.SystemAction;
 
 /**
  *
- * @author Ritesh Adval
  *
  */
 public class OperationInputNode extends OperationParameterNode<Input> {

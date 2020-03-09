@@ -61,8 +61,6 @@ import org.netbeans.modules.xml.schema.ui.nodes.schema.properties.NonNegativeInt
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Jeri Lockhart
  */
 public class SequenceNode extends SchemaComponentNode<Sequence>
 {

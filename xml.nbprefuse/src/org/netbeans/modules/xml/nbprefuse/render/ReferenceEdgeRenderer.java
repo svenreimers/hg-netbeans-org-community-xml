@@ -73,8 +73,6 @@ import prefuse.visual.VisualItem;
  *  ReferenceEdgeRenderer uses a GeneralPath instead of the Polygon used by
  *  EdgeRenderer.  To see the modifications, do a find on "2MAR2006".
  *
- * @author <a href="http://jheer.org">jeffrey heer</a>
- * @author Jeri Lockhart>
  */
 public class ReferenceEdgeRenderer extends EdgeRenderer {
 

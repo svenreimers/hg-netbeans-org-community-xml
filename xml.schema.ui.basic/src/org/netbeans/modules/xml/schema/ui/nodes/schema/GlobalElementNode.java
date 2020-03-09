@@ -61,7 +61,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class GlobalElementNode extends SchemaComponentNode<GlobalElement>
 {

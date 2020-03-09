@@ -49,7 +49,6 @@ import org.openide.nodes.Children;
 
 /**
  *
- * @author Ayub Khan
  */
 public class CustomDatatypeNode extends DatatypeNode {
 		

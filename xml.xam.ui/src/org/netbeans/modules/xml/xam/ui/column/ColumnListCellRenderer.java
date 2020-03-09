@@ -56,7 +56,6 @@ import org.openide.nodes.Node;
 /**
  * Renders the components in the list view.
  *
- * @author  Nathan Fiedler
  */
 public class ColumnListCellRenderer extends NodeRenderer {
     private static final long serialVersionUID = 1L;

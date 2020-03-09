@@ -118,7 +118,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author radval
  */
 public class PropertyViewFactoryImpl extends PropertyViewFactory {
     

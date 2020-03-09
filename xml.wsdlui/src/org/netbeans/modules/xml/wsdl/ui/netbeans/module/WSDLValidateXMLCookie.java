@@ -52,7 +52,6 @@ import org.netbeans.modules.xml.xam.Model;
 /**
  * Implements the ValidateXMLCookie cookie for WSDL models.
  *
- * @author  Nathan Fiedler
  */
 public class WSDLValidateXMLCookie implements ValidateXMLCookie {
     private WSDLDataObject dataObject;

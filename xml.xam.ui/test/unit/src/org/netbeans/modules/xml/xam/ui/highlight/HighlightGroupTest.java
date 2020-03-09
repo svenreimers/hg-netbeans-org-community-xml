@@ -55,7 +55,6 @@ import org.netbeans.modules.xml.xam.ui.Util;
 /**
  * Tests HighlightGroup class.
  *
- * @author Nathan Fiedler
  */
 public class HighlightGroupTest extends TestCase {
     private Schema schema;

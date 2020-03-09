@@ -46,7 +46,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author skini
  */
 public interface RefreshExtensibilityElementNodeCookie extends Node.Cookie {
     void refresh();

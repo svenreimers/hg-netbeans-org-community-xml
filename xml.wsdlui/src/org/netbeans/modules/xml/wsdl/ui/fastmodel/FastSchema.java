@@ -53,7 +53,6 @@ package org.netbeans.modules.xml.wsdl.ui.fastmodel;
 
 
 /**
- * @author radval
  *
  * A FastWSDLDefinitions represent a wsdl document
  * with only some content of the wsdl document parsed in it.

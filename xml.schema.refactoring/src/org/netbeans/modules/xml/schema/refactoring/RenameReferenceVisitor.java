@@ -59,8 +59,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author Nam Nguyen
- * @author Samaresh
  */
 class RenameReferenceVisitor extends DefaultSchemaVisitor {
     

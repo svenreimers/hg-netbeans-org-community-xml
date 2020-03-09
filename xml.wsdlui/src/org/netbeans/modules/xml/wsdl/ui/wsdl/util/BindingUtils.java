@@ -67,7 +67,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author jalmero
  */
 public class BindingUtils {
 

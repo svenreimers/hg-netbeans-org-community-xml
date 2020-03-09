@@ -66,7 +66,6 @@ import org.netbeans.modules.xml.schema.abe.nodes.ABEAbstractNode;
 
 /**
  *
- * @author girix
  */
 public class GlobalElementsContainerPanel extends ElementsContainerPanel{
     private static final long serialVersionUID = 7526472295622776147L;

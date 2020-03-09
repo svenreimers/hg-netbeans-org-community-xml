@@ -49,7 +49,6 @@ import java.util.LinkedList;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class TestSequence extends SequentialTest {
     protected LinkedList<SequentialTest> m_testList = null;

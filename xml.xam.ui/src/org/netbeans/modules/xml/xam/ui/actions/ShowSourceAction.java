@@ -50,7 +50,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Ajit Bhate
  */
 public class ShowSourceAction extends AbstractShowComponentAction
 {

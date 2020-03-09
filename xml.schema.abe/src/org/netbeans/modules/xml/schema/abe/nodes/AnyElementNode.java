@@ -63,7 +63,6 @@ import org.openide.windows.TopComponent;
 
 /**
  *
- * @author Samaresh (Samaresh.Panda@Sun.Com)
  */
 public class AnyElementNode extends ABEAbstractNode {
     

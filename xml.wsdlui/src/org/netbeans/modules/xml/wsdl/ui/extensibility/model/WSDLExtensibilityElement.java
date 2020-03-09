@@ -58,7 +58,6 @@ import javax.xml.namespace.QName;
 
 
 /**
- * @author radval
  *
  * WSDLExtensibilityElement is orginized as <folder> in layer.xml
  * one for each constants as defined in WSDLExtensibilityElements

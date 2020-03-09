@@ -98,7 +98,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author Sonali Kochar
  */
 public class SchemaSafeDeleteRefactoringPlugin extends SchemaRefactoringPlugin {
     

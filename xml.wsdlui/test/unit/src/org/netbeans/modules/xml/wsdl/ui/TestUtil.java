@@ -69,7 +69,6 @@ import org.openide.util.lookup.Lookups;
 
 /**
  *
- * @author girix
  */
 
 public class TestUtil{

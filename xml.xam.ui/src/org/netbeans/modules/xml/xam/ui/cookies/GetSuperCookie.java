@@ -51,7 +51,6 @@ import org.openide.nodes.Node;
  * GetComponentCookie returns referenced xam component's super component. 
  * 
  * 
- * @author Ajit Bhate
  */
 public interface GetSuperCookie extends Node.Cookie {
 

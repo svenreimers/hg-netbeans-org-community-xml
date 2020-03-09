@@ -65,7 +65,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author girix
  */
 public class DnDHelper {
     

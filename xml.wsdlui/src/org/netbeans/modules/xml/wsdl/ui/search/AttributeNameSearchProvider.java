@@ -65,7 +65,6 @@ import org.w3c.dom.Node;
  * Implements a SearchProvider that compares the name of each attribute
  * with the query string, using a case-insensitive string comparison.
  *
- * @author Nathan Fiedler
  */
 public class AttributeNameSearchProvider extends ChildVisitor
         implements SearchProvider {

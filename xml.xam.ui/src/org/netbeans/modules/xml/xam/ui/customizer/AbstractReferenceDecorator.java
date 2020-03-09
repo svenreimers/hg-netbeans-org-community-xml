@@ -52,7 +52,6 @@ import org.netbeans.modules.xml.xam.Model;
  * An abstract implementation of ExternalReferenceDecorator that provides
  * some common functionality for all concrete implementations to share.
  *
- * @author Nathan Fiedler
  */
 public abstract class AbstractReferenceDecorator implements
         ExternalReferenceDecorator {

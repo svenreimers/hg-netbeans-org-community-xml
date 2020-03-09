@@ -49,7 +49,6 @@ import org.netbeans.modules.xml.xam.Component;
 /**
  * Represents a highlighted component.
  *
- * @author Nathan Fiedler
  */
 public class Highlight {
     /** The type for a search result highlight. */

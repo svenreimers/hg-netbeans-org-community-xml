@@ -60,7 +60,6 @@ import junit.framework.Test;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class Retriver_0002 extends Retriver {

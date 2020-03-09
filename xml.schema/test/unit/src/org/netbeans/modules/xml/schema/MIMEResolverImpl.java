@@ -48,7 +48,6 @@ import org.openide.filesystems.MIMEResolver;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class MIMEResolverImpl extends MIMEResolver {
 

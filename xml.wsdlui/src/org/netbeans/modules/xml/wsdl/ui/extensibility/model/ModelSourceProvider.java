@@ -59,7 +59,6 @@ import org.openide.filesystems.FileObject;
 
 /**
  *
- * @author radval
  */
 public interface ModelSourceProvider {
     

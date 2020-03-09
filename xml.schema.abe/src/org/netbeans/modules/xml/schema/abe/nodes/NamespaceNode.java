@@ -80,7 +80,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author girix
  */
 public class NamespaceNode extends ABEAbstractNode{
     

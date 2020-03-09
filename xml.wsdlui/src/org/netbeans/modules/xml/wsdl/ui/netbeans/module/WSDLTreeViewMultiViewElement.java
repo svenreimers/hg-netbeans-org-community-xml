@@ -95,7 +95,6 @@ import org.openide.util.lookup.Lookups;
 import org.openide.windows.TopComponent;
 
 /**
- * @author radval
  *
  * To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Generation - Code and Comments
@@ -454,7 +453,6 @@ public class WSDLTreeViewMultiViewElement extends TopComponent
     /**
      * Find action for WSDL editor.
      *
-     * @author  Nathan Fiedler
      */
     private class WSDLFindAction extends AbstractAction {
         /** silence compiler warnings */

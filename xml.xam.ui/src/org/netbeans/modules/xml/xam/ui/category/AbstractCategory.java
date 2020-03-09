@@ -50,7 +50,6 @@ import java.beans.PropertyChangeSupport;
 /**
  * Abstract implementation of Category, used by concrete implementations.
  *
- * @author Nathan Fiedler
  */
 public abstract class AbstractCategory implements Category {
     /** Property change support for firing events to listeners. */

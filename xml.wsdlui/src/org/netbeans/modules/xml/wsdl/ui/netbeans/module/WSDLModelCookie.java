@@ -50,7 +50,6 @@ import org.netbeans.modules.xml.xam.ui.ModelCookie;
 /**
  * Provides access to a WSDL model instance.
  *
- * @author  Nathan Fiedler
  */
 public interface WSDLModelCookie extends ModelCookie<WSDLModel> {
 }

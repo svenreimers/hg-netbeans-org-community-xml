@@ -64,7 +64,6 @@ import org.openide.nodes.NodeOp;
 
 /**
  *
- * @author girix
  */
 public class MultiComponentActionManager {
     InstanceUIContext context;

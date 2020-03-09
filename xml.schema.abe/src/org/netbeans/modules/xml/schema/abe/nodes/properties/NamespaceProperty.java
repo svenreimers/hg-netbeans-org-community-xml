@@ -61,7 +61,6 @@ import org.openide.util.NbBundle;
 
 /**
  * This class provides property support for properties having namespace uris.
- * @author Ajit Bhate
  */
 public class NamespaceProperty extends BaseABENodeProperty {
     

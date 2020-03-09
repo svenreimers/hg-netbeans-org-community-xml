@@ -63,7 +63,6 @@ import java.awt.datatransfer.Transferable;
 
 /**
  *
- * @author girix
  */
 public class ABEPaletteDrop implements ActiveEditorDrop {
     

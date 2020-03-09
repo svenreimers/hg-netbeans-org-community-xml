@@ -52,7 +52,6 @@ import org.openide.util.Lookup;
 
 /**
  *
- * @author Ajit Bhate
  */
 public interface Customizer extends Lookup.Provider, HelpCtx.Provider {
     public static final String PROP_ACTION_APPLY = "apply";

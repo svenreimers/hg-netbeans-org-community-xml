@@ -62,7 +62,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author radval
  */
 public class WSDLExtensibilityElementsFactoryTest extends TestCase {
 

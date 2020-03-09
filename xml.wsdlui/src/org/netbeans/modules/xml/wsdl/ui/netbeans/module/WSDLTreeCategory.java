@@ -71,7 +71,6 @@ import org.openide.util.lookup.ProxyLookup;
 /**
  * Displays the tree form of the WSDL editor.
  *
- * @author Nathan Fiedler
  */
 public class WSDLTreeCategory extends AbstractCategory {
     /** Associated WSDL model. */

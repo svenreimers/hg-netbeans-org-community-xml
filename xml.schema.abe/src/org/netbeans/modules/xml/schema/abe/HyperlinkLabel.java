@@ -64,7 +64,6 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author girix
  */
 public class HyperlinkLabel extends JLabel{
     private static final long serialVersionUID = -483941387931729295L;

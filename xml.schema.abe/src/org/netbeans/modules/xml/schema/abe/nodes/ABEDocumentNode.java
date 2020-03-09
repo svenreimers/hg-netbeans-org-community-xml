@@ -49,7 +49,6 @@ import org.openide.nodes.AbstractNode;
 
 /**
  * This node represents the Instance view of a document. 
- * @author Chris Webster
  */
 public class ABEDocumentNode extends AbstractNode {
     

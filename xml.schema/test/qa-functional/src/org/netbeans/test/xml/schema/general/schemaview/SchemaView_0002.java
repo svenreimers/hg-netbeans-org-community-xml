@@ -69,7 +69,6 @@ import org.netbeans.jemmy.Timeouts;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class SchemaView_0002 extends SchemaView {

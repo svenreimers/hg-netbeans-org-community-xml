@@ -56,7 +56,6 @@ import org.netbeans.modules.xml.xam.ui.cookies.ViewComponentCookie;
 import org.netbeans.modules.xml.xam.ui.cookies.ViewComponentCookie.View;
 
 /**
- * @author Vladimir Yaroslavskiy
  * @version 2008.04.16
  */
 final class SearchProvider extends org.netbeans.modules.xml.search.spi.SearchProvider.Adapter {

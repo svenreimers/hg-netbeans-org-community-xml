@@ -49,7 +49,6 @@ package org.netbeans.modules.xml.xam.ui;
  * modules, to be used in place of directly using those other constants,
  * in order to avoid unnecessary module dependencies.
  *
- * @author  Nathan Fiedler
  */
 public interface ProjectConstants {
     /** The source group type for Java projects, to be used in place of

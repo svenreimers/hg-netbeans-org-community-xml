@@ -71,7 +71,6 @@ import org.openide.filesystems.FileUtil;
 
 /**
  *
- * @author nn136682
  */
 public class Util {
     static {

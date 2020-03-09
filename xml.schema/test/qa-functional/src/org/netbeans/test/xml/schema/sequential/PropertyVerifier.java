@@ -76,7 +76,6 @@ import java.io.File;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public abstract class PropertyVerifier extends TestSequence {
     

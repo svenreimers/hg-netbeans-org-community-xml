@@ -59,7 +59,6 @@ import org.netbeans.modules.xml.schema.abe.palette.DnDHelper;
 /**
  *
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public class TweenerPanel extends ABEBaseDropPanel {
     private static final long serialVersionUID = 7526472295622776147L;

@@ -69,7 +69,6 @@ import org.netbeans.modules.xml.xam.ui.XAMUtils;
  * Navigator component containing a tree of abe components along with
  * element and type filters
  *
- * @author  Chris Webster
  */
 public class NavigatorContent extends AbstractXMLNavigatorContent {
     /** silence compiler warnings */

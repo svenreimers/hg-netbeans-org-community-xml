@@ -52,7 +52,6 @@ import junit.framework.Test;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class Pattern_0002 extends Pattern {

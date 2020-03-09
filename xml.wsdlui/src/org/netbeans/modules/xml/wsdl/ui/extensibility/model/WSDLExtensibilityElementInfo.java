@@ -56,7 +56,6 @@ import org.netbeans.modules.xml.schema.model.Schema;
 import org.openide.loaders.DataObject;
 
 /**
- * @author radval
  *
  * WSDLExtensibilityElementInfo represents one schema element which is
  * a schema element from a wsdl extension schema.

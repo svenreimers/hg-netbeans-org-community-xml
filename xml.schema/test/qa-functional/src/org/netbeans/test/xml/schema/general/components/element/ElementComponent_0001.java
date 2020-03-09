@@ -50,7 +50,6 @@ import org.netbeans.jellytools.TopComponentOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class ElementComponent_0001 extends ElementComponent {

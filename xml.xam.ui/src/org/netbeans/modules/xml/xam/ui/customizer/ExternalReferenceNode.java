@@ -51,7 +51,6 @@ import org.openide.nodes.Node;
  * Nodes within ExternalReferenceCustomizer should implement this interface
  * to provide information about the data they represent.
  *
- * @author  Nathan Fiedler
  */
 public interface ExternalReferenceNode {
 

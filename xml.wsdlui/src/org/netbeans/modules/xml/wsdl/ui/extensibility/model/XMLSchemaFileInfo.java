@@ -49,7 +49,6 @@ import org.openide.loaders.DataObject;
 
 /**
  *
- * @author radval
  *
  */
 public interface XMLSchemaFileInfo {

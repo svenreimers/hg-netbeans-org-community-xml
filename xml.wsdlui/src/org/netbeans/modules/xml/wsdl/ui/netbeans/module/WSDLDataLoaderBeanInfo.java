@@ -58,7 +58,6 @@ import org.openide.util.Utilities;
 
 /** Description of {@link WSDLDataLoader}.
  *
- * @author Jerry Waldorf
  */
 public class WSDLDataLoaderBeanInfo extends SimpleBeanInfo {
 

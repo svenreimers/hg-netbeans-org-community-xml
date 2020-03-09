@@ -70,7 +70,6 @@ import org.netbeans.modules.xml.wsdl.ui.model.StringAttribute;
 
 /**
  *
- * @author radval
  */
 public class SchemaDocumentationFinderVisitor extends AbstractXSDVisitor {
     

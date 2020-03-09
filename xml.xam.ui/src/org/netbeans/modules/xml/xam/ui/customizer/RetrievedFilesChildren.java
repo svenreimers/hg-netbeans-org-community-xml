@@ -65,7 +65,6 @@ import org.openide.loaders.DataObject;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class RetrievedFilesChildren extends Children.Keys {
     private CatalogWriteModel cwm;

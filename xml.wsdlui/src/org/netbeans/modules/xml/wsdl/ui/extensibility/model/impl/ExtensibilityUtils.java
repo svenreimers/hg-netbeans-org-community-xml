@@ -86,7 +86,6 @@ import org.openide.loaders.DataObject;
 
 /**
  *
- * @author radval
  *
  */
 

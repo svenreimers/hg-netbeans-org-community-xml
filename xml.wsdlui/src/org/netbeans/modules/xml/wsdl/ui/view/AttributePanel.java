@@ -66,7 +66,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author  skini
  */
 public class AttributePanel extends javax.swing.JPanel {
     

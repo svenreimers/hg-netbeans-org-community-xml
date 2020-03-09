@@ -67,7 +67,6 @@ import org.netbeans.core.spi.multiview.MultiViewElement;
 
 /**
  *
- * @author radval
  */
 public class WSDLDesignMultiViewDesc extends Object
 	implements MultiViewDescription, Serializable {

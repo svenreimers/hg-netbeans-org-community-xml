@@ -71,7 +71,6 @@ import org.netbeans.modules.xml.schema.abe.visitors.DownTraversalVisitor;
 
 /**
  *
- * @author girix
  */
 public class FocusTraversalManager{
     

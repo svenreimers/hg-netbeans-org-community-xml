@@ -87,7 +87,6 @@ import org.xml.sax.SAXParseException;
 
 /**
  *
- * @author radval
  */
 public class PropertyModelFactoryImpl extends PropertyModelFactory {
    

@@ -59,7 +59,6 @@ import org.netbeans.modules.project.uiapi.OpenProjectsTrampoline;
 
 /**
  *
- * @author Sonali
  */
 public class OpenProjectsTrampolineImpl  implements OpenProjectsTrampoline {
     

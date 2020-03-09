@@ -47,7 +47,6 @@ package org.netbeans.modules.xml.xam.ui.column;
 /**
  * A ColumnProvider provides a Column to be displayed in a column view.
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public interface ColumnProvider {
 

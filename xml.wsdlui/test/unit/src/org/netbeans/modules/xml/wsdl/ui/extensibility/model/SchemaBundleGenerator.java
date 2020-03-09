@@ -98,7 +98,6 @@ import org.netbeans.modules.xml.xam.dom.NamedComponentReference;
 
 /**
  *
- * @author radval
  */
 public class SchemaBundleGenerator extends AbstractXSDVisitor {
     

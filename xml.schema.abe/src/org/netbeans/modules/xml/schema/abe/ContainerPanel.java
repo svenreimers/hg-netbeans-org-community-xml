@@ -84,7 +84,6 @@ import org.openide.util.RequestProcessor;
 
 /**
  *
- * @author girix
  */
 public abstract class ContainerPanel extends AnnotatedBorderPanel implements AXIVisitor{
     private static final long serialVersionUID = 7526472295622776147L;

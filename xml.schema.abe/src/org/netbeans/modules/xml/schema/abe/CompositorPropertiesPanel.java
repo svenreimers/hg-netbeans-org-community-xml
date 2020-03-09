@@ -62,7 +62,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author girix
  */
 public class CompositorPropertiesPanel extends ExtraPropertiesPanel{
     private static final long serialVersionUID = 7526472295622776147L;

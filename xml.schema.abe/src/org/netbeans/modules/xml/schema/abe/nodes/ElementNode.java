@@ -71,7 +71,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author Samaresh (Samaresh.Panda@Sun.Com)
  */
 public class ElementNode extends ABEAbstractNode {
     

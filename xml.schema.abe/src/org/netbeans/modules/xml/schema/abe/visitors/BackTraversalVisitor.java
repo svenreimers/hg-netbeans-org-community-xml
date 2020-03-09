@@ -69,7 +69,6 @@ import org.netbeans.modules.xml.schema.abe.StartTagPanel;
 
 /**
  *
- * @author girix
  */
 public class BackTraversalVisitor extends TraversalVisitor{
     ABEBaseDropPanel currentComponent;

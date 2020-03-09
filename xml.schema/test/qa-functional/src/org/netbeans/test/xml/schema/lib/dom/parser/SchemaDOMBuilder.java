@@ -62,7 +62,6 @@ import org.netbeans.test.xml.schema.lib.types.ComponentCategories;
 
 /**
  *
- * @author ca@netbeans.org
  */
 public class SchemaDOMBuilder {
     

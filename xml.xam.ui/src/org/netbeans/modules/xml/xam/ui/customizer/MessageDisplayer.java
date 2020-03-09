@@ -46,7 +46,6 @@ package org.netbeans.modules.xml.xam.ui.customizer;
 
 /**
  *
- * @author Ajit Bhate
  */
 public interface MessageDisplayer {
 

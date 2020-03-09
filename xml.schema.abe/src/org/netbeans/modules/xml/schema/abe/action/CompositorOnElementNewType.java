@@ -65,7 +65,6 @@ import org.openide.util.datatransfer.NewType;
 
 /**
  *
- * @author girix
  */
 public class CompositorOnElementNewType extends NewType{
     

@@ -57,7 +57,6 @@ import org.openide.util.Utilities;
 import org.openide.windows.TopComponent;
 /**
  *
- * @author Jeri Lockhart
  */
 public class WSDLSourceMultiviewDesc 
                 implements MultiViewDescription, Serializable {

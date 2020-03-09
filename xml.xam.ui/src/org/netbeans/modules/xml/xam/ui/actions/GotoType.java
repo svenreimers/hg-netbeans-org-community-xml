@@ -55,7 +55,6 @@ import org.openide.util.NbBundle;
  * Interface GotoType defines a place where an editor can be opened
  * for a particular component.
  *
- * @author  Nathan Fiedler
  */
 public abstract class GotoType {
 

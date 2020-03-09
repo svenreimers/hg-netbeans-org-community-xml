@@ -54,7 +54,6 @@ import junit.framework.Test;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 // Sample XML generation from schema via context menu

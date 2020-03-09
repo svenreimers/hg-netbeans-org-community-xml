@@ -55,7 +55,6 @@ import java.util.List;
 import org.openide.loaders.DataObject;
 
 /**
- * @author radval
  *
  * WSDLExtensibilityElementInfoContainer are DataFolder is layer.xml.
  * For a given constant as defined in @see WSDLExtensibilityElements

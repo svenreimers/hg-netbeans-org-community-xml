@@ -57,7 +57,6 @@ import org.openide.windows.TopComponent;
 
 /**
  *
- * @author Todd
  */
 public class InstanceUIContext {
     ////////////////////////////////////////////////////////////////////////////

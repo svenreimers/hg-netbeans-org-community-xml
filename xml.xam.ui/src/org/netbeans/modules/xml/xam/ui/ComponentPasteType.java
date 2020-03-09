@@ -64,7 +64,6 @@ import org.openide.util.datatransfer.PasteType;
  * and determines what is allowed to be pasted where, delegating most
  * of the work to the model.
  *
- * @author Nathan Fiedler
  */
 public class ComponentPasteType {
     /** NodeTransfer operations we use by default. */

@@ -28,7 +28,6 @@ import org.openide.util.actions.CookieAction;
 
 /**
  *
- * @author radval
  *
  */
 public abstract class CommonNodeAction extends CookieAction {

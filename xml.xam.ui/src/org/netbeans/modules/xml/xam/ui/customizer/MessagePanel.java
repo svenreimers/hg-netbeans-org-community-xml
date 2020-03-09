@@ -55,7 +55,6 @@ import org.openide.util.Utilities;
 
 /**
  *
- * @author  Ajit Bhate
  */
 public class MessagePanel extends javax.swing.JPanel implements MessageDisplayer
 {

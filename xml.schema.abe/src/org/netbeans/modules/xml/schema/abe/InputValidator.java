@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.schema.abe;
 
 /**
  *
- * @author girix
  */
 public interface InputValidator {
     public boolean isStringValid(String input);

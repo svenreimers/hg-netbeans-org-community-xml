@@ -52,7 +52,6 @@ import org.openide.nodes.Node;
  * and resources.
  * 
  * 
- * @author  Nathan Fiedler
  */
 public interface CountChildrenCookie extends Node.Cookie {
 

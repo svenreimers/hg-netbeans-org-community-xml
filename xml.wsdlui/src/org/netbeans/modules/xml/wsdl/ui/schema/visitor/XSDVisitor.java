@@ -57,7 +57,6 @@ import org.netbeans.modules.xml.schema.model.visitor.SchemaVisitor;
 
 /**
  *
- * @author radval
  */
 public interface XSDVisitor extends SchemaVisitor {
 

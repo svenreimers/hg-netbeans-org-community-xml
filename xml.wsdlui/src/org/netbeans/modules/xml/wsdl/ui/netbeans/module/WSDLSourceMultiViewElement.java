@@ -88,7 +88,6 @@ import org.openide.cookies.LineCookie;
 import org.openide.text.Line;
 
 /**
- * @author Jeri Lockhart
  */
 public class WSDLSourceMultiViewElement extends CloneableEditor implements MultiViewElement {
     

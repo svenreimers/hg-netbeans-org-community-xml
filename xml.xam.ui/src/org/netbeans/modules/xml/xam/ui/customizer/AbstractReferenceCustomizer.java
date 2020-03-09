@@ -53,8 +53,6 @@ import org.openide.nodes.Node;
 /**
  * Abstract base class for external reference customizers.
  *
- * @author  Ajit Bhate
- * @author  Nathan Fiedler
  */
 public abstract class AbstractReferenceCustomizer<T extends Component>
         extends AbstractComponentCustomizer<T> {

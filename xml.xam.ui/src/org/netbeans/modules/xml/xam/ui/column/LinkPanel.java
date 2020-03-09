@@ -82,7 +82,6 @@ import javax.swing.event.ChangeListener;
  * Contains and manages the link buttons that act as bread crumbs
  * for quickly browsing an instance of ColumnView.
  *
- * @author  Nathan Fiedler
  */
 public class LinkPanel extends JPanel implements ActionListener {
     private static final long serialVersionUID = 1L;

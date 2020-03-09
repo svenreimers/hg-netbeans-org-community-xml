@@ -69,7 +69,6 @@ import org.netbeans.modules.xml.xam.ui.XAMUtils;
 /**
  *
  *
- * @author  Todd Fast, todd.fast@sun.com
  */
 public abstract class ABEBaseDropPanel extends JPanel {
     protected static final long serialVersionUID = 7526472295622776147L;

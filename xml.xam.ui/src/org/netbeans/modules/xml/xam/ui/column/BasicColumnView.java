@@ -67,8 +67,6 @@ import org.netbeans.modules.xml.xam.ui.layout.SplitterLayout;
  * A Swing widget with a horizontal splitter layout. The split bars can
  * be moved right and left.
  *
- * @author  Jeri Lockhart
- * @author  Nathan Fiedler
  */
 public class BasicColumnView extends JPanel implements ColumnView {
     private static final String COLUMN_WEIGHT_1 = "1";   // NOI18N

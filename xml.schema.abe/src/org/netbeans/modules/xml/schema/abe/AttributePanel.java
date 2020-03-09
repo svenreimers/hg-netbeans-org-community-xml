@@ -83,7 +83,6 @@ import org.openide.DialogDisplayer;*/
 /**
  *
  *
- * @author Todd Fast, todd.fast@sun.com
  */
 public class AttributePanel extends ABEBaseDropPanel {
     private static final long serialVersionUID = 7526472295622776147L;

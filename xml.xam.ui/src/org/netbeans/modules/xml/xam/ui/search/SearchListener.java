@@ -49,7 +49,6 @@ import java.util.EventListener;
 /**
  * The listener interface for receiving search-related events.
  *
- * @author Nathan Fiedler
  */
 public interface SearchListener extends EventListener {
 

@@ -64,7 +64,6 @@ import org.openide.windows.TopComponent;
 
 /**
  *
- * @author girix
  */
 public class ComponentSelectionManager {
     InstanceUIContext context;

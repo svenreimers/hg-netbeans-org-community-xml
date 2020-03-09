@@ -72,8 +72,6 @@ import org.openide.windows.WindowManager;
  * GotoTypes. These types are the means by which the component is shown in
  * one view or another.
  *
- * @author Ajit Bhate
- * @author Nathan Fiedler
  */
 public class GoToAction extends CookieAction {
     /** silence compiler warnings */

@@ -67,7 +67,6 @@ import org.openide.util.NbBundle;
 /**
  * Presents the search component for XAM-based editors.
  *
- * @author  Nathan Fiedler
  */
 public abstract class SearchControlPanel extends JPanel
         implements ActionListener, SearchComponent, SearchListener {

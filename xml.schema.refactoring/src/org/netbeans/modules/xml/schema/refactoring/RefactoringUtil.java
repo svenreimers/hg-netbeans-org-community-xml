@@ -61,7 +61,6 @@ import org.openide.util.NbBundle;
 
 /**
  *
- * @author Nam Nguyen
  */
 public class RefactoringUtil {
     public static final String XSD_MIME_TYPE = "application/x-schema+xml";  // NOI18N

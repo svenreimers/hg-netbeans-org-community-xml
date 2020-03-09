@@ -53,7 +53,6 @@ import org.openide.util.NbPreferences;
 /**
  * Manages the WSDL editor options.
  *
- * @author  Nathan Fiedler
  */
 public class WSDLSettings {
     /** Singleton instance of SchemaSettings */

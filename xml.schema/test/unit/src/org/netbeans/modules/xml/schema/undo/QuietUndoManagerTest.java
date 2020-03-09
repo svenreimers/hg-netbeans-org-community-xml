@@ -69,7 +69,6 @@ import org.openide.loaders.DataObject;
  * the purpose of which is to test using the CloneableEditorSupport to
  * catch errors that occur only when the editor support is in place.
  *
- * @author Nathan Fiedler
  */
 public class QuietUndoManagerTest extends TestCase {
     public static final String XSD_PO = "PurchaseOrder.xsd";

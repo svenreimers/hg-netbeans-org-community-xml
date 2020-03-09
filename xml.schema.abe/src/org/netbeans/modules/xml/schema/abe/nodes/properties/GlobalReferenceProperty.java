@@ -53,7 +53,6 @@ import org.openide.nodes.PropertySupport;
 
 /**
  * This class provides property support for properties having global references.
- * @author Ajit Bhate
  */
 public class GlobalReferenceProperty extends PropertySupport.Reflection {
     

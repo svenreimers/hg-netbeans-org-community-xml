@@ -70,7 +70,6 @@ import org.openide.util.RequestProcessor;
  * An action on the SchemaDataObject node (SchemaNode)
  * to "Transform" the schema (from one design pattern to another)
  *
- * @author Ayub Khan
  */
 public class SchemaTransformWizard implements WizardDescriptor.InstantiatingIterator {
     private static final long serialVersionUID = 1L;

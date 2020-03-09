@@ -59,7 +59,6 @@ import org.openide.explorer.view.ListView;
  * have a need for that functionality. And it is not possible to override
  * anyway, due to package-private code.</p>
  *
- * @author  Nathan Fiedler
  */
 public class ColumnListView extends ListView {
     /** silence compiler warnings */
@@ -119,7 +118,6 @@ public class ColumnListView extends ListView {
      * in concert with the list cell renderer to show the node display
      * name in truncated form (with ...) and an arrow border.
      *
-     * @author  Nathan Fiedler
      */
     private class ColumnList extends JList {
         /** silence compiler warnings */

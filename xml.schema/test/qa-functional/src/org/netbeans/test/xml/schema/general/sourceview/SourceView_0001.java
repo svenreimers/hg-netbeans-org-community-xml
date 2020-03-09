@@ -53,7 +53,6 @@ import org.netbeans.jemmy.operators.AbstractButtonOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class SourceView_0001 extends SourceView {

@@ -50,8 +50,6 @@ import javax.swing.JComponent;
 /**
  * A Column repesents a visual component in a ColumnView.
  *
- * @author  Todd Fast, todd.fast@sun.com
- * @author  Nathan Fiedler
  */
 public interface Column {
     /** Property name for the title property. */

@@ -89,8 +89,6 @@ import org.netbeans.modules.xml.xam.ui.XAMUtils;
  * Base class for external reference creators. Unlike a customizer, a
  * creator may create mulitple new components at a time.
  *
- * @author  Ajit Bhate
- * @author  Nathan Fiedler
  */
 public abstract class ExternalReferenceCreator<T extends Component>
         extends AbstractReferenceCustomizer<T>
@@ -722,7 +720,6 @@ public abstract class ExternalReferenceCreator<T extends Component>
     /**
      * A column for the reference customizer table.
      *
-     * @author  Nathan Fiedler
      */
     protected class Column extends PropertySupport.ReadOnly {
         /** The keyword for this column. */
@@ -754,7 +751,6 @@ public abstract class ExternalReferenceCreator<T extends Component>
     /**
      * Special column for the reference customizer table's import column.
      *
-     * @author  Nathan Fiedler
      */
     protected class ImportColumn extends PropertySupport.ReadOnly {
         /** The keyword for this column. */

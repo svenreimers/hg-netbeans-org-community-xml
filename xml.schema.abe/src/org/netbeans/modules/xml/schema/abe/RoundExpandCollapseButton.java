@@ -65,7 +65,6 @@ import javax.swing.JButton;
 
 /**
  *
- * @author girix
  */
 public class RoundExpandCollapseButton extends JButton{
     private static final long serialVersionUID = 7526472295622776147L;

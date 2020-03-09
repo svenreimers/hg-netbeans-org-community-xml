@@ -52,7 +52,6 @@ import org.netbeans.modules.xml.xam.Nameable;
 
 /**
  *
- * @author radval
  *
  */
 public class SchemaElementMinMaxOccursFinderVisitor extends AbstractXSDVisitor {

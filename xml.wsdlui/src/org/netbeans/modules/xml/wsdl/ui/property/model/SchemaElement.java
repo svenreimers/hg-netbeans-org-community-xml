@@ -55,7 +55,6 @@ package org.netbeans.modules.xml.wsdl.ui.property.model;
 
 /**
  *
- * @author radval
  */
 public class SchemaElement {
     

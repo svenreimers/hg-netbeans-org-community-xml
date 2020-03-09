@@ -60,7 +60,6 @@ import org.openide.util.NbBundle;
  * taken from the Node delegate of DataFolder, if it is available.
  * Otherwise a default icon is used.
  *
- * @author  Nathan Fiedler
  */
 public class FolderNode extends AbstractNode {
     /** The source for our folder icons. */

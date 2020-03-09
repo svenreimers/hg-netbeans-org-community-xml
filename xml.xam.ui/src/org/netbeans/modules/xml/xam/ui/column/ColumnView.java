@@ -48,7 +48,6 @@ package org.netbeans.modules.xml.xam.ui.column;
  * A ColumnView contains one or more Column instances, and manages their
  * display in terms of providing a scrollable view.
  *
- * @author  Nathan Fiedler
  */
 public interface ColumnView {
 

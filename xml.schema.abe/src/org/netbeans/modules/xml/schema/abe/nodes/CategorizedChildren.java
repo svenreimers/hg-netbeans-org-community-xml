@@ -62,7 +62,6 @@ import org.openide.nodes.Node;
 
 /**
  *
- * @author Chris Webster
  */
 public class CategorizedChildren extends Children.Keys
         implements ComponentListener {

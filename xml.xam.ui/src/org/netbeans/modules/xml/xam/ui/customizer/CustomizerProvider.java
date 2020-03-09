@@ -48,7 +48,6 @@ package org.netbeans.modules.xml.xam.ui.customizer;
  * Defines an object as a provider of a customizer to be displayed in
  * a JColumnView component
  *
- * @author  Ajit Bhate
  */
 public interface CustomizerProvider {
 

@@ -52,7 +52,6 @@ import org.openide.util.NbBundle;
 /**
  * Action to show the design view for a component.
  *
- * @author Ajit Bhate
  */
 public class ShowDesignAction extends AbstractShowComponentAction {
     /** silence compiler warnings */

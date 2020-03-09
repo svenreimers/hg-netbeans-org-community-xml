@@ -66,7 +66,6 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author girix
  */
 public abstract class AnnotatedBorderPanel extends  ABEBaseDropPanel{
     

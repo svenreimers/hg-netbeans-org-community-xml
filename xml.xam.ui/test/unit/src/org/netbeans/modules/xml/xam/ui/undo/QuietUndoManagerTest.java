@@ -65,7 +65,6 @@ import org.openide.awt.UndoRedo;
  * Tests QuietUndoManager class, both in isolation and with XAM model.
  * Additional tests of QuietUndoManager can be found in schema/core.
  *
- * @author Nathan Fiedler
  */
 public class QuietUndoManagerTest extends TestCase {
     private SchemaModel model;

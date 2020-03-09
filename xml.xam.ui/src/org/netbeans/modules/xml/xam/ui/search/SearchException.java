@@ -47,7 +47,6 @@ package org.netbeans.modules.xml.xam.ui.search;
 /**
  * Thrown to indicate that a search failed to perform successfully.
  *
- * @author  Nathan Fiedler
  */
 public class SearchException extends Exception {
     /** silence compiler warnings */

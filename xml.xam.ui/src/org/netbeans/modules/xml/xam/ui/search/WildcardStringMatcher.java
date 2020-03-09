@@ -49,7 +49,6 @@ package org.netbeans.modules.xml.xam.ui.search;
  * See the documentation for the <code>match()</code> method for details.
  *
  * @see #match(String, String)
- * @author Nathan Fiedler
  */
 public class WildcardStringMatcher {
 

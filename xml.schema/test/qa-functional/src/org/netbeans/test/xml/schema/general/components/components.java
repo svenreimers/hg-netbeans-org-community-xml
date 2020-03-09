@@ -75,7 +75,6 @@ import org.netbeans.jemmy.operators.JToggleButtonOperator;
 
 /**
  *
- * @author michaelnazarov@netbeans.org
  */
 
 public class components extends GeneralXMLTest {

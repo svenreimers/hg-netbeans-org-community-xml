@@ -103,7 +103,7 @@ public class RelativePath {
         // for each remaining level in the home path, add a ..
         for(;i>=0;i--) {
             //s += ".." + File.separator;
-            //ritesh: always use forward slash since using backward slash for windows
+            //always use forward slash since using backward slash for windows
             //create problem creating URI object in engine. URI always expect forwaard slash
             s.append("..").append("/");
         }
@@ -111,7 +111,7 @@ public class RelativePath {
         // for each level in the file path, add the path
         for(;j>=1;j--) {
             //s += f.get(j) + File.separator;
-            //ritesh: always use forward slash since using backward slash for windows
+            //always use forward slash since using backward slash for windows
             //create problem creating URI object in engine. URI always expect forwaard slash
             s.append(f.get(j)).append("/");
         }

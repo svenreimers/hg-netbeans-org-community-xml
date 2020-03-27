@@ -59,7 +59,6 @@ import java.awt.event.MouseEvent;
 /**
  * Copy of original CloseButtonTabbedPane from the NetBeans 3.4 winsys.  Old code never dies.
  *
- * !!! jbecicka comment: 
  * !!! This class was copy/pasted from org.netbeans.core.output2.ui
  * !!! See issue 44576
  * !!! Remove this class as soon as issue 55845 is fixed

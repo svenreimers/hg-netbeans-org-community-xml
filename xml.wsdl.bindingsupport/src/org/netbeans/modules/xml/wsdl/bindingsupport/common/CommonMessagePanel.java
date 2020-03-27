@@ -67,7 +67,7 @@ public class CommonMessagePanel extends javax.swing.JPanel {
     static {//Got this from WizardDescriptor
         nbErrorForeground = UIManager.getColor("nb.errorForeground"); //NOI18N
         if (nbErrorForeground == null) {
-            nbErrorForeground = new Color(255, 0, 0); // RGB suggested by jdinga in #65358
+            nbErrorForeground = new Color(255, 0, 0); // RGB suggested in #65358
         }
         nbWarningForeground = UIManager.getColor("nb.warningForeground"); //NOI18N
         if (nbWarningForeground == null) {

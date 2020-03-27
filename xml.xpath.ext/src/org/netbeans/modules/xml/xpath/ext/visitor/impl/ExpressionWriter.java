@@ -120,7 +120,6 @@ public class ExpressionWriter extends XPathVisitorAdapter  {
         //    i.e.   'the "correct" way',   'the 'incorrect' way'
         // 3. quote the string with double quotes if the string contains single quotes
         //    i.e.   "the 'correct' way",   "the "incorrect" way"
-        // - josh
         
         String literal = stringLiteral.getValue();
         boolean isStringQuoted = false;

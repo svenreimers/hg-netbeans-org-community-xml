@@ -162,7 +162,6 @@ public class BPELExtensionXpathVisitor extends ValidationVisitor {
             }
 
             public Collection<SchemaModel> getVisibleModels() {
-                // TODO: waiting answer from Samaresh! 
                 //
                 // Returns the schema where the contextComp is declared for a while.
                 // It means that in case when the root element isn't explicitly defined 

@@ -46,7 +46,6 @@ made subject to such option by the copyright holder.
 <!--
     Document   : Chameleon.xsd
     Created on : July 9, 2002, 1:16 PM
-    Author     : Petr Kuzel
     Description:
         It is scheme without target namespace. It
         testes if handling for this special case works

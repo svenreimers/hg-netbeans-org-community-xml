@@ -64,7 +64,6 @@ public class XPathPredicateExpressionImpl extends XPathExpressionImpl
                 success = mModel.resolveExpressionExtReferences(this);
             }
             //
-            // TODO: Nikita. Uncomment for Debugging
             //
 //            if (success && mSchemaContext == null) {
 //                // assert false : "Wrong behavior!"; // NOI18N

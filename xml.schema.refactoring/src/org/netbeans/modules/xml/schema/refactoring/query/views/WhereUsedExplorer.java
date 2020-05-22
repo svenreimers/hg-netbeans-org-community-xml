@@ -224,7 +224,7 @@ public class WhereUsedExplorer extends JPanel implements ExplorerManager.Provide
         
         Schema schema = model.getSchema();
         
-        /**  order of categories suggested by Chris Webster
+        /**  order of categories
          * GlobalComplexTypes
          * GlobalElements (the ordering of these two really depends on the style of the schema)
          * GlobalSimpleTypes
